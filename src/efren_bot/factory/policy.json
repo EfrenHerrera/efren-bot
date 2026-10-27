@@ -22,6 +22,7 @@
     "notion": {"always_work": true, "require_ready": true},
     "slack": {"require_human_flag": true},
     "whatsapp": {"require_work_marker": true},
+    "manual": {"always_work": true},
     "fixture": {}
   }
 }

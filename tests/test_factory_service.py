@@ -404,3 +404,28 @@ def test_an_effect_approved_for_a_newer_run_supersedes_in_flight_work(sessions):
     assert service.run_approved_effects() == 0
     assert effects_of(sessions, old)["update_notion"].state == "superseded"
     assert "update_notion" not in [k for k, _, _ in gateway.executed]
+
+
+def test_a_manual_submission_goes_through_the_same_criteria(sessions):
+    from efren_bot.factory.submit import submit
+
+    service, _, _ = make(sessions)
+    ok = submit(service, "Cambiar el botón de la landing a verde", "landing", "m1")
+    assert ok["decision"] == "admit" and ok["job_id"] and not ok["duplicate"]
+    assert submit(service, "Cambiar el botón de la landing a verde", "landing", "m1")["duplicate"]
+    risky = submit(service, "Borrar la tabla de pagos de producción", "landing", "m2")
+    assert risky["decision"] == "inbox" and risky["job_id"] is None  # sensitive: a person decides
+
+
+def test_admission_only_ticks_decide_but_run_and_perform_nothing(sessions):
+    from efren_bot.factory.intake import FixtureAdapter
+    from efren_bot.factory.worker import tick
+
+    service, executor, gateway = make(sessions)
+    adapters = {"fixture": FixtureAdapter([item(project_hint="Landing Web")])}
+    out = tick(service, adapters, ["fixture"], admission_only=True)
+    assert out["pulled"] == {"fixture": 1} and out["ran"] == 0
+    assert executor.calls == [] and gateway.executed == []
+    with sessions() as session:
+        assert session.scalar(select(FactoryJob.status)) == "queued"
+    assert tick(service, adapters, ["fixture"])["ran"] == 1  # a normal tick does run it

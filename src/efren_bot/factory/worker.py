@@ -31,8 +31,12 @@ def pull_once(service: FactoryService, adapters: dict, sources: list[str]) -> di
     return counts
 
 
-def tick(service: FactoryService, adapters: dict, sources: list[str]) -> dict:
+def tick(
+    service: FactoryService, adapters: dict, sources: list[str], *, admission_only: bool = False
+) -> dict:
     pulled = pull_once(service, adapters, sources)
+    if admission_only:  # read-only rehearsal: decide admissions, run nothing, perform nothing
+        return {"pulled": pulled, "ran": 0, "effects": 0, "reclaimed": 0, "expired": 0}
     ran = 0
     while service.process_one() is not None:
         ran += 1
@@ -53,6 +57,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--pull", default="", help="comma-separated pull sources, e.g. slack,notion"
     )
+    parser.add_argument(
+        "--admission-only",
+        action="store_true",
+        help="pull and triage only: no job runs, no effects, nothing leaves the database",
+    )
     args = parser.parse_args(argv)
     sources = [s for s in args.pull.split(",") if s]
     try:
@@ -67,7 +76,10 @@ def main(argv: list[str] | None = None) -> int:
             notion_status_property=settings.factory_notion_status_property,
         )
         while True:
-            print(json.dumps(tick(service, adapters, sources)), flush=True)
+            print(
+                json.dumps(tick(service, adapters, sources, admission_only=args.admission_only)),
+                flush=True,
+            )
             if args.once:
                 return 0
             time.sleep(settings.worker_poll_interval_seconds)

@@ -88,8 +88,14 @@ review-runner:
 # Host process: pulls sources, runs queued jobs through scraft-ops, performs approved effects.
 # Mocked unless FACTORY_* is configured (see docs/factory.md). Never run it in Docker.
 FACTORY_PULL ?= slack
+FACTORY_ARGS ?=
 factory-worker:
-	$(UV) run --frozen python -m efren_bot.factory.worker --pull $(FACTORY_PULL)
+	$(UV) run --frozen python -m efren_bot.factory.worker --pull $(FACTORY_PULL) $(FACTORY_ARGS)
+
+# One request by hand through the same funnel: make factory-submit PROJECT=landing TEXT="..."
+.PHONY: factory-submit
+factory-submit:
+	$(UV) run --frozen python -m efren_bot.factory.submit --project "$(PROJECT)" --text "$(TEXT)"
 
 # Rehearsal with the real scraft-ops binary and a FAKE agent: no model, network or credentials.
 # Usage: make factory-rehearsal SCRAFT_OPS_BIN=/path/to/scraft-ops

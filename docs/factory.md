@@ -129,6 +129,8 @@ git temporales y pasarelas de efectos que solo anotan. Sin modelo, sin red, sin 
 
 ## Prueba final en el entorno conectado
 
+El guion ejecutable, con criterios de paso y evidencia a entregar, está en [factory-test-plan.md](factory-test-plan.md). Resumen:
+
 Orden sugerido; cada paso añade **una** capacidad real y se verifica antes del siguiente.
 
 1. `make sync`, `make up`, `make test-db`, `make factory-rehearsal` en la máquina nueva (debe pasar igual).
@@ -161,6 +163,6 @@ Comprobaciones, clasificadas antes de ejecutarlas: **obligatorias** por criterio
 | Efectos `post_slack` | no hay pasarela | **no implementado** (se propone, no se ejecuta) |
 | Despliegue en Docker de la API con el registro de proyectos | `compose.factory.yaml` | **sin verificar** |
 
-Límites conocidos: un job es de un solo repositorio (la iniciativa multi-repo, con orden entre repos,
+Límites conocidos: el perfil no tiene paso de preparación (un worktree nuevo no trae `node_modules`; ver el plan de pruebas); un job es de un solo repositorio (la iniciativa multi-repo, con orden entre repos,
 es trabajo de la capa siguiente); no hay topes de costo/tiempo por corrida más allá del timeout de la
 unidad de ejecución; la política de admisión es por palabras clave y se afina con uso real.
