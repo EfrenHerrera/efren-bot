@@ -1,0 +1,7238 @@
+{
+  "ok": false,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1292,
+    9750
+  ],
+  "components": [
+    {
+      "id": "hoy",
+      "type": "cloud",
+      "label": "HOY · base local preservada",
+      "x": 80,
+      "y": 120,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        120
+      ]
+    },
+    {
+      "id": "host",
+      "type": "cloud",
+      "label": "HOST · acceso observado",
+      "x": 526,
+      "y": 120,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        120
+      ]
+    },
+    {
+      "id": "bridge",
+      "type": "security",
+      "label": "Puente manual deshabilitado",
+      "x": 972,
+      "y": 120,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        120
+      ]
+    },
+    {
+      "id": "hoy-limite",
+      "type": "security",
+      "label": "No hay colector ni RAG real",
+      "x": 80,
+      "y": 280,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        280
+      ]
+    },
+    {
+      "id": "a-inicio",
+      "type": "external",
+      "label": "A · recibir evidencia fiel",
+      "x": 80,
+      "y": 520,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        520
+      ]
+    },
+    {
+      "id": "a-policy",
+      "type": "security",
+      "label": "Autorizar fuente real primero",
+      "x": 526,
+      "y": 520,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        520
+      ]
+    },
+    {
+      "id": "a-adapter",
+      "type": "security",
+      "label": "Identidad y operaciones",
+      "x": 972,
+      "y": 520,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        520
+      ]
+    },
+    {
+      "id": "a-slack",
+      "type": "security",
+      "label": "Slack · permisos separados",
+      "x": 972,
+      "y": 680,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        680
+      ]
+    },
+    {
+      "id": "a-notion",
+      "type": "security",
+      "label": "Notion · alcance de lectura",
+      "x": 526,
+      "y": 680,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        680
+      ]
+    },
+    {
+      "id": "a-gitlab",
+      "type": "security",
+      "label": "GitLab opcional · comprobar",
+      "x": 80,
+      "y": 680,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        680
+      ]
+    },
+    {
+      "id": "a-pull",
+      "type": "backend",
+      "label": "Pull programado aprobado",
+      "x": 80,
+      "y": 840,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        840
+      ]
+    },
+    {
+      "id": "a-push",
+      "type": "security",
+      "label": "O push aprobado por separado",
+      "x": 526,
+      "y": 840,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        840
+      ]
+    },
+    {
+      "id": "a-auth",
+      "type": "security",
+      "label": "Autenticación oficial host",
+      "x": 972,
+      "y": 840,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        840
+      ]
+    },
+    {
+      "id": "a-paginas",
+      "type": "backend",
+      "label": "Cobertura, páginas y cursor",
+      "x": 972,
+      "y": 1000,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        1000
+      ]
+    },
+    {
+      "id": "a-retry",
+      "type": "security",
+      "label": "429: backoff acotado; 401: STOP",
+      "x": 526,
+      "y": 1000,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        1000
+      ]
+    },
+    {
+      "id": "a-raw",
+      "type": "database",
+      "label": "Respuesta como fue RECIBIDA",
+      "x": 80,
+      "y": 1000,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        1000
+      ]
+    },
+    {
+      "id": "a-procedencia",
+      "type": "database",
+      "label": "Procedencia y cobertura",
+      "x": 80,
+      "y": 1160,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        1160
+      ]
+    },
+    {
+      "id": "a-minimo",
+      "type": "security",
+      "label": "Preservar cuerpo autorizado",
+      "x": 526,
+      "y": 1160,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        1160
+      ]
+    },
+    {
+      "id": "a-dedupe",
+      "type": "security",
+      "label": "Identidad exacta y dedupe",
+      "x": 972,
+      "y": 1160,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        1160
+      ]
+    },
+    {
+      "id": "a-persistir",
+      "type": "database",
+      "label": "Raw + outbox atómicos",
+      "x": 972,
+      "y": 1320,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        1320
+      ]
+    },
+    {
+      "id": "a-proyectar",
+      "type": "backend",
+      "label": "Proyección autorizada aparte",
+      "x": 526,
+      "y": 1320,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        1320
+      ]
+    },
+    {
+      "id": "a-literal",
+      "type": "frontend",
+      "label": "FUTURO · «Esto llegó así»",
+      "x": 80,
+      "y": 1320,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        1320
+      ]
+    },
+    {
+      "id": "a-presentar",
+      "type": "frontend",
+      "label": "Contexto y siguiente acción",
+      "x": 80,
+      "y": 1480,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        1480
+      ]
+    },
+    {
+      "id": "a-revocar",
+      "type": "security",
+      "label": "Edición, borrado o revocación",
+      "x": 526,
+      "y": 1480,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        1480
+      ]
+    },
+    {
+      "id": "a-noresucitar",
+      "type": "security",
+      "label": "No resucitar al restaurar",
+      "x": 972,
+      "y": 1480,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        1480
+      ]
+    },
+    {
+      "id": "a-inyeccion",
+      "type": "security",
+      "label": "La fuente NO da instrucciones",
+      "x": 972,
+      "y": 1640,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        1640
+      ]
+    },
+    {
+      "id": "a-url",
+      "type": "security",
+      "label": "source_url solo es metadato",
+      "x": 526,
+      "y": 1640,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        1640
+      ]
+    },
+    {
+      "id": "a-n8n",
+      "type": "security",
+      "label": "n8n opcional, no instalado",
+      "x": 80,
+      "y": 1640,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        1640
+      ]
+    },
+    {
+      "id": "b-inicio",
+      "type": "external",
+      "label": "B · tarea Notion existente",
+      "x": 80,
+      "y": 1920,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        1920
+      ]
+    },
+    {
+      "id": "b-identidad",
+      "type": "security",
+      "label": "Resolver página UUID + KNF",
+      "x": 526,
+      "y": 1920,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        1920
+      ]
+    },
+    {
+      "id": "b-objetivo",
+      "type": "backend",
+      "label": "Objetivo y criterios aceptados",
+      "x": 972,
+      "y": 1920,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        1920
+      ]
+    },
+    {
+      "id": "b-repo",
+      "type": "security",
+      "label": "Catálogo de repos permitido",
+      "x": 972,
+      "y": 2080,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        2080
+      ]
+    },
+    {
+      "id": "b-stop",
+      "type": "security",
+      "label": "¿Repo ambiguo o falta KNF?",
+      "x": 526,
+      "y": 2080,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        2080
+      ]
+    },
+    {
+      "id": "b-checkout",
+      "type": "security",
+      "label": "Checkout aprobado o clone",
+      "x": 80,
+      "y": 2080,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        2080
+      ]
+    },
+    {
+      "id": "b-base",
+      "type": "backend",
+      "label": "Inspeccionar trabajo y fijar base",
+      "x": 80,
+      "y": 2240,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        2240
+      ]
+    },
+    {
+      "id": "b-topologia",
+      "type": "security",
+      "label": "Autorizar worktree y rama Git",
+      "x": 526,
+      "y": 2240,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        2240
+      ]
+    },
+    {
+      "id": "b-worker",
+      "type": "backend",
+      "label": "Desarrollo en contexto aislado",
+      "x": 972,
+      "y": 2240,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        2240
+      ]
+    },
+    {
+      "id": "b-checks",
+      "type": "backend",
+      "label": "Diff, checks y revisión",
+      "x": 972,
+      "y": 2400,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        2400
+      ]
+    },
+    {
+      "id": "b-preview",
+      "type": "backend",
+      "label": "Preview EXACTO de MR",
+      "x": 526,
+      "y": 2400,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        2400
+      ]
+    },
+    {
+      "id": "b-aprobar",
+      "type": "security",
+      "label": "Aprobar efectos enumerados",
+      "x": 80,
+      "y": 2400,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        2400
+      ]
+    },
+    {
+      "id": "b-live",
+      "type": "security",
+      "label": "Revalidar ref, ACL y aprobación",
+      "x": 80,
+      "y": 2560,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        2560
+      ]
+    },
+    {
+      "id": "b-publicar",
+      "type": "backend",
+      "label": "Solo commit / push / MR concedidos",
+      "x": 526,
+      "y": 2560,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        2560
+      ]
+    },
+    {
+      "id": "b-ci",
+      "type": "external",
+      "label": "CI y comentarios autorizados",
+      "x": 972,
+      "y": 2560,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        2560
+      ]
+    },
+    {
+      "id": "b-fix",
+      "type": "security",
+      "label": "Fix job acotado, si se encarga",
+      "x": 972,
+      "y": 2720,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        2720
+      ]
+    },
+    {
+      "id": "b-merge",
+      "type": "security",
+      "label": "MERGE · aprobación separada",
+      "x": 526,
+      "y": 2720,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        2720
+      ]
+    },
+    {
+      "id": "b-deploy",
+      "type": "security",
+      "label": "DEPLOY · aprobación separada",
+      "x": 80,
+      "y": 2720,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        2720
+      ]
+    },
+    {
+      "id": "b-verificar",
+      "type": "backend",
+      "label": "Verificar resultado y pendientes",
+      "x": 80,
+      "y": 2880,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        2880
+      ]
+    },
+    {
+      "id": "b-status",
+      "type": "security",
+      "label": "Autorizar status externo Notion",
+      "x": 526,
+      "y": 2880,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        2880
+      ]
+    },
+    {
+      "id": "b-cierre",
+      "type": "external",
+      "label": "Cierre humano con evidencia",
+      "x": 972,
+      "y": 2880,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        2880
+      ]
+    },
+    {
+      "id": "c-inicio",
+      "type": "external",
+      "label": "C · solicitud nueva admitida",
+      "x": 80,
+      "y": 3160,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        3160
+      ]
+    },
+    {
+      "id": "c-owner",
+      "type": "backend",
+      "label": "¿Efren, equipo o tercero?",
+      "x": 526,
+      "y": 3160,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        3160
+      ]
+    },
+    {
+      "id": "c-buscar",
+      "type": "security",
+      "label": "Buscar tarea por identidad exacta",
+      "x": 972,
+      "y": 3160,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        3160
+      ]
+    },
+    {
+      "id": "c-aceptar",
+      "type": "backend",
+      "label": "Aceptar candidato y campos",
+      "x": 972,
+      "y": 3320,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        3320
+      ]
+    },
+    {
+      "id": "c-aprobar",
+      "type": "security",
+      "label": "Aprobar crear en DB nombrada",
+      "x": 526,
+      "y": 3320,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        3320
+      ]
+    },
+    {
+      "id": "c-intent",
+      "type": "database",
+      "label": "Intención durable e idempotencia",
+      "x": 80,
+      "y": 3320,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        3320
+      ]
+    },
+    {
+      "id": "c-crear",
+      "type": "backend",
+      "label": "Crear o reconciliar timeout",
+      "x": 80,
+      "y": 3480,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        3480
+      ]
+    },
+    {
+      "id": "c-readback",
+      "type": "security",
+      "label": "READBACK UUID y KNF autogenerado",
+      "x": 526,
+      "y": 3480,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        3480
+      ]
+    },
+    {
+      "id": "c-stop",
+      "type": "security",
+      "label": "Falta destino, KNF o repo: STOP",
+      "x": 972,
+      "y": 3480,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        3480
+      ]
+    },
+    {
+      "id": "c-bundle",
+      "type": "security",
+      "label": "Crear + rama: bundle explícito",
+      "x": 972,
+      "y": 3640,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        3640
+      ]
+    },
+    {
+      "id": "c-campos",
+      "type": "security",
+      "label": "Respetar esquema administrativo",
+      "x": 526,
+      "y": 3640,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        3640
+      ]
+    },
+    {
+      "id": "c-ids",
+      "type": "database",
+      "label": "Identidades que no se mezclan",
+      "x": 80,
+      "y": 3640,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        3640
+      ]
+    },
+    {
+      "id": "d-inicio",
+      "type": "external",
+      "label": "D · caso, hilo o mención admitida",
+      "x": 80,
+      "y": 3920,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        3920
+      ]
+    },
+    {
+      "id": "d-contexto",
+      "type": "backend",
+      "label": "Caso, contexto y precedentes",
+      "x": 526,
+      "y": 3920,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        3920
+      ]
+    },
+    {
+      "id": "d-skill",
+      "type": "security",
+      "label": "Skill SUPPORT aprobada y versionada",
+      "x": 972,
+      "y": 3920,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        3920
+      ]
+    },
+    {
+      "id": "d-herramientas",
+      "type": "security",
+      "label": "CloudWatch / DB solo si existen",
+      "x": 972,
+      "y": 4080,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        4080
+      ]
+    },
+    {
+      "id": "d-hechos",
+      "type": "backend",
+      "label": "Hechos, hipótesis y faltantes",
+      "x": 526,
+      "y": 4080,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        4080
+      ]
+    },
+    {
+      "id": "d-diagnostico",
+      "type": "backend",
+      "label": "Diagnóstico y borrador",
+      "x": 80,
+      "y": 4080,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        4080
+      ]
+    },
+    {
+      "id": "d-feedback",
+      "type": "external",
+      "label": "Feedback del usuario",
+      "x": 80,
+      "y": 4240,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        4240
+      ]
+    },
+    {
+      "id": "d-aprobar",
+      "type": "security",
+      "label": "Aprobar texto + destino + hilo",
+      "x": 526,
+      "y": 4240,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        4240
+      ]
+    },
+    {
+      "id": "d-live",
+      "type": "security",
+      "label": "Releer contexto y ACL vigentes",
+      "x": 972,
+      "y": 4240,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        4240
+      ]
+    },
+    {
+      "id": "d-publicar",
+      "type": "security",
+      "label": "Slack requiere NUEVOS write scopes",
+      "x": 972,
+      "y": 4400,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        4400
+      ]
+    },
+    {
+      "id": "d-seguir",
+      "type": "backend",
+      "label": "Nueva respuesta → nuevo job",
+      "x": 526,
+      "y": 4400,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        4400
+      ]
+    },
+    {
+      "id": "d-dev",
+      "type": "security",
+      "label": "¿Necesita código? Vincular DEV",
+      "x": 80,
+      "y": 4400,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        4400
+      ]
+    },
+    {
+      "id": "e-inicio",
+      "type": "external",
+      "label": "E · MR o comentarios elegidos",
+      "x": 80,
+      "y": 4680,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        4680
+      ]
+    },
+    {
+      "id": "e-permiso",
+      "type": "security",
+      "label": "Permiso GitLab / CI / logs",
+      "x": 526,
+      "y": 4680,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        4680
+      ]
+    },
+    {
+      "id": "e-base",
+      "type": "backend",
+      "label": "Fijar tarea, repo, base y diff",
+      "x": 972,
+      "y": 4680,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        4680
+      ]
+    },
+    {
+      "id": "e-worker",
+      "type": "backend",
+      "label": "Worker revisión → hallazgos",
+      "x": 972,
+      "y": 4840,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        4840
+      ]
+    },
+    {
+      "id": "e-comentar",
+      "type": "security",
+      "label": "Preview y aprobar comentarios",
+      "x": 526,
+      "y": 4840,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        4840
+      ]
+    },
+    {
+      "id": "e-fix",
+      "type": "security",
+      "label": "Fix OPCIONAL explícito y aislado",
+      "x": 80,
+      "y": 4840,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        4840
+      ]
+    },
+    {
+      "id": "e-checks",
+      "type": "backend",
+      "label": "Tests y diff del fix",
+      "x": 80,
+      "y": 5000,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        5000
+      ]
+    },
+    {
+      "id": "e-update",
+      "type": "security",
+      "label": "Aprobar actualización de MR",
+      "x": 526,
+      "y": 5000,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        5000
+      ]
+    },
+    {
+      "id": "e-ci",
+      "type": "external",
+      "label": "CI y revisión externa → humano",
+      "x": 526,
+      "y": 5140,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        5140
+      ]
+    },
+    {
+      "id": "f-inicio",
+      "type": "external",
+      "label": "F · pregunta y criterio suficiente",
+      "x": 80,
+      "y": 5280,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        5280
+      ]
+    },
+    {
+      "id": "f-fuentes",
+      "type": "security",
+      "label": "Docs/historia Notion permitidos",
+      "x": 526,
+      "y": 5280,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        5280
+      ]
+    },
+    {
+      "id": "f-frescura",
+      "type": "backend",
+      "label": "Frescura y contradicciones",
+      "x": 972,
+      "y": 5280,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        5280
+      ]
+    },
+    {
+      "id": "f-informe",
+      "type": "backend",
+      "label": "Informe según necesidad",
+      "x": 972,
+      "y": 5440,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        5440
+      ]
+    },
+    {
+      "id": "f-runbook",
+      "type": "backend",
+      "label": "O Postmortem / Runbook / mapa",
+      "x": 526,
+      "y": 5440,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        5440
+      ]
+    },
+    {
+      "id": "f-publicar",
+      "type": "security",
+      "label": "Aprobar publicación Notion",
+      "x": 80,
+      "y": 5440,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        5440
+      ]
+    },
+    {
+      "id": "f-decidir",
+      "type": "external",
+      "label": "Decisión humana sobre propuesta",
+      "x": 80,
+      "y": 5600,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        5600
+      ]
+    },
+    {
+      "id": "f-dev",
+      "type": "security",
+      "label": "DEV hijo solo si se encarga",
+      "x": 80,
+      "y": 5740,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        5740
+      ]
+    },
+    {
+      "id": "g-inicio",
+      "type": "backend",
+      "label": "G · watchers deterministas",
+      "x": 80,
+      "y": 5880,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        5880
+      ]
+    },
+    {
+      "id": "g-regla",
+      "type": "security",
+      "label": "Novedad / regla / comando aprobado",
+      "x": 526,
+      "y": 5880,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        5880
+      ]
+    },
+    {
+      "id": "g-atencion",
+      "type": "frontend",
+      "label": "Atención, esperas y resultados",
+      "x": 972,
+      "y": 5880,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        5880
+      ]
+    },
+    {
+      "id": "coord",
+      "type": "backend",
+      "label": "UN coordinador · futuro",
+      "x": 80,
+      "y": 6160,
+      "width": 280,
+      "height": 100,
+      "pos": [
+        80,
+        6160
+      ]
+    },
+    {
+      "id": "q-policy",
+      "type": "security",
+      "label": "Intersección de permisos por job",
+      "x": 526,
+      "y": 6160,
+      "width": 280,
+      "height": 100,
+      "pos": [
+        526,
+        6160
+      ]
+    },
+    {
+      "id": "q-cola",
+      "type": "messagebus",
+      "label": "Cola durable y scheduler",
+      "x": 972,
+      "y": 6160,
+      "width": 280,
+      "height": 100,
+      "pos": [
+        972,
+        6160
+      ]
+    },
+    {
+      "id": "q-claim",
+      "type": "security",
+      "label": "Claim en transacción corta",
+      "x": 972,
+      "y": 6340,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        6340
+      ]
+    },
+    {
+      "id": "q-workers",
+      "type": "backend",
+      "label": "Workers por rol en paralelo",
+      "x": 526,
+      "y": 6340,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        6340
+      ]
+    },
+    {
+      "id": "q-aislar",
+      "type": "security",
+      "label": "Un escritor por worktree / acción",
+      "x": 80,
+      "y": 6340,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        6340
+      ]
+    },
+    {
+      "id": "q-ejecutar",
+      "type": "backend",
+      "label": "Ejecutar fuera de transacción DB",
+      "x": 80,
+      "y": 6500,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        6500
+      ]
+    },
+    {
+      "id": "q-checkpoint",
+      "type": "database",
+      "label": "Checkpoint / resultado durable",
+      "x": 526,
+      "y": 6500,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        6500
+      ]
+    },
+    {
+      "id": "q-wait",
+      "type": "messagebus",
+      "label": "WAIT humano o externo",
+      "x": 972,
+      "y": 6500,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        6500
+      ]
+    },
+    {
+      "id": "q-otros",
+      "type": "backend",
+      "label": "Otros jobs siguen avanzando",
+      "x": 972,
+      "y": 6660,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        6660
+      ]
+    },
+    {
+      "id": "q-resume",
+      "type": "security",
+      "label": "Reanudar desde checkpoint",
+      "x": 526,
+      "y": 6660,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        6660
+      ]
+    },
+    {
+      "id": "q-crash",
+      "type": "security",
+      "label": "Crash / lease vencido → recuperar",
+      "x": 80,
+      "y": 6660,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        6660
+      ]
+    },
+    {
+      "id": "q-cancel",
+      "type": "security",
+      "label": "CANCEL bloquea acciones nuevas",
+      "x": 80,
+      "y": 6820,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        6820
+      ]
+    },
+    {
+      "id": "q-live",
+      "type": "security",
+      "label": "CADA efecto: control vivo",
+      "x": 526,
+      "y": 6820,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        6820
+      ]
+    },
+    {
+      "id": "q-intent",
+      "type": "database",
+      "label": "Diario de intención ANTES de red",
+      "x": 972,
+      "y": 6820,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        6820
+      ]
+    },
+    {
+      "id": "q-effect",
+      "type": "security",
+      "label": "Ejecutor de efectos acotados",
+      "x": 972,
+      "y": 6980,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        6980
+      ]
+    },
+    {
+      "id": "q-confirm",
+      "type": "database",
+      "label": "CONFIRMED y referencia remota",
+      "x": 526,
+      "y": 6980,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        6980
+      ]
+    },
+    {
+      "id": "q-unknown",
+      "type": "security",
+      "label": "UNKNOWN → RECONCILIAR primero",
+      "x": 80,
+      "y": 6980,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        6980
+      ]
+    },
+    {
+      "id": "q-human",
+      "type": "external",
+      "label": "No verificable → revisión humana",
+      "x": 80,
+      "y": 7140,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        7140
+      ]
+    },
+    {
+      "id": "q-autoridad",
+      "type": "database",
+      "label": "Autoridades externas separadas",
+      "x": 526,
+      "y": 7140,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        7140
+      ]
+    },
+    {
+      "id": "q-estados",
+      "type": "security",
+      "label": "Efren coordina, no sobrescribe",
+      "x": 972,
+      "y": 7140,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        7140
+      ]
+    },
+    {
+      "id": "m-historia",
+      "type": "database",
+      "label": "Historia canónica autorizada",
+      "x": 80,
+      "y": 7420,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        7420
+      ]
+    },
+    {
+      "id": "m-ledger",
+      "type": "database",
+      "label": "Evidencia y ledger de intentos",
+      "x": 526,
+      "y": 7420,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        7420
+      ]
+    },
+    {
+      "id": "m-exacto",
+      "type": "security",
+      "label": "Recuperación EXACTA primero",
+      "x": 972,
+      "y": 7420,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        7420
+      ]
+    },
+    {
+      "id": "m-candidatos",
+      "type": "backend",
+      "label": "Después, candidatos autorizados",
+      "x": 972,
+      "y": 7580,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        7580
+      ]
+    },
+    {
+      "id": "m-rehidratar",
+      "type": "security",
+      "label": "Rehidratar fuente + versión",
+      "x": 526,
+      "y": 7580,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        7580
+      ]
+    },
+    {
+      "id": "m-explicar",
+      "type": "backend",
+      "label": "Explicar con certeza y contradicción",
+      "x": 80,
+      "y": 7580,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        7580
+      ]
+    },
+    {
+      "id": "m-vector",
+      "type": "security",
+      "label": "pgvector preparado ≠ índice/RAG",
+      "x": 80,
+      "y": 7740,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        7740
+      ]
+    },
+    {
+      "id": "m-embedding",
+      "type": "security",
+      "label": "Embeddings externos no autorizados",
+      "x": 526,
+      "y": 7740,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        7740
+      ]
+    },
+    {
+      "id": "m-retener",
+      "type": "security",
+      "label": "Retención, borrado y copias",
+      "x": 972,
+      "y": 7740,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        7740
+      ]
+    },
+    {
+      "id": "m-leccion",
+      "type": "backend",
+      "label": "Lección confirmada → DRAFT",
+      "x": 972,
+      "y": 7900,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        7900
+      ]
+    },
+    {
+      "id": "m-revisar",
+      "type": "external",
+      "label": "Revisión humana de la lección",
+      "x": 526,
+      "y": 7900,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        7900
+      ]
+    },
+    {
+      "id": "m-registro",
+      "type": "security",
+      "label": "Registro versionado revisado",
+      "x": 80,
+      "y": 7900,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        7900
+      ]
+    },
+    {
+      "id": "r-blanco",
+      "type": "cloud",
+      "label": "AHORA · web blanca aceptada",
+      "x": 80,
+      "y": 8180,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        8180
+      ]
+    },
+    {
+      "id": "r-mapa",
+      "type": "backend",
+      "label": "Este mapa conceptual completo",
+      "x": 526,
+      "y": 8180,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        8180
+      ]
+    },
+    {
+      "id": "r-usuario",
+      "type": "external",
+      "label": "REVISIÓN del usuario primero",
+      "x": 972,
+      "y": 8180,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        8180
+      ]
+    },
+    {
+      "id": "r-piloto",
+      "type": "security",
+      "label": "Delimitar piloto raw de lectura",
+      "x": 972,
+      "y": 8340,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        8340
+      ]
+    },
+    {
+      "id": "r-policy",
+      "type": "security",
+      "label": "Aprobar política y capacidades",
+      "x": 526,
+      "y": 8340,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        8340
+      ]
+    },
+    {
+      "id": "r-implementar",
+      "type": "security",
+      "label": "Implementación con alcance propio",
+      "x": 80,
+      "y": 8340,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        8340
+      ]
+    },
+    {
+      "id": "t-protocolo",
+      "type": "security",
+      "label": "PLAN FUTURO · no pruebas ejecutadas",
+      "x": 80,
+      "y": 8620,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        8620
+      ]
+    },
+    {
+      "id": "t-a",
+      "type": "backend",
+      "label": "Test A · captura y fronteras",
+      "x": 526,
+      "y": 8620,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        8620
+      ]
+    },
+    {
+      "id": "t-a-fallos",
+      "type": "security",
+      "label": "A · negativas y recuperación",
+      "x": 972,
+      "y": 8620,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        8620
+      ]
+    },
+    {
+      "id": "t-b",
+      "type": "backend",
+      "label": "Test B · tarea a entrega",
+      "x": 972,
+      "y": 8780,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        8780
+      ]
+    },
+    {
+      "id": "t-b-fallos",
+      "type": "security",
+      "label": "B · aislamiento y gates de cierre",
+      "x": 526,
+      "y": 8780,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        8780
+      ]
+    },
+    {
+      "id": "t-c",
+      "type": "backend",
+      "label": "Test C · solicitud a tarea",
+      "x": 80,
+      "y": 8780,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        8780
+      ]
+    },
+    {
+      "id": "t-c-fallos",
+      "type": "security",
+      "label": "C · duplicado o timeout remoto",
+      "x": 80,
+      "y": 8940,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        8940
+      ]
+    },
+    {
+      "id": "t-d",
+      "type": "backend",
+      "label": "Test D · soporte revisable",
+      "x": 526,
+      "y": 8940,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        8940
+      ]
+    },
+    {
+      "id": "t-d-fallos",
+      "type": "security",
+      "label": "D · permisos y destino de respuesta",
+      "x": 972,
+      "y": 8940,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        8940
+      ]
+    },
+    {
+      "id": "t-e",
+      "type": "backend",
+      "label": "Test E · revisión independiente",
+      "x": 972,
+      "y": 9100,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        9100
+      ]
+    },
+    {
+      "id": "t-e-fallos",
+      "type": "security",
+      "label": "E · diff cambió o permiso revocado",
+      "x": 526,
+      "y": 9100,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        9100
+      ]
+    },
+    {
+      "id": "t-f",
+      "type": "backend",
+      "label": "Test F · investigación trazable",
+      "x": 80,
+      "y": 9100,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        9100
+      ]
+    },
+    {
+      "id": "t-f-fallos",
+      "type": "security",
+      "label": "F · falta fuente o destino nombrado",
+      "x": 80,
+      "y": 9260,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        9260
+      ]
+    },
+    {
+      "id": "t-g",
+      "type": "backend",
+      "label": "Test G · novedad y coordinación",
+      "x": 526,
+      "y": 9260,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        9260
+      ]
+    },
+    {
+      "id": "t-g-fallos",
+      "type": "security",
+      "label": "G · duplicado, espera y suspensión",
+      "x": 972,
+      "y": 9260,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        9260
+      ]
+    },
+    {
+      "id": "t-recuperar",
+      "type": "security",
+      "label": "TODOS A–G · fallo/reinicio/cancelar",
+      "x": 972,
+      "y": 9420,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        9420
+      ]
+    },
+    {
+      "id": "t-lease",
+      "type": "security",
+      "label": "TODOS · lease obsoleto y revocación",
+      "x": 526,
+      "y": 9420,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        9420
+      ]
+    },
+    {
+      "id": "t-unknown",
+      "type": "security",
+      "label": "TODOS · caída después de envío",
+      "x": 80,
+      "y": 9420,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        9420
+      ]
+    },
+    {
+      "id": "t-evidencia",
+      "type": "database",
+      "label": "Entrada/salida/evidencia por A–G",
+      "x": 80,
+      "y": 9580,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        80,
+        9580
+      ]
+    },
+    {
+      "id": "t-historico",
+      "type": "cloud",
+      "label": "Histórico ≠ prueba nueva",
+      "x": 526,
+      "y": 9580,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        526,
+        9580
+      ]
+    },
+    {
+      "id": "t-abiertas",
+      "type": "security",
+      "label": "Decisiones abiertas antes de activar",
+      "x": 972,
+      "y": 9580,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        972,
+        9580
+      ]
+    }
+  ],
+  "boundaries": [],
+  "connections": [
+    {
+      "from": "hoy",
+      "to": "hoy-limite",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          200
+        ],
+        [
+          220,
+          280
+        ]
+      ]
+    },
+    {
+      "from": "hoy",
+      "to": "host",
+      "label": "fuera runtime",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          160
+        ],
+        [
+          526,
+          160
+        ]
+      ],
+      "labelAt": [
+        443,
+        150
+      ]
+    },
+    {
+      "from": "host",
+      "to": "bridge",
+      "label": "excepción acotada",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          160
+        ],
+        [
+          972,
+          160
+        ]
+      ],
+      "labelAt": [
+        889,
+        150
+      ]
+    },
+    {
+      "from": "a-inicio",
+      "to": "a-policy",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          560
+        ],
+        [
+          526,
+          560
+        ]
+      ]
+    },
+    {
+      "from": "a-policy",
+      "to": "a-adapter",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          560
+        ],
+        [
+          972,
+          560
+        ]
+      ]
+    },
+    {
+      "from": "a-adapter",
+      "to": "a-slack",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          600
+        ],
+        [
+          1112,
+          680
+        ]
+      ]
+    },
+    {
+      "from": "a-slack",
+      "to": "a-notion",
+      "label": "otra fuente: gate propio",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          720
+        ],
+        [
+          806,
+          720
+        ]
+      ],
+      "labelAt": [
+        889,
+        710
+      ]
+    },
+    {
+      "from": "a-notion",
+      "to": "a-gitlab",
+      "label": "opcional: gate propio",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          720
+        ],
+        [
+          360,
+          720
+        ]
+      ],
+      "labelAt": [
+        443,
+        710
+      ]
+    },
+    {
+      "from": "a-gitlab",
+      "to": "a-pull",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          760
+        ],
+        [
+          220,
+          840
+        ]
+      ]
+    },
+    {
+      "from": "a-pull",
+      "to": "a-push",
+      "label": "alternativa, no requisito",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          880
+        ],
+        [
+          526,
+          880
+        ]
+      ],
+      "labelAt": [
+        443,
+        870
+      ]
+    },
+    {
+      "from": "a-push",
+      "to": "a-auth",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          880
+        ],
+        [
+          972,
+          880
+        ]
+      ]
+    },
+    {
+      "from": "a-auth",
+      "to": "a-paginas",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          920
+        ],
+        [
+          1112,
+          1000
+        ]
+      ]
+    },
+    {
+      "from": "a-paginas",
+      "to": "a-retry",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          1040
+        ],
+        [
+          806,
+          1040
+        ]
+      ]
+    },
+    {
+      "from": "a-retry",
+      "to": "a-raw",
+      "label": "solo respuesta admitida",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          1040
+        ],
+        [
+          360,
+          1040
+        ]
+      ],
+      "labelAt": [
+        443,
+        1030
+      ]
+    },
+    {
+      "from": "a-raw",
+      "to": "a-procedencia",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          1080
+        ],
+        [
+          220,
+          1160
+        ]
+      ]
+    },
+    {
+      "from": "a-procedencia",
+      "to": "a-minimo",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          1200
+        ],
+        [
+          526,
+          1200
+        ]
+      ]
+    },
+    {
+      "from": "a-minimo",
+      "to": "a-dedupe",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          1200
+        ],
+        [
+          972,
+          1200
+        ]
+      ]
+    },
+    {
+      "from": "a-dedupe",
+      "to": "a-persistir",
+      "label": "nuevo permitido",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          1240
+        ],
+        [
+          1112,
+          1320
+        ]
+      ],
+      "labelAt": [
+        1065,
+        1283
+      ]
+    },
+    {
+      "from": "a-persistir",
+      "to": "a-proyectar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          1360
+        ],
+        [
+          806,
+          1360
+        ]
+      ]
+    },
+    {
+      "from": "a-proyectar",
+      "to": "a-literal",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          1360
+        ],
+        [
+          360,
+          1360
+        ]
+      ]
+    },
+    {
+      "from": "a-literal",
+      "to": "a-presentar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          1400
+        ],
+        [
+          220,
+          1480
+        ]
+      ]
+    },
+    {
+      "from": "a-presentar",
+      "to": "a-revocar",
+      "label": "si cambia fuente",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          1520
+        ],
+        [
+          526,
+          1520
+        ]
+      ],
+      "labelAt": [
+        443,
+        1510
+      ]
+    },
+    {
+      "from": "a-revocar",
+      "to": "a-noresucitar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          1520
+        ],
+        [
+          972,
+          1520
+        ]
+      ]
+    },
+    {
+      "from": "a-noresucitar",
+      "to": "a-inyeccion",
+      "label": "guardas de toda captura",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          1560
+        ],
+        [
+          1112,
+          1640
+        ]
+      ],
+      "labelAt": [
+        1046,
+        1603
+      ]
+    },
+    {
+      "from": "a-inyeccion",
+      "to": "a-url",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          1680
+        ],
+        [
+          806,
+          1680
+        ]
+      ]
+    },
+    {
+      "from": "a-url",
+      "to": "a-n8n",
+      "label": "opcional; misma frontera",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          1680
+        ],
+        [
+          360,
+          1680
+        ]
+      ],
+      "labelAt": [
+        443,
+        1670
+      ]
+    },
+    {
+      "from": "b-inicio",
+      "to": "b-identidad",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          1953
+        ],
+        [
+          526,
+          1953
+        ]
+      ]
+    },
+    {
+      "from": "b-identidad",
+      "to": "b-objetivo",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          1960
+        ],
+        [
+          972,
+          1960
+        ]
+      ]
+    },
+    {
+      "from": "b-objetivo",
+      "to": "b-repo",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          2000
+        ],
+        [
+          1112,
+          2080
+        ]
+      ]
+    },
+    {
+      "from": "b-repo",
+      "to": "b-stop",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          2120
+        ],
+        [
+          806,
+          2120
+        ]
+      ]
+    },
+    {
+      "from": "b-stop",
+      "to": "b-checkout",
+      "label": "solo si resuelto",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          2120
+        ],
+        [
+          360,
+          2120
+        ]
+      ],
+      "labelAt": [
+        443,
+        2110
+      ]
+    },
+    {
+      "from": "b-checkout",
+      "to": "b-base",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          2160
+        ],
+        [
+          220,
+          2240
+        ]
+      ]
+    },
+    {
+      "from": "b-base",
+      "to": "b-topologia",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          2280
+        ],
+        [
+          526,
+          2280
+        ]
+      ]
+    },
+    {
+      "from": "b-topologia",
+      "to": "b-worker",
+      "label": "solo autorizado",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          2280
+        ],
+        [
+          972,
+          2280
+        ]
+      ],
+      "labelAt": [
+        889,
+        2270
+      ]
+    },
+    {
+      "from": "b-worker",
+      "to": "b-checks",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          2320
+        ],
+        [
+          1112,
+          2400
+        ]
+      ]
+    },
+    {
+      "from": "b-checks",
+      "to": "b-preview",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          2440
+        ],
+        [
+          806,
+          2440
+        ]
+      ]
+    },
+    {
+      "from": "b-preview",
+      "to": "b-aprobar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          2440
+        ],
+        [
+          360,
+          2440
+        ]
+      ]
+    },
+    {
+      "from": "b-aprobar",
+      "to": "b-live",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          2480
+        ],
+        [
+          220,
+          2560
+        ]
+      ]
+    },
+    {
+      "from": "b-live",
+      "to": "b-publicar",
+      "label": "vigente y exacto",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          2600
+        ],
+        [
+          526,
+          2600
+        ]
+      ],
+      "labelAt": [
+        443,
+        2590
+      ]
+    },
+    {
+      "from": "b-publicar",
+      "to": "b-ci",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          2600
+        ],
+        [
+          972,
+          2600
+        ]
+      ]
+    },
+    {
+      "from": "b-ci",
+      "to": "b-fix",
+      "label": "si hay encargo",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          2640
+        ],
+        [
+          1112,
+          2720
+        ]
+      ],
+      "labelAt": [
+        1067,
+        2683
+      ]
+    },
+    {
+      "from": "b-fix",
+      "to": "b-merge",
+      "label": "CI/revisión aceptados",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          2753
+        ],
+        [
+          806,
+          2753
+        ]
+      ],
+      "labelAt": [
+        889,
+        2743
+      ]
+    },
+    {
+      "from": "b-merge",
+      "to": "b-deploy",
+      "label": "si se solicita deploy",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          2760
+        ],
+        [
+          360,
+          2760
+        ]
+      ],
+      "labelAt": [
+        443,
+        2750
+      ]
+    },
+    {
+      "from": "b-deploy",
+      "to": "b-verificar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          2800
+        ],
+        [
+          220,
+          2880
+        ]
+      ]
+    },
+    {
+      "from": "b-verificar",
+      "to": "b-status",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          2920
+        ],
+        [
+          526,
+          2920
+        ]
+      ]
+    },
+    {
+      "from": "b-status",
+      "to": "b-cierre",
+      "label": "decisión independiente",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          2920
+        ],
+        [
+          972,
+          2920
+        ]
+      ],
+      "labelAt": [
+        889,
+        2910
+      ]
+    },
+    {
+      "from": "c-inicio",
+      "to": "c-owner",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          3200
+        ],
+        [
+          526,
+          3200
+        ]
+      ]
+    },
+    {
+      "from": "c-owner",
+      "to": "c-buscar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          3200
+        ],
+        [
+          972,
+          3200
+        ]
+      ]
+    },
+    {
+      "from": "c-buscar",
+      "to": "c-aceptar",
+      "label": "no hay tarea exacta",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          3240
+        ],
+        [
+          1112,
+          3320
+        ]
+      ],
+      "labelAt": [
+        1055,
+        3283
+      ]
+    },
+    {
+      "from": "c-aceptar",
+      "to": "c-aprobar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          3360
+        ],
+        [
+          806,
+          3360
+        ]
+      ]
+    },
+    {
+      "from": "c-aprobar",
+      "to": "c-intent",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          3360
+        ],
+        [
+          360,
+          3360
+        ]
+      ]
+    },
+    {
+      "from": "c-intent",
+      "to": "c-crear",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          3400
+        ],
+        [
+          220,
+          3480
+        ]
+      ]
+    },
+    {
+      "from": "c-crear",
+      "to": "c-readback",
+      "label": "confirmación real",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          3527
+        ],
+        [
+          526,
+          3527
+        ]
+      ],
+      "labelAt": [
+        443,
+        3517
+      ]
+    },
+    {
+      "from": "c-readback",
+      "to": "c-stop",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          3520
+        ],
+        [
+          972,
+          3520
+        ]
+      ]
+    },
+    {
+      "from": "c-stop",
+      "to": "c-bundle",
+      "label": "resuelto; permiso propio",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          3560
+        ],
+        [
+          1112,
+          3640
+        ]
+      ],
+      "labelAt": [
+        1043,
+        3603
+      ]
+    },
+    {
+      "from": "c-bundle",
+      "to": "c-campos",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          3680
+        ],
+        [
+          806,
+          3680
+        ]
+      ]
+    },
+    {
+      "from": "c-campos",
+      "to": "c-ids",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          3680
+        ],
+        [
+          360,
+          3680
+        ]
+      ]
+    },
+    {
+      "from": "d-inicio",
+      "to": "d-contexto",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          3960
+        ],
+        [
+          526,
+          3960
+        ]
+      ]
+    },
+    {
+      "from": "d-contexto",
+      "to": "d-skill",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          3960
+        ],
+        [
+          972,
+          3960
+        ]
+      ]
+    },
+    {
+      "from": "d-skill",
+      "to": "d-herramientas",
+      "label": "si hace falta leer",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          4000
+        ],
+        [
+          1112,
+          4080
+        ]
+      ],
+      "labelAt": [
+        1058,
+        4043
+      ]
+    },
+    {
+      "from": "d-herramientas",
+      "to": "d-hechos",
+      "label": "solo evidencia autorizada",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          4120
+        ],
+        [
+          806,
+          4120
+        ]
+      ],
+      "labelAt": [
+        889,
+        4110
+      ]
+    },
+    {
+      "from": "d-hechos",
+      "to": "d-diagnostico",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          4120
+        ],
+        [
+          360,
+          4120
+        ]
+      ]
+    },
+    {
+      "from": "d-diagnostico",
+      "to": "d-feedback",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          4160
+        ],
+        [
+          220,
+          4240
+        ]
+      ]
+    },
+    {
+      "from": "d-feedback",
+      "to": "d-aprobar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          4280
+        ],
+        [
+          526,
+          4280
+        ]
+      ]
+    },
+    {
+      "from": "d-aprobar",
+      "to": "d-live",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          4280
+        ],
+        [
+          972,
+          4280
+        ]
+      ]
+    },
+    {
+      "from": "d-live",
+      "to": "d-publicar",
+      "label": "si vigente",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          4320
+        ],
+        [
+          1112,
+          4400
+        ]
+      ],
+      "labelAt": [
+        1077,
+        4363
+      ]
+    },
+    {
+      "from": "d-publicar",
+      "to": "d-seguir",
+      "label": "solo si scopes concedidos",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          4440
+        ],
+        [
+          806,
+          4440
+        ]
+      ],
+      "labelAt": [
+        889,
+        4430
+      ]
+    },
+    {
+      "from": "d-seguir",
+      "to": "d-dev",
+      "label": "si necesita desarrollo",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          4440
+        ],
+        [
+          360,
+          4440
+        ]
+      ],
+      "labelAt": [
+        443,
+        4430
+      ]
+    },
+    {
+      "from": "e-inicio",
+      "to": "e-permiso",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          4720
+        ],
+        [
+          526,
+          4720
+        ]
+      ]
+    },
+    {
+      "from": "e-permiso",
+      "to": "e-base",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          4720
+        ],
+        [
+          972,
+          4720
+        ]
+      ]
+    },
+    {
+      "from": "e-base",
+      "to": "e-worker",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          4760
+        ],
+        [
+          1112,
+          4840
+        ]
+      ]
+    },
+    {
+      "from": "e-worker",
+      "to": "e-comentar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          4880
+        ],
+        [
+          806,
+          4880
+        ]
+      ]
+    },
+    {
+      "from": "e-comentar",
+      "to": "e-fix",
+      "label": "solo nuevo encargo",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          4880
+        ],
+        [
+          360,
+          4880
+        ]
+      ],
+      "labelAt": [
+        443,
+        4870
+      ]
+    },
+    {
+      "from": "e-fix",
+      "to": "e-checks",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          4920
+        ],
+        [
+          220,
+          5000
+        ]
+      ]
+    },
+    {
+      "from": "e-checks",
+      "to": "e-update",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          5040
+        ],
+        [
+          526,
+          5040
+        ]
+      ]
+    },
+    {
+      "from": "e-update",
+      "to": "e-ci",
+      "label": "publicación concedida",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          666,
+          5080
+        ],
+        [
+          666,
+          5140
+        ]
+      ],
+      "labelAt": [
+        605,
+        5113
+      ]
+    },
+    {
+      "from": "f-inicio",
+      "to": "f-fuentes",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          5320
+        ],
+        [
+          526,
+          5320
+        ]
+      ]
+    },
+    {
+      "from": "f-fuentes",
+      "to": "f-frescura",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          5320
+        ],
+        [
+          972,
+          5320
+        ]
+      ]
+    },
+    {
+      "from": "f-frescura",
+      "to": "f-informe",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          5360
+        ],
+        [
+          1112,
+          5440
+        ]
+      ]
+    },
+    {
+      "from": "f-informe",
+      "to": "f-runbook",
+      "label": "alternativa según criterio",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          5480
+        ],
+        [
+          806,
+          5480
+        ]
+      ],
+      "labelAt": [
+        889,
+        5470
+      ]
+    },
+    {
+      "from": "f-runbook",
+      "to": "f-publicar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          5480
+        ],
+        [
+          360,
+          5480
+        ]
+      ]
+    },
+    {
+      "from": "f-publicar",
+      "to": "f-decidir",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          5520
+        ],
+        [
+          220,
+          5600
+        ]
+      ]
+    },
+    {
+      "from": "f-decidir",
+      "to": "f-dev",
+      "label": "si hay decisión DEV",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          5680
+        ],
+        [
+          220,
+          5740
+        ]
+      ],
+      "labelAt": [
+        163,
+        5713
+      ]
+    },
+    {
+      "from": "g-inicio",
+      "to": "g-regla",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          5920
+        ],
+        [
+          526,
+          5920
+        ]
+      ]
+    },
+    {
+      "from": "g-regla",
+      "to": "g-atencion",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          5913
+        ],
+        [
+          972,
+          5913
+        ]
+      ]
+    },
+    {
+      "from": "g-atencion",
+      "to": "coord",
+      "label": "job solo por regla/encargo",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          5927
+        ],
+        [
+          948,
+          5927
+        ],
+        [
+          948,
+          6136
+        ],
+        [
+          220,
+          6136
+        ],
+        [
+          220,
+          6160
+        ]
+      ],
+      "labelAt": [
+        948,
+        6022
+      ]
+    },
+    {
+      "from": "coord",
+      "to": "q-policy",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          6217
+        ],
+        [
+          526,
+          6217
+        ]
+      ]
+    },
+    {
+      "from": "q-policy",
+      "to": "q-cola",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          6210
+        ],
+        [
+          972,
+          6210
+        ]
+      ]
+    },
+    {
+      "from": "q-cola",
+      "to": "q-claim",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          6260
+        ],
+        [
+          1112,
+          6340
+        ]
+      ]
+    },
+    {
+      "from": "q-claim",
+      "to": "q-workers",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          6380
+        ],
+        [
+          806,
+          6380
+        ]
+      ]
+    },
+    {
+      "from": "q-workers",
+      "to": "q-aislar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          6380
+        ],
+        [
+          360,
+          6380
+        ]
+      ]
+    },
+    {
+      "from": "q-aislar",
+      "to": "q-ejecutar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          6420
+        ],
+        [
+          220,
+          6500
+        ]
+      ]
+    },
+    {
+      "from": "q-ejecutar",
+      "to": "q-checkpoint",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          6540
+        ],
+        [
+          526,
+          6540
+        ]
+      ]
+    },
+    {
+      "from": "q-checkpoint",
+      "to": "q-wait",
+      "label": "si espera",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          6540
+        ],
+        [
+          972,
+          6540
+        ]
+      ],
+      "labelAt": [
+        889,
+        6530
+      ]
+    },
+    {
+      "from": "q-wait",
+      "to": "q-otros",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          6580
+        ],
+        [
+          1112,
+          6660
+        ]
+      ]
+    },
+    {
+      "from": "q-otros",
+      "to": "q-resume",
+      "label": "cuando llega condición",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          6700
+        ],
+        [
+          806,
+          6700
+        ]
+      ],
+      "labelAt": [
+        889,
+        6690
+      ]
+    },
+    {
+      "from": "q-resume",
+      "to": "q-crash",
+      "label": "si cae o vence lease",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          6700
+        ],
+        [
+          360,
+          6700
+        ]
+      ],
+      "labelAt": [
+        443,
+        6690
+      ]
+    },
+    {
+      "from": "q-crash",
+      "to": "q-cancel",
+      "label": "o cancelar encargo",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          6740
+        ],
+        [
+          220,
+          6820
+        ]
+      ],
+      "labelAt": [
+        166,
+        6783
+      ]
+    },
+    {
+      "from": "q-cancel",
+      "to": "q-live",
+      "label": "solo otros jobs no cancelados",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          6860
+        ],
+        [
+          526,
+          6860
+        ]
+      ],
+      "labelAt": [
+        443,
+        6850
+      ]
+    },
+    {
+      "from": "q-live",
+      "to": "q-intent",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          6860
+        ],
+        [
+          972,
+          6860
+        ]
+      ]
+    },
+    {
+      "from": "q-intent",
+      "to": "q-effect",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          6900
+        ],
+        [
+          1112,
+          6980
+        ]
+      ]
+    },
+    {
+      "from": "q-effect",
+      "to": "q-confirm",
+      "label": "respuesta confirmada",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          7020
+        ],
+        [
+          806,
+          7020
+        ]
+      ],
+      "labelAt": [
+        889,
+        7010
+      ]
+    },
+    {
+      "from": "q-confirm",
+      "to": "q-unknown",
+      "label": "alternativa: sin respuesta",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          7020
+        ],
+        [
+          360,
+          7020
+        ]
+      ],
+      "labelAt": [
+        443,
+        7010
+      ]
+    },
+    {
+      "from": "q-unknown",
+      "to": "q-human",
+      "label": "si no reconciliable",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          7060
+        ],
+        [
+          220,
+          7140
+        ]
+      ],
+      "labelAt": [
+        163,
+        7103
+      ]
+    },
+    {
+      "from": "q-human",
+      "to": "q-autoridad",
+      "label": "registrar límites",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          7180
+        ],
+        [
+          526,
+          7180
+        ]
+      ],
+      "labelAt": [
+        443,
+        7170
+      ]
+    },
+    {
+      "from": "q-autoridad",
+      "to": "q-estados",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          7180
+        ],
+        [
+          972,
+          7180
+        ]
+      ]
+    },
+    {
+      "from": "m-historia",
+      "to": "m-ledger",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          7460
+        ],
+        [
+          526,
+          7460
+        ]
+      ]
+    },
+    {
+      "from": "m-ledger",
+      "to": "m-exacto",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          7460
+        ],
+        [
+          972,
+          7460
+        ]
+      ]
+    },
+    {
+      "from": "m-exacto",
+      "to": "m-candidatos",
+      "label": "solo si hace falta",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          7500
+        ],
+        [
+          1112,
+          7580
+        ]
+      ],
+      "labelAt": [
+        1058,
+        7543
+      ]
+    },
+    {
+      "from": "m-candidatos",
+      "to": "m-rehidratar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          7620
+        ],
+        [
+          806,
+          7620
+        ]
+      ]
+    },
+    {
+      "from": "m-rehidratar",
+      "to": "m-explicar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          7620
+        ],
+        [
+          360,
+          7620
+        ]
+      ]
+    },
+    {
+      "from": "m-explicar",
+      "to": "m-vector",
+      "label": "opcional futuro",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          7660
+        ],
+        [
+          220,
+          7740
+        ]
+      ],
+      "labelAt": [
+        173,
+        7703
+      ]
+    },
+    {
+      "from": "m-vector",
+      "to": "m-embedding",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          7780
+        ],
+        [
+          526,
+          7780
+        ]
+      ]
+    },
+    {
+      "from": "m-embedding",
+      "to": "m-retener",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          7780
+        ],
+        [
+          972,
+          7780
+        ]
+      ]
+    },
+    {
+      "from": "m-retener",
+      "to": "m-leccion",
+      "label": "si hay lección confirmada",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          7820
+        ],
+        [
+          1112,
+          7900
+        ]
+      ],
+      "labelAt": [
+        1041,
+        7863
+      ]
+    },
+    {
+      "from": "m-leccion",
+      "to": "m-revisar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          7940
+        ],
+        [
+          806,
+          7940
+        ]
+      ]
+    },
+    {
+      "from": "m-revisar",
+      "to": "m-registro",
+      "label": "activar requiere decisión",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          7940
+        ],
+        [
+          360,
+          7940
+        ]
+      ],
+      "labelAt": [
+        443,
+        7930
+      ]
+    },
+    {
+      "from": "r-blanco",
+      "to": "r-mapa",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          8220
+        ],
+        [
+          526,
+          8220
+        ]
+      ]
+    },
+    {
+      "from": "r-mapa",
+      "to": "r-usuario",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          8220
+        ],
+        [
+          972,
+          8220
+        ]
+      ]
+    },
+    {
+      "from": "r-usuario",
+      "to": "r-piloto",
+      "label": "solo tras comentarios",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          8260
+        ],
+        [
+          1112,
+          8340
+        ]
+      ],
+      "labelAt": [
+        1051,
+        8303
+      ]
+    },
+    {
+      "from": "r-piloto",
+      "to": "r-policy",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          8380
+        ],
+        [
+          806,
+          8380
+        ]
+      ]
+    },
+    {
+      "from": "r-policy",
+      "to": "r-implementar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          8380
+        ],
+        [
+          360,
+          8380
+        ]
+      ]
+    },
+    {
+      "from": "r-implementar",
+      "to": "t-protocolo",
+      "label": "cuando se autorice",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          8420
+        ],
+        [
+          220,
+          8620
+        ]
+      ],
+      "labelAt": [
+        166,
+        8523
+      ]
+    },
+    {
+      "from": "t-protocolo",
+      "to": "t-a",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          8660
+        ],
+        [
+          526,
+          8660
+        ]
+      ]
+    },
+    {
+      "from": "t-a",
+      "to": "t-a-fallos",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          8660
+        ],
+        [
+          972,
+          8660
+        ]
+      ]
+    },
+    {
+      "from": "t-a-fallos",
+      "to": "t-b",
+      "label": "matriz, no dependencia",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          8700
+        ],
+        [
+          1112,
+          8780
+        ]
+      ],
+      "labelAt": [
+        1048,
+        8743
+      ]
+    },
+    {
+      "from": "t-b",
+      "to": "t-b-fallos",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          8820
+        ],
+        [
+          806,
+          8820
+        ]
+      ]
+    },
+    {
+      "from": "t-b-fallos",
+      "to": "t-c",
+      "label": "matriz, no dependencia",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          8820
+        ],
+        [
+          360,
+          8820
+        ]
+      ],
+      "labelAt": [
+        443,
+        8810
+      ]
+    },
+    {
+      "from": "t-c",
+      "to": "t-c-fallos",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          8860
+        ],
+        [
+          220,
+          8940
+        ]
+      ]
+    },
+    {
+      "from": "t-c-fallos",
+      "to": "t-d",
+      "label": "matriz, no dependencia",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          8980
+        ],
+        [
+          526,
+          8980
+        ]
+      ],
+      "labelAt": [
+        443,
+        8970
+      ]
+    },
+    {
+      "from": "t-d",
+      "to": "t-d-fallos",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          8980
+        ],
+        [
+          972,
+          8980
+        ]
+      ]
+    },
+    {
+      "from": "t-d-fallos",
+      "to": "t-e",
+      "label": "matriz, no dependencia",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          9020
+        ],
+        [
+          1112,
+          9100
+        ]
+      ],
+      "labelAt": [
+        1048,
+        9063
+      ]
+    },
+    {
+      "from": "t-e",
+      "to": "t-e-fallos",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          9140
+        ],
+        [
+          806,
+          9140
+        ]
+      ]
+    },
+    {
+      "from": "t-e-fallos",
+      "to": "t-f",
+      "label": "matriz, no dependencia",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          9140
+        ],
+        [
+          360,
+          9140
+        ]
+      ],
+      "labelAt": [
+        443,
+        9130
+      ]
+    },
+    {
+      "from": "t-f",
+      "to": "t-f-fallos",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          9180
+        ],
+        [
+          220,
+          9260
+        ]
+      ]
+    },
+    {
+      "from": "t-f-fallos",
+      "to": "t-g",
+      "label": "matriz, no dependencia",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          9300
+        ],
+        [
+          526,
+          9300
+        ]
+      ],
+      "labelAt": [
+        443,
+        9290
+      ]
+    },
+    {
+      "from": "t-g",
+      "to": "t-g-fallos",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          9300
+        ],
+        [
+          972,
+          9300
+        ]
+      ]
+    },
+    {
+      "from": "t-g-fallos",
+      "to": "t-recuperar",
+      "label": "obligatorio para cada A–G",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1112,
+          9340
+        ],
+        [
+          1112,
+          9420
+        ]
+      ],
+      "labelAt": [
+        1041,
+        9383
+      ]
+    },
+    {
+      "from": "t-recuperar",
+      "to": "t-lease",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          972,
+          9460
+        ],
+        [
+          806,
+          9460
+        ]
+      ]
+    },
+    {
+      "from": "t-lease",
+      "to": "t-unknown",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          9460
+        ],
+        [
+          360,
+          9460
+        ]
+      ]
+    },
+    {
+      "from": "t-unknown",
+      "to": "t-evidencia",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          9500
+        ],
+        [
+          220,
+          9580
+        ]
+      ]
+    },
+    {
+      "from": "t-evidencia",
+      "to": "t-historico",
+      "label": "no confundir evidencia",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          9620
+        ],
+        [
+          526,
+          9620
+        ]
+      ],
+      "labelAt": [
+        443,
+        9610
+      ]
+    },
+    {
+      "from": "t-historico",
+      "to": "t-abiertas",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          9620
+        ],
+        [
+          972,
+          9620
+        ]
+      ]
+    },
+    {
+      "from": "hoy-limite",
+      "to": "a-inicio",
+      "label": "futuro, NO conector actual",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          220,
+          360
+        ],
+        [
+          220,
+          520
+        ]
+      ],
+      "labelAt": [
+        147,
+        443
+      ]
+    },
+    {
+      "from": "a-presentar",
+      "to": "coord",
+      "label": "candidato autorizado",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          80,
+          1520
+        ],
+        [
+          56,
+          1520
+        ],
+        [
+          56,
+          6176
+        ],
+        [
+          80,
+          6176
+        ]
+      ],
+      "labelAt": [
+        115,
+        3851
+      ]
+    },
+    {
+      "from": "coord",
+      "to": "b-inicio",
+      "label": "despacho B explícito",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          80,
+          6187.333333333333
+        ],
+        [
+          56,
+          6187.333333333333
+        ],
+        [
+          56,
+          1967
+        ],
+        [
+          80,
+          1967
+        ]
+      ],
+      "labelAt": [
+        115,
+        5135
+      ]
+    },
+    {
+      "from": "coord",
+      "to": "c-inicio",
+      "label": "despacho C explícito",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          80,
+          6198.666666666667
+        ],
+        [
+          56,
+          6198.666666666667
+        ],
+        [
+          56,
+          3207
+        ],
+        [
+          80,
+          3207
+        ]
+      ],
+      "labelAt": [
+        115,
+        3584
+      ]
+    },
+    {
+      "from": "coord",
+      "to": "d-inicio",
+      "label": "despacho D explícito",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          80,
+          6210
+        ],
+        [
+          56,
+          6210
+        ],
+        [
+          56,
+          3960
+        ],
+        [
+          80,
+          3960
+        ]
+      ],
+      "labelAt": [
+        115,
+        4526
+      ]
+    },
+    {
+      "from": "coord",
+      "to": "e-inicio",
+      "label": "despacho E explícito",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          80,
+          6221.333333333333
+        ],
+        [
+          56,
+          6221.333333333333
+        ],
+        [
+          56,
+          4720
+        ],
+        [
+          80,
+          4720
+        ]
+      ],
+      "labelAt": [
+        115,
+        5849
+      ]
+    },
+    {
+      "from": "coord",
+      "to": "f-inicio",
+      "label": "despacho F explícito",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          80,
+          6232.666666666667
+        ],
+        [
+          56,
+          6232.666666666667
+        ],
+        [
+          56,
+          5320
+        ],
+        [
+          80,
+          5320
+        ]
+      ],
+      "labelAt": [
+        115,
+        6008
+      ]
+    },
+    {
+      "from": "coord",
+      "to": "m-historia",
+      "label": "auditoría compartida autorizada",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          80,
+          6244
+        ],
+        [
+          56,
+          6244
+        ],
+        [
+          56,
+          7460
+        ],
+        [
+          80,
+          7460
+        ]
+      ],
+      "labelAt": [
+        141,
+        7311
+      ]
+    },
+    {
+      "from": "r-mapa",
+      "to": "m-registro",
+      "label": "no activa registro",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          666,
+          8180
+        ],
+        [
+          666,
+          8060
+        ],
+        [
+          220,
+          8060
+        ],
+        [
+          220,
+          7980
+        ]
+      ],
+      "labelAt": [
+        443,
+        8050
+      ]
+    },
+    {
+      "from": "c-readback",
+      "to": "b-identidad",
+      "label": "reusar UUID + KNF reales",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          526,
+          3513
+        ],
+        [
+          502,
+          3513
+        ],
+        [
+          502,
+          1967
+        ],
+        [
+          526,
+          1967
+        ]
+      ],
+      "labelAt": [
+        433,
+        3130
+      ]
+    },
+    {
+      "from": "d-dev",
+      "to": "b-inicio",
+      "label": "enlace, no permiso heredado",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          80,
+          4440
+        ],
+        [
+          56,
+          4440
+        ],
+        [
+          56,
+          1953
+        ],
+        [
+          80,
+          1953
+        ]
+      ],
+      "labelAt": [
+        132,
+        3821
+      ]
+    },
+    {
+      "from": "f-dev",
+      "to": "c-inicio",
+      "label": "nuevo encargo vinculado",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          80,
+          5780
+        ],
+        [
+          56,
+          5780
+        ],
+        [
+          56,
+          3193
+        ],
+        [
+          80,
+          3193
+        ]
+      ],
+      "labelAt": [
+        56,
+        4477
+      ]
+    },
+    {
+      "from": "e-ci",
+      "to": "b-merge",
+      "label": "merge solo con su aprobación",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          806,
+          5180
+        ],
+        [
+          830,
+          5180
+        ],
+        [
+          830,
+          2767
+        ],
+        [
+          806,
+          2767
+        ]
+      ],
+      "labelAt": [
+        752,
+        4580
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "fuera runtime",
+      "x": 407,
+      "y": 140,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        443,
+        150
+      ]
+    },
+    {
+      "text": "excepción acotada",
+      "x": 843,
+      "y": 140,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        889,
+        150
+      ]
+    },
+    {
+      "text": "otra fuente: gate propio",
+      "x": 826,
+      "y": 700,
+      "width": 125,
+      "height": 14,
+      "labelAt": [
+        889,
+        710
+      ]
+    },
+    {
+      "text": "opcional: gate propio",
+      "x": 388,
+      "y": 700,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        443,
+        710
+      ]
+    },
+    {
+      "text": "alternativa, no requisito",
+      "x": 378,
+      "y": 860,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        443,
+        870
+      ]
+    },
+    {
+      "text": "solo respuesta admitida",
+      "x": 383,
+      "y": 1020,
+      "width": 120,
+      "height": 14,
+      "labelAt": [
+        443,
+        1030
+      ]
+    },
+    {
+      "text": "nuevo permitido",
+      "x": 1024,
+      "y": 1273,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        1065,
+        1283
+      ]
+    },
+    {
+      "text": "si cambia fuente",
+      "x": 400,
+      "y": 1500,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        443,
+        1510
+      ]
+    },
+    {
+      "text": "guardas de toda captura",
+      "x": 986,
+      "y": 1593,
+      "width": 120,
+      "height": 14,
+      "labelAt": [
+        1046,
+        1603
+      ]
+    },
+    {
+      "text": "opcional; misma frontera",
+      "x": 380,
+      "y": 1660,
+      "width": 125,
+      "height": 14,
+      "labelAt": [
+        443,
+        1670
+      ]
+    },
+    {
+      "text": "solo si resuelto",
+      "x": 400,
+      "y": 2100,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        443,
+        2110
+      ]
+    },
+    {
+      "text": "solo autorizado",
+      "x": 848,
+      "y": 2260,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        889,
+        2270
+      ]
+    },
+    {
+      "text": "vigente y exacto",
+      "x": 400,
+      "y": 2580,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        443,
+        2590
+      ]
+    },
+    {
+      "text": "si hay encargo",
+      "x": 1029,
+      "y": 2673,
+      "width": 77,
+      "height": 14,
+      "labelAt": [
+        1067,
+        2683
+      ]
+    },
+    {
+      "text": "CI/revisión aceptados",
+      "x": 834,
+      "y": 2733,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        889,
+        2743
+      ]
+    },
+    {
+      "text": "si se solicita deploy",
+      "x": 388,
+      "y": 2740,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        443,
+        2750
+      ]
+    },
+    {
+      "text": "decisión independiente",
+      "x": 831,
+      "y": 2900,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        889,
+        2910
+      ]
+    },
+    {
+      "text": "no hay tarea exacta",
+      "x": 1005,
+      "y": 3273,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        1055,
+        3283
+      ]
+    },
+    {
+      "text": "confirmación real",
+      "x": 397,
+      "y": 3507,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        443,
+        3517
+      ]
+    },
+    {
+      "text": "resuelto; permiso propio",
+      "x": 981,
+      "y": 3593,
+      "width": 125,
+      "height": 14,
+      "labelAt": [
+        1043,
+        3603
+      ]
+    },
+    {
+      "text": "si hace falta leer",
+      "x": 1010,
+      "y": 4033,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        1058,
+        4043
+      ]
+    },
+    {
+      "text": "solo evidencia autorizada",
+      "x": 824,
+      "y": 4100,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        889,
+        4110
+      ]
+    },
+    {
+      "text": "si vigente",
+      "x": 1048,
+      "y": 4353,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        1077,
+        4363
+      ]
+    },
+    {
+      "text": "solo si scopes concedidos",
+      "x": 824,
+      "y": 4420,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        889,
+        4430
+      ]
+    },
+    {
+      "text": "si necesita desarrollo",
+      "x": 385,
+      "y": 4420,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        443,
+        4430
+      ]
+    },
+    {
+      "text": "solo nuevo encargo",
+      "x": 395,
+      "y": 4860,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        443,
+        4870
+      ]
+    },
+    {
+      "text": "publicación concedida",
+      "x": 549,
+      "y": 5103,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        605,
+        5113
+      ]
+    },
+    {
+      "text": "alternativa según criterio",
+      "x": 822,
+      "y": 5460,
+      "width": 135,
+      "height": 14,
+      "labelAt": [
+        889,
+        5470
+      ]
+    },
+    {
+      "text": "si hay decisión DEV",
+      "x": 113,
+      "y": 5703,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        163,
+        5713
+      ]
+    },
+    {
+      "text": "job solo por regla/encargo",
+      "x": 881,
+      "y": 6012,
+      "width": 135,
+      "height": 14,
+      "labelAt": [
+        948,
+        6022
+      ]
+    },
+    {
+      "text": "si espera",
+      "x": 862,
+      "y": 6520,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        889,
+        6530
+      ]
+    },
+    {
+      "text": "cuando llega condición",
+      "x": 831,
+      "y": 6680,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        889,
+        6690
+      ]
+    },
+    {
+      "text": "si cae o vence lease",
+      "x": 390,
+      "y": 6680,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        443,
+        6690
+      ]
+    },
+    {
+      "text": "o cancelar encargo",
+      "x": 118,
+      "y": 6773,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        166,
+        6783
+      ]
+    },
+    {
+      "text": "solo otros jobs no cancelados",
+      "x": 368,
+      "y": 6840,
+      "width": 149,
+      "height": 14,
+      "labelAt": [
+        443,
+        6850
+      ]
+    },
+    {
+      "text": "respuesta confirmada",
+      "x": 836,
+      "y": 7000,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        889,
+        7010
+      ]
+    },
+    {
+      "text": "alternativa: sin respuesta",
+      "x": 376,
+      "y": 7000,
+      "width": 135,
+      "height": 14,
+      "labelAt": [
+        443,
+        7010
+      ]
+    },
+    {
+      "text": "si no reconciliable",
+      "x": 113,
+      "y": 7093,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        163,
+        7103
+      ]
+    },
+    {
+      "text": "registrar límites",
+      "x": 397,
+      "y": 7160,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        443,
+        7170
+      ]
+    },
+    {
+      "text": "solo si hace falta",
+      "x": 1010,
+      "y": 7533,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        1058,
+        7543
+      ]
+    },
+    {
+      "text": "opcional futuro",
+      "x": 132,
+      "y": 7693,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        173,
+        7703
+      ]
+    },
+    {
+      "text": "si hay lección confirmada",
+      "x": 976,
+      "y": 7853,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        1041,
+        7863
+      ]
+    },
+    {
+      "text": "activar requiere decisión",
+      "x": 378,
+      "y": 7920,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        443,
+        7930
+      ]
+    },
+    {
+      "text": "solo tras comentarios",
+      "x": 995,
+      "y": 8293,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        1051,
+        8303
+      ]
+    },
+    {
+      "text": "cuando se autorice",
+      "x": 118,
+      "y": 8513,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        166,
+        8523
+      ]
+    },
+    {
+      "text": "matriz, no dependencia",
+      "x": 990,
+      "y": 8733,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        1048,
+        8743
+      ]
+    },
+    {
+      "text": "matriz, no dependencia",
+      "x": 385,
+      "y": 8800,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        443,
+        8810
+      ]
+    },
+    {
+      "text": "matriz, no dependencia",
+      "x": 385,
+      "y": 8960,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        443,
+        8970
+      ]
+    },
+    {
+      "text": "matriz, no dependencia",
+      "x": 990,
+      "y": 9053,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        1048,
+        9063
+      ]
+    },
+    {
+      "text": "matriz, no dependencia",
+      "x": 385,
+      "y": 9120,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        443,
+        9130
+      ]
+    },
+    {
+      "text": "matriz, no dependencia",
+      "x": 385,
+      "y": 9280,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        443,
+        9290
+      ]
+    },
+    {
+      "text": "obligatorio para cada A–G",
+      "x": 976,
+      "y": 9373,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        1041,
+        9383
+      ]
+    },
+    {
+      "text": "no confundir evidencia",
+      "x": 385,
+      "y": 9600,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        443,
+        9610
+      ]
+    },
+    {
+      "text": "futuro, NO conector actual",
+      "x": 79,
+      "y": 433,
+      "width": 135,
+      "height": 14,
+      "labelAt": [
+        147,
+        443
+      ]
+    },
+    {
+      "text": "candidato autorizado",
+      "x": 62,
+      "y": 3841,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        115,
+        3851
+      ]
+    },
+    {
+      "text": "despacho B explícito",
+      "x": 62,
+      "y": 5125,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        115,
+        5135
+      ]
+    },
+    {
+      "text": "despacho C explícito",
+      "x": 62,
+      "y": 3574,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        115,
+        3584
+      ]
+    },
+    {
+      "text": "despacho D explícito",
+      "x": 62,
+      "y": 4516,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        115,
+        4526
+      ]
+    },
+    {
+      "text": "despacho E explícito",
+      "x": 62,
+      "y": 5839,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        115,
+        5849
+      ]
+    },
+    {
+      "text": "despacho F explícito",
+      "x": 62,
+      "y": 5998,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        115,
+        6008
+      ]
+    },
+    {
+      "text": "auditoría compartida autorizada",
+      "x": 62,
+      "y": 7301,
+      "width": 159,
+      "height": 14,
+      "labelAt": [
+        141,
+        7311
+      ]
+    },
+    {
+      "text": "no activa registro",
+      "x": 395,
+      "y": 8040,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        443,
+        8050
+      ]
+    },
+    {
+      "text": "reusar UUID + KNF reales",
+      "x": 371,
+      "y": 3120,
+      "width": 125,
+      "height": 14,
+      "labelAt": [
+        433,
+        3130
+      ]
+    },
+    {
+      "text": "enlace, no permiso heredado",
+      "x": 62,
+      "y": 3811,
+      "width": 140,
+      "height": 14,
+      "labelAt": [
+        132,
+        3821
+      ]
+    },
+    {
+      "text": "nuevo encargo vinculado",
+      "x": -4,
+      "y": 4467,
+      "width": 120,
+      "height": 14,
+      "labelAt": [
+        56,
+        4477
+      ]
+    },
+    {
+      "text": "merge solo con su aprobación",
+      "x": 680,
+      "y": 4570,
+      "width": 144,
+      "height": 14,
+      "labelAt": [
+        752,
+        4580
+      ]
+    }
+  ],
+  "schemaVersion": 1,
+  "source": "renderer",
+  "error": "Architecture layout validation failed:\n- [composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 4209px corridor with connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" at [56, 1967] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2969px corridor with connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" at [56, 3207] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2216px corridor with connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" at [56, 3960] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 1456px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 856px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2487px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 1953] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2587px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3193] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2980.3px corridor with connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" at [56, 3207] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2227.3px corridor with connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" at [56, 3960] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 1467.3px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 867.3px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2473px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 1967] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2587px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3193] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 2238.7px corridor with connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" at [56, 3960] -> [56, 6198.7] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 1478.7px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6198.7] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 878.7px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6198.7] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 1233px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 3207] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 2573px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3207] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 1490px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6210] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 890px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6210] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 480px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 3960] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 1820px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3960] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" shares a 901.3px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6221.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" shares a 1060px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 4720] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" shares a 460px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 5320] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" shares a 1247px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3193] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- Label \"nuevo encargo vinculado\" overlaps component \"d-dev\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [-4, 4467, 120, 14]\n  component \"d-dev\" rect: [80, 4400, 280, 80]\n  Suggested fix: set labelAt [61, 4494] or set labelDx 5 with labelDy 18 (below); or set labelAt [61, 4392] or set labelDx 5 with labelDy -84 (above)\n- [composition/label-route-clearance] showcase architecture label \"si se solicita deploy\" on connections[42] id \"b-17\" \"b-merge\" -> \"b-deploy\" label \"si se solicita deploy\" is 3.6px from connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" label \"reusar UUID + KNF reales\" segment 1 [502, 3513] -> [502, 1967] (label rect [388, 2740, 111, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"decisión independiente\" on connections[45] id \"b-20\" \"b-status\" -> \"b-cierre\" label \"decisión independiente\" is 1.2px from connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" label \"merge solo con su aprobación\" segment 1 [830, 5180] -> [830, 2767] (label rect [831, 2900, 116, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"solo evidencia autorizada\" on connections[60] id \"d-04\" \"d-herramientas\" -> \"d-hechos\" label \"solo evidencia autorizada\" is 0px from connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" label \"merge solo con su aprobación\" segment 1 [830, 5180] -> [830, 2767] (label rect [824, 4100, 130, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"solo si scopes concedidos\" on connections[66] id \"d-10\" \"d-publicar\" -> \"d-seguir\" label \"solo si scopes concedidos\" is 0px from connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" label \"merge solo con su aprobación\" segment 1 [830, 5180] -> [830, 2767] (label rect [824, 4420, 130, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" label \"candidato autorizado\" segment 1 [56, 1520] -> [56, 6176] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" label \"despacho B explícito\" segment 1 [56, 6187.3] -> [56, 1967] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" label \"despacho C explícito\" segment 1 [56, 6198.7] -> [56, 3207] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" label \"despacho D explícito\" segment 1 [56, 6210] -> [56, 3960] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-canvas-containment] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" extends past the left edge by 4.2px (label rect [-4, 4467, 120, 14]; viewBox 1292x9750) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise enlarge meta.viewBox.",
+  "diagnostics": [
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 4209px corridor with connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" at [56, 1967] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 144,
+        "id": "shared-a",
+        "from": "a-presentar",
+        "to": "coord"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 145,
+          "id": "shared-b",
+          "from": "coord",
+          "to": "b-inicio"
+        },
+        "overlapLengthPx": 4209,
+        "minimumPx": 8,
+        "from": [
+          56,
+          1967
+        ],
+        "to": [
+          56,
+          6176
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2969px corridor with connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" at [56, 3207] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 144,
+        "id": "shared-a",
+        "from": "a-presentar",
+        "to": "coord"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 146,
+          "id": "shared-c",
+          "from": "coord",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 2969,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3207
+        ],
+        "to": [
+          56,
+          6176
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2216px corridor with connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" at [56, 3960] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 144,
+        "id": "shared-a",
+        "from": "a-presentar",
+        "to": "coord"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 147,
+          "id": "shared-d",
+          "from": "coord",
+          "to": "d-inicio"
+        },
+        "overlapLengthPx": 2216,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3960
+        ],
+        "to": [
+          56,
+          6176
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 1456px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 144,
+        "id": "shared-a",
+        "from": "a-presentar",
+        "to": "coord"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 148,
+          "id": "shared-e",
+          "from": "coord",
+          "to": "e-inicio"
+        },
+        "overlapLengthPx": 1456,
+        "minimumPx": 8,
+        "from": [
+          56,
+          4720
+        ],
+        "to": [
+          56,
+          6176
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 856px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 144,
+        "id": "shared-a",
+        "from": "a-presentar",
+        "to": "coord"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 149,
+          "id": "shared-f",
+          "from": "coord",
+          "to": "f-inicio"
+        },
+        "overlapLengthPx": 856,
+        "minimumPx": 8,
+        "from": [
+          56,
+          5320
+        ],
+        "to": [
+          56,
+          6176
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2487px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 1953] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 144,
+        "id": "shared-a",
+        "from": "a-presentar",
+        "to": "coord"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 153,
+          "id": "shared-d-b",
+          "from": "d-dev",
+          "to": "b-inicio"
+        },
+        "overlapLengthPx": 2487,
+        "minimumPx": 8,
+        "from": [
+          56,
+          1953
+        ],
+        "to": [
+          56,
+          4440
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2587px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3193] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 144,
+        "id": "shared-a",
+        "from": "a-presentar",
+        "to": "coord"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 2587,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3193
+        ],
+        "to": [
+          56,
+          5780
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2980.3px corridor with connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" at [56, 3207] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 145,
+        "id": "shared-b",
+        "from": "coord",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 146,
+          "id": "shared-c",
+          "from": "coord",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 2980.3,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3207
+        ],
+        "to": [
+          56,
+          6187.333333333333
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2227.3px corridor with connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" at [56, 3960] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 145,
+        "id": "shared-b",
+        "from": "coord",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 147,
+          "id": "shared-d",
+          "from": "coord",
+          "to": "d-inicio"
+        },
+        "overlapLengthPx": 2227.3,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3960
+        ],
+        "to": [
+          56,
+          6187.333333333333
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 1467.3px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 145,
+        "id": "shared-b",
+        "from": "coord",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 148,
+          "id": "shared-e",
+          "from": "coord",
+          "to": "e-inicio"
+        },
+        "overlapLengthPx": 1467.3,
+        "minimumPx": 8,
+        "from": [
+          56,
+          4720
+        ],
+        "to": [
+          56,
+          6187.333333333333
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 867.3px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 145,
+        "id": "shared-b",
+        "from": "coord",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 149,
+          "id": "shared-f",
+          "from": "coord",
+          "to": "f-inicio"
+        },
+        "overlapLengthPx": 867.3,
+        "minimumPx": 8,
+        "from": [
+          56,
+          5320
+        ],
+        "to": [
+          56,
+          6187.333333333333
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2473px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 1967] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 145,
+        "id": "shared-b",
+        "from": "coord",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 153,
+          "id": "shared-d-b",
+          "from": "d-dev",
+          "to": "b-inicio"
+        },
+        "overlapLengthPx": 2473,
+        "minimumPx": 8,
+        "from": [
+          56,
+          1967
+        ],
+        "to": [
+          56,
+          4440
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2587px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3193] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 145,
+        "id": "shared-b",
+        "from": "coord",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 2587,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3193
+        ],
+        "to": [
+          56,
+          5780
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 2238.7px corridor with connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" at [56, 3960] -> [56, 6198.7] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 146,
+        "id": "shared-c",
+        "from": "coord",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 147,
+          "id": "shared-d",
+          "from": "coord",
+          "to": "d-inicio"
+        },
+        "overlapLengthPx": 2238.7,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3960
+        ],
+        "to": [
+          56,
+          6198.666666666667
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 1478.7px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6198.7] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 146,
+        "id": "shared-c",
+        "from": "coord",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 148,
+          "id": "shared-e",
+          "from": "coord",
+          "to": "e-inicio"
+        },
+        "overlapLengthPx": 1478.7,
+        "minimumPx": 8,
+        "from": [
+          56,
+          4720
+        ],
+        "to": [
+          56,
+          6198.666666666667
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 878.7px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6198.7] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 146,
+        "id": "shared-c",
+        "from": "coord",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 149,
+          "id": "shared-f",
+          "from": "coord",
+          "to": "f-inicio"
+        },
+        "overlapLengthPx": 878.7,
+        "minimumPx": 8,
+        "from": [
+          56,
+          5320
+        ],
+        "to": [
+          56,
+          6198.666666666667
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 1233px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 3207] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 146,
+        "id": "shared-c",
+        "from": "coord",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 153,
+          "id": "shared-d-b",
+          "from": "d-dev",
+          "to": "b-inicio"
+        },
+        "overlapLengthPx": 1233,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3207
+        ],
+        "to": [
+          56,
+          4440
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 2573px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3207] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 146,
+        "id": "shared-c",
+        "from": "coord",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 2573,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3207
+        ],
+        "to": [
+          56,
+          5780
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 1490px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6210] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 147,
+        "id": "shared-d",
+        "from": "coord",
+        "to": "d-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 148,
+          "id": "shared-e",
+          "from": "coord",
+          "to": "e-inicio"
+        },
+        "overlapLengthPx": 1490,
+        "minimumPx": 8,
+        "from": [
+          56,
+          4720
+        ],
+        "to": [
+          56,
+          6210
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 890px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6210] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 147,
+        "id": "shared-d",
+        "from": "coord",
+        "to": "d-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 149,
+          "id": "shared-f",
+          "from": "coord",
+          "to": "f-inicio"
+        },
+        "overlapLengthPx": 890,
+        "minimumPx": 8,
+        "from": [
+          56,
+          5320
+        ],
+        "to": [
+          56,
+          6210
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 480px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 3960] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 147,
+        "id": "shared-d",
+        "from": "coord",
+        "to": "d-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 153,
+          "id": "shared-d-b",
+          "from": "d-dev",
+          "to": "b-inicio"
+        },
+        "overlapLengthPx": 480,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3960
+        ],
+        "to": [
+          56,
+          4440
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 1820px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3960] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 147,
+        "id": "shared-d",
+        "from": "coord",
+        "to": "d-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 1820,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3960
+        ],
+        "to": [
+          56,
+          5780
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" shares a 901.3px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6221.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 148,
+        "id": "shared-e",
+        "from": "coord",
+        "to": "e-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 149,
+          "id": "shared-f",
+          "from": "coord",
+          "to": "f-inicio"
+        },
+        "overlapLengthPx": 901.3,
+        "minimumPx": 8,
+        "from": [
+          56,
+          5320
+        ],
+        "to": [
+          56,
+          6221.333333333333
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" shares a 1060px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 4720] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 148,
+        "id": "shared-e",
+        "from": "coord",
+        "to": "e-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 1060,
+        "minimumPx": 8,
+        "from": [
+          56,
+          4720
+        ],
+        "to": [
+          56,
+          5780
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" shares a 460px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 5320] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 149,
+        "id": "shared-f",
+        "from": "coord",
+        "to": "f-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 460,
+        "minimumPx": 8,
+        "from": [
+          56,
+          5320
+        ],
+        "to": [
+          56,
+          5780
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" shares a 1247px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3193] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 153,
+        "id": "shared-d-b",
+        "from": "d-dev",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 1247,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3193
+        ],
+        "to": [
+          56,
+          4440
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"si se solicita deploy\" on connections[42] id \"b-17\" \"b-merge\" -> \"b-deploy\" label \"si se solicita deploy\" is 3.6px from connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" label \"reusar UUID + KNF reales\" segment 1 [502, 3513] -> [502, 1967] (label rect [388, 2740, 111, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 42,
+        "id": "b-17",
+        "from": "b-merge",
+        "to": "b-deploy"
+      },
+      "evidence": {
+        "label": "si se solicita deploy",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 152,
+          "id": "shared-c-b",
+          "from": "c-readback",
+          "to": "b-identidad"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 3.6,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "b-17",
+            "from": "b-merge",
+            "to": "b-deploy",
+            "label": "si se solicita deploy"
+          },
+          "relationIndex": 42,
+          "label": "si se solicita deploy",
+          "x": 387.6,
+          "y": 2740,
+          "width": 110.8,
+          "height": 14,
+          "lx": 443,
+          "ly": 2750
+        },
+        "from": [
+          502,
+          3513
+        ],
+        "to": [
+          502,
+          1967
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"decisión independiente\" on connections[45] id \"b-20\" \"b-status\" -> \"b-cierre\" label \"decisión independiente\" is 1.2px from connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" label \"merge solo con su aprobación\" segment 1 [830, 5180] -> [830, 2767] (label rect [831, 2900, 116, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 45,
+        "id": "b-20",
+        "from": "b-status",
+        "to": "b-cierre"
+      },
+      "evidence": {
+        "label": "decisión independiente",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 1.2,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "b-20",
+            "from": "b-status",
+            "to": "b-cierre",
+            "label": "decisión independiente"
+          },
+          "relationIndex": 45,
+          "label": "decisión independiente",
+          "x": 831.2,
+          "y": 2900,
+          "width": 115.6,
+          "height": 14,
+          "lx": 889,
+          "ly": 2910
+        },
+        "from": [
+          830,
+          5180
+        ],
+        "to": [
+          830,
+          2767
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"solo evidencia autorizada\" on connections[60] id \"d-04\" \"d-herramientas\" -> \"d-hechos\" label \"solo evidencia autorizada\" is 0px from connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" label \"merge solo con su aprobación\" segment 1 [830, 5180] -> [830, 2767] (label rect [824, 4100, 130, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 60,
+        "id": "d-04",
+        "from": "d-herramientas",
+        "to": "d-hechos"
+      },
+      "evidence": {
+        "label": "solo evidencia autorizada",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "d-04",
+            "from": "d-herramientas",
+            "to": "d-hechos",
+            "label": "solo evidencia autorizada"
+          },
+          "relationIndex": 60,
+          "label": "solo evidencia autorizada",
+          "x": 824,
+          "y": 4100,
+          "width": 130,
+          "height": 14,
+          "lx": 889,
+          "ly": 4110
+        },
+        "from": [
+          830,
+          5180
+        ],
+        "to": [
+          830,
+          2767
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"solo si scopes concedidos\" on connections[66] id \"d-10\" \"d-publicar\" -> \"d-seguir\" label \"solo si scopes concedidos\" is 0px from connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" label \"merge solo con su aprobación\" segment 1 [830, 5180] -> [830, 2767] (label rect [824, 4420, 130, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 66,
+        "id": "d-10",
+        "from": "d-publicar",
+        "to": "d-seguir"
+      },
+      "evidence": {
+        "label": "solo si scopes concedidos",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "d-10",
+            "from": "d-publicar",
+            "to": "d-seguir",
+            "label": "solo si scopes concedidos"
+          },
+          "relationIndex": 66,
+          "label": "solo si scopes concedidos",
+          "x": 824,
+          "y": 4420,
+          "width": 130,
+          "height": 14,
+          "lx": 889,
+          "ly": 4430
+        },
+        "from": [
+          830,
+          5180
+        ],
+        "to": [
+          830,
+          2767
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" label \"candidato autorizado\" segment 1 [56, 1520] -> [56, 6176] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 154,
+        "id": "shared-f-b",
+        "from": "f-dev",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "label": "nuevo encargo vinculado",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 144,
+          "id": "shared-a",
+          "from": "a-presentar",
+          "to": "coord"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "shared-f-b",
+            "from": "f-dev",
+            "to": "c-inicio",
+            "label": "nuevo encargo vinculado",
+            "variant": "dashed",
+            "fromSide": "left",
+            "toSide": "left"
+          },
+          "relationIndex": 154,
+          "label": "nuevo encargo vinculado",
+          "x": -4.199999999999996,
+          "y": 4466.5,
+          "width": 120.39999999999999,
+          "height": 14,
+          "lx": 56,
+          "ly": 4476.5
+        },
+        "from": [
+          56,
+          1520
+        ],
+        "to": [
+          56,
+          6176
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" label \"despacho B explícito\" segment 1 [56, 6187.3] -> [56, 1967] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 154,
+        "id": "shared-f-b",
+        "from": "f-dev",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "label": "nuevo encargo vinculado",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 145,
+          "id": "shared-b",
+          "from": "coord",
+          "to": "b-inicio"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "shared-f-b",
+            "from": "f-dev",
+            "to": "c-inicio",
+            "label": "nuevo encargo vinculado",
+            "variant": "dashed",
+            "fromSide": "left",
+            "toSide": "left"
+          },
+          "relationIndex": 154,
+          "label": "nuevo encargo vinculado",
+          "x": -4.199999999999996,
+          "y": 4466.5,
+          "width": 120.39999999999999,
+          "height": 14,
+          "lx": 56,
+          "ly": 4476.5
+        },
+        "from": [
+          56,
+          6187.333333333333
+        ],
+        "to": [
+          56,
+          1967
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" label \"despacho C explícito\" segment 1 [56, 6198.7] -> [56, 3207] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 154,
+        "id": "shared-f-b",
+        "from": "f-dev",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "label": "nuevo encargo vinculado",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 146,
+          "id": "shared-c",
+          "from": "coord",
+          "to": "c-inicio"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "shared-f-b",
+            "from": "f-dev",
+            "to": "c-inicio",
+            "label": "nuevo encargo vinculado",
+            "variant": "dashed",
+            "fromSide": "left",
+            "toSide": "left"
+          },
+          "relationIndex": 154,
+          "label": "nuevo encargo vinculado",
+          "x": -4.199999999999996,
+          "y": 4466.5,
+          "width": 120.39999999999999,
+          "height": 14,
+          "lx": 56,
+          "ly": 4476.5
+        },
+        "from": [
+          56,
+          6198.666666666667
+        ],
+        "to": [
+          56,
+          3207
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" label \"despacho D explícito\" segment 1 [56, 6210] -> [56, 3960] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 154,
+        "id": "shared-f-b",
+        "from": "f-dev",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "label": "nuevo encargo vinculado",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 147,
+          "id": "shared-d",
+          "from": "coord",
+          "to": "d-inicio"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "shared-f-b",
+            "from": "f-dev",
+            "to": "c-inicio",
+            "label": "nuevo encargo vinculado",
+            "variant": "dashed",
+            "fromSide": "left",
+            "toSide": "left"
+          },
+          "relationIndex": 154,
+          "label": "nuevo encargo vinculado",
+          "x": -4.199999999999996,
+          "y": 4466.5,
+          "width": 120.39999999999999,
+          "height": 14,
+          "lx": 56,
+          "ly": 4476.5
+        },
+        "from": [
+          56,
+          6210
+        ],
+        "to": [
+          56,
+          3960
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-canvas-containment",
+      "severity": "error",
+      "message": "[composition/label-canvas-containment] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" extends past the left edge by 4.2px (label rect [-4, 4467, 120, 14]; viewBox 1292x9750) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise enlarge meta.viewBox.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 154,
+        "id": "shared-f-b",
+        "from": "f-dev",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "label": "nuevo encargo vinculado",
+        "labelRect": {
+          "x": -4.199999999999996,
+          "y": 4466.5,
+          "width": 120.39999999999999,
+          "height": 14
+        },
+        "viewBox": [
+          1292,
+          9750
+        ],
+        "overflowPx": {
+          "left": 4.2
+        },
+        "tolerancePx": 0.5
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise enlarge meta.viewBox"
+      ]
+    },
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "Label \"nuevo encargo vinculado\" overlaps component \"d-dev\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [-4, 4467, 120, 14]\n  component \"d-dev\" rect: [80, 4400, 280, 80]\n  Suggested fix: set labelAt [61, 4494] or set labelDx 5 with labelDy 18 (below); or set labelAt [61, 4392] or set labelDx 5 with labelDy -84 (above)",
+      "subject": {
+        "diagramType": "architecture"
+      },
+      "evidence": {},
+      "supportedFixes": []
+    }
+  ],
+  "contract": "archify-architecture-layout-v1"
+}

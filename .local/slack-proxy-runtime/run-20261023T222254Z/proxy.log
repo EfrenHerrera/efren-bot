@@ -1,0 +1,31 @@
+{"level":30,"time":1792794174573,"msg":"Slack MCP facade listening"}
+{"level":30,"time":1792794174573,"msg":"OAuth callback bridge listening"}
+{"level":30,"time":1792794197758,"component":"oauth-discovery","method":"GET","path":"/.well-known/oauth-protected-resource","status":200,"msg":"Serving OAuth protected resource metadata"}
+{"level":30,"time":1792794197944,"component":"oauth-discovery","method":"GET","path":"/.well-known/oauth-authorization-server","status":200,"msg":"Serving OAuth authorization server metadata"}
+{"level":30,"time":1792794215182,"component":"oauth-discovery","method":"GET","path":"/.well-known/oauth-protected-resource","status":200,"msg":"Serving OAuth protected resource metadata"}
+{"level":30,"time":1792794215370,"component":"oauth-discovery","method":"GET","path":"/.well-known/oauth-authorization-server","status":200,"msg":"Serving OAuth authorization server metadata"}
+{"level":30,"time":1792794215797,"component":"mcp-proxy","method":"POST","path":"/mcp","status":401,"msg":"Proxying MCP response"}
+{"level":30,"time":1792794811182,"component":"mcp-proxy","method":"POST","path":"/mcp","status":401,"msg":"Proxying MCP response"}
+{"level":30,"time":1792794811637,"component":"oauth-discovery","method":"GET","path":"/.well-known/oauth-authorization-server","status":200,"msg":"Serving OAuth authorization server metadata"}
+{"level":30,"time":1792794854911,"component":"mcp-proxy","method":"POST","path":"/mcp","status":401,"msg":"Proxying MCP response"}
+{"level":30,"time":1792794855104,"component":"oauth-discovery","method":"GET","path":"/.well-known/oauth-authorization-server","status":200,"msg":"Serving OAuth authorization server metadata"}
+{"level":30,"time":1792794855533,"component":"mcp-proxy","method":"POST","path":"/mcp","status":401,"msg":"Proxying MCP response"}
+{"level":30,"time":1792794855714,"component":"oauth-discovery","method":"GET","path":"/.well-known/oauth-authorization-server","status":200,"msg":"Serving OAuth authorization server metadata"}
+{"level":30,"time":1792794856138,"component":"mcp-proxy","method":"POST","path":"/mcp","status":401,"msg":"Proxying MCP response"}
+{"level":30,"time":1792794856331,"component":"oauth-discovery","method":"GET","path":"/.well-known/oauth-authorization-server","status":200,"msg":"Serving OAuth authorization server metadata"}
+{"level":30,"time":1792794856794,"component":"mcp-proxy","method":"POST","path":"/mcp","status":401,"msg":"Proxying MCP response"}
+{"level":30,"time":1792794856985,"component":"oauth-discovery","method":"GET","path":"/.well-known/oauth-authorization-server","status":200,"msg":"Serving OAuth authorization server metadata"}
+{"level":30,"time":1792794857534,"component":"mcp-proxy","method":"POST","path":"/mcp","status":401,"msg":"Proxying MCP response"}
+{"level":30,"time":1792794857727,"component":"oauth-discovery","method":"GET","path":"/.well-known/oauth-authorization-server","status":200,"msg":"Serving OAuth authorization server metadata"}
+{"level":30,"time":1792794859331,"component":"mcp-proxy","method":"POST","path":"/mcp","status":401,"msg":"Proxying MCP response"}
+{"level":30,"time":1792794859522,"component":"oauth-discovery","method":"GET","path":"/.well-known/oauth-authorization-server","status":200,"msg":"Serving OAuth authorization server metadata"}
+{"level":30,"time":1792794861719,"component":"mcp-proxy","method":"POST","path":"/mcp","status":401,"msg":"Proxying MCP response"}
+{"level":30,"time":1792794861906,"component":"oauth-discovery","method":"GET","path":"/.well-known/oauth-authorization-server","status":200,"msg":"Serving OAuth authorization server metadata"}
+{"level":30,"time":1792794868091,"component":"mcp-proxy","method":"POST","path":"/mcp","status":401,"msg":"Proxying MCP response"}
+{"level":30,"time":1792794868564,"component":"oauth-discovery","method":"GET","path":"/.well-known/oauth-authorization-server","status":200,"msg":"Serving OAuth authorization server metadata"}
+{"level":30,"time":1792794870470,"component":"mcp-proxy","method":"POST","path":"/mcp","status":401,"msg":"Proxying MCP response"}
+{"level":30,"time":1792794870662,"component":"oauth-discovery","method":"GET","path":"/.well-known/oauth-authorization-server","status":200,"msg":"Serving OAuth authorization server metadata"}
+{"level":30,"time":1792794872633,"component":"mcp-proxy","method":"POST","path":"/mcp","status":401,"msg":"Proxying MCP response"}
+{"level":30,"time":1792794872841,"component":"oauth-discovery","method":"GET","path":"/.well-known/oauth-authorization-server","status":200,"msg":"Serving OAuth authorization server metadata"}
+{"level":30,"time":1792959910370,"signal":"SIGTERM","msg":"Shutting down servers"}
+{"level":30,"time":1792959910389,"msg":"Shutdown complete"}

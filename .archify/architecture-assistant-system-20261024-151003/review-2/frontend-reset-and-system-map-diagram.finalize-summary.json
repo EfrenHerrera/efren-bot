@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+    "sha256": "295ca3f727f12a2b81e1ef546cff59cb36386239f9a0fbee73a61fb2b6341580",
+    "bytes": 50323
+  },
+  "artifact": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+    "sha256": "9bb4127c50e71bcfa8e740a9ca87989b0137e83cfc791183d87c3e0bb80ca0fa",
+    "bytes": 1156919
+  },
+  "gates": {
+    "validate": "fail",
+    "deliver": "not-run",
+    "check": "not-run",
+    "browser-check": "not-run"
+  },
+  "failedStage": "validate",
+  "diagnostics": [
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "Connection \"b-inicio->b-identidad\" is too short (20px; minimum 24px) — place its components farther apart.",
+      "subject": {
+        "diagramType": "architecture"
+      }
+    },
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "Label \"confirmación real\" overlaps component \"c-crear\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [130, 3540, 92, 14]\n  component \"c-crear\" rect: [28, 3480, 280, 80]\n  Suggested fix: set labelAt [176, 3574] or set labelDy 24 (below); or set labelAt [176, 3472] or set labelDy -78 (above)",
+      "subject": {
+        "diagramType": "architecture"
+      }
+    }
+  ],
+  "diagnosticSummary": {
+    "total": 2,
+    "shown": 2,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/review-2/frontend-reset-and-system-map-diagram.finalize.json",
+    "summaryReceipt": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/review-2/frontend-reset-and-system-map-diagram.finalize-summary.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-24T22:44:47.674Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 556,
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "nextAction": {
+    "action": "edit-in-place",
+    "candidate": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+    "constraint": "Preserve unaffected semantics and geometry; apply each diagnostic's supportedFixes, or the fix its message names, and do not replace the whole candidate.",
+    "then": "finalize-once"
+  }
+}

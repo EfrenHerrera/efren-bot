@@ -1,0 +1,3037 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "startedAt": "2026-10-24T22:24:20.149Z",
+  "specification": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+    "sha256": "bfc2c7fdb56eaaa09492649e54fe078b7306cac94121eda3af57e556070eac5c",
+    "bytes": 50043
+  },
+  "artifact": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html"
+  },
+  "stages": {
+    "validate": {
+      "status": "fail",
+      "exitCode": 1,
+      "durationMs": null,
+      "command": [
+        "/opt/homebrew/Cellar/node/26.0.0/bin/node",
+        "/Users/efren.herrera/.agents/skills/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+        "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": false,
+        "command": "deliver",
+        "receiptId": "c7c157bf-c83a-4067-9c80-c4649f9fb295",
+        "stage": "render",
+        "type": "architecture",
+        "input": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+        "output": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+        "error": "Architecture layout validation failed:\n- [composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 4209px corridor with connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" at [56, 1967] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2969px corridor with connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" at [56, 3207] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2216px corridor with connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" at [56, 3960] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 1456px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 856px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2487px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 1953] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2587px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3193] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2980.3px corridor with connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" at [56, 3207] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2227.3px corridor with connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" at [56, 3960] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 1467.3px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 867.3px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2473px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 1967] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2587px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3193] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 2238.7px corridor with connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" at [56, 3960] -> [56, 6198.7] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 1478.7px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6198.7] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 878.7px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6198.7] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 1233px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 3207] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 2573px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3207] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 1490px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6210] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 890px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6210] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 480px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 3960] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 1820px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3960] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" shares a 901.3px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6221.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" shares a 1060px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 4720] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" shares a 460px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 5320] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" shares a 1247px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3193] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- Label \"nuevo encargo vinculado\" overlaps component \"d-dev\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [-4, 4467, 120, 14]\n  component \"d-dev\" rect: [80, 4400, 280, 80]\n  Suggested fix: set labelAt [61, 4494] or set labelDx 5 with labelDy 18 (below); or set labelAt [61, 4392] or set labelDx 5 with labelDy -84 (above)\n- [composition/label-route-clearance] showcase architecture label \"si se solicita deploy\" on connections[42] id \"b-17\" \"b-merge\" -> \"b-deploy\" label \"si se solicita deploy\" is 3.6px from connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" label \"reusar UUID + KNF reales\" segment 1 [502, 3513] -> [502, 1967] (label rect [388, 2740, 111, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"decisión independiente\" on connections[45] id \"b-20\" \"b-status\" -> \"b-cierre\" label \"decisión independiente\" is 1.2px from connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" label \"merge solo con su aprobación\" segment 1 [830, 5180] -> [830, 2767] (label rect [831, 2900, 116, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"solo evidencia autorizada\" on connections[60] id \"d-04\" \"d-herramientas\" -> \"d-hechos\" label \"solo evidencia autorizada\" is 0px from connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" label \"merge solo con su aprobación\" segment 1 [830, 5180] -> [830, 2767] (label rect [824, 4100, 130, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"solo si scopes concedidos\" on connections[66] id \"d-10\" \"d-publicar\" -> \"d-seguir\" label \"solo si scopes concedidos\" is 0px from connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" label \"merge solo con su aprobación\" segment 1 [830, 5180] -> [830, 2767] (label rect [824, 4420, 130, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" label \"candidato autorizado\" segment 1 [56, 1520] -> [56, 6176] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" label \"despacho B explícito\" segment 1 [56, 6187.3] -> [56, 1967] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" label \"despacho C explícito\" segment 1 [56, 6198.7] -> [56, 3207] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" label \"despacho D explícito\" segment 1 [56, 6210] -> [56, 3960] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-canvas-containment] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" extends past the left edge by 4.2px (label rect [-4, 4467, 120, 14]; viewBox 1292x9750) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise enlarge meta.viewBox.",
+        "diagnostics": [
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 4209px corridor with connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" at [56, 1967] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 144,
+              "id": "shared-a",
+              "from": "a-presentar",
+              "to": "coord"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 145,
+                "id": "shared-b",
+                "from": "coord",
+                "to": "b-inicio"
+              },
+              "overlapLengthPx": 4209,
+              "minimumPx": 8,
+              "from": [
+                56,
+                1967
+              ],
+              "to": [
+                56,
+                6176
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2969px corridor with connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" at [56, 3207] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 144,
+              "id": "shared-a",
+              "from": "a-presentar",
+              "to": "coord"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 146,
+                "id": "shared-c",
+                "from": "coord",
+                "to": "c-inicio"
+              },
+              "overlapLengthPx": 2969,
+              "minimumPx": 8,
+              "from": [
+                56,
+                3207
+              ],
+              "to": [
+                56,
+                6176
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2216px corridor with connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" at [56, 3960] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 144,
+              "id": "shared-a",
+              "from": "a-presentar",
+              "to": "coord"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 147,
+                "id": "shared-d",
+                "from": "coord",
+                "to": "d-inicio"
+              },
+              "overlapLengthPx": 2216,
+              "minimumPx": 8,
+              "from": [
+                56,
+                3960
+              ],
+              "to": [
+                56,
+                6176
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 1456px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 144,
+              "id": "shared-a",
+              "from": "a-presentar",
+              "to": "coord"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 148,
+                "id": "shared-e",
+                "from": "coord",
+                "to": "e-inicio"
+              },
+              "overlapLengthPx": 1456,
+              "minimumPx": 8,
+              "from": [
+                56,
+                4720
+              ],
+              "to": [
+                56,
+                6176
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 856px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 144,
+              "id": "shared-a",
+              "from": "a-presentar",
+              "to": "coord"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 149,
+                "id": "shared-f",
+                "from": "coord",
+                "to": "f-inicio"
+              },
+              "overlapLengthPx": 856,
+              "minimumPx": 8,
+              "from": [
+                56,
+                5320
+              ],
+              "to": [
+                56,
+                6176
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2487px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 1953] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 144,
+              "id": "shared-a",
+              "from": "a-presentar",
+              "to": "coord"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 153,
+                "id": "shared-d-b",
+                "from": "d-dev",
+                "to": "b-inicio"
+              },
+              "overlapLengthPx": 2487,
+              "minimumPx": 8,
+              "from": [
+                56,
+                1953
+              ],
+              "to": [
+                56,
+                4440
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2587px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3193] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 144,
+              "id": "shared-a",
+              "from": "a-presentar",
+              "to": "coord"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "overlapLengthPx": 2587,
+              "minimumPx": 8,
+              "from": [
+                56,
+                3193
+              ],
+              "to": [
+                56,
+                5780
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2980.3px corridor with connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" at [56, 3207] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 145,
+              "id": "shared-b",
+              "from": "coord",
+              "to": "b-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 146,
+                "id": "shared-c",
+                "from": "coord",
+                "to": "c-inicio"
+              },
+              "overlapLengthPx": 2980.3,
+              "minimumPx": 8,
+              "from": [
+                56,
+                3207
+              ],
+              "to": [
+                56,
+                6187.333333333333
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2227.3px corridor with connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" at [56, 3960] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 145,
+              "id": "shared-b",
+              "from": "coord",
+              "to": "b-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 147,
+                "id": "shared-d",
+                "from": "coord",
+                "to": "d-inicio"
+              },
+              "overlapLengthPx": 2227.3,
+              "minimumPx": 8,
+              "from": [
+                56,
+                3960
+              ],
+              "to": [
+                56,
+                6187.333333333333
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 1467.3px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 145,
+              "id": "shared-b",
+              "from": "coord",
+              "to": "b-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 148,
+                "id": "shared-e",
+                "from": "coord",
+                "to": "e-inicio"
+              },
+              "overlapLengthPx": 1467.3,
+              "minimumPx": 8,
+              "from": [
+                56,
+                4720
+              ],
+              "to": [
+                56,
+                6187.333333333333
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 867.3px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 145,
+              "id": "shared-b",
+              "from": "coord",
+              "to": "b-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 149,
+                "id": "shared-f",
+                "from": "coord",
+                "to": "f-inicio"
+              },
+              "overlapLengthPx": 867.3,
+              "minimumPx": 8,
+              "from": [
+                56,
+                5320
+              ],
+              "to": [
+                56,
+                6187.333333333333
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2473px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 1967] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 145,
+              "id": "shared-b",
+              "from": "coord",
+              "to": "b-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 153,
+                "id": "shared-d-b",
+                "from": "d-dev",
+                "to": "b-inicio"
+              },
+              "overlapLengthPx": 2473,
+              "minimumPx": 8,
+              "from": [
+                56,
+                1967
+              ],
+              "to": [
+                56,
+                4440
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2587px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3193] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 145,
+              "id": "shared-b",
+              "from": "coord",
+              "to": "b-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "overlapLengthPx": 2587,
+              "minimumPx": 8,
+              "from": [
+                56,
+                3193
+              ],
+              "to": [
+                56,
+                5780
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 2238.7px corridor with connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" at [56, 3960] -> [56, 6198.7] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 146,
+              "id": "shared-c",
+              "from": "coord",
+              "to": "c-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 147,
+                "id": "shared-d",
+                "from": "coord",
+                "to": "d-inicio"
+              },
+              "overlapLengthPx": 2238.7,
+              "minimumPx": 8,
+              "from": [
+                56,
+                3960
+              ],
+              "to": [
+                56,
+                6198.666666666667
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 1478.7px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6198.7] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 146,
+              "id": "shared-c",
+              "from": "coord",
+              "to": "c-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 148,
+                "id": "shared-e",
+                "from": "coord",
+                "to": "e-inicio"
+              },
+              "overlapLengthPx": 1478.7,
+              "minimumPx": 8,
+              "from": [
+                56,
+                4720
+              ],
+              "to": [
+                56,
+                6198.666666666667
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 878.7px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6198.7] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 146,
+              "id": "shared-c",
+              "from": "coord",
+              "to": "c-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 149,
+                "id": "shared-f",
+                "from": "coord",
+                "to": "f-inicio"
+              },
+              "overlapLengthPx": 878.7,
+              "minimumPx": 8,
+              "from": [
+                56,
+                5320
+              ],
+              "to": [
+                56,
+                6198.666666666667
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 1233px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 3207] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 146,
+              "id": "shared-c",
+              "from": "coord",
+              "to": "c-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 153,
+                "id": "shared-d-b",
+                "from": "d-dev",
+                "to": "b-inicio"
+              },
+              "overlapLengthPx": 1233,
+              "minimumPx": 8,
+              "from": [
+                56,
+                3207
+              ],
+              "to": [
+                56,
+                4440
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 2573px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3207] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 146,
+              "id": "shared-c",
+              "from": "coord",
+              "to": "c-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "overlapLengthPx": 2573,
+              "minimumPx": 8,
+              "from": [
+                56,
+                3207
+              ],
+              "to": [
+                56,
+                5780
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 1490px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6210] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 147,
+              "id": "shared-d",
+              "from": "coord",
+              "to": "d-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 148,
+                "id": "shared-e",
+                "from": "coord",
+                "to": "e-inicio"
+              },
+              "overlapLengthPx": 1490,
+              "minimumPx": 8,
+              "from": [
+                56,
+                4720
+              ],
+              "to": [
+                56,
+                6210
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 890px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6210] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 147,
+              "id": "shared-d",
+              "from": "coord",
+              "to": "d-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 149,
+                "id": "shared-f",
+                "from": "coord",
+                "to": "f-inicio"
+              },
+              "overlapLengthPx": 890,
+              "minimumPx": 8,
+              "from": [
+                56,
+                5320
+              ],
+              "to": [
+                56,
+                6210
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 480px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 3960] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 147,
+              "id": "shared-d",
+              "from": "coord",
+              "to": "d-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 153,
+                "id": "shared-d-b",
+                "from": "d-dev",
+                "to": "b-inicio"
+              },
+              "overlapLengthPx": 480,
+              "minimumPx": 8,
+              "from": [
+                56,
+                3960
+              ],
+              "to": [
+                56,
+                4440
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 1820px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3960] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 147,
+              "id": "shared-d",
+              "from": "coord",
+              "to": "d-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "overlapLengthPx": 1820,
+              "minimumPx": 8,
+              "from": [
+                56,
+                3960
+              ],
+              "to": [
+                56,
+                5780
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" shares a 901.3px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6221.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 148,
+              "id": "shared-e",
+              "from": "coord",
+              "to": "e-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 149,
+                "id": "shared-f",
+                "from": "coord",
+                "to": "f-inicio"
+              },
+              "overlapLengthPx": 901.3,
+              "minimumPx": 8,
+              "from": [
+                56,
+                5320
+              ],
+              "to": [
+                56,
+                6221.333333333333
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" shares a 1060px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 4720] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 148,
+              "id": "shared-e",
+              "from": "coord",
+              "to": "e-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "overlapLengthPx": 1060,
+              "minimumPx": 8,
+              "from": [
+                56,
+                4720
+              ],
+              "to": [
+                56,
+                5780
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" shares a 460px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 5320] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 149,
+              "id": "shared-f",
+              "from": "coord",
+              "to": "f-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "overlapLengthPx": 460,
+              "minimumPx": 8,
+              "from": [
+                56,
+                5320
+              ],
+              "to": [
+                56,
+                5780
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/ambiguous-corridor",
+            "severity": "error",
+            "message": "[composition/ambiguous-corridor] showcase architecture connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" shares a 1247px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3193] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 153,
+              "id": "shared-d-b",
+              "from": "d-dev",
+              "to": "b-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "overlapLengthPx": 1247,
+              "minimumPx": 8,
+              "from": [
+                56,
+                3193
+              ],
+              "to": [
+                56,
+                4440
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+            ]
+          },
+          {
+            "code": "composition/label-route-clearance",
+            "severity": "error",
+            "message": "[composition/label-route-clearance] showcase architecture label \"si se solicita deploy\" on connections[42] id \"b-17\" \"b-merge\" -> \"b-deploy\" label \"si se solicita deploy\" is 3.6px from connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" label \"reusar UUID + KNF reales\" segment 1 [502, 3513] -> [502, 1967] (label rect [388, 2740, 111, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 42,
+              "id": "b-17",
+              "from": "b-merge",
+              "to": "b-deploy"
+            },
+            "evidence": {
+              "label": "si se solicita deploy",
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 152,
+                "id": "shared-c-b",
+                "from": "c-readback",
+                "to": "b-identidad"
+              },
+              "segmentIndex": 1,
+              "clearancePx": 3.6,
+              "minimumPx": 4,
+              "labelRect": {
+                "relation": {
+                  "id": "b-17",
+                  "from": "b-merge",
+                  "to": "b-deploy",
+                  "label": "si se solicita deploy"
+                },
+                "relationIndex": 42,
+                "label": "si se solicita deploy",
+                "x": 387.6,
+                "y": 2740,
+                "width": 110.8,
+                "height": 14,
+                "lx": 443,
+                "ly": 2750
+              },
+              "from": [
+                502,
+                3513
+              ],
+              "to": [
+                502,
+                1967
+              ]
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+            ]
+          },
+          {
+            "code": "composition/label-route-clearance",
+            "severity": "error",
+            "message": "[composition/label-route-clearance] showcase architecture label \"decisión independiente\" on connections[45] id \"b-20\" \"b-status\" -> \"b-cierre\" label \"decisión independiente\" is 1.2px from connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" label \"merge solo con su aprobación\" segment 1 [830, 5180] -> [830, 2767] (label rect [831, 2900, 116, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 45,
+              "id": "b-20",
+              "from": "b-status",
+              "to": "b-cierre"
+            },
+            "evidence": {
+              "label": "decisión independiente",
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 155,
+                "id": "shared-e-merge",
+                "from": "e-ci",
+                "to": "b-merge"
+              },
+              "segmentIndex": 1,
+              "clearancePx": 1.2,
+              "minimumPx": 4,
+              "labelRect": {
+                "relation": {
+                  "id": "b-20",
+                  "from": "b-status",
+                  "to": "b-cierre",
+                  "label": "decisión independiente"
+                },
+                "relationIndex": 45,
+                "label": "decisión independiente",
+                "x": 831.2,
+                "y": 2900,
+                "width": 115.6,
+                "height": 14,
+                "lx": 889,
+                "ly": 2910
+              },
+              "from": [
+                830,
+                5180
+              ],
+              "to": [
+                830,
+                2767
+              ]
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+            ]
+          },
+          {
+            "code": "composition/label-route-clearance",
+            "severity": "error",
+            "message": "[composition/label-route-clearance] showcase architecture label \"solo evidencia autorizada\" on connections[60] id \"d-04\" \"d-herramientas\" -> \"d-hechos\" label \"solo evidencia autorizada\" is 0px from connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" label \"merge solo con su aprobación\" segment 1 [830, 5180] -> [830, 2767] (label rect [824, 4100, 130, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 60,
+              "id": "d-04",
+              "from": "d-herramientas",
+              "to": "d-hechos"
+            },
+            "evidence": {
+              "label": "solo evidencia autorizada",
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 155,
+                "id": "shared-e-merge",
+                "from": "e-ci",
+                "to": "b-merge"
+              },
+              "segmentIndex": 1,
+              "clearancePx": 0,
+              "minimumPx": 4,
+              "labelRect": {
+                "relation": {
+                  "id": "d-04",
+                  "from": "d-herramientas",
+                  "to": "d-hechos",
+                  "label": "solo evidencia autorizada"
+                },
+                "relationIndex": 60,
+                "label": "solo evidencia autorizada",
+                "x": 824,
+                "y": 4100,
+                "width": 130,
+                "height": 14,
+                "lx": 889,
+                "ly": 4110
+              },
+              "from": [
+                830,
+                5180
+              ],
+              "to": [
+                830,
+                2767
+              ]
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+            ]
+          },
+          {
+            "code": "composition/label-route-clearance",
+            "severity": "error",
+            "message": "[composition/label-route-clearance] showcase architecture label \"solo si scopes concedidos\" on connections[66] id \"d-10\" \"d-publicar\" -> \"d-seguir\" label \"solo si scopes concedidos\" is 0px from connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" label \"merge solo con su aprobación\" segment 1 [830, 5180] -> [830, 2767] (label rect [824, 4420, 130, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 66,
+              "id": "d-10",
+              "from": "d-publicar",
+              "to": "d-seguir"
+            },
+            "evidence": {
+              "label": "solo si scopes concedidos",
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 155,
+                "id": "shared-e-merge",
+                "from": "e-ci",
+                "to": "b-merge"
+              },
+              "segmentIndex": 1,
+              "clearancePx": 0,
+              "minimumPx": 4,
+              "labelRect": {
+                "relation": {
+                  "id": "d-10",
+                  "from": "d-publicar",
+                  "to": "d-seguir",
+                  "label": "solo si scopes concedidos"
+                },
+                "relationIndex": 66,
+                "label": "solo si scopes concedidos",
+                "x": 824,
+                "y": 4420,
+                "width": 130,
+                "height": 14,
+                "lx": 889,
+                "ly": 4430
+              },
+              "from": [
+                830,
+                5180
+              ],
+              "to": [
+                830,
+                2767
+              ]
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+            ]
+          },
+          {
+            "code": "composition/label-route-clearance",
+            "severity": "error",
+            "message": "[composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" label \"candidato autorizado\" segment 1 [56, 1520] -> [56, 6176] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 154,
+              "id": "shared-f-b",
+              "from": "f-dev",
+              "to": "c-inicio"
+            },
+            "evidence": {
+              "label": "nuevo encargo vinculado",
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 144,
+                "id": "shared-a",
+                "from": "a-presentar",
+                "to": "coord"
+              },
+              "segmentIndex": 1,
+              "clearancePx": 0,
+              "minimumPx": 4,
+              "labelRect": {
+                "relation": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "variant": "dashed",
+                  "fromSide": "left",
+                  "toSide": "left"
+                },
+                "relationIndex": 154,
+                "label": "nuevo encargo vinculado",
+                "x": -4.199999999999996,
+                "y": 4466.5,
+                "width": 120.39999999999999,
+                "height": 14,
+                "lx": 56,
+                "ly": 4476.5
+              },
+              "from": [
+                56,
+                1520
+              ],
+              "to": [
+                56,
+                6176
+              ]
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+            ]
+          },
+          {
+            "code": "composition/label-route-clearance",
+            "severity": "error",
+            "message": "[composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" label \"despacho B explícito\" segment 1 [56, 6187.3] -> [56, 1967] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 154,
+              "id": "shared-f-b",
+              "from": "f-dev",
+              "to": "c-inicio"
+            },
+            "evidence": {
+              "label": "nuevo encargo vinculado",
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 145,
+                "id": "shared-b",
+                "from": "coord",
+                "to": "b-inicio"
+              },
+              "segmentIndex": 1,
+              "clearancePx": 0,
+              "minimumPx": 4,
+              "labelRect": {
+                "relation": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "variant": "dashed",
+                  "fromSide": "left",
+                  "toSide": "left"
+                },
+                "relationIndex": 154,
+                "label": "nuevo encargo vinculado",
+                "x": -4.199999999999996,
+                "y": 4466.5,
+                "width": 120.39999999999999,
+                "height": 14,
+                "lx": 56,
+                "ly": 4476.5
+              },
+              "from": [
+                56,
+                6187.333333333333
+              ],
+              "to": [
+                56,
+                1967
+              ]
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+            ]
+          },
+          {
+            "code": "composition/label-route-clearance",
+            "severity": "error",
+            "message": "[composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" label \"despacho C explícito\" segment 1 [56, 6198.7] -> [56, 3207] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 154,
+              "id": "shared-f-b",
+              "from": "f-dev",
+              "to": "c-inicio"
+            },
+            "evidence": {
+              "label": "nuevo encargo vinculado",
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 146,
+                "id": "shared-c",
+                "from": "coord",
+                "to": "c-inicio"
+              },
+              "segmentIndex": 1,
+              "clearancePx": 0,
+              "minimumPx": 4,
+              "labelRect": {
+                "relation": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "variant": "dashed",
+                  "fromSide": "left",
+                  "toSide": "left"
+                },
+                "relationIndex": 154,
+                "label": "nuevo encargo vinculado",
+                "x": -4.199999999999996,
+                "y": 4466.5,
+                "width": 120.39999999999999,
+                "height": 14,
+                "lx": 56,
+                "ly": 4476.5
+              },
+              "from": [
+                56,
+                6198.666666666667
+              ],
+              "to": [
+                56,
+                3207
+              ]
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+            ]
+          },
+          {
+            "code": "composition/label-route-clearance",
+            "severity": "error",
+            "message": "[composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" label \"despacho D explícito\" segment 1 [56, 6210] -> [56, 3960] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 154,
+              "id": "shared-f-b",
+              "from": "f-dev",
+              "to": "c-inicio"
+            },
+            "evidence": {
+              "label": "nuevo encargo vinculado",
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 147,
+                "id": "shared-d",
+                "from": "coord",
+                "to": "d-inicio"
+              },
+              "segmentIndex": 1,
+              "clearancePx": 0,
+              "minimumPx": 4,
+              "labelRect": {
+                "relation": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "variant": "dashed",
+                  "fromSide": "left",
+                  "toSide": "left"
+                },
+                "relationIndex": 154,
+                "label": "nuevo encargo vinculado",
+                "x": -4.199999999999996,
+                "y": 4466.5,
+                "width": 120.39999999999999,
+                "height": 14,
+                "lx": 56,
+                "ly": 4476.5
+              },
+              "from": [
+                56,
+                6210
+              ],
+              "to": [
+                56,
+                3960
+              ]
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+            ]
+          },
+          {
+            "code": "composition/label-canvas-containment",
+            "severity": "error",
+            "message": "[composition/label-canvas-containment] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" extends past the left edge by 4.2px (label rect [-4, 4467, 120, 14]; viewBox 1292x9750) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise enlarge meta.viewBox.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 154,
+              "id": "shared-f-b",
+              "from": "f-dev",
+              "to": "c-inicio"
+            },
+            "evidence": {
+              "label": "nuevo encargo vinculado",
+              "labelRect": {
+                "x": -4.199999999999996,
+                "y": 4466.5,
+                "width": 120.39999999999999,
+                "height": 14
+              },
+              "viewBox": [
+                1292,
+                9750
+              ],
+              "overflowPx": {
+                "left": 4.2
+              },
+              "tolerancePx": 0.5
+            },
+            "supportedFixes": [
+              "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise enlarge meta.viewBox"
+            ]
+          },
+          {
+            "code": "layout/constraint",
+            "severity": "error",
+            "message": "Label \"nuevo encargo vinculado\" overlaps component \"d-dev\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [-4, 4467, 120, 14]\n  component \"d-dev\" rect: [80, 4400, 280, 80]\n  Suggested fix: set labelAt [61, 4494] or set labelDx 5 with labelDy 18 (below); or set labelAt [61, 4392] or set labelDx 5 with labelDy -84 (above)",
+            "subject": {
+              "diagramType": "architecture"
+            },
+            "evidence": {},
+            "supportedFixes": []
+          }
+        ],
+        "provenance": "absent",
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      },
+      "execution": "embedded-in-deliver"
+    },
+    "deliver": {
+      "status": "not-run",
+      "execution": "blocked-by-validate"
+    }
+  },
+  "diagnostics": [
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 4209px corridor with connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" at [56, 1967] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 144,
+        "id": "shared-a",
+        "from": "a-presentar",
+        "to": "coord"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 145,
+          "id": "shared-b",
+          "from": "coord",
+          "to": "b-inicio"
+        },
+        "overlapLengthPx": 4209,
+        "minimumPx": 8,
+        "from": [
+          56,
+          1967
+        ],
+        "to": [
+          56,
+          6176
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2969px corridor with connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" at [56, 3207] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 144,
+        "id": "shared-a",
+        "from": "a-presentar",
+        "to": "coord"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 146,
+          "id": "shared-c",
+          "from": "coord",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 2969,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3207
+        ],
+        "to": [
+          56,
+          6176
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2216px corridor with connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" at [56, 3960] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 144,
+        "id": "shared-a",
+        "from": "a-presentar",
+        "to": "coord"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 147,
+          "id": "shared-d",
+          "from": "coord",
+          "to": "d-inicio"
+        },
+        "overlapLengthPx": 2216,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3960
+        ],
+        "to": [
+          56,
+          6176
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 1456px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 144,
+        "id": "shared-a",
+        "from": "a-presentar",
+        "to": "coord"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 148,
+          "id": "shared-e",
+          "from": "coord",
+          "to": "e-inicio"
+        },
+        "overlapLengthPx": 1456,
+        "minimumPx": 8,
+        "from": [
+          56,
+          4720
+        ],
+        "to": [
+          56,
+          6176
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 856px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6176] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 144,
+        "id": "shared-a",
+        "from": "a-presentar",
+        "to": "coord"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 149,
+          "id": "shared-f",
+          "from": "coord",
+          "to": "f-inicio"
+        },
+        "overlapLengthPx": 856,
+        "minimumPx": 8,
+        "from": [
+          56,
+          5320
+        ],
+        "to": [
+          56,
+          6176
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2487px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 1953] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 144,
+        "id": "shared-a",
+        "from": "a-presentar",
+        "to": "coord"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 153,
+          "id": "shared-d-b",
+          "from": "d-dev",
+          "to": "b-inicio"
+        },
+        "overlapLengthPx": 2487,
+        "minimumPx": 8,
+        "from": [
+          56,
+          1953
+        ],
+        "to": [
+          56,
+          4440
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" shares a 2587px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3193] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 144,
+        "id": "shared-a",
+        "from": "a-presentar",
+        "to": "coord"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 2587,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3193
+        ],
+        "to": [
+          56,
+          5780
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2980.3px corridor with connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" at [56, 3207] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 145,
+        "id": "shared-b",
+        "from": "coord",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 146,
+          "id": "shared-c",
+          "from": "coord",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 2980.3,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3207
+        ],
+        "to": [
+          56,
+          6187.333333333333
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2227.3px corridor with connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" at [56, 3960] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 145,
+        "id": "shared-b",
+        "from": "coord",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 147,
+          "id": "shared-d",
+          "from": "coord",
+          "to": "d-inicio"
+        },
+        "overlapLengthPx": 2227.3,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3960
+        ],
+        "to": [
+          56,
+          6187.333333333333
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 1467.3px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 145,
+        "id": "shared-b",
+        "from": "coord",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 148,
+          "id": "shared-e",
+          "from": "coord",
+          "to": "e-inicio"
+        },
+        "overlapLengthPx": 1467.3,
+        "minimumPx": 8,
+        "from": [
+          56,
+          4720
+        ],
+        "to": [
+          56,
+          6187.333333333333
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 867.3px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6187.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 145,
+        "id": "shared-b",
+        "from": "coord",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 149,
+          "id": "shared-f",
+          "from": "coord",
+          "to": "f-inicio"
+        },
+        "overlapLengthPx": 867.3,
+        "minimumPx": 8,
+        "from": [
+          56,
+          5320
+        ],
+        "to": [
+          56,
+          6187.333333333333
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2473px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 1967] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 145,
+        "id": "shared-b",
+        "from": "coord",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 153,
+          "id": "shared-d-b",
+          "from": "d-dev",
+          "to": "b-inicio"
+        },
+        "overlapLengthPx": 2473,
+        "minimumPx": 8,
+        "from": [
+          56,
+          1967
+        ],
+        "to": [
+          56,
+          4440
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" shares a 2587px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3193] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 145,
+        "id": "shared-b",
+        "from": "coord",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 2587,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3193
+        ],
+        "to": [
+          56,
+          5780
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 2238.7px corridor with connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" at [56, 3960] -> [56, 6198.7] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 146,
+        "id": "shared-c",
+        "from": "coord",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 147,
+          "id": "shared-d",
+          "from": "coord",
+          "to": "d-inicio"
+        },
+        "overlapLengthPx": 2238.7,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3960
+        ],
+        "to": [
+          56,
+          6198.666666666667
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 1478.7px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6198.7] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 146,
+        "id": "shared-c",
+        "from": "coord",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 148,
+          "id": "shared-e",
+          "from": "coord",
+          "to": "e-inicio"
+        },
+        "overlapLengthPx": 1478.7,
+        "minimumPx": 8,
+        "from": [
+          56,
+          4720
+        ],
+        "to": [
+          56,
+          6198.666666666667
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 878.7px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6198.7] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 146,
+        "id": "shared-c",
+        "from": "coord",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 149,
+          "id": "shared-f",
+          "from": "coord",
+          "to": "f-inicio"
+        },
+        "overlapLengthPx": 878.7,
+        "minimumPx": 8,
+        "from": [
+          56,
+          5320
+        ],
+        "to": [
+          56,
+          6198.666666666667
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 1233px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 3207] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 146,
+        "id": "shared-c",
+        "from": "coord",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 153,
+          "id": "shared-d-b",
+          "from": "d-dev",
+          "to": "b-inicio"
+        },
+        "overlapLengthPx": 1233,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3207
+        ],
+        "to": [
+          56,
+          4440
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" shares a 2573px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3207] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 146,
+        "id": "shared-c",
+        "from": "coord",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 2573,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3207
+        ],
+        "to": [
+          56,
+          5780
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 1490px corridor with connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" at [56, 4720] -> [56, 6210] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 147,
+        "id": "shared-d",
+        "from": "coord",
+        "to": "d-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 148,
+          "id": "shared-e",
+          "from": "coord",
+          "to": "e-inicio"
+        },
+        "overlapLengthPx": 1490,
+        "minimumPx": 8,
+        "from": [
+          56,
+          4720
+        ],
+        "to": [
+          56,
+          6210
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 890px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6210] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 147,
+        "id": "shared-d",
+        "from": "coord",
+        "to": "d-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 149,
+          "id": "shared-f",
+          "from": "coord",
+          "to": "f-inicio"
+        },
+        "overlapLengthPx": 890,
+        "minimumPx": 8,
+        "from": [
+          56,
+          5320
+        ],
+        "to": [
+          56,
+          6210
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 480px corridor with connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [56, 3960] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 147,
+        "id": "shared-d",
+        "from": "coord",
+        "to": "d-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 153,
+          "id": "shared-d-b",
+          "from": "d-dev",
+          "to": "b-inicio"
+        },
+        "overlapLengthPx": 480,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3960
+        ],
+        "to": [
+          56,
+          4440
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" shares a 1820px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3960] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 147,
+        "id": "shared-d",
+        "from": "coord",
+        "to": "d-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 1820,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3960
+        ],
+        "to": [
+          56,
+          5780
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" shares a 901.3px corridor with connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" at [56, 5320] -> [56, 6221.3] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 148,
+        "id": "shared-e",
+        "from": "coord",
+        "to": "e-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 149,
+          "id": "shared-f",
+          "from": "coord",
+          "to": "f-inicio"
+        },
+        "overlapLengthPx": 901.3,
+        "minimumPx": 8,
+        "from": [
+          56,
+          5320
+        ],
+        "to": [
+          56,
+          6221.333333333333
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[148] id \"shared-e\" \"coord\" -> \"e-inicio\" shares a 1060px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 4720] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 148,
+        "id": "shared-e",
+        "from": "coord",
+        "to": "e-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 1060,
+        "minimumPx": 8,
+        "from": [
+          56,
+          4720
+        ],
+        "to": [
+          56,
+          5780
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[149] id \"shared-f\" \"coord\" -> \"f-inicio\" shares a 460px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 5320] -> [56, 5780] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 149,
+        "id": "shared-f",
+        "from": "coord",
+        "to": "f-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 460,
+        "minimumPx": 8,
+        "from": [
+          56,
+          5320
+        ],
+        "to": [
+          56,
+          5780
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" shares a 1247px corridor with connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [56, 3193] -> [56, 4440] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 153,
+        "id": "shared-d-b",
+        "from": "d-dev",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "overlapLengthPx": 1247,
+        "minimumPx": 8,
+        "from": [
+          56,
+          3193
+        ],
+        "to": [
+          56,
+          4440
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"si se solicita deploy\" on connections[42] id \"b-17\" \"b-merge\" -> \"b-deploy\" label \"si se solicita deploy\" is 3.6px from connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" label \"reusar UUID + KNF reales\" segment 1 [502, 3513] -> [502, 1967] (label rect [388, 2740, 111, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 42,
+        "id": "b-17",
+        "from": "b-merge",
+        "to": "b-deploy"
+      },
+      "evidence": {
+        "label": "si se solicita deploy",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 152,
+          "id": "shared-c-b",
+          "from": "c-readback",
+          "to": "b-identidad"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 3.6,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "b-17",
+            "from": "b-merge",
+            "to": "b-deploy",
+            "label": "si se solicita deploy"
+          },
+          "relationIndex": 42,
+          "label": "si se solicita deploy",
+          "x": 387.6,
+          "y": 2740,
+          "width": 110.8,
+          "height": 14,
+          "lx": 443,
+          "ly": 2750
+        },
+        "from": [
+          502,
+          3513
+        ],
+        "to": [
+          502,
+          1967
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"decisión independiente\" on connections[45] id \"b-20\" \"b-status\" -> \"b-cierre\" label \"decisión independiente\" is 1.2px from connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" label \"merge solo con su aprobación\" segment 1 [830, 5180] -> [830, 2767] (label rect [831, 2900, 116, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 45,
+        "id": "b-20",
+        "from": "b-status",
+        "to": "b-cierre"
+      },
+      "evidence": {
+        "label": "decisión independiente",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 1.2,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "b-20",
+            "from": "b-status",
+            "to": "b-cierre",
+            "label": "decisión independiente"
+          },
+          "relationIndex": 45,
+          "label": "decisión independiente",
+          "x": 831.2,
+          "y": 2900,
+          "width": 115.6,
+          "height": 14,
+          "lx": 889,
+          "ly": 2910
+        },
+        "from": [
+          830,
+          5180
+        ],
+        "to": [
+          830,
+          2767
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"solo evidencia autorizada\" on connections[60] id \"d-04\" \"d-herramientas\" -> \"d-hechos\" label \"solo evidencia autorizada\" is 0px from connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" label \"merge solo con su aprobación\" segment 1 [830, 5180] -> [830, 2767] (label rect [824, 4100, 130, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 60,
+        "id": "d-04",
+        "from": "d-herramientas",
+        "to": "d-hechos"
+      },
+      "evidence": {
+        "label": "solo evidencia autorizada",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "d-04",
+            "from": "d-herramientas",
+            "to": "d-hechos",
+            "label": "solo evidencia autorizada"
+          },
+          "relationIndex": 60,
+          "label": "solo evidencia autorizada",
+          "x": 824,
+          "y": 4100,
+          "width": 130,
+          "height": 14,
+          "lx": 889,
+          "ly": 4110
+        },
+        "from": [
+          830,
+          5180
+        ],
+        "to": [
+          830,
+          2767
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"solo si scopes concedidos\" on connections[66] id \"d-10\" \"d-publicar\" -> \"d-seguir\" label \"solo si scopes concedidos\" is 0px from connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" label \"merge solo con su aprobación\" segment 1 [830, 5180] -> [830, 2767] (label rect [824, 4420, 130, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 66,
+        "id": "d-10",
+        "from": "d-publicar",
+        "to": "d-seguir"
+      },
+      "evidence": {
+        "label": "solo si scopes concedidos",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "d-10",
+            "from": "d-publicar",
+            "to": "d-seguir",
+            "label": "solo si scopes concedidos"
+          },
+          "relationIndex": 66,
+          "label": "solo si scopes concedidos",
+          "x": 824,
+          "y": 4420,
+          "width": 130,
+          "height": 14,
+          "lx": 889,
+          "ly": 4430
+        },
+        "from": [
+          830,
+          5180
+        ],
+        "to": [
+          830,
+          2767
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" label \"candidato autorizado\" segment 1 [56, 1520] -> [56, 6176] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 154,
+        "id": "shared-f-b",
+        "from": "f-dev",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "label": "nuevo encargo vinculado",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 144,
+          "id": "shared-a",
+          "from": "a-presentar",
+          "to": "coord"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "shared-f-b",
+            "from": "f-dev",
+            "to": "c-inicio",
+            "label": "nuevo encargo vinculado",
+            "variant": "dashed",
+            "fromSide": "left",
+            "toSide": "left"
+          },
+          "relationIndex": 154,
+          "label": "nuevo encargo vinculado",
+          "x": -4.199999999999996,
+          "y": 4466.5,
+          "width": 120.39999999999999,
+          "height": 14,
+          "lx": 56,
+          "ly": 4476.5
+        },
+        "from": [
+          56,
+          1520
+        ],
+        "to": [
+          56,
+          6176
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" label \"despacho B explícito\" segment 1 [56, 6187.3] -> [56, 1967] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 154,
+        "id": "shared-f-b",
+        "from": "f-dev",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "label": "nuevo encargo vinculado",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 145,
+          "id": "shared-b",
+          "from": "coord",
+          "to": "b-inicio"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "shared-f-b",
+            "from": "f-dev",
+            "to": "c-inicio",
+            "label": "nuevo encargo vinculado",
+            "variant": "dashed",
+            "fromSide": "left",
+            "toSide": "left"
+          },
+          "relationIndex": 154,
+          "label": "nuevo encargo vinculado",
+          "x": -4.199999999999996,
+          "y": 4466.5,
+          "width": 120.39999999999999,
+          "height": 14,
+          "lx": 56,
+          "ly": 4476.5
+        },
+        "from": [
+          56,
+          6187.333333333333
+        ],
+        "to": [
+          56,
+          1967
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" label \"despacho C explícito\" segment 1 [56, 6198.7] -> [56, 3207] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 154,
+        "id": "shared-f-b",
+        "from": "f-dev",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "label": "nuevo encargo vinculado",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 146,
+          "id": "shared-c",
+          "from": "coord",
+          "to": "c-inicio"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "shared-f-b",
+            "from": "f-dev",
+            "to": "c-inicio",
+            "label": "nuevo encargo vinculado",
+            "variant": "dashed",
+            "fromSide": "left",
+            "toSide": "left"
+          },
+          "relationIndex": 154,
+          "label": "nuevo encargo vinculado",
+          "x": -4.199999999999996,
+          "y": 4466.5,
+          "width": 120.39999999999999,
+          "height": 14,
+          "lx": 56,
+          "ly": 4476.5
+        },
+        "from": [
+          56,
+          6198.666666666667
+        ],
+        "to": [
+          56,
+          3207
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" label \"nuevo encargo vinculado\" is 0px from connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" label \"despacho D explícito\" segment 1 [56, 6210] -> [56, 3960] (label rect [-4, 4467, 120, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 154,
+        "id": "shared-f-b",
+        "from": "f-dev",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "label": "nuevo encargo vinculado",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 147,
+          "id": "shared-d",
+          "from": "coord",
+          "to": "d-inicio"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "shared-f-b",
+            "from": "f-dev",
+            "to": "c-inicio",
+            "label": "nuevo encargo vinculado",
+            "variant": "dashed",
+            "fromSide": "left",
+            "toSide": "left"
+          },
+          "relationIndex": 154,
+          "label": "nuevo encargo vinculado",
+          "x": -4.199999999999996,
+          "y": 4466.5,
+          "width": 120.39999999999999,
+          "height": 14,
+          "lx": 56,
+          "ly": 4476.5
+        },
+        "from": [
+          56,
+          6210
+        ],
+        "to": [
+          56,
+          3960
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-canvas-containment",
+      "severity": "error",
+      "message": "[composition/label-canvas-containment] showcase architecture label \"nuevo encargo vinculado\" on connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" extends past the left edge by 4.2px (label rect [-4, 4467, 120, 14]; viewBox 1292x9750) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise enlarge meta.viewBox.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 154,
+        "id": "shared-f-b",
+        "from": "f-dev",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "label": "nuevo encargo vinculado",
+        "labelRect": {
+          "x": -4.199999999999996,
+          "y": 4466.5,
+          "width": 120.39999999999999,
+          "height": 14
+        },
+        "viewBox": [
+          1292,
+          9750
+        ],
+        "overflowPx": {
+          "left": 4.2
+        },
+        "tolerancePx": 0.5
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise enlarge meta.viewBox"
+      ]
+    },
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "Label \"nuevo encargo vinculado\" overlaps component \"d-dev\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [-4, 4467, 120, 14]\n  component \"d-dev\" rect: [80, 4400, 280, 80]\n  Suggested fix: set labelAt [61, 4494] or set labelDx 5 with labelDy 18 (below); or set labelAt [61, 4392] or set labelDx 5 with labelDy -84 (above)",
+      "subject": {
+        "diagramType": "architecture"
+      },
+      "evidence": {},
+      "supportedFixes": []
+    }
+  ],
+  "evidence": {
+    "receipt": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.finalize.json",
+    "summaryReceipt": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.finalize-summary.json"
+  },
+  "visualReview": "not-requested",
+  "failedStage": "validate",
+  "finishedAt": "2026-10-24T22:24:20.554Z",
+  "durationMs": 405,
+  "update": {
+    "status": "update_available",
+    "installedVersion": "3.0.1",
+    "availableVersion": "3.2.0",
+    "releaseNotes": "https://github.com/tt-a1i/archify/releases/tag/v3.2.0",
+    "severity": "normal",
+    "checkedAt": "2026-10-24T22:19:37.577Z",
+    "source": "cache",
+    "noticeRequired": true,
+    "noticeText": "Archify update: 3.0.1 → 3.2.0. A previous check at 2026-10-24T22:19:37.577Z found a newer release. Release notes: https://github.com/tt-a1i/archify/releases/tag/v3.2.0. The installed Skill has not changed; ask to snooze or ignore this reminder.",
+    "eventKey": "archify@sha256:70e210265c59f24dcbdf2a502ff671104b5454e7ee7d3554aecd86bad32384f5"
+  }
+}

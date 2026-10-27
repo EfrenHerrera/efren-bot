@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+    "sha256": "53c56b6a007e028b4f1c856fe3f6233d781e289b5668abca8146c01a28195993",
+    "bytes": 60890
+  },
+  "artifact": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+    "sha256": "c7ea06b900e255d2c6e4133fc14ca20d8572d1765314e0c83acdccfb12c243eb",
+    "bytes": 1216918
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/semantic-review-5/frontend-reset-and-system-map-diagram.finalize.json",
+    "summaryReceipt": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/semantic-review-5/frontend-reset-and-system-map-diagram.finalize-summary.json",
+    "browserCheckReceipt": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/semantic-review-5/frontend-reset-and-system-map-diagram.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-24T22:44:47.674Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 4958,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 77,
+      "routesOverSuggestedBends": 1
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "b-05",
+            "from": "b-stop",
+            "to": "b-checkout",
+            "label": "solo si resuelto",
+            "collectionIndex": 34,
+            "artifactIndex": 35
+          },
+          "right": {
+            "id": "shared-c-b",
+            "from": "c-readback",
+            "to": "b-identidad",
+            "label": "reusar UUID + KNF reales",
+            "collectionIndex": 184,
+            "artifactIndex": 185
+          },
+          "point": [
+            450,
+            2120
+          ]
+        },
+        {
+          "left": {
+            "id": "b-05",
+            "from": "b-stop",
+            "to": "b-checkout",
+            "label": "solo si resuelto",
+            "collectionIndex": 34,
+            "artifactIndex": 35
+          },
+          "right": {
+            "id": "shared-d-b",
+            "from": "d-dev",
+            "to": "b-inicio",
+            "label": "enlace, no permiso heredado",
+            "collectionIndex": 185,
+            "artifactIndex": 186
+          },
+          "point": [
+            328,
+            2120
+          ]
+        },
+        {
+          "left": {
+            "id": "b-07",
+            "from": "b-base",
+            "to": "b-topologia",
+            "label": "",
+            "collectionIndex": 36,
+            "artifactIndex": 37
+          },
+          "right": {
+            "id": "shared-c-b",
+            "from": "c-readback",
+            "to": "b-identidad",
+            "label": "reusar UUID + KNF reales",
+            "collectionIndex": 184,
+            "artifactIndex": 185
+          },
+          "point": [
+            450,
+            2280
+          ]
+        },
+        {
+          "left": {
+            "id": "b-07",
+            "from": "b-base",
+            "to": "b-topologia",
+            "label": "",
+            "collectionIndex": 36,
+            "artifactIndex": 37
+          },
+          "right": {
+            "id": "shared-d-b",
+            "from": "d-dev",
+            "to": "b-inicio",
+            "label": "enlace, no permiso heredado",
+            "collectionIndex": 185,
+            "artifactIndex": 186
+          },
+          "point": [
+            328,
+            2280
+          ]
+        },
+        {
+          "left": {
+            "id": "b-11",
+            "from": "b-preview",
+            "to": "b-aprobar",
+            "label": "si publicar encargado",
+            "collectionIndex": 40,
+            "artifactIndex": 41
+          },
+          "right": {
+            "id": "shared-c-b",
+            "from": "c-readback",
+            "to": "b-identidad",
+            "label": "reusar UUID + KNF reales",
+            "collectionIndex": 184,
+            "artifactIndex": 185
+          },
+          "point": [
+            450,
+            2440
+          ]
+        },
+        {
+          "left": {
+            "id": "b-11",
+            "from": "b-preview",
+            "to": "b-aprobar",
+            "label": "si publicar encargado",
+            "collectionIndex": 40,
+            "artifactIndex": 41
+          },
+          "right": {
+            "id": "shared-d-b",
+            "from": "d-dev",
+            "to": "b-inicio",
+            "label": "enlace, no permiso heredado",
+            "collectionIndex": 185,
+            "artifactIndex": 186
+          },
+          "point": [
+            328,
+            2440
+          ]
+        },
+        {
+          "left": {
+            "id": "b-local",
+            "from": "b-preview",
+            "to": "b-verificar",
+            "label": "solo diff solicitado",
+            "collectionIndex": 41,
+            "artifactIndex": 42
+          },
+          "right": {
+            "id": "b-14",
+            "from": "b-publicar",
+            "to": "b-ci",
+            "label": "",
+            "collectionIndex": 44,
+            "artifactIndex": 45
+          },
+          "point": [
+            837,
+            2600
+          ]
+        },
+        {
+          "left": {
+            "id": "b-local",
+            "from": "b-preview",
+            "to": "b-verificar",
+            "label": "solo diff solicitado",
+            "collectionIndex": 41,
+            "artifactIndex": 42
+          },
+          "right": {
+            "id": "b-ci-merge",
+            "from": "b-ci",
+            "to": "b-merge",
+            "label": "si merge encargado",
+            "collectionIndex": 47,
+            "artifactIndex": 48
+          },
+          "point": [
+            837,
+            2680
+          ]
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "b-18",
+            "from": "b-deploy",
+            "to": "b-verificar",
+            "label": "",
+            "collectionIndex": 50,
+            "artifactIndex": 51
+          },
+          "bends": 3,
+          "stretch": 1.07
+        }
+      ],
+      "truncated": true
+    },
+    "hints": [
+      "b-stop → b-checkout crosses c-readback → b-identidad: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "b-stop → b-checkout crosses d-dev → b-inicio: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "b-base → b-topologia crosses c-readback → b-identidad: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "b-base → b-topologia crosses d-dev → b-inicio: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "b-preview → b-aprobar crosses c-readback → b-identidad: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "b-preview → b-aprobar crosses d-dev → b-inicio: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "b-preview → b-verificar crosses b-publicar → b-ci: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "b-preview → b-verificar crosses b-ci → b-merge: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

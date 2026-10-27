@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "8c6066e0-a5c3-4df9-8493-1ef7f97b0063",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+  "output": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+  "specification": {
+    "sha256": "53c56b6a007e028b4f1c856fe3f6233d781e289b5668abca8146c01a28195993",
+    "bytes": 60890
+  },
+  "artifact": {
+    "sha256": "c7ea06b900e255d2c6e4133fc14ca20d8572d1765314e0c83acdccfb12c243eb",
+    "bytes": 1216918
+  }
+}

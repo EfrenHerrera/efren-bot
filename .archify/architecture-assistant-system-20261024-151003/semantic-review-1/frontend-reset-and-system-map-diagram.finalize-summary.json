@@ -1,0 +1,402 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+    "sha256": "1b99393cc9160446bc99525b12b603ebb9eb96127b46ddfd2aa9ec3981f1b188",
+    "bytes": 60258
+  },
+  "artifact": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+    "sha256": "9bb4127c50e71bcfa8e740a9ca87989b0137e83cfc791183d87c3e0bb80ca0fa",
+    "bytes": 1156919
+  },
+  "gates": {
+    "validate": "fail",
+    "deliver": "not-run",
+    "check": "not-run",
+    "browser-check": "not-run"
+  },
+  "failedStage": "validate",
+  "diagnostics": [
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[48] id \"b-mr-result\" \"b-ci\" -> \"b-verificar\" crosses component \"b-fix\" (unrelated to this relationship) on segment 0 [1053, 2640] -> [1053, 2913] (2px clearance) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 48,
+        "id": "b-mr-result",
+        "from": "b-ci",
+        "to": "b-verificar"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "b-fix",
+        "segmentIndex": 0,
+        "from": [
+          1053,
+          2640
+        ],
+        "to": [
+          1053,
+          2913
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[73] id \"d-04\" \"d-herramientas\" -> \"d-hechos\" shares a 16px corridor with connections[187] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [778, 4127] -> [778, 4143] (segments 3 and 1; minimum 8px) — if the authored labelDx/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 73,
+        "id": "d-04",
+        "from": "d-herramientas",
+        "to": "d-hechos"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 187,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "overlapLengthPx": 16,
+        "minimumPx": 8,
+        "from": [
+          778,
+          4127
+        ],
+        "to": [
+          778,
+          4143
+        ],
+        "segmentIndex": 3,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored labelDx/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"vigente y exacto\" on connections[43] id \"b-13\" \"b-live\" -> \"b-publicar\" label \"vigente y exacto\" is 0px from connections[41] id \"b-local\" \"b-preview\" -> \"b-verificar\" label \"solo diff solicitado\" segment 1 [391, 2447] -> [391, 2899] (label rect [348, 2580, 87, 14]; minimum 4px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 43,
+        "id": "b-13",
+        "from": "b-live",
+        "to": "b-publicar"
+      },
+      "evidence": {
+        "label": "vigente y exacto",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 41,
+          "id": "b-local",
+          "from": "b-preview",
+          "to": "b-verificar"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "b-13",
+            "from": "b-live",
+            "to": "b-publicar",
+            "label": "vigente y exacto"
+          },
+          "relationIndex": 43,
+          "label": "vigente y exacto",
+          "x": 347.6,
+          "y": 2580,
+          "width": 86.8,
+          "height": 14,
+          "lx": 391,
+          "ly": 2590
+        },
+        "from": [
+          391,
+          2447
+        ],
+        "to": [
+          391,
+          2899
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "Label \"solo evidencia autorizada\" overlaps component \"d-herramientas\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [843, 4108, 130, 14]\n  component \"d-herramientas\" rect: [920, 4080, 280, 80]\n  Suggested fix: set labelAt [908, 4174] or set labelDy 56 (below); or set labelAt [908, 4072] or set labelDy -46 (above)",
+      "subject": {
+        "diagramType": "architecture"
+      }
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[88] id \"e-04\" \"e-worker\" -> \"e-result\" shares a 30px corridor with connections[187] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [778, 4873] -> [778, 4903] (segments 3 and 1; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 88,
+        "id": "e-04",
+        "from": "e-worker",
+        "to": "e-result"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 187,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "overlapLengthPx": 30,
+        "minimumPx": 8,
+        "from": [
+          778,
+          4873
+        ],
+        "to": [
+          778,
+          4903
+        ],
+        "segmentIndex": 3,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"si se solicita deploy\" on connections[49] id \"b-17\" \"b-merge\" -> \"b-deploy\" label \"si se solicita deploy\" is 0px from connections[41] id \"b-local\" \"b-preview\" -> \"b-verificar\" label \"solo diff solicitado\" segment 1 [391, 2447] -> [391, 2899] (label rect [335, 2733, 111, 14]; minimum 4px) — if the authored labelDx/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 49,
+        "id": "b-17",
+        "from": "b-merge",
+        "to": "b-deploy"
+      },
+      "evidence": {
+        "label": "si se solicita deploy",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 41,
+          "id": "b-local",
+          "from": "b-preview",
+          "to": "b-verificar"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "b-17",
+            "from": "b-merge",
+            "to": "b-deploy",
+            "label": "si se solicita deploy",
+            "labelDx": -1
+          },
+          "relationIndex": 49,
+          "label": "si se solicita deploy",
+          "x": 334.6,
+          "y": 2733,
+          "width": 110.8,
+          "height": 14,
+          "lx": 390,
+          "ly": 2743
+        },
+        "from": [
+          391,
+          2447
+        ],
+        "to": [
+          391,
+          2899
+        ]
+      },
+      "supportedFixes": [
+        "if the authored labelDx/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"match exacto: leer IDs\" on connections[59] id \"c-reuse\" \"c-buscar\" -> \"c-readback\" label \"match exacto: leer IDs\" is 1.2px from connections[60] id \"c-ambiguous\" \"c-buscar\" -> \"c-stop\" label \"ambiguo: preguntar\" segment 1 [896, 3200] -> [896, 3520] (label rect [779, 3340, 116, 14]; minimum 4px) — if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 59,
+        "id": "c-reuse",
+        "from": "c-buscar",
+        "to": "c-readback"
+      },
+      "evidence": {
+        "label": "match exacto: leer IDs",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 60,
+          "id": "c-ambiguous",
+          "from": "c-buscar",
+          "to": "c-stop"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 1.2,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "c-reuse",
+            "from": "c-buscar",
+            "to": "c-readback",
+            "label": "match exacto: leer IDs",
+            "fromSide": "left",
+            "toSide": "right"
+          },
+          "relationIndex": 59,
+          "label": "match exacto: leer IDs",
+          "x": 779.2,
+          "y": 3340,
+          "width": 115.6,
+          "height": 14,
+          "lx": 837,
+          "ly": 3350
+        },
+        "from": [
+          896,
+          3200
+        ],
+        "to": [
+          896,
+          3520
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"ambiguo: preguntar\" on connections[60] id \"c-ambiguous\" \"c-buscar\" -> \"c-stop\" label \"ambiguo: preguntar\" is 0px from connections[59] id \"c-reuse\" \"c-buscar\" -> \"c-readback\" label \"match exacto: leer IDs\" segment 1 [837, 3207] -> [837, 3513] (label rect [798, 3410, 96, 14]; minimum 4px) — if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 60,
+        "id": "c-ambiguous",
+        "from": "c-buscar",
+        "to": "c-stop"
+      },
+      "evidence": {
+        "label": "ambiguo: preguntar",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 59,
+          "id": "c-reuse",
+          "from": "c-buscar",
+          "to": "c-readback"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "c-ambiguous",
+            "from": "c-buscar",
+            "to": "c-stop",
+            "label": "ambiguo: preguntar",
+            "fromSide": "left",
+            "toSide": "left",
+            "labelAt": [
+              846,
+              3420
+            ]
+          },
+          "relationIndex": 60,
+          "label": "ambiguo: preguntar",
+          "x": 797.8,
+          "y": 3410,
+          "width": 96.39999999999999,
+          "height": 14,
+          "lx": 846,
+          "ly": 3420
+        },
+        "from": [
+          837,
+          3207
+        ],
+        "to": [
+          837,
+          3513
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    }
+  ],
+  "diagnosticSummary": {
+    "total": 17,
+    "shown": 8,
+    "truncated": true,
+    "omittedByCode": {
+      "clean-flow/edge-through-node": 2,
+      "composition/label-route-clearance": 5,
+      "layout/constraint": 2
+    }
+  },
+  "evidence": {
+    "receipt": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/semantic-review-1/frontend-reset-and-system-map-diagram.finalize.json",
+    "summaryReceipt": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/semantic-review-1/frontend-reset-and-system-map-diagram.finalize-summary.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-24T22:44:47.674Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 1006,
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "nextAction": {
+    "action": "edit-in-place",
+    "candidate": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+    "constraint": "Preserve all semantics and user-fixed geometry. Use references/architecture-layout-repair.md to choose a local repair or connected-scene reflow; edit the existing candidate.",
+    "then": "finalize-once"
+  }
+}

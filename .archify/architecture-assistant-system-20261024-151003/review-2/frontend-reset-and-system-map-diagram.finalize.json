@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "startedAt": "2026-10-24T22:49:36.497Z",
+  "specification": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+    "sha256": "295ca3f727f12a2b81e1ef546cff59cb36386239f9a0fbee73a61fb2b6341580",
+    "bytes": 50323
+  },
+  "artifact": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+    "sha256": "9bb4127c50e71bcfa8e740a9ca87989b0137e83cfc791183d87c3e0bb80ca0fa",
+    "bytes": 1156919
+  },
+  "stages": {
+    "validate": {
+      "status": "fail",
+      "exitCode": 1,
+      "durationMs": null,
+      "command": [
+        "/opt/homebrew/Cellar/node/26.0.0/bin/node",
+        "/Users/efren.herrera/.agents/skills/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+        "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": false,
+        "command": "deliver",
+        "receiptId": "071f2b36-f605-42ff-bf5d-7d6266e5a84a",
+        "stage": "render",
+        "type": "architecture",
+        "input": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+        "output": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+        "error": "Architecture layout validation failed:\n- Connection \"b-inicio->b-identidad\" is too short (20px; minimum 24px) — place its components farther apart.\n- Label \"confirmación real\" overlaps component \"c-crear\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [130, 3540, 92, 14]\n  component \"c-crear\" rect: [28, 3480, 280, 80]\n  Suggested fix: set labelAt [176, 3574] or set labelDy 24 (below); or set labelAt [176, 3472] or set labelDy -78 (above)",
+        "diagnostics": [
+          {
+            "code": "layout/constraint",
+            "severity": "error",
+            "message": "Connection \"b-inicio->b-identidad\" is too short (20px; minimum 24px) — place its components farther apart.",
+            "subject": {
+              "diagramType": "architecture"
+            },
+            "evidence": {},
+            "supportedFixes": []
+          },
+          {
+            "code": "layout/constraint",
+            "severity": "error",
+            "message": "Label \"confirmación real\" overlaps component \"c-crear\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [130, 3540, 92, 14]\n  component \"c-crear\" rect: [28, 3480, 280, 80]\n  Suggested fix: set labelAt [176, 3574] or set labelDy 24 (below); or set labelAt [176, 3472] or set labelDy -78 (above)",
+            "subject": {
+              "diagramType": "architecture"
+            },
+            "evidence": {},
+            "supportedFixes": []
+          }
+        ],
+        "provenance": "failed",
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      },
+      "execution": "embedded-in-deliver"
+    },
+    "deliver": {
+      "status": "not-run",
+      "execution": "blocked-by-validate"
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "diagnostics": [
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "Connection \"b-inicio->b-identidad\" is too short (20px; minimum 24px) — place its components farther apart.",
+      "subject": {
+        "diagramType": "architecture"
+      },
+      "evidence": {},
+      "supportedFixes": []
+    },
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "Label \"confirmación real\" overlaps component \"c-crear\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [130, 3540, 92, 14]\n  component \"c-crear\" rect: [28, 3480, 280, 80]\n  Suggested fix: set labelAt [176, 3574] or set labelDy 24 (below); or set labelAt [176, 3472] or set labelDy -78 (above)",
+      "subject": {
+        "diagramType": "architecture"
+      },
+      "evidence": {},
+      "supportedFixes": []
+    }
+  ],
+  "evidence": {
+    "receipt": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/review-2/frontend-reset-and-system-map-diagram.finalize.json",
+    "summaryReceipt": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/review-2/frontend-reset-and-system-map-diagram.finalize-summary.json"
+  },
+  "visualReview": "not-requested",
+  "failedStage": "validate",
+  "finishedAt": "2026-10-24T22:49:37.053Z",
+  "durationMs": 556,
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-24T22:44:47.674Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

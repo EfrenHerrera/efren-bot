@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "profile_id": "slack-thread-read",
+  "profile_version": 1,
+  "approved": false,
+  "cli": {
+    "path": "/absolute/path/to/claude",
+    "minimum_version": "2.1.295",
+    "verified_version": null,
+    "verified_sha256": null
+  },
+  "model": null,
+  "allowed_slack_hosts": [],
+  "connector": {
+    "kind": "claude_ai",
+    "server_url": null,
+    "tool_name": null,
+    "url_argument": null,
+    "fixed_arguments": {},
+    "input_schema": null
+  },
+  "limits": {
+    "run_timeout_seconds": 120,
+    "max_turns": 4,
+    "max_tool_calls": 1,
+    "max_stdout_bytes": 1048576,
+    "max_stderr_bytes": 65536,
+    "max_result_bytes": 32768
+  }
+}

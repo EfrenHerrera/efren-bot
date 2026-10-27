@@ -1,0 +1,9 @@
+{
+  "pid": 48834,
+  "source_commit": "d056996bc99d0571ce6ddf396622dbb2371b8254",
+  "facade": "http://127.0.0.1:3120/mcp",
+  "callback_listener": "127.0.0.1:3118",
+  "log_path": "/Users/efren.herrera/workspace/efren-bot/.local/slack-proxy-runtime/run-20261023T222254Z/proxy.log",
+  "entrypoint": "/Users/efren.herrera/workspace/efren-bot/.local/slack-mcp-proxy/build/index.js",
+  "credentials_supplied": false
+}

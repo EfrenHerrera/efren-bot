@@ -1,0 +1,21 @@
+# Explicit opt-in. Only API receives the bridge-owned files, never Claude HOME/tokens.
+services:
+  api:
+    user: "${CLAUDE_BRIDGE_UID:?use make bridge-up}:${CLAUDE_BRIDGE_GID:?use make bridge-up}"
+    environment:
+      CLAUDE_BRIDGE_ENABLED: "true"
+      CLAUDE_BRIDGE_TOKEN_FILE: /run/efren-bot-bridge/token
+      CLAUDE_BRIDGE_PROFILE_FILE: /run/efren-bot-bridge/profile.json
+    volumes:
+      - type: bind
+        source: ./.local/bridge/token
+        target: /run/efren-bot-bridge/token
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./.local/bridge/profile.json
+        target: /run/efren-bot-bridge/profile.json
+        read_only: true
+        bind:
+          create_host_path: false

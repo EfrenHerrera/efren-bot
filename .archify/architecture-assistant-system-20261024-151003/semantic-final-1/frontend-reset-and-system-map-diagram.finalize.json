@@ -1,0 +1,2854 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "startedAt": "2026-10-24T23:38:51.788Z",
+  "specification": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+    "sha256": "8b164c86e229f0951049595d25c6ef791cbf5077401c6c7904fc847259869c05",
+    "bytes": 62438
+  },
+  "artifact": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+    "sha256": "7a68f198d28b565c3f0a372a96678d9c873a7f86c07f06b75c9646cf8a719e48",
+    "bytes": 1220824
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": null,
+      "execution": "embedded-in-deliver",
+      "command": [
+        "/opt/homebrew/Cellar/node/26.0.0/bin/node",
+        "/Users/efren.herrera/.agents/skills/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+        "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "validate",
+        "specification": {
+          "sha256": "8b164c86e229f0951049595d25c6ef791cbf5077401c6c7904fc847259869c05",
+          "bytes": 62438
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        }
+      }
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 984,
+      "command": [
+        "/opt/homebrew/Cellar/node/26.0.0/bin/node",
+        "/Users/efren.herrera/.agents/skills/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+        "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "receiptId": "b15a7328-04c7-4c85-81ea-e593fe98edde",
+        "ok": true,
+        "command": "deliver",
+        "type": "architecture",
+        "input": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+        "output": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+        "specification": {
+          "sha256": "8b164c86e229f0951049595d25c6ef791cbf5077401c6c7904fc847259869c05",
+          "bytes": 62438
+        },
+        "artifact": {
+          "sha256": "7a68f198d28b565c3f0a372a96678d9c873a7f86c07f06b75c9646cf8a719e48",
+          "bytes": 1220824
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        },
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      }
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 202,
+      "command": [
+        "/opt/homebrew/Cellar/node/26.0.0/bin/node",
+        "/Users/efren.herrera/.agents/skills/archify/bin/archify.mjs",
+        "check",
+        "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+        "--require-provenance"
+      ],
+      "receipt": {
+        "ok": true,
+        "file": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+        "artifact": {
+          "sha256": "7a68f198d28b565c3f0a372a96678d9c873a7f86c07f06b75c9646cf8a719e48",
+          "bytes": 1220824
+        },
+        "checks": [
+          {
+            "name": "single_svg",
+            "ok": true,
+            "details": [
+              "found 1 <svg> block(s)"
+            ]
+          },
+          {
+            "name": "finite_svg",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "orthogonal_arrows",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "label_route_clearance",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_crossings",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_corridors",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "container_border_runs",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "route_rhythm",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "legend_clearance",
+            "ok": true,
+            "details": []
+          }
+        ],
+        "composition": {
+          "schemaVersion": 1,
+          "profile": "showcase",
+          "status": "pass",
+          "summary": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "metrics": {
+            "properCrossings": 0,
+            "resolvedCrossovers": 82,
+            "ambiguousCorridors": 0,
+            "arrowheadCollisions": 0,
+            "containerBorderRuns": 0,
+            "labelRouteClearanceIssues": 0,
+            "labelCanvasOverflowIssues": 0,
+            "minLabelRouteClearance": 4,
+            "desktopReadabilityIssues": 0,
+            "viewportHeightIssues": 0,
+            "minProjectedNodeTextPx": 6,
+            "maxBends": 3,
+            "routesOverSuggestedBends": 3,
+            "maxStretch": 1.3,
+            "routesOverSuggestedStretch": 0,
+            "minSegmentPx": 24,
+            "minInteriorSegmentPx": 146,
+            "shortSegmentCount": 0,
+            "shortEndpointSegmentCount": 0,
+            "shortInteriorSegmentCount": 0,
+            "microSegmentCount": 0
+          },
+          "suggestedLimits": {
+            "bendsPerRelationship": 2,
+            "stretch": 1.35,
+            "segmentPx": 16,
+            "microSegmentPx": 8
+          },
+          "routeReview": {
+            "crossings": [
+              {
+                "left": {
+                  "id": "b-05",
+                  "from": "b-stop",
+                  "to": "b-checkout",
+                  "label": "solo si resuelto",
+                  "collectionIndex": 34,
+                  "artifactIndex": 35
+                },
+                "right": {
+                  "id": "shared-c-b",
+                  "from": "c-readback",
+                  "to": "b-identidad",
+                  "label": "reusar UUID + KNF reales",
+                  "collectionIndex": 186,
+                  "artifactIndex": 187
+                },
+                "point": [
+                  450,
+                  2120
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-05",
+                  "from": "b-stop",
+                  "to": "b-checkout",
+                  "label": "solo si resuelto",
+                  "collectionIndex": 34,
+                  "artifactIndex": 35
+                },
+                "right": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "collectionIndex": 187,
+                  "artifactIndex": 188
+                },
+                "point": [
+                  328,
+                  2120
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-07",
+                  "from": "b-base",
+                  "to": "b-topologia",
+                  "label": "",
+                  "collectionIndex": 36,
+                  "artifactIndex": 37
+                },
+                "right": {
+                  "id": "shared-c-b",
+                  "from": "c-readback",
+                  "to": "b-identidad",
+                  "label": "reusar UUID + KNF reales",
+                  "collectionIndex": 186,
+                  "artifactIndex": 187
+                },
+                "point": [
+                  450,
+                  2280
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-07",
+                  "from": "b-base",
+                  "to": "b-topologia",
+                  "label": "",
+                  "collectionIndex": 36,
+                  "artifactIndex": 37
+                },
+                "right": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "collectionIndex": 187,
+                  "artifactIndex": 188
+                },
+                "point": [
+                  328,
+                  2280
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-11",
+                  "from": "b-preview",
+                  "to": "b-aprobar",
+                  "label": "si publicar encargado",
+                  "collectionIndex": 40,
+                  "artifactIndex": 41
+                },
+                "right": {
+                  "id": "shared-c-b",
+                  "from": "c-readback",
+                  "to": "b-identidad",
+                  "label": "reusar UUID + KNF reales",
+                  "collectionIndex": 186,
+                  "artifactIndex": 187
+                },
+                "point": [
+                  450,
+                  2440
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-11",
+                  "from": "b-preview",
+                  "to": "b-aprobar",
+                  "label": "si publicar encargado",
+                  "collectionIndex": 40,
+                  "artifactIndex": 41
+                },
+                "right": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "collectionIndex": 187,
+                  "artifactIndex": 188
+                },
+                "point": [
+                  328,
+                  2440
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-local",
+                  "from": "b-preview",
+                  "to": "b-verificar",
+                  "label": "solo diff solicitado",
+                  "collectionIndex": 41,
+                  "artifactIndex": 42
+                },
+                "right": {
+                  "id": "b-14",
+                  "from": "b-publicar",
+                  "to": "b-ci",
+                  "label": "",
+                  "collectionIndex": 44,
+                  "artifactIndex": 45
+                },
+                "point": [
+                  837,
+                  2600
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-local",
+                  "from": "b-preview",
+                  "to": "b-verificar",
+                  "label": "solo diff solicitado",
+                  "collectionIndex": 41,
+                  "artifactIndex": 42
+                },
+                "right": {
+                  "id": "b-ci-merge",
+                  "from": "b-ci",
+                  "to": "b-merge",
+                  "label": "si merge encargado",
+                  "collectionIndex": 47,
+                  "artifactIndex": 48
+                },
+                "point": [
+                  837,
+                  2680
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-13",
+                  "from": "b-live",
+                  "to": "b-publicar",
+                  "label": "vigente y exacto",
+                  "collectionIndex": 43,
+                  "artifactIndex": 44
+                },
+                "right": {
+                  "id": "shared-c-b",
+                  "from": "c-readback",
+                  "to": "b-identidad",
+                  "label": "reusar UUID + KNF reales",
+                  "collectionIndex": 186,
+                  "artifactIndex": 187
+                },
+                "point": [
+                  450,
+                  2600
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-13",
+                  "from": "b-live",
+                  "to": "b-publicar",
+                  "label": "vigente y exacto",
+                  "collectionIndex": 43,
+                  "artifactIndex": 44
+                },
+                "right": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "collectionIndex": 187,
+                  "artifactIndex": 188
+                },
+                "point": [
+                  328,
+                  2600
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-14",
+                  "from": "b-publicar",
+                  "to": "b-ci",
+                  "label": "",
+                  "collectionIndex": 44,
+                  "artifactIndex": 45
+                },
+                "right": {
+                  "id": "b-16",
+                  "from": "b-fix",
+                  "to": "b-checks",
+                  "label": "nuevo diff a checks",
+                  "collectionIndex": 46,
+                  "artifactIndex": 47
+                },
+                "point": [
+                  876,
+                  2600
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-16",
+                  "from": "b-fix",
+                  "to": "b-checks",
+                  "label": "nuevo diff a checks",
+                  "collectionIndex": 46,
+                  "artifactIndex": 47
+                },
+                "right": {
+                  "id": "b-ci-merge",
+                  "from": "b-ci",
+                  "to": "b-merge",
+                  "label": "si merge encargado",
+                  "collectionIndex": 47,
+                  "artifactIndex": 48
+                },
+                "point": [
+                  876,
+                  2680
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-16",
+                  "from": "b-fix",
+                  "to": "b-checks",
+                  "label": "nuevo diff a checks",
+                  "collectionIndex": 46,
+                  "artifactIndex": 47
+                },
+                "right": {
+                  "id": "b-mr-result",
+                  "from": "b-ci",
+                  "to": "b-verificar",
+                  "label": "MR entregado; sin fix",
+                  "collectionIndex": 48,
+                  "artifactIndex": 49
+                },
+                "point": [
+                  896,
+                  2760
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-17",
+                  "from": "b-merge",
+                  "to": "b-deploy",
+                  "label": "si se solicita deploy",
+                  "collectionIndex": 49,
+                  "artifactIndex": 50
+                },
+                "right": {
+                  "id": "shared-c-b",
+                  "from": "c-readback",
+                  "to": "b-identidad",
+                  "label": "reusar UUID + KNF reales",
+                  "collectionIndex": 186,
+                  "artifactIndex": 187
+                },
+                "point": [
+                  450,
+                  2760
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-17",
+                  "from": "b-merge",
+                  "to": "b-deploy",
+                  "label": "si se solicita deploy",
+                  "collectionIndex": 49,
+                  "artifactIndex": 50
+                },
+                "right": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "collectionIndex": 187,
+                  "artifactIndex": 188
+                },
+                "point": [
+                  328,
+                  2760
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-18",
+                  "from": "b-deploy",
+                  "to": "b-verificar",
+                  "label": "",
+                  "collectionIndex": 50,
+                  "artifactIndex": 51
+                },
+                "right": {
+                  "id": "shared-c-b",
+                  "from": "c-readback",
+                  "to": "b-identidad",
+                  "label": "reusar UUID + KNF reales",
+                  "collectionIndex": 186,
+                  "artifactIndex": 187
+                },
+                "point": [
+                  450,
+                  3144
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-18",
+                  "from": "b-deploy",
+                  "to": "b-verificar",
+                  "label": "",
+                  "collectionIndex": 50,
+                  "artifactIndex": 51
+                },
+                "right": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "collectionIndex": 187,
+                  "artifactIndex": 188
+                },
+                "point": [
+                  328,
+                  3144
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-18",
+                  "from": "b-deploy",
+                  "to": "b-verificar",
+                  "label": "",
+                  "collectionIndex": 50,
+                  "artifactIndex": 51
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  3144
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-19",
+                  "from": "b-verificar",
+                  "to": "b-status",
+                  "label": "si se pide status",
+                  "collectionIndex": 52,
+                  "artifactIndex": 53
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  2920
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-result-local",
+                  "from": "b-verificar",
+                  "to": "b-result",
+                  "label": "resultado sin status",
+                  "collectionIndex": 54,
+                  "artifactIndex": 55
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  3080
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-human-close",
+                  "from": "b-result",
+                  "to": "b-cierre",
+                  "label": "si humano decide cerrar",
+                  "collectionIndex": 55,
+                  "artifactIndex": 56
+                },
+                "right": {
+                  "id": "shared-c-b",
+                  "from": "c-readback",
+                  "to": "b-identidad",
+                  "label": "reusar UUID + KNF reales",
+                  "collectionIndex": 186,
+                  "artifactIndex": 187
+                },
+                "point": [
+                  450,
+                  3080
+                ]
+              },
+              {
+                "left": {
+                  "id": "b-human-close",
+                  "from": "b-result",
+                  "to": "b-cierre",
+                  "label": "si humano decide cerrar",
+                  "collectionIndex": 55,
+                  "artifactIndex": 56
+                },
+                "right": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "collectionIndex": 187,
+                  "artifactIndex": 188
+                },
+                "point": [
+                  328,
+                  2920
+                ]
+              },
+              {
+                "left": {
+                  "id": "c-01",
+                  "from": "c-inicio",
+                  "to": "c-owner",
+                  "label": "",
+                  "collectionIndex": 56,
+                  "artifactIndex": 57
+                },
+                "right": {
+                  "id": "shared-c-b",
+                  "from": "c-readback",
+                  "to": "b-identidad",
+                  "label": "reusar UUID + KNF reales",
+                  "collectionIndex": 186,
+                  "artifactIndex": 187
+                },
+                "point": [
+                  450,
+                  3200
+                ]
+              },
+              {
+                "left": {
+                  "id": "c-01",
+                  "from": "c-inicio",
+                  "to": "c-owner",
+                  "label": "",
+                  "collectionIndex": 56,
+                  "artifactIndex": 57
+                },
+                "right": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "collectionIndex": 187,
+                  "artifactIndex": 188
+                },
+                "point": [
+                  328,
+                  3200
+                ]
+              },
+              {
+                "left": {
+                  "id": "c-02",
+                  "from": "c-owner",
+                  "to": "c-buscar",
+                  "label": "",
+                  "collectionIndex": 57,
+                  "artifactIndex": 58
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  3200
+                ]
+              },
+              {
+                "left": {
+                  "id": "c-reuse",
+                  "from": "c-buscar",
+                  "to": "c-readback",
+                  "label": "match exacto: leer IDs",
+                  "collectionIndex": 59,
+                  "artifactIndex": 60
+                },
+                "right": {
+                  "id": "c-04",
+                  "from": "c-aceptar",
+                  "to": "c-aprobar",
+                  "label": "",
+                  "collectionIndex": 61,
+                  "artifactIndex": 62
+                },
+                "point": [
+                  837,
+                  3360
+                ]
+              },
+              {
+                "left": {
+                  "id": "c-reuse",
+                  "from": "c-buscar",
+                  "to": "c-readback",
+                  "label": "match exacto: leer IDs",
+                  "collectionIndex": 59,
+                  "artifactIndex": 60
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  3520
+                ]
+              },
+              {
+                "left": {
+                  "id": "c-ambiguous",
+                  "from": "c-buscar",
+                  "to": "c-stop",
+                  "label": "ambiguo: preguntar",
+                  "collectionIndex": 60,
+                  "artifactIndex": 61
+                },
+                "right": {
+                  "id": "c-04",
+                  "from": "c-aceptar",
+                  "to": "c-aprobar",
+                  "label": "",
+                  "collectionIndex": 61,
+                  "artifactIndex": 62
+                },
+                "point": [
+                  896,
+                  3360
+                ]
+              },
+              {
+                "left": {
+                  "id": "c-04",
+                  "from": "c-aceptar",
+                  "to": "c-aprobar",
+                  "label": "",
+                  "collectionIndex": 61,
+                  "artifactIndex": 62
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  3360
+                ]
+              },
+              {
+                "left": {
+                  "id": "c-05",
+                  "from": "c-aprobar",
+                  "to": "c-intent",
+                  "label": "",
+                  "collectionIndex": 62,
+                  "artifactIndex": 63
+                },
+                "right": {
+                  "id": "shared-c-b",
+                  "from": "c-readback",
+                  "to": "b-identidad",
+                  "label": "reusar UUID + KNF reales",
+                  "collectionIndex": 186,
+                  "artifactIndex": 187
+                },
+                "point": [
+                  450,
+                  3360
+                ]
+              },
+              {
+                "left": {
+                  "id": "c-05",
+                  "from": "c-aprobar",
+                  "to": "c-intent",
+                  "label": "",
+                  "collectionIndex": 62,
+                  "artifactIndex": 63
+                },
+                "right": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "collectionIndex": 187,
+                  "artifactIndex": 188
+                },
+                "point": [
+                  328,
+                  3360
+                ]
+              },
+              {
+                "left": {
+                  "id": "c-05",
+                  "from": "c-aprobar",
+                  "to": "c-intent",
+                  "label": "",
+                  "collectionIndex": 62,
+                  "artifactIndex": 63
+                },
+                "right": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "collectionIndex": 188,
+                  "artifactIndex": 189
+                },
+                "point": [
+                  348,
+                  3360
+                ]
+              },
+              {
+                "left": {
+                  "id": "c-07",
+                  "from": "c-crear",
+                  "to": "c-readback",
+                  "label": "confirmación real",
+                  "collectionIndex": 64,
+                  "artifactIndex": 65
+                },
+                "right": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "collectionIndex": 187,
+                  "artifactIndex": 188
+                },
+                "point": [
+                  328,
+                  3527
+                ]
+              },
+              {
+                "left": {
+                  "id": "c-07",
+                  "from": "c-crear",
+                  "to": "c-readback",
+                  "label": "confirmación real",
+                  "collectionIndex": 64,
+                  "artifactIndex": 65
+                },
+                "right": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "collectionIndex": 188,
+                  "artifactIndex": 189
+                },
+                "point": [
+                  348,
+                  3527
+                ]
+              },
+              {
+                "left": {
+                  "id": "c-08",
+                  "from": "c-readback",
+                  "to": "c-stop",
+                  "label": "",
+                  "collectionIndex": 65,
+                  "artifactIndex": 66
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  3520
+                ]
+              },
+              {
+                "left": {
+                  "id": "c-10",
+                  "from": "c-bundle",
+                  "to": "c-campos",
+                  "label": "",
+                  "collectionIndex": 67,
+                  "artifactIndex": 68
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  3680
+                ]
+              },
+              {
+                "left": {
+                  "id": "c-11",
+                  "from": "c-campos",
+                  "to": "c-ids",
+                  "label": "",
+                  "collectionIndex": 68,
+                  "artifactIndex": 69
+                },
+                "right": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "collectionIndex": 187,
+                  "artifactIndex": 188
+                },
+                "point": [
+                  328,
+                  3680
+                ]
+              },
+              {
+                "left": {
+                  "id": "c-11",
+                  "from": "c-campos",
+                  "to": "c-ids",
+                  "label": "",
+                  "collectionIndex": 68,
+                  "artifactIndex": 69
+                },
+                "right": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "collectionIndex": 188,
+                  "artifactIndex": 189
+                },
+                "point": [
+                  348,
+                  3680
+                ]
+              },
+              {
+                "left": {
+                  "id": "d-01",
+                  "from": "d-inicio",
+                  "to": "d-contexto",
+                  "label": "",
+                  "collectionIndex": 69,
+                  "artifactIndex": 70
+                },
+                "right": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "collectionIndex": 187,
+                  "artifactIndex": 188
+                },
+                "point": [
+                  328,
+                  3960
+                ]
+              },
+              {
+                "left": {
+                  "id": "d-01",
+                  "from": "d-inicio",
+                  "to": "d-contexto",
+                  "label": "",
+                  "collectionIndex": 69,
+                  "artifactIndex": 70
+                },
+                "right": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "collectionIndex": 188,
+                  "artifactIndex": 189
+                },
+                "point": [
+                  348,
+                  3960
+                ]
+              },
+              {
+                "left": {
+                  "id": "d-02",
+                  "from": "d-contexto",
+                  "to": "d-skill",
+                  "label": "",
+                  "collectionIndex": 70,
+                  "artifactIndex": 71
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  3953
+                ]
+              },
+              {
+                "left": {
+                  "id": "d-sufficient",
+                  "from": "d-skill",
+                  "to": "d-hechos",
+                  "label": "evidencia suficiente",
+                  "collectionIndex": 72,
+                  "artifactIndex": 73
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  4120
+                ]
+              },
+              {
+                "left": {
+                  "id": "d-04",
+                  "from": "d-herramientas",
+                  "to": "d-hechos",
+                  "label": "solo evidencia autorizada",
+                  "collectionIndex": 73,
+                  "artifactIndex": 74
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  4120
+                ]
+              },
+              {
+                "left": {
+                  "id": "d-needed-unavailable",
+                  "from": "d-herramientas",
+                  "to": "d-stop",
+                  "label": "necesaria no disponible",
+                  "collectionIndex": 74,
+                  "artifactIndex": 75
+                },
+                "right": {
+                  "id": "d-08",
+                  "from": "d-aprobar",
+                  "to": "d-live",
+                  "label": "",
+                  "collectionIndex": 79,
+                  "artifactIndex": 80
+                },
+                "point": [
+                  837,
+                  4280
+                ]
+              },
+              {
+                "left": {
+                  "id": "d-needed-unavailable",
+                  "from": "d-herramientas",
+                  "to": "d-stop",
+                  "label": "necesaria no disponible",
+                  "collectionIndex": 74,
+                  "artifactIndex": 75
+                },
+                "right": {
+                  "id": "d-10",
+                  "from": "d-publicar",
+                  "to": "d-seguir",
+                  "label": "solo si scopes concedidos",
+                  "collectionIndex": 81,
+                  "artifactIndex": 82
+                },
+                "point": [
+                  837,
+                  4440
+                ]
+              },
+              {
+                "left": {
+                  "id": "d-needed-unavailable",
+                  "from": "d-herramientas",
+                  "to": "d-stop",
+                  "label": "necesaria no disponible",
+                  "collectionIndex": 74,
+                  "artifactIndex": 75
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  4600
+                ]
+              },
+              {
+                "left": {
+                  "id": "d-05",
+                  "from": "d-hechos",
+                  "to": "d-diagnostico",
+                  "label": "",
+                  "collectionIndex": 75,
+                  "artifactIndex": 76
+                },
+                "right": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "collectionIndex": 187,
+                  "artifactIndex": 188
+                },
+                "point": [
+                  328,
+                  4120
+                ]
+              },
+              {
+                "left": {
+                  "id": "d-05",
+                  "from": "d-hechos",
+                  "to": "d-diagnostico",
+                  "label": "",
+                  "collectionIndex": 75,
+                  "artifactIndex": 76
+                },
+                "right": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "collectionIndex": 188,
+                  "artifactIndex": 189
+                },
+                "point": [
+                  348,
+                  4120
+                ]
+              },
+              {
+                "left": {
+                  "id": "d-07",
+                  "from": "d-feedback",
+                  "to": "d-aprobar",
+                  "label": "",
+                  "collectionIndex": 77,
+                  "artifactIndex": 78
+                },
+                "right": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "collectionIndex": 187,
+                  "artifactIndex": 188
+                },
+                "point": [
+                  328,
+                  4280
+                ]
+              },
+              {
+                "left": {
+                  "id": "d-07",
+                  "from": "d-feedback",
+                  "to": "d-aprobar",
+                  "label": "",
+                  "collectionIndex": 77,
+                  "artifactIndex": 78
+                },
+                "right": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "collectionIndex": 188,
+                  "artifactIndex": 189
+                },
+                "point": [
+                  348,
+                  4280
+                ]
+              },
+              {
+                "left": {
+                  "id": "d-draft-only",
+                  "from": "d-feedback",
+                  "to": "d-result",
+                  "label": "solo borrador solicitado",
+                  "collectionIndex": 78,
+                  "artifactIndex": 79
+                },
+                "right": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "collectionIndex": 187,
+                  "artifactIndex": 188
+                },
+                "point": [
+                  328,
+                  4280.727272727273
+                ]
+              },
+              {
+                "left": {
+                  "id": "d-08",
+                  "from": "d-aprobar",
+                  "to": "d-live",
+                  "label": "",
+                  "collectionIndex": 79,
+                  "artifactIndex": 80
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  4280
+                ]
+              },
+              {
+                "left": {
+                  "id": "d-10",
+                  "from": "d-publicar",
+                  "to": "d-seguir",
+                  "label": "solo si scopes concedidos",
+                  "collectionIndex": 81,
+                  "artifactIndex": 82
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  4440
+                ]
+              },
+              {
+                "left": {
+                  "id": "d-follow-result",
+                  "from": "d-seguir",
+                  "to": "d-result",
+                  "label": "registrar seguimiento",
+                  "collectionIndex": 83,
+                  "artifactIndex": 84
+                },
+                "right": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "collectionIndex": 188,
+                  "artifactIndex": 189
+                },
+                "point": [
+                  348,
+                  4440
+                ]
+              },
+              {
+                "left": {
+                  "id": "e-01",
+                  "from": "e-inicio",
+                  "to": "e-base",
+                  "label": "diff admitido",
+                  "collectionIndex": 84,
+                  "artifactIndex": 85
+                },
+                "right": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "collectionIndex": 188,
+                  "artifactIndex": 189
+                },
+                "point": [
+                  348,
+                  4720
+                ]
+              },
+              {
+                "left": {
+                  "id": "e-02",
+                  "from": "e-base",
+                  "to": "e-permiso",
+                  "label": "requiere CI o logs",
+                  "collectionIndex": 85,
+                  "artifactIndex": 86
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  4713
+                ]
+              },
+              {
+                "left": {
+                  "id": "e-03",
+                  "from": "e-base",
+                  "to": "e-worker",
+                  "label": "diff suficiente",
+                  "collectionIndex": 86,
+                  "artifactIndex": 87
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  4727
+                ]
+              },
+              {
+                "left": {
+                  "id": "e-04",
+                  "from": "e-worker",
+                  "to": "e-result",
+                  "label": "hallazgos",
+                  "collectionIndex": 88,
+                  "artifactIndex": 89
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  4880
+                ]
+              },
+              {
+                "left": {
+                  "id": "e-publish-choice",
+                  "from": "e-result",
+                  "to": "e-comentar",
+                  "label": "si publicar encargado",
+                  "collectionIndex": 89,
+                  "artifactIndex": 90
+                },
+                "right": {
+                  "id": "shared-e-merge",
+                  "from": "e-ci",
+                  "to": "b-merge",
+                  "label": "merge solo con su aprobación",
+                  "collectionIndex": 189,
+                  "artifactIndex": 190
+                },
+                "point": [
+                  778,
+                  4880
+                ]
+              },
+              {
+                "left": {
+                  "id": "e-05",
+                  "from": "e-result",
+                  "to": "e-fix",
+                  "label": "solo nuevo encargo",
+                  "collectionIndex": 91,
+                  "artifactIndex": 92
+                },
+                "right": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "collectionIndex": 188,
+                  "artifactIndex": 189
+                },
+                "point": [
+                  348,
+                  4880
+                ]
+              },
+              {
+                "left": {
+                  "id": "e-07",
+                  "from": "e-checks",
+                  "to": "e-update",
+                  "label": "",
+                  "collectionIndex": 93,
+                  "artifactIndex": 94
+                },
+                "right": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "collectionIndex": 188,
+                  "artifactIndex": 189
+                },
+                "point": [
+                  348,
+                  5040
+                ]
+              },
+              {
+                "left": {
+                  "id": "f-01",
+                  "from": "f-inicio",
+                  "to": "f-fuentes",
+                  "label": "",
+                  "collectionIndex": 95,
+                  "artifactIndex": 96
+                },
+                "right": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "collectionIndex": 188,
+                  "artifactIndex": 189
+                },
+                "point": [
+                  348,
+                  5320
+                ]
+              },
+              {
+                "left": {
+                  "id": "f-local-decision",
+                  "from": "f-result",
+                  "to": "f-decidir",
+                  "label": "borrador local",
+                  "collectionIndex": 101,
+                  "artifactIndex": 102
+                },
+                "right": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "collectionIndex": 188,
+                  "artifactIndex": 189
+                },
+                "point": [
+                  348,
+                  5647
+                ]
+              },
+              {
+                "left": {
+                  "id": "f-publish-choice",
+                  "from": "f-result",
+                  "to": "f-publicar",
+                  "label": "si publicar solicitado",
+                  "collectionIndex": 102,
+                  "artifactIndex": 103
+                },
+                "right": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "collectionIndex": 188,
+                  "artifactIndex": 189
+                },
+                "point": [
+                  348,
+                  5480
+                ]
+              },
+              {
+                "left": {
+                  "id": "q-noeffect",
+                  "from": "q-checkpoint",
+                  "to": "q-result",
+                  "label": "sin efecto requerido",
+                  "collectionIndex": 115,
+                  "artifactIndex": 116
+                },
+                "right": {
+                  "id": "q-12",
+                  "from": "q-crash",
+                  "to": "q-resume",
+                  "label": "recuperar tras fencing",
+                  "collectionIndex": 121,
+                  "artifactIndex": 122
+                },
+                "point": [
+                  450,
+                  6700
+                ]
+              },
+              {
+                "left": {
+                  "id": "q-noeffect",
+                  "from": "q-checkpoint",
+                  "to": "q-result",
+                  "label": "sin efecto requerido",
+                  "collectionIndex": 115,
+                  "artifactIndex": 116
+                },
+                "right": {
+                  "id": "q-17",
+                  "from": "q-effect",
+                  "to": "q-unknown",
+                  "label": "sin respuesta: UNKNOWN",
+                  "collectionIndex": 129,
+                  "artifactIndex": 130
+                },
+                "point": [
+                  450,
+                  7084
+                ]
+              },
+              {
+                "left": {
+                  "id": "q-noeffect",
+                  "from": "q-checkpoint",
+                  "to": "q-result",
+                  "label": "sin efecto requerido",
+                  "collectionIndex": 115,
+                  "artifactIndex": 116
+                },
+                "right": {
+                  "id": "q-reconciled",
+                  "from": "q-reconcile",
+                  "to": "q-confirm",
+                  "label": "efecto confirmado",
+                  "collectionIndex": 131,
+                  "artifactIndex": 132
+                },
+                "point": [
+                  450,
+                  7020
+                ]
+              },
+              {
+                "left": {
+                  "id": "q-noeffect",
+                  "from": "q-checkpoint",
+                  "to": "q-result",
+                  "label": "sin efecto requerido",
+                  "collectionIndex": 115,
+                  "artifactIndex": 116
+                },
+                "right": {
+                  "id": "q-safe-retry",
+                  "from": "q-reconcile",
+                  "to": "q-live",
+                  "label": "G garantizada O (P: no aceptado ni podrá completar)",
+                  "collectionIndex": 132,
+                  "artifactIndex": 133
+                },
+                "point": [
+                  450,
+                  6860
+                ]
+              },
+              {
+                "left": {
+                  "id": "q-effect-choice",
+                  "from": "q-checkpoint",
+                  "to": "q-live",
+                  "label": "efecto solicitado",
+                  "collectionIndex": 116,
+                  "artifactIndex": 117
+                },
+                "right": {
+                  "id": "q-10",
+                  "from": "q-wait",
+                  "to": "q-resume",
+                  "label": "cuando llega condición",
+                  "collectionIndex": 119,
+                  "artifactIndex": 120
+                },
+                "point": [
+                  778,
+                  6700
+                ]
+              },
+              {
+                "left": {
+                  "id": "q-effect-choice",
+                  "from": "q-checkpoint",
+                  "to": "q-live",
+                  "label": "efecto solicitado",
+                  "collectionIndex": 116,
+                  "artifactIndex": 117
+                },
+                "right": {
+                  "id": "q-reclaim",
+                  "from": "q-resume",
+                  "to": "q-claim",
+                  "label": "vigente: nuevo claim",
+                  "collectionIndex": 122,
+                  "artifactIndex": 123
+                },
+                "point": [
+                  778,
+                  6700
+                ]
+              },
+              {
+                "left": {
+                  "id": "q-effect-choice",
+                  "from": "q-checkpoint",
+                  "to": "q-live",
+                  "label": "efecto solicitado",
+                  "collectionIndex": 116,
+                  "artifactIndex": 117
+                },
+                "right": {
+                  "id": "q-resume-blocked",
+                  "from": "q-resume",
+                  "to": "q-wait",
+                  "label": "cambió: esperar revisión",
+                  "collectionIndex": 123,
+                  "artifactIndex": 124
+                },
+                "point": [
+                  778,
+                  6700
+                ]
+              },
+              {
+                "left": {
+                  "id": "q-08",
+                  "from": "q-checkpoint",
+                  "to": "q-wait",
+                  "label": "si espera",
+                  "collectionIndex": 117,
+                  "artifactIndex": 118
+                },
+                "right": {
+                  "id": "q-reclaim",
+                  "from": "q-resume",
+                  "to": "q-claim",
+                  "label": "vigente: nuevo claim",
+                  "collectionIndex": 122,
+                  "artifactIndex": 123
+                },
+                "point": [
+                  837,
+                  6533
+                ]
+              },
+              {
+                "left": {
+                  "id": "q-12",
+                  "from": "q-crash",
+                  "to": "q-resume",
+                  "label": "recuperar tras fencing",
+                  "collectionIndex": 121,
+                  "artifactIndex": 122
+                },
+                "right": {
+                  "id": "q-cancel-choice",
+                  "from": "q-checkpoint",
+                  "to": "q-cancel",
+                  "label": "si cancelar",
+                  "collectionIndex": 124,
+                  "artifactIndex": 125
+                },
+                "point": [
+                  391,
+                  6700
+                ]
+              },
+              {
+                "left": {
+                  "id": "q-17",
+                  "from": "q-effect",
+                  "to": "q-unknown",
+                  "label": "sin respuesta: UNKNOWN",
+                  "collectionIndex": 129,
+                  "artifactIndex": 130
+                },
+                "right": {
+                  "id": "q-reconciled",
+                  "from": "q-reconcile",
+                  "to": "q-confirm",
+                  "label": "efecto confirmado",
+                  "collectionIndex": 131,
+                  "artifactIndex": 132
+                },
+                "point": [
+                  391,
+                  7084
+                ]
+              },
+              {
+                "left": {
+                  "id": "q-17",
+                  "from": "q-effect",
+                  "to": "q-unknown",
+                  "label": "sin respuesta: UNKNOWN",
+                  "collectionIndex": 129,
+                  "artifactIndex": 130
+                },
+                "right": {
+                  "id": "q-safe-retry",
+                  "from": "q-reconcile",
+                  "to": "q-live",
+                  "label": "G garantizada O (P: no aceptado ni podrá completar)",
+                  "collectionIndex": 132,
+                  "artifactIndex": 133
+                },
+                "point": [
+                  391,
+                  7084
+                ]
+              },
+              {
+                "left": {
+                  "id": "q-17",
+                  "from": "q-effect",
+                  "to": "q-unknown",
+                  "label": "sin respuesta: UNKNOWN",
+                  "collectionIndex": 129,
+                  "artifactIndex": 130
+                },
+                "right": {
+                  "id": "q-19",
+                  "from": "q-confirm",
+                  "to": "q-autoridad",
+                  "label": "registrar resultado",
+                  "collectionIndex": 134,
+                  "artifactIndex": 135
+                },
+                "point": [
+                  614,
+                  7084
+                ]
+              },
+              {
+                "left": {
+                  "id": "m-history-lesson",
+                  "from": "m-historia",
+                  "to": "m-leccion",
+                  "label": "si hay lección confirmada",
+                  "collectionIndex": 138,
+                  "artifactIndex": 139
+                },
+                "right": {
+                  "id": "m-05",
+                  "from": "m-rehidratar",
+                  "to": "m-explicar",
+                  "label": "",
+                  "collectionIndex": 144,
+                  "artifactIndex": 145
+                },
+                "point": [
+                  332,
+                  7620
+                ]
+              },
+              {
+                "left": {
+                  "id": "m-history-lesson",
+                  "from": "m-historia",
+                  "to": "m-leccion",
+                  "label": "si hay lección confirmada",
+                  "collectionIndex": 138,
+                  "artifactIndex": 139
+                },
+                "right": {
+                  "id": "m-07",
+                  "from": "m-vector",
+                  "to": "m-embedding",
+                  "label": "",
+                  "collectionIndex": 146,
+                  "artifactIndex": 147
+                },
+                "point": [
+                  332,
+                  7780
+                ]
+              },
+              {
+                "left": {
+                  "id": "m-history-lesson",
+                  "from": "m-historia",
+                  "to": "m-leccion",
+                  "label": "si hay lección confirmada",
+                  "collectionIndex": 138,
+                  "artifactIndex": 139
+                },
+                "right": {
+                  "id": "m-11",
+                  "from": "m-revisar",
+                  "to": "m-registro",
+                  "label": "activar requiere decisión",
+                  "collectionIndex": 150,
+                  "artifactIndex": 151
+                },
+                "point": [
+                  332,
+                  7940
+                ]
+              },
+              {
+                "left": {
+                  "id": "m-history-retention",
+                  "from": "m-historia",
+                  "to": "m-retener",
+                  "label": "raw e historia; derivados si existen",
+                  "collectionIndex": 139,
+                  "artifactIndex": 140
+                },
+                "right": {
+                  "id": "m-05",
+                  "from": "m-rehidratar",
+                  "to": "m-explicar",
+                  "label": "",
+                  "collectionIndex": 144,
+                  "artifactIndex": 145
+                },
+                "point": [
+                  332,
+                  7620
+                ]
+              },
+              {
+                "left": {
+                  "id": "m-history-retention",
+                  "from": "m-historia",
+                  "to": "m-retener",
+                  "label": "raw e historia; derivados si existen",
+                  "collectionIndex": 139,
+                  "artifactIndex": 140
+                },
+                "right": {
+                  "id": "m-07",
+                  "from": "m-vector",
+                  "to": "m-embedding",
+                  "label": "",
+                  "collectionIndex": 146,
+                  "artifactIndex": 147
+                },
+                "point": [
+                  332,
+                  7780
+                ]
+              },
+              {
+                "left": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "collectionIndex": 187,
+                  "artifactIndex": 188
+                },
+                "right": {
+                  "id": "shared-f-b",
+                  "from": "f-dev",
+                  "to": "c-inicio",
+                  "label": "nuevo encargo vinculado",
+                  "collectionIndex": 188,
+                  "artifactIndex": 189
+                },
+                "point": [
+                  328,
+                  3200
+                ]
+              }
+            ],
+            "detours": [
+              {
+                "relationship": {
+                  "id": "b-18",
+                  "from": "b-deploy",
+                  "to": "b-verificar",
+                  "label": "",
+                  "collectionIndex": 50,
+                  "artifactIndex": 51
+                },
+                "bends": 3,
+                "stretch": 1.07
+              },
+              {
+                "relationship": {
+                  "id": "m-history-lesson",
+                  "from": "m-historia",
+                  "to": "m-leccion",
+                  "label": "si hay lección confirmada",
+                  "collectionIndex": 138,
+                  "artifactIndex": 139
+                },
+                "bends": 3,
+                "stretch": 1.038
+              },
+              {
+                "relationship": {
+                  "id": "m-history-retention",
+                  "from": "m-historia",
+                  "to": "m-retener",
+                  "label": "raw e historia; derivados si existen",
+                  "collectionIndex": 139,
+                  "artifactIndex": 140
+                },
+                "bends": 3,
+                "stretch": 1.043
+              }
+            ]
+          },
+          "leadingSpace": {
+            "measured": true,
+            "emptyTopPx": 120,
+            "emptyTopRatio": 0.012,
+            "occupiedTop": 120,
+            "viewBoxTop": 0,
+            "canvasHeight": 9750,
+            "typicalNodeHeight": 80,
+            "reviewSuggested": false
+          },
+          "desktopReadability": {
+            "budgetBasis": "legacy-930",
+            "readerContract": "declared-wide-v1",
+            "availableDiagramWidth": 930,
+            "actualBudgetPx": 930,
+            "limit": "legacy",
+            "requestedTargetPx": 7.5,
+            "requestedTargetMet": false,
+            "hardFloorPx": 6,
+            "hardFloorMet": true,
+            "minimumOwner": {
+              "kind": "edge",
+              "id": "h-host",
+              "from": "hoy",
+              "to": "host"
+            },
+            "minimumSourceTextPx": 8,
+            "minimumProjectedTextPx": 6,
+            "semanticTextCount": 432
+          },
+          "issues": []
+        },
+        "provenance": "current",
+        "deliveryReceiptId": "b15a7328-04c7-4c85-81ea-e593fe98edde"
+      }
+    },
+    "browser-check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 3798,
+      "command": [
+        "/opt/homebrew/Cellar/node/26.0.0/bin/node",
+        "/Users/efren.herrera/.agents/skills/archify/bin/archify.mjs",
+        "browser-check",
+        "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+        "--json",
+        "--require-provenance",
+        "--out-dir",
+        "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/semantic-final-1"
+      ],
+      "execution": "in-process",
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "browser-check",
+        "evidenceKind": "automated-browser",
+        "status": "pass",
+        "visualReview": "not-requested",
+        "provenance": "current",
+        "deliveryReceiptId": "b15a7328-04c7-4c85-81ea-e593fe98edde",
+        "artifact": {
+          "path": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+          "sha256": "7a68f198d28b565c3f0a372a96678d9c873a7f86c07f06b75c9646cf8a719e48",
+          "bytes": 1220824
+        },
+        "state": {
+          "detail": "read",
+          "motion": "still"
+        },
+        "chrome": {
+          "status": "available",
+          "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+        },
+        "diagnostics": [],
+        "containment": {
+          "status": "pass",
+          "policy": "fit-or-reader-declared-readable-vertical-scroll",
+          "viewports": [
+            {
+              "width": 1440,
+              "height": 900,
+              "theme": "light",
+              "innerWidth": 1440,
+              "innerHeight": 900,
+              "scrollWidth": 1440,
+              "scrollHeight": 8272,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1064,
+              "diagramWidth": 1034,
+              "pageComposition": {
+                "bodyPaddingPx": 12,
+                "headerPx": 52,
+                "diagramChromePx": 78,
+                "svgPx": 8130,
+                "cardsPx": 0,
+                "viewBoxHeight": 9750
+              },
+              "viewBoxWidth": 1240,
+              "minimumProjectedNodeTextPx": 6.670967741935484,
+              "minimumProjectedNonEdgeTextPx": 7.504838709677419,
+              "minimumProjectedEdgeTextPx": 6.670967741935484,
+              "minimumProjectedNodeText": "fuera runtime",
+              "minimumProjectedNodeTextDetail": "edge",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "edge",
+                "id": "h-host",
+                "from": "hoy",
+                "to": "host"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "theme": "light",
+              "innerWidth": 1600,
+              "innerHeight": 1000,
+              "scrollWidth": 1600,
+              "scrollHeight": 8338,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1064,
+              "diagramWidth": 1034,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 60,
+                "diagramChromePx": 84,
+                "svgPx": 8130,
+                "cardsPx": 0,
+                "viewBoxHeight": 9750
+              },
+              "viewBoxWidth": 1240,
+              "minimumProjectedNodeTextPx": 6.670967741935484,
+              "minimumProjectedNonEdgeTextPx": 7.504838709677419,
+              "minimumProjectedEdgeTextPx": 6.670967741935484,
+              "minimumProjectedNodeText": "fuera runtime",
+              "minimumProjectedNodeTextDetail": "edge",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "edge",
+                "id": "h-host",
+                "from": "hoy",
+                "to": "host"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "theme": "light",
+              "innerWidth": 1920,
+              "innerHeight": 1080,
+              "scrollWidth": 1920,
+              "scrollHeight": 8338,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1064,
+              "diagramWidth": 1034,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 60,
+                "diagramChromePx": 84,
+                "svgPx": 8130,
+                "cardsPx": 0,
+                "viewBoxHeight": 9750
+              },
+              "viewBoxWidth": 1240,
+              "minimumProjectedNodeTextPx": 6.670967741935484,
+              "minimumProjectedNonEdgeTextPx": 7.504838709677419,
+              "minimumProjectedEdgeTextPx": 6.670967741935484,
+              "minimumProjectedNodeText": "fuera runtime",
+              "minimumProjectedNodeTextDetail": "edge",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "edge",
+                "id": "h-host",
+                "from": "hoy",
+                "to": "host"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "theme": "light",
+              "innerWidth": 2048,
+              "innerHeight": 1320,
+              "scrollWidth": 2048,
+              "scrollHeight": 8357,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1084,
+              "diagramWidth": 1034,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 68,
+                "diagramChromePx": 94,
+                "svgPx": 8130,
+                "cardsPx": 0,
+                "viewBoxHeight": 9750
+              },
+              "viewBoxWidth": 1240,
+              "minimumProjectedNodeTextPx": 6.670967741935484,
+              "minimumProjectedNonEdgeTextPx": 7.504838709677419,
+              "minimumProjectedEdgeTextPx": 6.670967741935484,
+              "minimumProjectedNodeText": "fuera runtime",
+              "minimumProjectedNodeTextDetail": "edge",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "edge",
+                "id": "h-host",
+                "from": "hoy",
+                "to": "host"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 44,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            }
+          ]
+        },
+        "themeStates": {
+          "status": "pass",
+          "viewports": [
+            {
+              "width": 1440,
+              "height": 900,
+              "requestedTheme": "light",
+              "resolvedTheme": "light",
+              "ok": true
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "requestedTheme": "light",
+              "resolvedTheme": "light",
+              "ok": true
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "requestedTheme": "light",
+              "resolvedTheme": "light",
+              "ok": true
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "requestedTheme": "light",
+              "resolvedTheme": "light",
+              "ok": true
+            },
+            {
+              "width": 1440,
+              "height": 900,
+              "requestedTheme": "dark",
+              "resolvedTheme": "dark",
+              "ok": true
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "requestedTheme": "dark",
+              "resolvedTheme": "dark",
+              "ok": true
+            }
+          ]
+        },
+        "readability": {
+          "status": "pass",
+          "minimumProjectedNodeTextPx": 6,
+          "viewports": [
+            {
+              "width": 1440,
+              "height": 900,
+              "theme": "light",
+              "innerWidth": 1440,
+              "innerHeight": 900,
+              "scrollWidth": 1440,
+              "scrollHeight": 8272,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1064,
+              "diagramWidth": 1034,
+              "pageComposition": {
+                "bodyPaddingPx": 12,
+                "headerPx": 52,
+                "diagramChromePx": 78,
+                "svgPx": 8130,
+                "cardsPx": 0,
+                "viewBoxHeight": 9750
+              },
+              "viewBoxWidth": 1240,
+              "minimumProjectedNodeTextPx": 6.670967741935484,
+              "minimumProjectedNonEdgeTextPx": 7.504838709677419,
+              "minimumProjectedEdgeTextPx": 6.670967741935484,
+              "minimumProjectedNodeText": "fuera runtime",
+              "minimumProjectedNodeTextDetail": "edge",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "edge",
+                "id": "h-host",
+                "from": "hoy",
+                "to": "host"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "theme": "light",
+              "innerWidth": 1600,
+              "innerHeight": 1000,
+              "scrollWidth": 1600,
+              "scrollHeight": 8338,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1064,
+              "diagramWidth": 1034,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 60,
+                "diagramChromePx": 84,
+                "svgPx": 8130,
+                "cardsPx": 0,
+                "viewBoxHeight": 9750
+              },
+              "viewBoxWidth": 1240,
+              "minimumProjectedNodeTextPx": 6.670967741935484,
+              "minimumProjectedNonEdgeTextPx": 7.504838709677419,
+              "minimumProjectedEdgeTextPx": 6.670967741935484,
+              "minimumProjectedNodeText": "fuera runtime",
+              "minimumProjectedNodeTextDetail": "edge",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "edge",
+                "id": "h-host",
+                "from": "hoy",
+                "to": "host"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "theme": "light",
+              "innerWidth": 1920,
+              "innerHeight": 1080,
+              "scrollWidth": 1920,
+              "scrollHeight": 8338,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1064,
+              "diagramWidth": 1034,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 60,
+                "diagramChromePx": 84,
+                "svgPx": 8130,
+                "cardsPx": 0,
+                "viewBoxHeight": 9750
+              },
+              "viewBoxWidth": 1240,
+              "minimumProjectedNodeTextPx": 6.670967741935484,
+              "minimumProjectedNonEdgeTextPx": 7.504838709677419,
+              "minimumProjectedEdgeTextPx": 6.670967741935484,
+              "minimumProjectedNodeText": "fuera runtime",
+              "minimumProjectedNodeTextDetail": "edge",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "edge",
+                "id": "h-host",
+                "from": "hoy",
+                "to": "host"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "theme": "light",
+              "innerWidth": 2048,
+              "innerHeight": 1320,
+              "scrollWidth": 2048,
+              "scrollHeight": 8357,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1084,
+              "diagramWidth": 1034,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 68,
+                "diagramChromePx": 94,
+                "svgPx": 8130,
+                "cardsPx": 0,
+                "viewBoxHeight": 9750
+              },
+              "viewBoxWidth": 1240,
+              "minimumProjectedNodeTextPx": 6.670967741935484,
+              "minimumProjectedNonEdgeTextPx": 7.504838709677419,
+              "minimumProjectedEdgeTextPx": 6.670967741935484,
+              "minimumProjectedNodeText": "fuera runtime",
+              "minimumProjectedNodeTextDetail": "edge",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "edge",
+                "id": "h-host",
+                "from": "hoy",
+                "to": "host"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 44,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            }
+          ]
+        },
+        "viewerChrome": {
+          "status": "pass",
+          "viewports": [
+            {
+              "width": 1440,
+              "height": 900,
+              "theme": "light",
+              "innerWidth": 1440,
+              "innerHeight": 900,
+              "scrollWidth": 1440,
+              "scrollHeight": 8272,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1064,
+              "diagramWidth": 1034,
+              "pageComposition": {
+                "bodyPaddingPx": 12,
+                "headerPx": 52,
+                "diagramChromePx": 78,
+                "svgPx": 8130,
+                "cardsPx": 0,
+                "viewBoxHeight": 9750
+              },
+              "viewBoxWidth": 1240,
+              "minimumProjectedNodeTextPx": 6.670967741935484,
+              "minimumProjectedNonEdgeTextPx": 7.504838709677419,
+              "minimumProjectedEdgeTextPx": 6.670967741935484,
+              "minimumProjectedNodeText": "fuera runtime",
+              "minimumProjectedNodeTextDetail": "edge",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "edge",
+                "id": "h-host",
+                "from": "hoy",
+                "to": "host"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1600,
+              "height": 1000,
+              "theme": "light",
+              "innerWidth": 1600,
+              "innerHeight": 1000,
+              "scrollWidth": 1600,
+              "scrollHeight": 8338,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1064,
+              "diagramWidth": 1034,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 60,
+                "diagramChromePx": 84,
+                "svgPx": 8130,
+                "cardsPx": 0,
+                "viewBoxHeight": 9750
+              },
+              "viewBoxWidth": 1240,
+              "minimumProjectedNodeTextPx": 6.670967741935484,
+              "minimumProjectedNonEdgeTextPx": 7.504838709677419,
+              "minimumProjectedEdgeTextPx": 6.670967741935484,
+              "minimumProjectedNodeText": "fuera runtime",
+              "minimumProjectedNodeTextDetail": "edge",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "edge",
+                "id": "h-host",
+                "from": "hoy",
+                "to": "host"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 1920,
+              "height": 1080,
+              "theme": "light",
+              "innerWidth": 1920,
+              "innerHeight": 1080,
+              "scrollWidth": 1920,
+              "scrollHeight": 8338,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1064,
+              "diagramWidth": 1034,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 60,
+                "diagramChromePx": 84,
+                "svgPx": 8130,
+                "cardsPx": 0,
+                "viewBoxHeight": 9750
+              },
+              "viewBoxWidth": 1240,
+              "minimumProjectedNodeTextPx": 6.670967741935484,
+              "minimumProjectedNonEdgeTextPx": 7.504838709677419,
+              "minimumProjectedEdgeTextPx": 6.670967741935484,
+              "minimumProjectedNodeText": "fuera runtime",
+              "minimumProjectedNodeTextDetail": "edge",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "edge",
+                "id": "h-host",
+                "from": "hoy",
+                "to": "host"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 54,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            },
+            {
+              "width": 2048,
+              "height": 1320,
+              "theme": "light",
+              "innerWidth": 2048,
+              "innerHeight": 1320,
+              "scrollWidth": 2048,
+              "scrollHeight": 8357,
+              "overflowX": false,
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
+              "readerLayout": "adaptive",
+              "readerOverflow": "authored",
+              "readerFit": "intrinsic-height",
+              "ok": true,
+              "readerWidth": 1084,
+              "diagramWidth": 1034,
+              "pageComposition": {
+                "bodyPaddingPx": 64,
+                "headerPx": 68,
+                "diagramChromePx": 94,
+                "svgPx": 8130,
+                "cardsPx": 0,
+                "viewBoxHeight": 9750
+              },
+              "viewBoxWidth": 1240,
+              "minimumProjectedNodeTextPx": 6.670967741935484,
+              "minimumProjectedNonEdgeTextPx": 7.504838709677419,
+              "minimumProjectedEdgeTextPx": 6.670967741935484,
+              "minimumProjectedNodeText": "fuera runtime",
+              "minimumProjectedNodeTextDetail": "edge",
+              "minimumProjectedNodeTextOwner": {
+                "kind": "edge",
+                "id": "h-host",
+                "from": "hoy",
+                "to": "host"
+              },
+              "minimumRequiredNodeTextPx": 6,
+              "readabilityOk": true,
+              "hasLegend": true,
+              "hasNavigationDock": true,
+              "legendDockIntersectionArea": 0,
+              "dockStageIntersectionArea": 0,
+              "dockStageGap": 10,
+              "requiredDockStageGap": 10,
+              "viewerChromeStageOk": true,
+              "viewerChromeReserve": 44,
+              "viewerChromeActive": true,
+              "viewerChromeOk": true,
+              "resolvedTheme": "light"
+            }
+          ]
+        },
+        "captures": {
+          "status": "not-requested",
+          "screenshots": [],
+          "contactSheet": null
+        },
+        "sidecars": {
+          "directory": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/semantic-final-1",
+          "receipt": "frontend-reset-and-system-map-diagram.browser-check.json",
+          "files": []
+        }
+      }
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "diagnostics": [],
+  "evidence": {
+    "receipt": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/semantic-final-1/frontend-reset-and-system-map-diagram.finalize.json",
+    "summaryReceipt": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/semantic-final-1/frontend-reset-and-system-map-diagram.finalize-summary.json",
+    "browserCheckReceipt": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/semantic-final-1/frontend-reset-and-system-map-diagram.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "finishedAt": "2026-10-24T23:38:56.882Z",
+  "durationMs": 5093,
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-24T22:44:47.674Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

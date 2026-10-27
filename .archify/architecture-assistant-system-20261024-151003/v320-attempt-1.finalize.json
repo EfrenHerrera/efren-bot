@@ -1,0 +1,1317 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "startedAt": "2026-10-24T22:44:47.581Z",
+  "specification": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+    "sha256": "0d285d74b61e3aa4591a247cdb5ed19dad1c1fce2a112a33bed452d4ec029398",
+    "bytes": 50325
+  },
+  "artifact": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html"
+  },
+  "stages": {
+    "validate": {
+      "status": "fail",
+      "exitCode": 1,
+      "durationMs": null,
+      "command": [
+        "/opt/homebrew/Cellar/node/26.0.0/bin/node",
+        "/Users/efren.herrera/.agents/skills/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+        "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": false,
+        "command": "deliver",
+        "receiptId": "9f411f65-0fcc-4d38-8261-07cf736a0f5d",
+        "stage": "check",
+        "type": "architecture",
+        "input": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+        "output": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+        "error": "Final artifact check failed; the previous artifact was preserved.",
+        "diagnostics": [
+          {
+            "code": "composition/desktop-readability",
+            "severity": "error",
+            "message": "Final artifact failed composition/desktop-readability.",
+            "subject": {
+              "check": "composition"
+            },
+            "evidence": {
+              "owner": {
+                "kind": "edge",
+                "id": "h-host",
+                "from": "hoy",
+                "to": "host"
+              },
+              "viewportWidth": 1440,
+              "viewportHeight": 900,
+              "availableDiagramWidth": 930,
+              "budgetBasis": "legacy-930",
+              "readerContract": "declared-wide-v1",
+              "requestedTargetPx": 7.5,
+              "requestedTargetMet": false,
+              "budgetLimit": "legacy",
+              "viewBoxWidth": 1292,
+              "scale": 0.7198142414860681,
+              "text": "fuera runtime",
+              "detail": "edge",
+              "sourceFontPx": 8,
+              "projectedFontPx": 5.758513931888545,
+              "minimumProjectedFontPx": 6
+            },
+            "supportedFixes": [
+              "Preserve the semantic text and any supplied coordinates, routes, sides, channels, and labels. Compactly reflow automatic spacing and empty corridors so the complete viewBox width is at most 1240px (current 1292px; 8px source text at 930px desktop budget). If supplied geometry fixes that width, use a renderer-supported semantic text-size setting or renderer-level fix instead. Position-only label controls cannot repair its projection."
+            ]
+          }
+        ],
+        "provenance": "absent",
+        "checker": {
+          "ok": false,
+          "file": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+          "artifact": {
+            "sha256": "5ccd50d8f63400526d4c12921b618163158ad73565de31e727bd8a8cc9cbded5",
+            "bytes": 1157026
+          },
+          "checks": [
+            {
+              "name": "single_svg",
+              "ok": true,
+              "details": [
+                "found 1 <svg> block(s)"
+              ]
+            },
+            {
+              "name": "finite_svg",
+              "ok": true,
+              "details": []
+            },
+            {
+              "name": "orthogonal_arrows",
+              "ok": true,
+              "details": []
+            },
+            {
+              "name": "label_route_clearance",
+              "ok": true,
+              "details": []
+            },
+            {
+              "name": "relationship_crossings",
+              "ok": true,
+              "details": []
+            },
+            {
+              "name": "relationship_corridors",
+              "ok": true,
+              "details": []
+            },
+            {
+              "name": "container_border_runs",
+              "ok": true,
+              "details": []
+            },
+            {
+              "name": "route_rhythm",
+              "ok": true,
+              "details": []
+            },
+            {
+              "name": "legend_clearance",
+              "ok": true,
+              "details": []
+            }
+          ],
+          "composition": {
+            "schemaVersion": 1,
+            "profile": "showcase",
+            "status": "fail",
+            "summary": {
+              "errors": 1,
+              "warnings": 0
+            },
+            "metrics": {
+              "properCrossings": 0,
+              "resolvedCrossovers": 45,
+              "ambiguousCorridors": 0,
+              "arrowheadCollisions": 0,
+              "containerBorderRuns": 0,
+              "labelRouteClearanceIssues": 0,
+              "labelCanvasOverflowIssues": 0,
+              "minLabelRouteClearance": 4.6,
+              "desktopReadabilityIssues": 1,
+              "viewportHeightIssues": 0,
+              "minProjectedNodeTextPx": 5.758513931888545,
+              "maxBends": 3,
+              "routesOverSuggestedBends": 1,
+              "maxStretch": 1.054,
+              "routesOverSuggestedStretch": 0,
+              "minSegmentPx": 24,
+              "minInteriorSegmentPx": 209,
+              "shortSegmentCount": 0,
+              "shortEndpointSegmentCount": 0,
+              "shortInteriorSegmentCount": 0,
+              "microSegmentCount": 0
+            },
+            "suggestedLimits": {
+              "bendsPerRelationship": 2,
+              "stretch": 1.35,
+              "segmentPx": 16,
+              "microSegmentPx": 8
+            },
+            "routeReview": {
+              "crossings": [
+                {
+                  "left": {
+                    "id": "b-05",
+                    "from": "b-stop",
+                    "to": "b-checkout",
+                    "label": "solo si resuelto",
+                    "collectionIndex": 30,
+                    "artifactIndex": 31
+                  },
+                  "right": {
+                    "id": "shared-c-b",
+                    "from": "c-readback",
+                    "to": "b-identidad",
+                    "label": "reusar UUID + KNF reales",
+                    "collectionIndex": 152,
+                    "artifactIndex": 153
+                  },
+                  "point": [
+                    502,
+                    2120
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "b-05",
+                    "from": "b-stop",
+                    "to": "b-checkout",
+                    "label": "solo si resuelto",
+                    "collectionIndex": 30,
+                    "artifactIndex": 31
+                  },
+                  "right": {
+                    "id": "shared-d-b",
+                    "from": "d-dev",
+                    "to": "b-inicio",
+                    "label": "enlace, no permiso heredado",
+                    "collectionIndex": 153,
+                    "artifactIndex": 154
+                  },
+                  "point": [
+                    380,
+                    2120
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "b-07",
+                    "from": "b-base",
+                    "to": "b-topologia",
+                    "label": "",
+                    "collectionIndex": 32,
+                    "artifactIndex": 33
+                  },
+                  "right": {
+                    "id": "shared-c-b",
+                    "from": "c-readback",
+                    "to": "b-identidad",
+                    "label": "reusar UUID + KNF reales",
+                    "collectionIndex": 152,
+                    "artifactIndex": 153
+                  },
+                  "point": [
+                    502,
+                    2280
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "b-07",
+                    "from": "b-base",
+                    "to": "b-topologia",
+                    "label": "",
+                    "collectionIndex": 32,
+                    "artifactIndex": 33
+                  },
+                  "right": {
+                    "id": "shared-d-b",
+                    "from": "d-dev",
+                    "to": "b-inicio",
+                    "label": "enlace, no permiso heredado",
+                    "collectionIndex": 153,
+                    "artifactIndex": 154
+                  },
+                  "point": [
+                    380,
+                    2280
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "b-11",
+                    "from": "b-preview",
+                    "to": "b-aprobar",
+                    "label": "",
+                    "collectionIndex": 36,
+                    "artifactIndex": 37
+                  },
+                  "right": {
+                    "id": "shared-c-b",
+                    "from": "c-readback",
+                    "to": "b-identidad",
+                    "label": "reusar UUID + KNF reales",
+                    "collectionIndex": 152,
+                    "artifactIndex": 153
+                  },
+                  "point": [
+                    502,
+                    2440
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "b-11",
+                    "from": "b-preview",
+                    "to": "b-aprobar",
+                    "label": "",
+                    "collectionIndex": 36,
+                    "artifactIndex": 37
+                  },
+                  "right": {
+                    "id": "shared-d-b",
+                    "from": "d-dev",
+                    "to": "b-inicio",
+                    "label": "enlace, no permiso heredado",
+                    "collectionIndex": 153,
+                    "artifactIndex": 154
+                  },
+                  "point": [
+                    380,
+                    2440
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "b-13",
+                    "from": "b-live",
+                    "to": "b-publicar",
+                    "label": "vigente y exacto",
+                    "collectionIndex": 38,
+                    "artifactIndex": 39
+                  },
+                  "right": {
+                    "id": "shared-c-b",
+                    "from": "c-readback",
+                    "to": "b-identidad",
+                    "label": "reusar UUID + KNF reales",
+                    "collectionIndex": 152,
+                    "artifactIndex": 153
+                  },
+                  "point": [
+                    502,
+                    2600
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "b-13",
+                    "from": "b-live",
+                    "to": "b-publicar",
+                    "label": "vigente y exacto",
+                    "collectionIndex": 38,
+                    "artifactIndex": 39
+                  },
+                  "right": {
+                    "id": "shared-d-b",
+                    "from": "d-dev",
+                    "to": "b-inicio",
+                    "label": "enlace, no permiso heredado",
+                    "collectionIndex": 153,
+                    "artifactIndex": 154
+                  },
+                  "point": [
+                    380,
+                    2600
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "b-17",
+                    "from": "b-merge",
+                    "to": "b-deploy",
+                    "label": "si se solicita deploy",
+                    "collectionIndex": 42,
+                    "artifactIndex": 43
+                  },
+                  "right": {
+                    "id": "shared-c-b",
+                    "from": "c-readback",
+                    "to": "b-identidad",
+                    "label": "reusar UUID + KNF reales",
+                    "collectionIndex": 152,
+                    "artifactIndex": 153
+                  },
+                  "point": [
+                    502,
+                    2760
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "b-17",
+                    "from": "b-merge",
+                    "to": "b-deploy",
+                    "label": "si se solicita deploy",
+                    "collectionIndex": 42,
+                    "artifactIndex": 43
+                  },
+                  "right": {
+                    "id": "shared-d-b",
+                    "from": "d-dev",
+                    "to": "b-inicio",
+                    "label": "enlace, no permiso heredado",
+                    "collectionIndex": 153,
+                    "artifactIndex": 154
+                  },
+                  "point": [
+                    380,
+                    2760
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "b-19",
+                    "from": "b-verificar",
+                    "to": "b-status",
+                    "label": "",
+                    "collectionIndex": 44,
+                    "artifactIndex": 45
+                  },
+                  "right": {
+                    "id": "shared-c-b",
+                    "from": "c-readback",
+                    "to": "b-identidad",
+                    "label": "reusar UUID + KNF reales",
+                    "collectionIndex": 152,
+                    "artifactIndex": 153
+                  },
+                  "point": [
+                    502,
+                    2920
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "b-19",
+                    "from": "b-verificar",
+                    "to": "b-status",
+                    "label": "",
+                    "collectionIndex": 44,
+                    "artifactIndex": 45
+                  },
+                  "right": {
+                    "id": "shared-d-b",
+                    "from": "d-dev",
+                    "to": "b-inicio",
+                    "label": "enlace, no permiso heredado",
+                    "collectionIndex": 153,
+                    "artifactIndex": 154
+                  },
+                  "point": [
+                    380,
+                    2920
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "b-20",
+                    "from": "b-status",
+                    "to": "b-cierre",
+                    "label": "decisión independiente",
+                    "collectionIndex": 45,
+                    "artifactIndex": 46
+                  },
+                  "right": {
+                    "id": "shared-e-merge",
+                    "from": "e-ci",
+                    "to": "b-merge",
+                    "label": "merge solo con su aprobación",
+                    "collectionIndex": 155,
+                    "artifactIndex": 156
+                  },
+                  "point": [
+                    830,
+                    2920
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "c-01",
+                    "from": "c-inicio",
+                    "to": "c-owner",
+                    "label": "",
+                    "collectionIndex": 46,
+                    "artifactIndex": 47
+                  },
+                  "right": {
+                    "id": "shared-c-b",
+                    "from": "c-readback",
+                    "to": "b-identidad",
+                    "label": "reusar UUID + KNF reales",
+                    "collectionIndex": 152,
+                    "artifactIndex": 153
+                  },
+                  "point": [
+                    502,
+                    3200
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "c-01",
+                    "from": "c-inicio",
+                    "to": "c-owner",
+                    "label": "",
+                    "collectionIndex": 46,
+                    "artifactIndex": 47
+                  },
+                  "right": {
+                    "id": "shared-d-b",
+                    "from": "d-dev",
+                    "to": "b-inicio",
+                    "label": "enlace, no permiso heredado",
+                    "collectionIndex": 153,
+                    "artifactIndex": 154
+                  },
+                  "point": [
+                    380,
+                    3200
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "c-02",
+                    "from": "c-owner",
+                    "to": "c-buscar",
+                    "label": "",
+                    "collectionIndex": 47,
+                    "artifactIndex": 48
+                  },
+                  "right": {
+                    "id": "shared-e-merge",
+                    "from": "e-ci",
+                    "to": "b-merge",
+                    "label": "merge solo con su aprobación",
+                    "collectionIndex": 155,
+                    "artifactIndex": 156
+                  },
+                  "point": [
+                    830,
+                    3200
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "c-04",
+                    "from": "c-aceptar",
+                    "to": "c-aprobar",
+                    "label": "",
+                    "collectionIndex": 49,
+                    "artifactIndex": 50
+                  },
+                  "right": {
+                    "id": "shared-e-merge",
+                    "from": "e-ci",
+                    "to": "b-merge",
+                    "label": "merge solo con su aprobación",
+                    "collectionIndex": 155,
+                    "artifactIndex": 156
+                  },
+                  "point": [
+                    830,
+                    3360
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "c-05",
+                    "from": "c-aprobar",
+                    "to": "c-intent",
+                    "label": "",
+                    "collectionIndex": 50,
+                    "artifactIndex": 51
+                  },
+                  "right": {
+                    "id": "shared-c-b",
+                    "from": "c-readback",
+                    "to": "b-identidad",
+                    "label": "reusar UUID + KNF reales",
+                    "collectionIndex": 152,
+                    "artifactIndex": 153
+                  },
+                  "point": [
+                    502,
+                    3360
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "c-05",
+                    "from": "c-aprobar",
+                    "to": "c-intent",
+                    "label": "",
+                    "collectionIndex": 50,
+                    "artifactIndex": 51
+                  },
+                  "right": {
+                    "id": "shared-d-b",
+                    "from": "d-dev",
+                    "to": "b-inicio",
+                    "label": "enlace, no permiso heredado",
+                    "collectionIndex": 153,
+                    "artifactIndex": 154
+                  },
+                  "point": [
+                    380,
+                    3360
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "c-05",
+                    "from": "c-aprobar",
+                    "to": "c-intent",
+                    "label": "",
+                    "collectionIndex": 50,
+                    "artifactIndex": 51
+                  },
+                  "right": {
+                    "id": "shared-f-b",
+                    "from": "f-dev",
+                    "to": "c-inicio",
+                    "label": "nuevo encargo vinculado",
+                    "collectionIndex": 154,
+                    "artifactIndex": 155
+                  },
+                  "point": [
+                    400,
+                    3360
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "c-07",
+                    "from": "c-crear",
+                    "to": "c-readback",
+                    "label": "confirmación real",
+                    "collectionIndex": 52,
+                    "artifactIndex": 53
+                  },
+                  "right": {
+                    "id": "shared-d-b",
+                    "from": "d-dev",
+                    "to": "b-inicio",
+                    "label": "enlace, no permiso heredado",
+                    "collectionIndex": 153,
+                    "artifactIndex": 154
+                  },
+                  "point": [
+                    380,
+                    3527
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "c-07",
+                    "from": "c-crear",
+                    "to": "c-readback",
+                    "label": "confirmación real",
+                    "collectionIndex": 52,
+                    "artifactIndex": 53
+                  },
+                  "right": {
+                    "id": "shared-f-b",
+                    "from": "f-dev",
+                    "to": "c-inicio",
+                    "label": "nuevo encargo vinculado",
+                    "collectionIndex": 154,
+                    "artifactIndex": 155
+                  },
+                  "point": [
+                    400,
+                    3527
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "c-08",
+                    "from": "c-readback",
+                    "to": "c-stop",
+                    "label": "",
+                    "collectionIndex": 53,
+                    "artifactIndex": 54
+                  },
+                  "right": {
+                    "id": "shared-e-merge",
+                    "from": "e-ci",
+                    "to": "b-merge",
+                    "label": "merge solo con su aprobación",
+                    "collectionIndex": 155,
+                    "artifactIndex": 156
+                  },
+                  "point": [
+                    830,
+                    3520
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "c-10",
+                    "from": "c-bundle",
+                    "to": "c-campos",
+                    "label": "",
+                    "collectionIndex": 55,
+                    "artifactIndex": 56
+                  },
+                  "right": {
+                    "id": "shared-e-merge",
+                    "from": "e-ci",
+                    "to": "b-merge",
+                    "label": "merge solo con su aprobación",
+                    "collectionIndex": 155,
+                    "artifactIndex": 156
+                  },
+                  "point": [
+                    830,
+                    3680
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "c-11",
+                    "from": "c-campos",
+                    "to": "c-ids",
+                    "label": "",
+                    "collectionIndex": 56,
+                    "artifactIndex": 57
+                  },
+                  "right": {
+                    "id": "shared-d-b",
+                    "from": "d-dev",
+                    "to": "b-inicio",
+                    "label": "enlace, no permiso heredado",
+                    "collectionIndex": 153,
+                    "artifactIndex": 154
+                  },
+                  "point": [
+                    380,
+                    3680
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "c-11",
+                    "from": "c-campos",
+                    "to": "c-ids",
+                    "label": "",
+                    "collectionIndex": 56,
+                    "artifactIndex": 57
+                  },
+                  "right": {
+                    "id": "shared-f-b",
+                    "from": "f-dev",
+                    "to": "c-inicio",
+                    "label": "nuevo encargo vinculado",
+                    "collectionIndex": 154,
+                    "artifactIndex": 155
+                  },
+                  "point": [
+                    400,
+                    3680
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "d-01",
+                    "from": "d-inicio",
+                    "to": "d-contexto",
+                    "label": "",
+                    "collectionIndex": 57,
+                    "artifactIndex": 58
+                  },
+                  "right": {
+                    "id": "shared-d-b",
+                    "from": "d-dev",
+                    "to": "b-inicio",
+                    "label": "enlace, no permiso heredado",
+                    "collectionIndex": 153,
+                    "artifactIndex": 154
+                  },
+                  "point": [
+                    380,
+                    3960
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "d-01",
+                    "from": "d-inicio",
+                    "to": "d-contexto",
+                    "label": "",
+                    "collectionIndex": 57,
+                    "artifactIndex": 58
+                  },
+                  "right": {
+                    "id": "shared-f-b",
+                    "from": "f-dev",
+                    "to": "c-inicio",
+                    "label": "nuevo encargo vinculado",
+                    "collectionIndex": 154,
+                    "artifactIndex": 155
+                  },
+                  "point": [
+                    400,
+                    3960
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "d-02",
+                    "from": "d-contexto",
+                    "to": "d-skill",
+                    "label": "",
+                    "collectionIndex": 58,
+                    "artifactIndex": 59
+                  },
+                  "right": {
+                    "id": "shared-e-merge",
+                    "from": "e-ci",
+                    "to": "b-merge",
+                    "label": "merge solo con su aprobación",
+                    "collectionIndex": 155,
+                    "artifactIndex": 156
+                  },
+                  "point": [
+                    830,
+                    3960
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "d-04",
+                    "from": "d-herramientas",
+                    "to": "d-hechos",
+                    "label": "solo evidencia autorizada",
+                    "collectionIndex": 60,
+                    "artifactIndex": 61
+                  },
+                  "right": {
+                    "id": "shared-e-merge",
+                    "from": "e-ci",
+                    "to": "b-merge",
+                    "label": "merge solo con su aprobación",
+                    "collectionIndex": 155,
+                    "artifactIndex": 156
+                  },
+                  "point": [
+                    830,
+                    4120
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "d-05",
+                    "from": "d-hechos",
+                    "to": "d-diagnostico",
+                    "label": "",
+                    "collectionIndex": 61,
+                    "artifactIndex": 62
+                  },
+                  "right": {
+                    "id": "shared-d-b",
+                    "from": "d-dev",
+                    "to": "b-inicio",
+                    "label": "enlace, no permiso heredado",
+                    "collectionIndex": 153,
+                    "artifactIndex": 154
+                  },
+                  "point": [
+                    380,
+                    4120
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "d-05",
+                    "from": "d-hechos",
+                    "to": "d-diagnostico",
+                    "label": "",
+                    "collectionIndex": 61,
+                    "artifactIndex": 62
+                  },
+                  "right": {
+                    "id": "shared-f-b",
+                    "from": "f-dev",
+                    "to": "c-inicio",
+                    "label": "nuevo encargo vinculado",
+                    "collectionIndex": 154,
+                    "artifactIndex": 155
+                  },
+                  "point": [
+                    400,
+                    4120
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "d-07",
+                    "from": "d-feedback",
+                    "to": "d-aprobar",
+                    "label": "",
+                    "collectionIndex": 63,
+                    "artifactIndex": 64
+                  },
+                  "right": {
+                    "id": "shared-d-b",
+                    "from": "d-dev",
+                    "to": "b-inicio",
+                    "label": "enlace, no permiso heredado",
+                    "collectionIndex": 153,
+                    "artifactIndex": 154
+                  },
+                  "point": [
+                    380,
+                    4280
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "d-07",
+                    "from": "d-feedback",
+                    "to": "d-aprobar",
+                    "label": "",
+                    "collectionIndex": 63,
+                    "artifactIndex": 64
+                  },
+                  "right": {
+                    "id": "shared-f-b",
+                    "from": "f-dev",
+                    "to": "c-inicio",
+                    "label": "nuevo encargo vinculado",
+                    "collectionIndex": 154,
+                    "artifactIndex": 155
+                  },
+                  "point": [
+                    400,
+                    4280
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "d-08",
+                    "from": "d-aprobar",
+                    "to": "d-live",
+                    "label": "",
+                    "collectionIndex": 64,
+                    "artifactIndex": 65
+                  },
+                  "right": {
+                    "id": "shared-e-merge",
+                    "from": "e-ci",
+                    "to": "b-merge",
+                    "label": "merge solo con su aprobación",
+                    "collectionIndex": 155,
+                    "artifactIndex": 156
+                  },
+                  "point": [
+                    830,
+                    4280
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "d-10",
+                    "from": "d-publicar",
+                    "to": "d-seguir",
+                    "label": "solo si scopes concedidos",
+                    "collectionIndex": 66,
+                    "artifactIndex": 67
+                  },
+                  "right": {
+                    "id": "shared-e-merge",
+                    "from": "e-ci",
+                    "to": "b-merge",
+                    "label": "merge solo con su aprobación",
+                    "collectionIndex": 155,
+                    "artifactIndex": 156
+                  },
+                  "point": [
+                    830,
+                    4440
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "d-11",
+                    "from": "d-seguir",
+                    "to": "d-dev",
+                    "label": "si necesita desarrollo",
+                    "collectionIndex": 67,
+                    "artifactIndex": 68
+                  },
+                  "right": {
+                    "id": "shared-f-b",
+                    "from": "f-dev",
+                    "to": "c-inicio",
+                    "label": "nuevo encargo vinculado",
+                    "collectionIndex": 154,
+                    "artifactIndex": 155
+                  },
+                  "point": [
+                    400,
+                    4440
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "e-01",
+                    "from": "e-inicio",
+                    "to": "e-permiso",
+                    "label": "",
+                    "collectionIndex": 68,
+                    "artifactIndex": 69
+                  },
+                  "right": {
+                    "id": "shared-f-b",
+                    "from": "f-dev",
+                    "to": "c-inicio",
+                    "label": "nuevo encargo vinculado",
+                    "collectionIndex": 154,
+                    "artifactIndex": 155
+                  },
+                  "point": [
+                    400,
+                    4720
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "e-02",
+                    "from": "e-permiso",
+                    "to": "e-base",
+                    "label": "",
+                    "collectionIndex": 69,
+                    "artifactIndex": 70
+                  },
+                  "right": {
+                    "id": "shared-e-merge",
+                    "from": "e-ci",
+                    "to": "b-merge",
+                    "label": "merge solo con su aprobación",
+                    "collectionIndex": 155,
+                    "artifactIndex": 156
+                  },
+                  "point": [
+                    830,
+                    4720
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "e-04",
+                    "from": "e-worker",
+                    "to": "e-comentar",
+                    "label": "",
+                    "collectionIndex": 71,
+                    "artifactIndex": 72
+                  },
+                  "right": {
+                    "id": "shared-e-merge",
+                    "from": "e-ci",
+                    "to": "b-merge",
+                    "label": "merge solo con su aprobación",
+                    "collectionIndex": 155,
+                    "artifactIndex": 156
+                  },
+                  "point": [
+                    830,
+                    4880
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "e-05",
+                    "from": "e-comentar",
+                    "to": "e-fix",
+                    "label": "solo nuevo encargo",
+                    "collectionIndex": 72,
+                    "artifactIndex": 73
+                  },
+                  "right": {
+                    "id": "shared-f-b",
+                    "from": "f-dev",
+                    "to": "c-inicio",
+                    "label": "nuevo encargo vinculado",
+                    "collectionIndex": 154,
+                    "artifactIndex": 155
+                  },
+                  "point": [
+                    400,
+                    4880
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "e-07",
+                    "from": "e-checks",
+                    "to": "e-update",
+                    "label": "",
+                    "collectionIndex": 74,
+                    "artifactIndex": 75
+                  },
+                  "right": {
+                    "id": "shared-f-b",
+                    "from": "f-dev",
+                    "to": "c-inicio",
+                    "label": "nuevo encargo vinculado",
+                    "collectionIndex": 154,
+                    "artifactIndex": 155
+                  },
+                  "point": [
+                    400,
+                    5040
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "f-01",
+                    "from": "f-inicio",
+                    "to": "f-fuentes",
+                    "label": "",
+                    "collectionIndex": 76,
+                    "artifactIndex": 77
+                  },
+                  "right": {
+                    "id": "shared-f-b",
+                    "from": "f-dev",
+                    "to": "c-inicio",
+                    "label": "nuevo encargo vinculado",
+                    "collectionIndex": 154,
+                    "artifactIndex": 155
+                  },
+                  "point": [
+                    400,
+                    5320
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "f-05",
+                    "from": "f-runbook",
+                    "to": "f-publicar",
+                    "label": "",
+                    "collectionIndex": 80,
+                    "artifactIndex": 81
+                  },
+                  "right": {
+                    "id": "shared-f-b",
+                    "from": "f-dev",
+                    "to": "c-inicio",
+                    "label": "nuevo encargo vinculado",
+                    "collectionIndex": 154,
+                    "artifactIndex": 155
+                  },
+                  "point": [
+                    400,
+                    5480
+                  ]
+                },
+                {
+                  "left": {
+                    "id": "shared-d-b",
+                    "from": "d-dev",
+                    "to": "b-inicio",
+                    "label": "enlace, no permiso heredado",
+                    "collectionIndex": 153,
+                    "artifactIndex": 154
+                  },
+                  "right": {
+                    "id": "shared-f-b",
+                    "from": "f-dev",
+                    "to": "c-inicio",
+                    "label": "nuevo encargo vinculado",
+                    "collectionIndex": 154,
+                    "artifactIndex": 155
+                  },
+                  "point": [
+                    380,
+                    3200
+                  ]
+                }
+              ],
+              "detours": [
+                {
+                  "relationship": {
+                    "id": "g-03",
+                    "from": "g-atencion",
+                    "to": "coord",
+                    "label": "job solo por regla/encargo",
+                    "collectionIndex": 85,
+                    "artifactIndex": 86
+                  },
+                  "bends": 3,
+                  "stretch": 1
+                }
+              ]
+            },
+            "leadingSpace": {
+              "measured": true,
+              "emptyTopPx": 120,
+              "emptyTopRatio": 0.012,
+              "occupiedTop": 120,
+              "viewBoxTop": 0,
+              "canvasHeight": 9750,
+              "typicalNodeHeight": 80,
+              "reviewSuggested": false
+            },
+            "desktopReadability": {
+              "budgetBasis": "legacy-930",
+              "readerContract": "declared-wide-v1",
+              "availableDiagramWidth": 930,
+              "actualBudgetPx": 930,
+              "limit": "legacy",
+              "requestedTargetPx": 7.5,
+              "requestedTargetMet": false,
+              "hardFloorPx": 6,
+              "hardFloorMet": false,
+              "minimumOwner": {
+                "kind": "edge",
+                "id": "h-host",
+                "from": "hoy",
+                "to": "host"
+              },
+              "minimumSourceTextPx": 8,
+              "minimumProjectedTextPx": 5.758513931888545,
+              "semanticTextCount": 372
+            },
+            "issues": [
+              {
+                "severity": "error",
+                "code": "composition/desktop-readability",
+                "owner": {
+                  "kind": "edge",
+                  "id": "h-host",
+                  "from": "hoy",
+                  "to": "host"
+                },
+                "viewportWidth": 1440,
+                "viewportHeight": 900,
+                "availableDiagramWidth": 930,
+                "budgetBasis": "legacy-930",
+                "readerContract": "declared-wide-v1",
+                "requestedTargetPx": 7.5,
+                "requestedTargetMet": false,
+                "budgetLimit": "legacy",
+                "viewBoxWidth": 1292,
+                "scale": 0.7198142414860681,
+                "text": "fuera runtime",
+                "detail": "edge",
+                "sourceFontPx": 8,
+                "projectedFontPx": 5.758513931888545,
+                "minimumProjectedFontPx": 6
+              }
+            ]
+          }
+        },
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      },
+      "execution": "embedded-in-deliver"
+    },
+    "deliver": {
+      "status": "not-run",
+      "execution": "blocked-by-validate"
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "diagnostics": [
+    {
+      "code": "composition/desktop-readability",
+      "severity": "error",
+      "message": "Final artifact failed composition/desktop-readability.",
+      "subject": {
+        "check": "composition"
+      },
+      "evidence": {
+        "owner": {
+          "kind": "edge",
+          "id": "h-host",
+          "from": "hoy",
+          "to": "host"
+        },
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "availableDiagramWidth": 930,
+        "budgetBasis": "legacy-930",
+        "readerContract": "declared-wide-v1",
+        "requestedTargetPx": 7.5,
+        "requestedTargetMet": false,
+        "budgetLimit": "legacy",
+        "viewBoxWidth": 1292,
+        "scale": 0.7198142414860681,
+        "text": "fuera runtime",
+        "detail": "edge",
+        "sourceFontPx": 8,
+        "projectedFontPx": 5.758513931888545,
+        "minimumProjectedFontPx": 6
+      },
+      "supportedFixes": [
+        "Preserve the semantic text and any supplied coordinates, routes, sides, channels, and labels. Compactly reflow automatic spacing and empty corridors so the complete viewBox width is at most 1240px (current 1292px; 8px source text at 930px desktop budget). If supplied geometry fixes that width, use a renderer-supported semantic text-size setting or renderer-level fix instead. Position-only label controls cannot repair its projection."
+      ]
+    }
+  ],
+  "evidence": {
+    "receipt": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.finalize.json",
+    "summaryReceipt": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.finalize-summary.json"
+  },
+  "visualReview": "not-requested",
+  "failedStage": "validate",
+  "finishedAt": "2026-10-24T22:44:48.274Z",
+  "durationMs": 693,
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-24T22:44:47.674Z",
+    "source": "network",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

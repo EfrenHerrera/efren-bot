@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+    "sha256": "ccdd54a759b8495ab0fbf35c2b01ed39ae99ff4cd15c1ade238786ddeedad8dc",
+    "bytes": 60667
+  },
+  "artifact": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+    "sha256": "9bb4127c50e71bcfa8e740a9ca87989b0137e83cfc791183d87c3e0bb80ca0fa",
+    "bytes": 1156919
+  },
+  "gates": {
+    "validate": "fail",
+    "deliver": "not-run",
+    "check": "not-run",
+    "browser-check": "not-run"
+  },
+  "failedStage": "validate",
+  "diagnostics": [
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[41] id \"b-local\" \"b-preview\" -> \"b-verificar\" shares a 146px corridor with connections[47] id \"b-ci-merge\" \"b-ci\" -> \"b-merge\" at [837, 2607] -> [837, 2753] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 41,
+        "id": "b-local",
+        "from": "b-preview",
+        "to": "b-verificar"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 47,
+          "id": "b-ci-merge",
+          "from": "b-ci",
+          "to": "b-merge"
+        },
+        "overlapLengthPx": 146,
+        "minimumPx": 8,
+        "from": [
+          837,
+          2607
+        ],
+        "to": [
+          837,
+          2753
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[46] id \"b-16\" \"b-fix\" -> \"b-checks\" shares a 160px corridor with connections[48] id \"b-mr-result\" \"b-ci\" -> \"b-verificar\" at [896, 2600] -> [896, 2760] (segments 1 and 1; minimum 8px) — if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 46,
+        "id": "b-16",
+        "from": "b-fix",
+        "to": "b-checks"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 48,
+          "id": "b-mr-result",
+          "from": "b-ci",
+          "to": "b-verificar"
+        },
+        "overlapLengthPx": 160,
+        "minimumPx": 8,
+        "from": [
+          896,
+          2600
+        ],
+        "to": [
+          896,
+          2760
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[55] id \"b-human-close\" \"b-result\" -> \"b-cierre\" shares a 224px corridor with connections[187] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [778, 2856] -> [778, 3080] (segments 1 and 1; minimum 8px) — if the authored labelAt/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 55,
+        "id": "b-human-close",
+        "from": "b-result",
+        "to": "b-cierre"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 187,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "overlapLengthPx": 224,
+        "minimumPx": 8,
+        "from": [
+          778,
+          2856
+        ],
+        "to": [
+          778,
+          3080
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored labelAt/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[115] id \"q-noeffect\" \"q-checkpoint\" -> \"q-result\" shares a 96px corridor with connections[119] id \"q-10\" \"q-wait\" -> \"q-resume\" at [450, 6604] -> [450, 6700] (segments 1 and 2; minimum 8px) — if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 115,
+        "id": "q-noeffect",
+        "from": "q-checkpoint",
+        "to": "q-result"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 119,
+          "id": "q-10",
+          "from": "q-wait",
+          "to": "q-resume"
+        },
+        "overlapLengthPx": 96,
+        "minimumPx": 8,
+        "from": [
+          450,
+          6604
+        ],
+        "to": [
+          450,
+          6700
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    }
+  ],
+  "diagnosticSummary": {
+    "total": 4,
+    "shown": 4,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/semantic-review-2/frontend-reset-and-system-map-diagram.finalize.json",
+    "summaryReceipt": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/semantic-review-2/frontend-reset-and-system-map-diagram.finalize-summary.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-24T22:44:47.674Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 897,
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "nextAction": {
+    "action": "edit-in-place",
+    "candidate": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+    "constraint": "Preserve all semantics and user-fixed geometry. Use references/architecture-layout-repair.md to choose a local repair or connected-scene reflow; edit the existing candidate.",
+    "then": "finalize-once"
+  }
+}

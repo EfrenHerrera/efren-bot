@@ -1,0 +1,37 @@
+docker compose --project-name efren-bot config --quiet
+uv run --frozen ruff check src tests migrations
+All checks passed!
+uv run --frozen ruff format --check src tests migrations
+106 files already formatted
+npm --prefix apps/web ci
+
+added 107 packages, and audited 108 packages in 2s
+
+22 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm --prefix apps/web run typecheck
+
+> efren-bot-web@0.1.0 typecheck
+> tsc --noEmit
+
+npm --prefix apps/web run build
+
+> efren-bot-web@0.1.0 build
+> npm run typecheck && vite build
+
+
+> efren-bot-web@0.1.0 typecheck
+> tsc --noEmit
+
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 134 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.48 kB │ gzip:   0.29 kB
+dist/assets/index-CWlQ_V7V.css   41.30 kB │ gzip:   8.00 kB
+dist/assets/index-CkCOgnCg.js   396.21 kB │ gzip: 116.45 kB
+
+✓ built in 457ms

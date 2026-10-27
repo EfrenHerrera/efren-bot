@@ -1,0 +1,7514 @@
+{
+  "ok": false,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1240,
+    9750
+  ],
+  "components": [
+    {
+      "id": "hoy",
+      "type": "cloud",
+      "label": "HOY · base local preservada",
+      "x": 28,
+      "y": 120,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        120
+      ]
+    },
+    {
+      "id": "host",
+      "type": "cloud",
+      "label": "HOST · acceso observado",
+      "x": 474,
+      "y": 120,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        120
+      ]
+    },
+    {
+      "id": "bridge",
+      "type": "security",
+      "label": "Puente manual deshabilitado",
+      "x": 920,
+      "y": 120,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        120
+      ]
+    },
+    {
+      "id": "hoy-limite",
+      "type": "security",
+      "label": "No hay colector ni RAG real",
+      "x": 28,
+      "y": 280,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        280
+      ]
+    },
+    {
+      "id": "a-inicio",
+      "type": "external",
+      "label": "A · recibir evidencia fiel",
+      "x": 28,
+      "y": 520,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        520
+      ]
+    },
+    {
+      "id": "a-policy",
+      "type": "security",
+      "label": "Autorizar fuente real primero",
+      "x": 474,
+      "y": 520,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        520
+      ]
+    },
+    {
+      "id": "a-adapter",
+      "type": "security",
+      "label": "Identidad y operaciones",
+      "x": 920,
+      "y": 520,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        520
+      ]
+    },
+    {
+      "id": "a-slack",
+      "type": "security",
+      "label": "Slack · permisos separados",
+      "x": 920,
+      "y": 680,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        680
+      ]
+    },
+    {
+      "id": "a-notion",
+      "type": "security",
+      "label": "Notion · alcance de lectura",
+      "x": 474,
+      "y": 680,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        680
+      ]
+    },
+    {
+      "id": "a-gitlab",
+      "type": "security",
+      "label": "GitLab opcional · comprobar",
+      "x": 28,
+      "y": 680,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        680
+      ]
+    },
+    {
+      "id": "a-admit",
+      "type": "security",
+      "label": "Una fuente admitida y un modo",
+      "x": 474,
+      "y": 840,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        840
+      ]
+    },
+    {
+      "id": "a-pull",
+      "type": "backend",
+      "label": "Pull programado aprobado",
+      "x": 28,
+      "y": 1000,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        1000
+      ]
+    },
+    {
+      "id": "a-push",
+      "type": "security",
+      "label": "O push aprobado por separado",
+      "x": 920,
+      "y": 1000,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        1000
+      ]
+    },
+    {
+      "id": "a-auth",
+      "type": "security",
+      "label": "Autenticación oficial host",
+      "x": 474,
+      "y": 1000,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        1000
+      ]
+    },
+    {
+      "id": "a-paginas",
+      "type": "backend",
+      "label": "Cobertura, páginas y cursor",
+      "x": 920,
+      "y": 1160,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        1160
+      ]
+    },
+    {
+      "id": "a-retry",
+      "type": "security",
+      "label": "429: backoff acotado; 401: STOP",
+      "x": 474,
+      "y": 1160,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        1160
+      ]
+    },
+    {
+      "id": "a-raw",
+      "type": "database",
+      "label": "Respuesta como fue RECIBIDA",
+      "x": 28,
+      "y": 1160,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        1160
+      ]
+    },
+    {
+      "id": "a-procedencia",
+      "type": "database",
+      "label": "Procedencia y cobertura",
+      "x": 28,
+      "y": 1320,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        1320
+      ]
+    },
+    {
+      "id": "a-minimo",
+      "type": "security",
+      "label": "Preservar cuerpo autorizado",
+      "x": 474,
+      "y": 1320,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        1320
+      ]
+    },
+    {
+      "id": "a-dedupe",
+      "type": "security",
+      "label": "Identidad exacta y dedupe",
+      "x": 920,
+      "y": 1320,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        1320
+      ]
+    },
+    {
+      "id": "a-persistir",
+      "type": "database",
+      "label": "Raw + outbox atómicos",
+      "x": 920,
+      "y": 1480,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        1480
+      ]
+    },
+    {
+      "id": "a-proyectar",
+      "type": "backend",
+      "label": "Proyección autorizada aparte",
+      "x": 474,
+      "y": 1480,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        1480
+      ]
+    },
+    {
+      "id": "a-literal",
+      "type": "frontend",
+      "label": "FUTURO · «Esto llegó así»",
+      "x": 28,
+      "y": 1480,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        1480
+      ]
+    },
+    {
+      "id": "a-presentar",
+      "type": "frontend",
+      "label": "Contexto y siguiente acción",
+      "x": 28,
+      "y": 1640,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        1640
+      ]
+    },
+    {
+      "id": "a-revocar",
+      "type": "security",
+      "label": "Edición, borrado o revocación",
+      "x": 474,
+      "y": 1640,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        1640
+      ]
+    },
+    {
+      "id": "a-noresucitar",
+      "type": "security",
+      "label": "No resucitar al restaurar",
+      "x": 920,
+      "y": 1640,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        1640
+      ]
+    },
+    {
+      "id": "a-inyeccion",
+      "type": "security",
+      "label": "La fuente NO da instrucciones",
+      "x": 920,
+      "y": 1800,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        1800
+      ]
+    },
+    {
+      "id": "a-url",
+      "type": "security",
+      "label": "source_url solo es metadato",
+      "x": 474,
+      "y": 1800,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        1800
+      ]
+    },
+    {
+      "id": "a-n8n",
+      "type": "security",
+      "label": "n8n opcional, no instalado",
+      "x": 28,
+      "y": 1800,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        1800
+      ]
+    },
+    {
+      "id": "b-inicio",
+      "type": "external",
+      "label": "B · tarea Notion existente",
+      "x": 24,
+      "y": 1920,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        24,
+        1920
+      ]
+    },
+    {
+      "id": "b-identidad",
+      "type": "security",
+      "label": "Resolver página UUID + KNF",
+      "x": 474,
+      "y": 1920,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        1920
+      ]
+    },
+    {
+      "id": "b-objetivo",
+      "type": "backend",
+      "label": "Objetivo y criterios aceptados",
+      "x": 920,
+      "y": 1920,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        1920
+      ]
+    },
+    {
+      "id": "b-repo",
+      "type": "security",
+      "label": "Catálogo de repos permitido",
+      "x": 920,
+      "y": 2080,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        2080
+      ]
+    },
+    {
+      "id": "b-stop",
+      "type": "security",
+      "label": "¿Repo ambiguo o falta KNF?",
+      "x": 474,
+      "y": 2080,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        2080
+      ]
+    },
+    {
+      "id": "b-checkout",
+      "type": "security",
+      "label": "Checkout aprobado o clone",
+      "x": 28,
+      "y": 2080,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        2080
+      ]
+    },
+    {
+      "id": "b-base",
+      "type": "backend",
+      "label": "Inspeccionar trabajo y fijar base",
+      "x": 28,
+      "y": 2240,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        2240
+      ]
+    },
+    {
+      "id": "b-topologia",
+      "type": "security",
+      "label": "Autorizar worktree y rama Git",
+      "x": 474,
+      "y": 2240,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        2240
+      ]
+    },
+    {
+      "id": "b-worker",
+      "type": "backend",
+      "label": "Desarrollo en contexto aislado",
+      "x": 920,
+      "y": 2240,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        2240
+      ]
+    },
+    {
+      "id": "b-checks",
+      "type": "backend",
+      "label": "Diff, checks y revisión",
+      "x": 920,
+      "y": 2400,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        2400
+      ]
+    },
+    {
+      "id": "b-preview",
+      "type": "backend",
+      "label": "Preview EXACTO de MR",
+      "x": 474,
+      "y": 2400,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        2400
+      ]
+    },
+    {
+      "id": "b-aprobar",
+      "type": "security",
+      "label": "Aprobar efectos enumerados",
+      "x": 28,
+      "y": 2400,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        2400
+      ]
+    },
+    {
+      "id": "b-live",
+      "type": "security",
+      "label": "Revalidar ref, ACL y aprobación",
+      "x": 28,
+      "y": 2560,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        2560
+      ]
+    },
+    {
+      "id": "b-publicar",
+      "type": "backend",
+      "label": "Solo commit / push / MR concedidos",
+      "x": 474,
+      "y": 2560,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        2560
+      ]
+    },
+    {
+      "id": "b-ci",
+      "type": "external",
+      "label": "CI y comentarios autorizados",
+      "x": 920,
+      "y": 2560,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        2560
+      ]
+    },
+    {
+      "id": "b-fix",
+      "type": "security",
+      "label": "Fix job acotado, si se encarga",
+      "x": 900,
+      "y": 2720,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        900,
+        2720
+      ]
+    },
+    {
+      "id": "b-merge",
+      "type": "security",
+      "label": "MERGE · aprobación separada",
+      "x": 474,
+      "y": 2720,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        2720
+      ]
+    },
+    {
+      "id": "b-deploy",
+      "type": "security",
+      "label": "DEPLOY · aprobación separada",
+      "x": 28,
+      "y": 2720,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        2720
+      ]
+    },
+    {
+      "id": "b-verificar",
+      "type": "backend",
+      "label": "Verificar resultado y pendientes",
+      "x": 920,
+      "y": 3040,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        3040
+      ]
+    },
+    {
+      "id": "b-status",
+      "type": "security",
+      "label": "Autorizar status externo Notion",
+      "x": 474,
+      "y": 2880,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        2880
+      ]
+    },
+    {
+      "id": "b-cierre",
+      "type": "external",
+      "label": "Cierre humano con evidencia",
+      "x": 940,
+      "y": 2880,
+      "width": 260,
+      "height": 80,
+      "pos": [
+        940,
+        2880
+      ]
+    },
+    {
+      "id": "b-result",
+      "type": "database",
+      "label": "Resultado del alcance solicitado",
+      "x": 474,
+      "y": 3040,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        3040
+      ]
+    },
+    {
+      "id": "c-inicio",
+      "type": "external",
+      "label": "C · solicitud nueva admitida",
+      "x": 28,
+      "y": 3160,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        3160
+      ]
+    },
+    {
+      "id": "c-owner",
+      "type": "backend",
+      "label": "¿Efren, equipo o tercero?",
+      "x": 474,
+      "y": 3160,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        3160
+      ]
+    },
+    {
+      "id": "c-buscar",
+      "type": "security",
+      "label": "Buscar tarea por identidad exacta",
+      "x": 920,
+      "y": 3160,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        3160
+      ]
+    },
+    {
+      "id": "c-aceptar",
+      "type": "backend",
+      "label": "Aceptar candidato y campos",
+      "x": 920,
+      "y": 3320,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        3320
+      ]
+    },
+    {
+      "id": "c-aprobar",
+      "type": "security",
+      "label": "Aprobar crear en DB nombrada",
+      "x": 474,
+      "y": 3320,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        3320
+      ]
+    },
+    {
+      "id": "c-intent",
+      "type": "database",
+      "label": "Intención durable e idempotencia",
+      "x": 28,
+      "y": 3320,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        3320
+      ]
+    },
+    {
+      "id": "c-crear",
+      "type": "backend",
+      "label": "Crear o reconciliar timeout",
+      "x": 28,
+      "y": 3480,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        3480
+      ]
+    },
+    {
+      "id": "c-readback",
+      "type": "security",
+      "label": "READBACK UUID y KNF autogenerado",
+      "x": 474,
+      "y": 3480,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        3480
+      ]
+    },
+    {
+      "id": "c-stop",
+      "type": "security",
+      "label": "Falta destino, KNF o repo: STOP",
+      "x": 920,
+      "y": 3480,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        3480
+      ]
+    },
+    {
+      "id": "c-bundle",
+      "type": "security",
+      "label": "Crear + rama: bundle explícito",
+      "x": 920,
+      "y": 3640,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        3640
+      ]
+    },
+    {
+      "id": "c-campos",
+      "type": "security",
+      "label": "Respetar esquema administrativo",
+      "x": 474,
+      "y": 3640,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        3640
+      ]
+    },
+    {
+      "id": "c-ids",
+      "type": "database",
+      "label": "Identidades que no se mezclan",
+      "x": 28,
+      "y": 3640,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        3640
+      ]
+    },
+    {
+      "id": "d-inicio",
+      "type": "external",
+      "label": "D · caso, hilo o mención admitida",
+      "x": 28,
+      "y": 3920,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        3920
+      ]
+    },
+    {
+      "id": "d-contexto",
+      "type": "backend",
+      "label": "Caso, contexto y precedentes",
+      "x": 474,
+      "y": 3920,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        3920
+      ]
+    },
+    {
+      "id": "d-skill",
+      "type": "security",
+      "label": "Skill SUPPORT aprobada y versionada",
+      "x": 920,
+      "y": 3920,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        3920
+      ]
+    },
+    {
+      "id": "d-herramientas",
+      "type": "security",
+      "label": "CloudWatch / DB solo si existen",
+      "x": 920,
+      "y": 4080,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        4080
+      ]
+    },
+    {
+      "id": "d-hechos",
+      "type": "backend",
+      "label": "Hechos, hipótesis y faltantes",
+      "x": 474,
+      "y": 4080,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        4080
+      ]
+    },
+    {
+      "id": "d-diagnostico",
+      "type": "backend",
+      "label": "Diagnóstico y borrador",
+      "x": 28,
+      "y": 4080,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        4080
+      ]
+    },
+    {
+      "id": "d-feedback",
+      "type": "external",
+      "label": "Feedback del usuario",
+      "x": 28,
+      "y": 4240,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        4240
+      ]
+    },
+    {
+      "id": "d-aprobar",
+      "type": "security",
+      "label": "Aprobar texto + destino + hilo",
+      "x": 474,
+      "y": 4240,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        4240
+      ]
+    },
+    {
+      "id": "d-live",
+      "type": "security",
+      "label": "Releer contexto y ACL vigentes",
+      "x": 920,
+      "y": 4240,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        4240
+      ]
+    },
+    {
+      "id": "d-publicar",
+      "type": "security",
+      "label": "Slack requiere NUEVOS write scopes",
+      "x": 920,
+      "y": 4400,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        4400
+      ]
+    },
+    {
+      "id": "d-seguir",
+      "type": "backend",
+      "label": "Nueva respuesta → nuevo job",
+      "x": 474,
+      "y": 4400,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        4400
+      ]
+    },
+    {
+      "id": "d-dev",
+      "type": "security",
+      "label": "¿Necesita código? Vincular DEV",
+      "x": 24,
+      "y": 4400,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        24,
+        4400
+      ]
+    },
+    {
+      "id": "d-result",
+      "type": "database",
+      "label": "Borrador local y decisión de soporte",
+      "x": 28,
+      "y": 4560,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        4560
+      ]
+    },
+    {
+      "id": "d-stop",
+      "type": "security",
+      "label": "Falta evidencia NECESARIA: parar",
+      "x": 474,
+      "y": 4560,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        4560
+      ]
+    },
+    {
+      "id": "e-inicio",
+      "type": "external",
+      "label": "E · MR o comentarios elegidos",
+      "x": 28,
+      "y": 4680,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        4680
+      ]
+    },
+    {
+      "id": "e-permiso",
+      "type": "security",
+      "label": "CI / logs si hacen falta: permiso",
+      "x": 920,
+      "y": 4680,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        4680
+      ]
+    },
+    {
+      "id": "e-base",
+      "type": "backend",
+      "label": "Fijar tarea, repo, base y diff",
+      "x": 474,
+      "y": 4680,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        4680
+      ]
+    },
+    {
+      "id": "e-worker",
+      "type": "backend",
+      "label": "Worker revisión → hallazgos",
+      "x": 920,
+      "y": 4840,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        4840
+      ]
+    },
+    {
+      "id": "e-result",
+      "type": "database",
+      "label": "Informe local de revisión",
+      "x": 474,
+      "y": 4840,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        4840
+      ]
+    },
+    {
+      "id": "e-comentar",
+      "type": "security",
+      "label": "Preview y aprobar comentarios",
+      "x": 920,
+      "y": 5000,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        5000
+      ]
+    },
+    {
+      "id": "e-fix",
+      "type": "security",
+      "label": "Fix OPCIONAL explícito y aislado",
+      "x": 28,
+      "y": 4840,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        4840
+      ]
+    },
+    {
+      "id": "e-checks",
+      "type": "backend",
+      "label": "Tests y diff del fix",
+      "x": 28,
+      "y": 5000,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        5000
+      ]
+    },
+    {
+      "id": "e-update",
+      "type": "security",
+      "label": "Aprobar actualización de MR",
+      "x": 474,
+      "y": 5000,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        5000
+      ]
+    },
+    {
+      "id": "e-ci",
+      "type": "external",
+      "label": "CI y revisión externa → humano",
+      "x": 474,
+      "y": 5140,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        5140
+      ]
+    },
+    {
+      "id": "f-inicio",
+      "type": "external",
+      "label": "F · pregunta y criterio suficiente",
+      "x": 28,
+      "y": 5280,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        5280
+      ]
+    },
+    {
+      "id": "f-fuentes",
+      "type": "security",
+      "label": "Corpus e historia autorizados",
+      "x": 474,
+      "y": 5280,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        5280
+      ]
+    },
+    {
+      "id": "f-frescura",
+      "type": "backend",
+      "label": "Frescura y contradicciones",
+      "x": 920,
+      "y": 5280,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        5280
+      ]
+    },
+    {
+      "id": "f-informe",
+      "type": "backend",
+      "label": "Informe según necesidad",
+      "x": 920,
+      "y": 5440,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        5440
+      ]
+    },
+    {
+      "id": "f-runbook",
+      "type": "backend",
+      "label": "O Postmortem / Runbook / mapa",
+      "x": 474,
+      "y": 5440,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        5440
+      ]
+    },
+    {
+      "id": "f-publicar",
+      "type": "security",
+      "label": "Aprobar publicación Notion",
+      "x": 28,
+      "y": 5440,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        5440
+      ]
+    },
+    {
+      "id": "f-decidir",
+      "type": "external",
+      "label": "Decisión humana sobre propuesta",
+      "x": 28,
+      "y": 5600,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        5600
+      ]
+    },
+    {
+      "id": "f-result",
+      "type": "database",
+      "label": "Borrador local de investigación",
+      "x": 474,
+      "y": 5600,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        5600
+      ]
+    },
+    {
+      "id": "f-dev",
+      "type": "security",
+      "label": "DEV hijo solo si se encarga",
+      "x": 44,
+      "y": 5740,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        44,
+        5740
+      ]
+    },
+    {
+      "id": "g-inicio",
+      "type": "backend",
+      "label": "G · watchers deterministas",
+      "x": 28,
+      "y": 5880,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        5880
+      ]
+    },
+    {
+      "id": "g-regla",
+      "type": "security",
+      "label": "Novedad / regla / comando aprobado",
+      "x": 474,
+      "y": 5880,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        5880
+      ]
+    },
+    {
+      "id": "g-atencion",
+      "type": "frontend",
+      "label": "Atención, esperas y resultados",
+      "x": 920,
+      "y": 5880,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        5880
+      ]
+    },
+    {
+      "id": "coord",
+      "type": "backend",
+      "label": "UN coordinador · futuro",
+      "x": 28,
+      "y": 6160,
+      "width": 280,
+      "height": 100,
+      "pos": [
+        28,
+        6160
+      ]
+    },
+    {
+      "id": "q-policy",
+      "type": "security",
+      "label": "Intersección de permisos por job",
+      "x": 474,
+      "y": 6160,
+      "width": 280,
+      "height": 100,
+      "pos": [
+        474,
+        6160
+      ]
+    },
+    {
+      "id": "q-cola",
+      "type": "messagebus",
+      "label": "Cola durable y scheduler",
+      "x": 920,
+      "y": 6160,
+      "width": 280,
+      "height": 100,
+      "pos": [
+        920,
+        6160
+      ]
+    },
+    {
+      "id": "q-claim",
+      "type": "security",
+      "label": "Claim en transacción corta",
+      "x": 920,
+      "y": 6340,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        6340
+      ]
+    },
+    {
+      "id": "q-workers",
+      "type": "backend",
+      "label": "Workers por rol en paralelo",
+      "x": 474,
+      "y": 6340,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        6340
+      ]
+    },
+    {
+      "id": "q-aislar",
+      "type": "security",
+      "label": "Un escritor por worktree / acción",
+      "x": 28,
+      "y": 6340,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        6340
+      ]
+    },
+    {
+      "id": "q-ejecutar",
+      "type": "backend",
+      "label": "Ejecutar fuera de transacción DB",
+      "x": 28,
+      "y": 6500,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        6500
+      ]
+    },
+    {
+      "id": "q-checkpoint",
+      "type": "database",
+      "label": "Checkpoint / resultado durable",
+      "x": 474,
+      "y": 6500,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        6500
+      ]
+    },
+    {
+      "id": "q-wait",
+      "type": "messagebus",
+      "label": "WAIT humano o externo",
+      "x": 920,
+      "y": 6500,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        6500
+      ]
+    },
+    {
+      "id": "q-otros",
+      "type": "backend",
+      "label": "Otros jobs siguen avanzando",
+      "x": 920,
+      "y": 6660,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        6660
+      ]
+    },
+    {
+      "id": "q-resume",
+      "type": "security",
+      "label": "Reanudar desde checkpoint",
+      "x": 474,
+      "y": 6660,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        6660
+      ]
+    },
+    {
+      "id": "q-crash",
+      "type": "security",
+      "label": "Crash / lease vencido → recuperar",
+      "x": 28,
+      "y": 6660,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        6660
+      ]
+    },
+    {
+      "id": "q-cancel",
+      "type": "security",
+      "label": "CANCEL bloquea acciones nuevas",
+      "x": 28,
+      "y": 6760,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        6760
+      ]
+    },
+    {
+      "id": "q-cancel-record",
+      "type": "database",
+      "label": "Cancelado: registrar y conciliar",
+      "x": 28,
+      "y": 6880,
+      "width": 280,
+      "height": 60,
+      "pos": [
+        28,
+        6880
+      ]
+    },
+    {
+      "id": "q-live",
+      "type": "security",
+      "label": "CADA efecto: permiso y no CANCEL",
+      "x": 474,
+      "y": 6820,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        6820
+      ]
+    },
+    {
+      "id": "q-intent",
+      "type": "database",
+      "label": "Diario de intención ANTES de red",
+      "x": 920,
+      "y": 6820,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        6820
+      ]
+    },
+    {
+      "id": "q-effect",
+      "type": "security",
+      "label": "Ejecutor de efectos acotados",
+      "x": 920,
+      "y": 6980,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        6980
+      ]
+    },
+    {
+      "id": "q-confirm",
+      "type": "database",
+      "label": "CONFIRMED y referencia remota",
+      "x": 474,
+      "y": 6980,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        6980
+      ]
+    },
+    {
+      "id": "q-unknown",
+      "type": "security",
+      "label": "UNKNOWN → RECONCILIAR primero",
+      "x": 28,
+      "y": 6980,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        6980
+      ]
+    },
+    {
+      "id": "q-human",
+      "type": "external",
+      "label": "No verificable → revisión humana",
+      "x": 28,
+      "y": 7140,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        7140
+      ]
+    },
+    {
+      "id": "q-autoridad",
+      "type": "database",
+      "label": "Autoridades externas separadas",
+      "x": 474,
+      "y": 7140,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        7140
+      ]
+    },
+    {
+      "id": "q-estados",
+      "type": "security",
+      "label": "Efren coordina, no sobrescribe",
+      "x": 920,
+      "y": 7140,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        7140
+      ]
+    },
+    {
+      "id": "q-reconcile",
+      "type": "security",
+      "label": "Reconciliar mediante lectura admitida",
+      "x": 28,
+      "y": 7300,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        7300
+      ]
+    },
+    {
+      "id": "q-result",
+      "type": "database",
+      "label": "Resultado durable del job",
+      "x": 474,
+      "y": 7300,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        7300
+      ]
+    },
+    {
+      "id": "m-historia",
+      "type": "database",
+      "label": "Historia canónica autorizada",
+      "x": 28,
+      "y": 7420,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        7420
+      ]
+    },
+    {
+      "id": "m-ledger",
+      "type": "database",
+      "label": "Evidencia y ledger de intentos",
+      "x": 474,
+      "y": 7420,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        7420
+      ]
+    },
+    {
+      "id": "m-exacto",
+      "type": "security",
+      "label": "Recuperación EXACTA primero",
+      "x": 920,
+      "y": 7420,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        7420
+      ]
+    },
+    {
+      "id": "m-candidatos",
+      "type": "backend",
+      "label": "Después, candidatos autorizados",
+      "x": 920,
+      "y": 7580,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        7580
+      ]
+    },
+    {
+      "id": "m-rehidratar",
+      "type": "security",
+      "label": "Rehidratar fuente + versión",
+      "x": 474,
+      "y": 7580,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        7580
+      ]
+    },
+    {
+      "id": "m-explicar",
+      "type": "backend",
+      "label": "Explicar con certeza y contradicción",
+      "x": 28,
+      "y": 7580,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        7580
+      ]
+    },
+    {
+      "id": "m-vector",
+      "type": "security",
+      "label": "pgvector preparado ≠ índice/RAG",
+      "x": 28,
+      "y": 7740,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        7740
+      ]
+    },
+    {
+      "id": "m-embedding",
+      "type": "security",
+      "label": "Embeddings externos no autorizados",
+      "x": 474,
+      "y": 7740,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        7740
+      ]
+    },
+    {
+      "id": "m-retener",
+      "type": "security",
+      "label": "Retención, borrado y copias",
+      "x": 920,
+      "y": 7740,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        7740
+      ]
+    },
+    {
+      "id": "m-leccion",
+      "type": "backend",
+      "label": "Lección confirmada → DRAFT",
+      "x": 920,
+      "y": 7900,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        7900
+      ]
+    },
+    {
+      "id": "m-revisar",
+      "type": "external",
+      "label": "Revisión humana de la lección",
+      "x": 474,
+      "y": 7900,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        7900
+      ]
+    },
+    {
+      "id": "m-registro",
+      "type": "security",
+      "label": "Registro versionado revisado",
+      "x": 28,
+      "y": 7900,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        7900
+      ]
+    },
+    {
+      "id": "r-blanco",
+      "type": "cloud",
+      "label": "AHORA · web blanca aceptada",
+      "x": 28,
+      "y": 8180,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        8180
+      ]
+    },
+    {
+      "id": "r-mapa",
+      "type": "backend",
+      "label": "Este mapa conceptual completo",
+      "x": 474,
+      "y": 8180,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        8180
+      ]
+    },
+    {
+      "id": "r-usuario",
+      "type": "external",
+      "label": "REVISIÓN del usuario primero",
+      "x": 920,
+      "y": 8180,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        8180
+      ]
+    },
+    {
+      "id": "r-piloto",
+      "type": "security",
+      "label": "Delimitar piloto raw de lectura",
+      "x": 920,
+      "y": 8340,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        8340
+      ]
+    },
+    {
+      "id": "r-policy",
+      "type": "security",
+      "label": "Aprobar política y capacidades",
+      "x": 474,
+      "y": 8340,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        8340
+      ]
+    },
+    {
+      "id": "r-implementar",
+      "type": "security",
+      "label": "Implementación con alcance propio",
+      "x": 28,
+      "y": 8340,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        8340
+      ]
+    },
+    {
+      "id": "t-protocolo",
+      "type": "security",
+      "label": "PLAN FUTURO · no pruebas ejecutadas",
+      "x": 28,
+      "y": 8620,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        8620
+      ]
+    },
+    {
+      "id": "t-a",
+      "type": "backend",
+      "label": "Test A · captura y fronteras",
+      "x": 474,
+      "y": 8620,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        8620
+      ]
+    },
+    {
+      "id": "t-a-fallos",
+      "type": "security",
+      "label": "A · negativas y recuperación",
+      "x": 920,
+      "y": 8620,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        8620
+      ]
+    },
+    {
+      "id": "t-b",
+      "type": "backend",
+      "label": "Test B · tarea a entrega",
+      "x": 920,
+      "y": 8780,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        8780
+      ]
+    },
+    {
+      "id": "t-b-fallos",
+      "type": "security",
+      "label": "B · aislamiento y gates de cierre",
+      "x": 474,
+      "y": 8780,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        8780
+      ]
+    },
+    {
+      "id": "t-c",
+      "type": "backend",
+      "label": "Test C · solicitud a tarea",
+      "x": 28,
+      "y": 8780,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        8780
+      ]
+    },
+    {
+      "id": "t-c-fallos",
+      "type": "security",
+      "label": "C · duplicado o timeout remoto",
+      "x": 28,
+      "y": 8940,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        8940
+      ]
+    },
+    {
+      "id": "t-d",
+      "type": "backend",
+      "label": "Test D · soporte revisable",
+      "x": 474,
+      "y": 8940,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        8940
+      ]
+    },
+    {
+      "id": "t-d-fallos",
+      "type": "security",
+      "label": "D · lectura necesaria o efecto opcional",
+      "x": 920,
+      "y": 8940,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        8940
+      ]
+    },
+    {
+      "id": "t-e",
+      "type": "backend",
+      "label": "Test E · revisión independiente",
+      "x": 920,
+      "y": 9100,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        9100
+      ]
+    },
+    {
+      "id": "t-e-fallos",
+      "type": "security",
+      "label": "E · diff cambió o permiso revocado",
+      "x": 474,
+      "y": 9100,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        9100
+      ]
+    },
+    {
+      "id": "t-f",
+      "type": "backend",
+      "label": "Test F · investigación trazable",
+      "x": 28,
+      "y": 9100,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        9100
+      ]
+    },
+    {
+      "id": "t-f-fallos",
+      "type": "security",
+      "label": "F · fuente necesaria o escritura opcional",
+      "x": 28,
+      "y": 9260,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        9260
+      ]
+    },
+    {
+      "id": "t-g",
+      "type": "backend",
+      "label": "Test G · novedad y coordinación",
+      "x": 474,
+      "y": 9260,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        9260
+      ]
+    },
+    {
+      "id": "t-g-fallos",
+      "type": "security",
+      "label": "G · duplicado, espera y suspensión",
+      "x": 920,
+      "y": 9260,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        9260
+      ]
+    },
+    {
+      "id": "t-recuperar",
+      "type": "security",
+      "label": "TODOS A–G · fallo/reinicio/cancelar",
+      "x": 920,
+      "y": 9420,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        9420
+      ]
+    },
+    {
+      "id": "t-lease",
+      "type": "security",
+      "label": "TODOS · lease obsoleto y revocación",
+      "x": 474,
+      "y": 9420,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        9420
+      ]
+    },
+    {
+      "id": "t-unknown",
+      "type": "security",
+      "label": "TODOS · caída después de envío",
+      "x": 28,
+      "y": 9420,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        9420
+      ]
+    },
+    {
+      "id": "t-evidencia",
+      "type": "database",
+      "label": "Entrada/salida/evidencia por A–G",
+      "x": 28,
+      "y": 9580,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        28,
+        9580
+      ]
+    },
+    {
+      "id": "t-historico",
+      "type": "cloud",
+      "label": "Histórico ≠ prueba nueva",
+      "x": 474,
+      "y": 9580,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        474,
+        9580
+      ]
+    },
+    {
+      "id": "t-abiertas",
+      "type": "security",
+      "label": "Decisiones abiertas antes de activar",
+      "x": 920,
+      "y": 9580,
+      "width": 280,
+      "height": 80,
+      "pos": [
+        920,
+        9580
+      ]
+    }
+  ],
+  "boundaries": [],
+  "connections": [
+    {
+      "from": "hoy",
+      "to": "hoy-limite",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          200
+        ],
+        [
+          168,
+          280
+        ]
+      ]
+    },
+    {
+      "from": "hoy",
+      "to": "host",
+      "label": "fuera runtime",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          160
+        ],
+        [
+          474,
+          160
+        ]
+      ],
+      "labelAt": [
+        391,
+        150
+      ]
+    },
+    {
+      "from": "host",
+      "to": "bridge",
+      "label": "excepción acotada",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          160
+        ],
+        [
+          920,
+          160
+        ]
+      ],
+      "labelAt": [
+        837,
+        150
+      ]
+    },
+    {
+      "from": "a-inicio",
+      "to": "a-policy",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          560
+        ],
+        [
+          474,
+          560
+        ]
+      ]
+    },
+    {
+      "from": "a-policy",
+      "to": "a-adapter",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          560
+        ],
+        [
+          920,
+          560
+        ]
+      ]
+    },
+    {
+      "from": "a-adapter",
+      "to": "a-slack",
+      "label": "si Slack elegido",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1074,
+          600
+        ],
+        [
+          1074,
+          680
+        ]
+      ],
+      "labelAt": [
+        1123,
+        643
+      ]
+    },
+    {
+      "from": "a-adapter",
+      "to": "a-notion",
+      "label": "si Notion elegido",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          600
+        ],
+        [
+          1060,
+          656
+        ],
+        [
+          614,
+          656
+        ],
+        [
+          614,
+          680
+        ]
+      ],
+      "labelAt": [
+        837,
+        676
+      ]
+    },
+    {
+      "from": "a-adapter",
+      "to": "a-gitlab",
+      "label": "si GitLab elegido",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          1046,
+          600
+        ],
+        [
+          1046,
+          640
+        ],
+        [
+          168,
+          640
+        ],
+        [
+          168,
+          680
+        ]
+      ],
+      "labelAt": [
+        607,
+        630
+      ]
+    },
+    {
+      "from": "a-slack",
+      "to": "a-admit",
+      "label": "solo scope concedido",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          760
+        ],
+        [
+          1060,
+          800
+        ],
+        [
+          628,
+          800
+        ],
+        [
+          628,
+          840
+        ]
+      ],
+      "labelAt": [
+        844,
+        790
+      ]
+    },
+    {
+      "from": "a-notion",
+      "to": "a-admit",
+      "label": "solo scope concedido",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          614,
+          760
+        ],
+        [
+          614,
+          840
+        ]
+      ],
+      "labelAt": [
+        555,
+        803
+      ]
+    },
+    {
+      "from": "a-gitlab",
+      "to": "a-admit",
+      "label": "solo scope concedido",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          760
+        ],
+        [
+          168,
+          816
+        ],
+        [
+          600,
+          816
+        ],
+        [
+          600,
+          840
+        ]
+      ],
+      "labelAt": [
+        384,
+        806
+      ]
+    },
+    {
+      "from": "a-admit",
+      "to": "a-pull",
+      "label": "pull elegido",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          607,
+          920
+        ],
+        [
+          607,
+          960
+        ],
+        [
+          168,
+          960
+        ],
+        [
+          168,
+          1000
+        ]
+      ],
+      "labelAt": [
+        388,
+        950
+      ]
+    },
+    {
+      "from": "a-admit",
+      "to": "a-push",
+      "label": "push solicitado",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          621,
+          920
+        ],
+        [
+          621,
+          960
+        ],
+        [
+          1060,
+          960
+        ],
+        [
+          1060,
+          1000
+        ]
+      ],
+      "labelAt": [
+        841,
+        950
+      ]
+    },
+    {
+      "from": "a-pull",
+      "to": "a-auth",
+      "label": "intake read-only",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          1040
+        ],
+        [
+          474,
+          1040
+        ]
+      ],
+      "labelAt": [
+        391,
+        1030
+      ]
+    },
+    {
+      "from": "a-push",
+      "to": "a-auth",
+      "label": "solo push aprobado",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          1033
+        ],
+        [
+          754,
+          1033
+        ]
+      ],
+      "labelAt": [
+        837,
+        1023
+      ]
+    },
+    {
+      "from": "a-auth",
+      "to": "a-paginas",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          1047
+        ],
+        [
+          837,
+          1047
+        ],
+        [
+          837,
+          1193
+        ],
+        [
+          920,
+          1193
+        ]
+      ]
+    },
+    {
+      "from": "a-paginas",
+      "to": "a-retry",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          1207
+        ],
+        [
+          754,
+          1207
+        ]
+      ]
+    },
+    {
+      "from": "a-retry",
+      "to": "a-raw",
+      "label": "solo respuesta admitida",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          1200
+        ],
+        [
+          308,
+          1200
+        ]
+      ],
+      "labelAt": [
+        391,
+        1190
+      ]
+    },
+    {
+      "from": "a-raw",
+      "to": "a-procedencia",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          1240
+        ],
+        [
+          168,
+          1320
+        ]
+      ]
+    },
+    {
+      "from": "a-procedencia",
+      "to": "a-minimo",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          1360
+        ],
+        [
+          474,
+          1360
+        ]
+      ]
+    },
+    {
+      "from": "a-minimo",
+      "to": "a-dedupe",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          1360
+        ],
+        [
+          920,
+          1360
+        ]
+      ]
+    },
+    {
+      "from": "a-dedupe",
+      "to": "a-persistir",
+      "label": "nuevo permitido",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          1400
+        ],
+        [
+          1060,
+          1480
+        ]
+      ],
+      "labelAt": [
+        1013,
+        1443
+      ]
+    },
+    {
+      "from": "a-persistir",
+      "to": "a-proyectar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          1520
+        ],
+        [
+          754,
+          1520
+        ]
+      ]
+    },
+    {
+      "from": "a-proyectar",
+      "to": "a-literal",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          1520
+        ],
+        [
+          308,
+          1520
+        ]
+      ]
+    },
+    {
+      "from": "a-literal",
+      "to": "a-presentar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          1560
+        ],
+        [
+          168,
+          1640
+        ]
+      ]
+    },
+    {
+      "from": "a-presentar",
+      "to": "a-revocar",
+      "label": "si cambia fuente",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          1680
+        ],
+        [
+          474,
+          1680
+        ]
+      ],
+      "labelAt": [
+        391,
+        1670
+      ]
+    },
+    {
+      "from": "a-revocar",
+      "to": "a-noresucitar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          1680
+        ],
+        [
+          920,
+          1680
+        ]
+      ]
+    },
+    {
+      "from": "a-noresucitar",
+      "to": "a-inyeccion",
+      "label": "guardas de toda captura",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          1720
+        ],
+        [
+          1060,
+          1800
+        ]
+      ],
+      "labelAt": [
+        994,
+        1763
+      ]
+    },
+    {
+      "from": "a-inyeccion",
+      "to": "a-url",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          1840
+        ],
+        [
+          754,
+          1840
+        ]
+      ]
+    },
+    {
+      "from": "a-url",
+      "to": "a-n8n",
+      "label": "opcional; misma frontera",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          1840
+        ],
+        [
+          308,
+          1840
+        ]
+      ],
+      "labelAt": [
+        391,
+        1830
+      ]
+    },
+    {
+      "from": "b-inicio",
+      "to": "b-identidad",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          304,
+          1953
+        ],
+        [
+          474,
+          1953
+        ]
+      ]
+    },
+    {
+      "from": "b-identidad",
+      "to": "b-objetivo",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          1960
+        ],
+        [
+          920,
+          1960
+        ]
+      ]
+    },
+    {
+      "from": "b-objetivo",
+      "to": "b-repo",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          2000
+        ],
+        [
+          1060,
+          2080
+        ]
+      ]
+    },
+    {
+      "from": "b-repo",
+      "to": "b-stop",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          2120
+        ],
+        [
+          754,
+          2120
+        ]
+      ]
+    },
+    {
+      "from": "b-stop",
+      "to": "b-checkout",
+      "label": "solo si resuelto",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          2120
+        ],
+        [
+          308,
+          2120
+        ]
+      ],
+      "labelAt": [
+        391,
+        2110
+      ]
+    },
+    {
+      "from": "b-checkout",
+      "to": "b-base",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          2160
+        ],
+        [
+          168,
+          2240
+        ]
+      ]
+    },
+    {
+      "from": "b-base",
+      "to": "b-topologia",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          2280
+        ],
+        [
+          474,
+          2280
+        ]
+      ]
+    },
+    {
+      "from": "b-topologia",
+      "to": "b-worker",
+      "label": "solo autorizado",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          2280
+        ],
+        [
+          920,
+          2280
+        ]
+      ],
+      "labelAt": [
+        837,
+        2270
+      ]
+    },
+    {
+      "from": "b-worker",
+      "to": "b-checks",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          2320
+        ],
+        [
+          1060,
+          2400
+        ]
+      ]
+    },
+    {
+      "from": "b-checks",
+      "to": "b-preview",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          2440
+        ],
+        [
+          754,
+          2440
+        ]
+      ]
+    },
+    {
+      "from": "b-preview",
+      "to": "b-aprobar",
+      "label": "si publicar encargado",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          2440
+        ],
+        [
+          308,
+          2440
+        ]
+      ],
+      "labelAt": [
+        391,
+        2430
+      ]
+    },
+    {
+      "from": "b-preview",
+      "to": "b-verificar",
+      "label": "solo diff solicitado",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          2440
+        ],
+        [
+          837,
+          2440
+        ],
+        [
+          837,
+          3080
+        ],
+        [
+          920,
+          3080
+        ]
+      ],
+      "labelAt": [
+        837,
+        2500
+      ]
+    },
+    {
+      "from": "b-aprobar",
+      "to": "b-live",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          2480
+        ],
+        [
+          168,
+          2560
+        ]
+      ]
+    },
+    {
+      "from": "b-live",
+      "to": "b-publicar",
+      "label": "vigente y exacto",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          2600
+        ],
+        [
+          474,
+          2600
+        ]
+      ],
+      "labelAt": [
+        391,
+        2590
+      ]
+    },
+    {
+      "from": "b-publicar",
+      "to": "b-ci",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          2600
+        ],
+        [
+          920,
+          2600
+        ]
+      ]
+    },
+    {
+      "from": "b-ci",
+      "to": "b-fix",
+      "label": "si hay encargo",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1040,
+          2640
+        ],
+        [
+          1040,
+          2720
+        ]
+      ],
+      "labelAt": [
+        995,
+        2663
+      ]
+    },
+    {
+      "from": "b-fix",
+      "to": "b-checks",
+      "label": "nuevo diff a checks",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          900,
+          2760
+        ],
+        [
+          876,
+          2760
+        ],
+        [
+          876,
+          2440
+        ],
+        [
+          920,
+          2440
+        ]
+      ],
+      "labelAt": [
+        1130,
+        2660
+      ]
+    },
+    {
+      "from": "b-ci",
+      "to": "b-merge",
+      "label": "si merge encargado",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          2640
+        ],
+        [
+          1060,
+          2680
+        ],
+        [
+          614,
+          2680
+        ],
+        [
+          614,
+          2720
+        ]
+      ],
+      "labelAt": [
+        614,
+        2660
+      ]
+    },
+    {
+      "from": "b-ci",
+      "to": "b-verificar",
+      "label": "MR entregado; sin fix",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          2600
+        ],
+        [
+          896,
+          2600
+        ],
+        [
+          896,
+          3080
+        ],
+        [
+          920,
+          3080
+        ]
+      ],
+      "labelAt": [
+        1060,
+        3022
+      ]
+    },
+    {
+      "from": "b-merge",
+      "to": "b-deploy",
+      "label": "si se solicita deploy",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          2760
+        ],
+        [
+          308,
+          2760
+        ]
+      ],
+      "labelAt": [
+        390,
+        2750
+      ]
+    },
+    {
+      "from": "b-deploy",
+      "to": "b-verificar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          2800
+        ],
+        [
+          168,
+          3144
+        ],
+        [
+          1060,
+          3144
+        ],
+        [
+          1060,
+          3120
+        ]
+      ]
+    },
+    {
+      "from": "b-merge",
+      "to": "b-verificar",
+      "label": "solo merge solicitado",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          2760
+        ],
+        [
+          837,
+          2760
+        ],
+        [
+          837,
+          3080
+        ],
+        [
+          920,
+          3080
+        ]
+      ],
+      "labelAt": [
+        1060,
+        3000
+      ]
+    },
+    {
+      "from": "b-verificar",
+      "to": "b-status",
+      "label": "si se pide status",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          3080
+        ],
+        [
+          837,
+          3080
+        ],
+        [
+          837,
+          2920
+        ],
+        [
+          754,
+          2920
+        ]
+      ],
+      "labelAt": [
+        1060,
+        2978
+      ]
+    },
+    {
+      "from": "b-status",
+      "to": "b-result",
+      "label": "solo escritura aprobada",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          614,
+          2960
+        ],
+        [
+          614,
+          3040
+        ]
+      ],
+      "labelAt": [
+        548,
+        3003
+      ]
+    },
+    {
+      "from": "b-verificar",
+      "to": "b-result",
+      "label": "resultado sin status",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          3080
+        ],
+        [
+          754,
+          3080
+        ]
+      ],
+      "labelAt": [
+        837,
+        3128
+      ]
+    },
+    {
+      "from": "b-result",
+      "to": "b-cierre",
+      "label": "si humano decide cerrar",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          3080
+        ],
+        [
+          847,
+          3080
+        ],
+        [
+          847,
+          2920
+        ],
+        [
+          940,
+          2920
+        ]
+      ],
+      "labelAt": [
+        614,
+        3134
+      ]
+    },
+    {
+      "from": "c-inicio",
+      "to": "c-owner",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          3200
+        ],
+        [
+          474,
+          3200
+        ]
+      ]
+    },
+    {
+      "from": "c-owner",
+      "to": "c-buscar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          3200
+        ],
+        [
+          920,
+          3200
+        ]
+      ]
+    },
+    {
+      "from": "c-buscar",
+      "to": "c-aceptar",
+      "label": "no hay tarea reutilizable",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          3240
+        ],
+        [
+          1060,
+          3320
+        ]
+      ],
+      "labelAt": [
+        989,
+        3283
+      ]
+    },
+    {
+      "from": "c-buscar",
+      "to": "c-readback",
+      "label": "match exacto: leer IDs",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          3200
+        ],
+        [
+          837,
+          3200
+        ],
+        [
+          837,
+          3520
+        ],
+        [
+          754,
+          3520
+        ]
+      ],
+      "labelAt": [
+        1060,
+        3460
+      ]
+    },
+    {
+      "from": "c-buscar",
+      "to": "c-stop",
+      "label": "ambiguo: preguntar",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          3200
+        ],
+        [
+          896,
+          3200
+        ],
+        [
+          896,
+          3520
+        ],
+        [
+          920,
+          3520
+        ]
+      ],
+      "labelAt": [
+        1060,
+        3420
+      ]
+    },
+    {
+      "from": "c-aceptar",
+      "to": "c-aprobar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          3360
+        ],
+        [
+          754,
+          3360
+        ]
+      ]
+    },
+    {
+      "from": "c-aprobar",
+      "to": "c-intent",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          3360
+        ],
+        [
+          308,
+          3360
+        ]
+      ]
+    },
+    {
+      "from": "c-intent",
+      "to": "c-crear",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          3400
+        ],
+        [
+          168,
+          3480
+        ]
+      ]
+    },
+    {
+      "from": "c-crear",
+      "to": "c-readback",
+      "label": "confirmación real",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          3527
+        ],
+        [
+          474,
+          3527
+        ]
+      ],
+      "labelAt": [
+        399,
+        3517
+      ]
+    },
+    {
+      "from": "c-readback",
+      "to": "c-stop",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          3520
+        ],
+        [
+          920,
+          3520
+        ]
+      ]
+    },
+    {
+      "from": "c-stop",
+      "to": "c-bundle",
+      "label": "resuelto; permiso propio",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          3560
+        ],
+        [
+          1060,
+          3640
+        ]
+      ],
+      "labelAt": [
+        991,
+        3603
+      ]
+    },
+    {
+      "from": "c-bundle",
+      "to": "c-campos",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          3680
+        ],
+        [
+          754,
+          3680
+        ]
+      ]
+    },
+    {
+      "from": "c-campos",
+      "to": "c-ids",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          3680
+        ],
+        [
+          308,
+          3680
+        ]
+      ]
+    },
+    {
+      "from": "d-inicio",
+      "to": "d-contexto",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          3960
+        ],
+        [
+          474,
+          3960
+        ]
+      ]
+    },
+    {
+      "from": "d-contexto",
+      "to": "d-skill",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          3953
+        ],
+        [
+          920,
+          3953
+        ]
+      ]
+    },
+    {
+      "from": "d-skill",
+      "to": "d-herramientas",
+      "label": "lectura necesaria",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          4000
+        ],
+        [
+          1060,
+          4080
+        ]
+      ],
+      "labelAt": [
+        1008,
+        4043
+      ]
+    },
+    {
+      "from": "d-skill",
+      "to": "d-hechos",
+      "label": "evidencia suficiente",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          3967
+        ],
+        [
+          837,
+          3967
+        ],
+        [
+          837,
+          4120
+        ],
+        [
+          754,
+          4120
+        ]
+      ],
+      "labelAt": [
+        837,
+        4034
+      ]
+    },
+    {
+      "from": "d-herramientas",
+      "to": "d-hechos",
+      "label": "solo evidencia autorizada",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          4120
+        ],
+        [
+          754,
+          4120
+        ]
+      ],
+      "labelAt": [
+        1060,
+        4180
+      ]
+    },
+    {
+      "from": "d-herramientas",
+      "to": "d-stop",
+      "label": "necesaria no disponible",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          4120
+        ],
+        [
+          837,
+          4120
+        ],
+        [
+          837,
+          4600
+        ],
+        [
+          754,
+          4600
+        ]
+      ],
+      "labelAt": [
+        903,
+        4363
+      ]
+    },
+    {
+      "from": "d-hechos",
+      "to": "d-diagnostico",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          4120
+        ],
+        [
+          308,
+          4120
+        ]
+      ]
+    },
+    {
+      "from": "d-diagnostico",
+      "to": "d-feedback",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          4160
+        ],
+        [
+          168,
+          4240
+        ]
+      ]
+    },
+    {
+      "from": "d-feedback",
+      "to": "d-aprobar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          4280
+        ],
+        [
+          474,
+          4280
+        ]
+      ]
+    },
+    {
+      "from": "d-feedback",
+      "to": "d-result",
+      "label": "solo borrador solicitado",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          4280
+        ],
+        [
+          332,
+          4280
+        ],
+        [
+          332,
+          4600
+        ],
+        [
+          308,
+          4600
+        ]
+      ],
+      "labelAt": [
+        424,
+        4500
+      ]
+    },
+    {
+      "from": "d-aprobar",
+      "to": "d-live",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          4280
+        ],
+        [
+          920,
+          4280
+        ]
+      ]
+    },
+    {
+      "from": "d-live",
+      "to": "d-publicar",
+      "label": "si vigente",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          4320
+        ],
+        [
+          1060,
+          4400
+        ]
+      ],
+      "labelAt": [
+        1025,
+        4363
+      ]
+    },
+    {
+      "from": "d-publicar",
+      "to": "d-seguir",
+      "label": "solo si scopes concedidos",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          4440
+        ],
+        [
+          754,
+          4440
+        ]
+      ],
+      "labelAt": [
+        1060,
+        4500
+      ]
+    },
+    {
+      "from": "d-result",
+      "to": "d-dev",
+      "label": "si DEV encargado",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          4600
+        ],
+        [
+          332,
+          4600
+        ],
+        [
+          332,
+          4440
+        ],
+        [
+          304,
+          4440
+        ]
+      ],
+      "labelAt": [
+        420,
+        4660
+      ]
+    },
+    {
+      "from": "d-seguir",
+      "to": "d-result",
+      "label": "registrar seguimiento",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          4440
+        ],
+        [
+          332,
+          4440
+        ],
+        [
+          332,
+          4600
+        ],
+        [
+          308,
+          4600
+        ]
+      ],
+      "labelAt": [
+        271,
+        4523
+      ]
+    },
+    {
+      "from": "e-inicio",
+      "to": "e-base",
+      "label": "diff admitido",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          4720
+        ],
+        [
+          474,
+          4720
+        ]
+      ],
+      "labelAt": [
+        391,
+        4710
+      ]
+    },
+    {
+      "from": "e-base",
+      "to": "e-permiso",
+      "label": "requiere CI o logs",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          4713
+        ],
+        [
+          920,
+          4713
+        ]
+      ],
+      "labelAt": [
+        837,
+        4703
+      ]
+    },
+    {
+      "from": "e-base",
+      "to": "e-worker",
+      "label": "diff suficiente",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          4727
+        ],
+        [
+          837,
+          4727
+        ],
+        [
+          837,
+          4880
+        ],
+        [
+          920,
+          4880
+        ]
+      ],
+      "labelAt": [
+        837,
+        4794
+      ]
+    },
+    {
+      "from": "e-permiso",
+      "to": "e-worker",
+      "label": "lectura extra aprobada",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          4760
+        ],
+        [
+          1060,
+          4840
+        ]
+      ],
+      "labelAt": [
+        996,
+        4803
+      ]
+    },
+    {
+      "from": "e-worker",
+      "to": "e-result",
+      "label": "hallazgos",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          4880
+        ],
+        [
+          754,
+          4880
+        ]
+      ],
+      "labelAt": [
+        1060,
+        4960
+      ]
+    },
+    {
+      "from": "e-result",
+      "to": "e-comentar",
+      "label": "si publicar encargado",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          4880
+        ],
+        [
+          837,
+          4880
+        ],
+        [
+          837,
+          5033
+        ],
+        [
+          920,
+          5033
+        ]
+      ],
+      "labelAt": [
+        898,
+        4960
+      ]
+    },
+    {
+      "from": "e-comentar",
+      "to": "e-ci",
+      "label": "solo texto aprobado",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          936,
+          5080
+        ],
+        [
+          936,
+          5187
+        ],
+        [
+          754,
+          5187
+        ]
+      ],
+      "labelAt": [
+        845,
+        5177
+      ]
+    },
+    {
+      "from": "e-result",
+      "to": "e-fix",
+      "label": "solo nuevo encargo",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          4880
+        ],
+        [
+          308,
+          4880
+        ]
+      ],
+      "labelAt": [
+        400,
+        4870
+      ]
+    },
+    {
+      "from": "e-fix",
+      "to": "e-checks",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          4920
+        ],
+        [
+          168,
+          5000
+        ]
+      ]
+    },
+    {
+      "from": "e-checks",
+      "to": "e-update",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          5040
+        ],
+        [
+          474,
+          5040
+        ]
+      ]
+    },
+    {
+      "from": "e-update",
+      "to": "e-ci",
+      "label": "publicación concedida",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          614,
+          5080
+        ],
+        [
+          614,
+          5140
+        ]
+      ],
+      "labelAt": [
+        553,
+        5113
+      ]
+    },
+    {
+      "from": "f-inicio",
+      "to": "f-fuentes",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          5320
+        ],
+        [
+          474,
+          5320
+        ]
+      ]
+    },
+    {
+      "from": "f-fuentes",
+      "to": "f-frescura",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          5313
+        ],
+        [
+          920,
+          5313
+        ]
+      ]
+    },
+    {
+      "from": "f-frescura",
+      "to": "f-informe",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          5360
+        ],
+        [
+          1060,
+          5440
+        ]
+      ]
+    },
+    {
+      "from": "f-frescura",
+      "to": "f-runbook",
+      "label": "otro formato necesario",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          5327
+        ],
+        [
+          837,
+          5327
+        ],
+        [
+          837,
+          5480
+        ],
+        [
+          754,
+          5480
+        ]
+      ],
+      "labelAt": [
+        837,
+        5394
+      ]
+    },
+    {
+      "from": "f-runbook",
+      "to": "f-result",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          614,
+          5520
+        ],
+        [
+          614,
+          5600
+        ]
+      ]
+    },
+    {
+      "from": "f-informe",
+      "to": "f-result",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          936,
+          5520
+        ],
+        [
+          936,
+          5616
+        ],
+        [
+          754,
+          5616
+        ]
+      ]
+    },
+    {
+      "from": "f-result",
+      "to": "f-decidir",
+      "label": "borrador local",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          5647
+        ],
+        [
+          308,
+          5647
+        ]
+      ],
+      "labelAt": [
+        391,
+        5637
+      ]
+    },
+    {
+      "from": "f-result",
+      "to": "f-publicar",
+      "label": "si publicar solicitado",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          5633
+        ],
+        [
+          450,
+          5633
+        ],
+        [
+          450,
+          5480
+        ],
+        [
+          308,
+          5480
+        ]
+      ],
+      "labelAt": [
+        450,
+        5547
+      ]
+    },
+    {
+      "from": "f-publicar",
+      "to": "f-decidir",
+      "label": "solo escritura aprobada",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          5520
+        ],
+        [
+          168,
+          5600
+        ]
+      ],
+      "labelAt": [
+        102,
+        5563
+      ]
+    },
+    {
+      "from": "f-decidir",
+      "to": "f-dev",
+      "label": "si hay decisión DEV",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          5680
+        ],
+        [
+          168,
+          5740
+        ]
+      ],
+      "labelAt": [
+        111,
+        5713
+      ]
+    },
+    {
+      "from": "g-inicio",
+      "to": "g-regla",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          5920
+        ],
+        [
+          474,
+          5920
+        ]
+      ]
+    },
+    {
+      "from": "g-regla",
+      "to": "g-atencion",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          5913
+        ],
+        [
+          920,
+          5913
+        ]
+      ]
+    },
+    {
+      "from": "g-atencion",
+      "to": "coord",
+      "label": "job solo por regla/encargo",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          5927
+        ],
+        [
+          896,
+          5927
+        ],
+        [
+          896,
+          6136
+        ],
+        [
+          168,
+          6136
+        ],
+        [
+          168,
+          6160
+        ]
+      ],
+      "labelAt": [
+        896,
+        6022
+      ]
+    },
+    {
+      "from": "coord",
+      "to": "q-policy",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          6217
+        ],
+        [
+          474,
+          6217
+        ]
+      ]
+    },
+    {
+      "from": "q-policy",
+      "to": "q-cola",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          6210
+        ],
+        [
+          920,
+          6210
+        ]
+      ]
+    },
+    {
+      "from": "q-cola",
+      "to": "q-claim",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          6260
+        ],
+        [
+          1060,
+          6340
+        ]
+      ]
+    },
+    {
+      "from": "q-claim",
+      "to": "q-workers",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          6380
+        ],
+        [
+          754,
+          6380
+        ]
+      ]
+    },
+    {
+      "from": "q-workers",
+      "to": "q-aislar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          6380
+        ],
+        [
+          308,
+          6380
+        ]
+      ]
+    },
+    {
+      "from": "q-aislar",
+      "to": "q-ejecutar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          6420
+        ],
+        [
+          168,
+          6500
+        ]
+      ]
+    },
+    {
+      "from": "q-ejecutar",
+      "to": "q-checkpoint",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          6526
+        ],
+        [
+          474,
+          6526
+        ]
+      ]
+    },
+    {
+      "from": "q-checkpoint",
+      "to": "q-result",
+      "label": "sin efecto requerido",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          6554
+        ],
+        [
+          450,
+          6554
+        ],
+        [
+          450,
+          7340
+        ],
+        [
+          474,
+          7340
+        ]
+      ],
+      "labelAt": [
+        509,
+        6950
+      ]
+    },
+    {
+      "from": "q-checkpoint",
+      "to": "q-live",
+      "label": "efecto solicitado",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          6547
+        ],
+        [
+          778,
+          6547
+        ],
+        [
+          778,
+          6853
+        ],
+        [
+          754,
+          6853
+        ]
+      ],
+      "labelAt": [
+        726,
+        6627
+      ]
+    },
+    {
+      "from": "q-checkpoint",
+      "to": "q-wait",
+      "label": "si espera",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          6533
+        ],
+        [
+          920,
+          6533
+        ]
+      ],
+      "labelAt": [
+        796,
+        6523
+      ]
+    },
+    {
+      "from": "q-wait",
+      "to": "q-otros",
+      "label": "otro job independiente",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          6580
+        ],
+        [
+          1060,
+          6660
+        ]
+      ],
+      "labelAt": [
+        996,
+        6623
+      ]
+    },
+    {
+      "from": "q-wait",
+      "to": "q-resume",
+      "label": "cuando llega condición",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          6540
+        ],
+        [
+          837,
+          6540
+        ],
+        [
+          837,
+          6700
+        ],
+        [
+          754,
+          6700
+        ]
+      ],
+      "labelAt": [
+        1060,
+        6460
+      ]
+    },
+    {
+      "from": "q-ejecutar",
+      "to": "q-crash",
+      "label": "si cae o vence lease",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          6580
+        ],
+        [
+          168,
+          6660
+        ]
+      ],
+      "labelAt": [
+        109,
+        6623
+      ]
+    },
+    {
+      "from": "q-crash",
+      "to": "q-resume",
+      "label": "recuperar tras fencing",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          6700
+        ],
+        [
+          474,
+          6700
+        ]
+      ],
+      "labelAt": [
+        614,
+        6760
+      ]
+    },
+    {
+      "from": "q-resume",
+      "to": "q-claim",
+      "label": "vigente: nuevo claim",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          6700
+        ],
+        [
+          837,
+          6700
+        ],
+        [
+          837,
+          6380
+        ],
+        [
+          920,
+          6380
+        ]
+      ],
+      "labelAt": [
+        1060,
+        6480
+      ]
+    },
+    {
+      "from": "q-resume",
+      "to": "q-wait",
+      "label": "cambió: esperar revisión",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          6700
+        ],
+        [
+          837,
+          6700
+        ],
+        [
+          837,
+          6540
+        ],
+        [
+          920,
+          6540
+        ]
+      ],
+      "labelAt": [
+        614,
+        6620
+      ]
+    },
+    {
+      "from": "q-checkpoint",
+      "to": "q-cancel",
+      "label": "si cancelar",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          6540
+        ],
+        [
+          391,
+          6540
+        ],
+        [
+          391,
+          6800
+        ],
+        [
+          308,
+          6800
+        ]
+      ],
+      "labelAt": [
+        391,
+        6660
+      ]
+    },
+    {
+      "from": "q-cancel",
+      "to": "q-cancel-record",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          6840
+        ],
+        [
+          168,
+          6880
+        ]
+      ]
+    },
+    {
+      "from": "q-live",
+      "to": "q-intent",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          6867
+        ],
+        [
+          920,
+          6867
+        ]
+      ]
+    },
+    {
+      "from": "q-intent",
+      "to": "q-effect",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          6900
+        ],
+        [
+          1060,
+          6980
+        ]
+      ]
+    },
+    {
+      "from": "q-effect",
+      "to": "q-confirm",
+      "label": "respuesta confirmada",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          7020
+        ],
+        [
+          754,
+          7020
+        ]
+      ],
+      "labelAt": [
+        837,
+        7010
+      ]
+    },
+    {
+      "from": "q-effect",
+      "to": "q-unknown",
+      "label": "sin respuesta: UNKNOWN",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          7060
+        ],
+        [
+          1060,
+          7084
+        ],
+        [
+          168,
+          7084
+        ],
+        [
+          168,
+          7060
+        ]
+      ],
+      "labelAt": [
+        837,
+        7074
+      ]
+    },
+    {
+      "from": "q-unknown",
+      "to": "q-reconcile",
+      "label": "leer antes de retry",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          7020
+        ],
+        [
+          332,
+          7020
+        ],
+        [
+          332,
+          7340
+        ],
+        [
+          308,
+          7340
+        ]
+      ],
+      "labelAt": [
+        160,
+        7260
+      ]
+    },
+    {
+      "from": "q-reconcile",
+      "to": "q-confirm",
+      "label": "efecto confirmado",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          7340
+        ],
+        [
+          391,
+          7340
+        ],
+        [
+          391,
+          7020
+        ],
+        [
+          474,
+          7020
+        ]
+      ],
+      "labelAt": [
+        810,
+        7100
+      ]
+    },
+    {
+      "from": "q-reconcile",
+      "to": "q-live",
+      "label": "ausente y job activo",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          7340
+        ],
+        [
+          391,
+          7340
+        ],
+        [
+          391,
+          6860
+        ],
+        [
+          474,
+          6860
+        ]
+      ],
+      "labelAt": [
+        390,
+        6945
+      ]
+    },
+    {
+      "from": "q-reconcile",
+      "to": "q-human",
+      "label": "aún incierto: no retry",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          7340
+        ],
+        [
+          332,
+          7340
+        ],
+        [
+          332,
+          7180
+        ],
+        [
+          308,
+          7180
+        ]
+      ],
+      "labelAt": [
+        160,
+        7240
+      ]
+    },
+    {
+      "from": "q-confirm",
+      "to": "q-autoridad",
+      "label": "registrar resultado",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          614,
+          7060
+        ],
+        [
+          614,
+          7140
+        ]
+      ],
+      "labelAt": [
+        557,
+        7103
+      ]
+    },
+    {
+      "from": "q-autoridad",
+      "to": "q-estados",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          7173
+        ],
+        [
+          920,
+          7173
+        ]
+      ]
+    },
+    {
+      "from": "q-estados",
+      "to": "q-result",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          936,
+          7220
+        ],
+        [
+          936,
+          7316
+        ],
+        [
+          754,
+          7316
+        ]
+      ]
+    },
+    {
+      "from": "m-historia",
+      "to": "m-ledger",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          7460
+        ],
+        [
+          474,
+          7460
+        ]
+      ]
+    },
+    {
+      "from": "m-ledger",
+      "to": "m-exacto",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          7453
+        ],
+        [
+          920,
+          7453
+        ]
+      ]
+    },
+    {
+      "from": "m-exacto",
+      "to": "m-candidatos",
+      "label": "solo si hace falta",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          7500
+        ],
+        [
+          1060,
+          7580
+        ]
+      ],
+      "labelAt": [
+        1006,
+        7543
+      ]
+    },
+    {
+      "from": "m-exacto",
+      "to": "m-rehidratar",
+      "label": "coincidencia exacta",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          7467
+        ],
+        [
+          837,
+          7467
+        ],
+        [
+          837,
+          7613
+        ],
+        [
+          754,
+          7613
+        ]
+      ],
+      "labelAt": [
+        837,
+        7530
+      ]
+    },
+    {
+      "from": "m-candidatos",
+      "to": "m-rehidratar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          7627
+        ],
+        [
+          754,
+          7627
+        ]
+      ]
+    },
+    {
+      "from": "m-rehidratar",
+      "to": "m-explicar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          7620
+        ],
+        [
+          308,
+          7620
+        ]
+      ]
+    },
+    {
+      "from": "m-explicar",
+      "to": "m-vector",
+      "label": "opcional futuro",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          7660
+        ],
+        [
+          168,
+          7740
+        ]
+      ],
+      "labelAt": [
+        121,
+        7703
+      ]
+    },
+    {
+      "from": "m-vector",
+      "to": "m-embedding",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          7780
+        ],
+        [
+          474,
+          7780
+        ]
+      ]
+    },
+    {
+      "from": "m-embedding",
+      "to": "m-retener",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          7780
+        ],
+        [
+          920,
+          7780
+        ]
+      ]
+    },
+    {
+      "from": "m-retener",
+      "to": "m-leccion",
+      "label": "si hay lección confirmada",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          7820
+        ],
+        [
+          1060,
+          7900
+        ]
+      ],
+      "labelAt": [
+        989,
+        7863
+      ]
+    },
+    {
+      "from": "m-leccion",
+      "to": "m-revisar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          7940
+        ],
+        [
+          754,
+          7940
+        ]
+      ]
+    },
+    {
+      "from": "m-revisar",
+      "to": "m-registro",
+      "label": "activar requiere decisión",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          7940
+        ],
+        [
+          308,
+          7940
+        ]
+      ],
+      "labelAt": [
+        391,
+        7930
+      ]
+    },
+    {
+      "from": "r-blanco",
+      "to": "r-mapa",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          8220
+        ],
+        [
+          474,
+          8220
+        ]
+      ]
+    },
+    {
+      "from": "r-mapa",
+      "to": "r-usuario",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          8220
+        ],
+        [
+          920,
+          8220
+        ]
+      ]
+    },
+    {
+      "from": "r-usuario",
+      "to": "r-piloto",
+      "label": "solo tras comentarios",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          8260
+        ],
+        [
+          1060,
+          8340
+        ]
+      ],
+      "labelAt": [
+        999,
+        8303
+      ]
+    },
+    {
+      "from": "r-piloto",
+      "to": "r-policy",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          8380
+        ],
+        [
+          754,
+          8380
+        ]
+      ]
+    },
+    {
+      "from": "r-policy",
+      "to": "r-implementar",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          8380
+        ],
+        [
+          308,
+          8380
+        ]
+      ]
+    },
+    {
+      "from": "r-implementar",
+      "to": "t-protocolo",
+      "label": "cuando se autorice",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          8420
+        ],
+        [
+          168,
+          8620
+        ]
+      ],
+      "labelAt": [
+        114,
+        8523
+      ]
+    },
+    {
+      "from": "t-protocolo",
+      "to": "t-a",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          8660
+        ],
+        [
+          474,
+          8660
+        ]
+      ]
+    },
+    {
+      "from": "t-a",
+      "to": "t-a-fallos",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          8660
+        ],
+        [
+          920,
+          8660
+        ]
+      ]
+    },
+    {
+      "from": "t-a-fallos",
+      "to": "t-b",
+      "label": "matriz, no dependencia",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          8700
+        ],
+        [
+          1060,
+          8780
+        ]
+      ],
+      "labelAt": [
+        996,
+        8743
+      ]
+    },
+    {
+      "from": "t-b",
+      "to": "t-b-fallos",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          8820
+        ],
+        [
+          754,
+          8820
+        ]
+      ]
+    },
+    {
+      "from": "t-b-fallos",
+      "to": "t-c",
+      "label": "matriz, no dependencia",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          8820
+        ],
+        [
+          308,
+          8820
+        ]
+      ],
+      "labelAt": [
+        391,
+        8810
+      ]
+    },
+    {
+      "from": "t-c",
+      "to": "t-c-fallos",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          8860
+        ],
+        [
+          168,
+          8940
+        ]
+      ]
+    },
+    {
+      "from": "t-c-fallos",
+      "to": "t-d",
+      "label": "matriz, no dependencia",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          8980
+        ],
+        [
+          474,
+          8980
+        ]
+      ],
+      "labelAt": [
+        391,
+        8970
+      ]
+    },
+    {
+      "from": "t-d",
+      "to": "t-d-fallos",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          8980
+        ],
+        [
+          920,
+          8980
+        ]
+      ]
+    },
+    {
+      "from": "t-d-fallos",
+      "to": "t-e",
+      "label": "matriz, no dependencia",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          9020
+        ],
+        [
+          1060,
+          9100
+        ]
+      ],
+      "labelAt": [
+        996,
+        9063
+      ]
+    },
+    {
+      "from": "t-e",
+      "to": "t-e-fallos",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          9140
+        ],
+        [
+          754,
+          9140
+        ]
+      ]
+    },
+    {
+      "from": "t-e-fallos",
+      "to": "t-f",
+      "label": "matriz, no dependencia",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          9140
+        ],
+        [
+          308,
+          9140
+        ]
+      ],
+      "labelAt": [
+        391,
+        9130
+      ]
+    },
+    {
+      "from": "t-f",
+      "to": "t-f-fallos",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          9180
+        ],
+        [
+          168,
+          9260
+        ]
+      ]
+    },
+    {
+      "from": "t-f-fallos",
+      "to": "t-g",
+      "label": "matriz, no dependencia",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          9300
+        ],
+        [
+          474,
+          9300
+        ]
+      ],
+      "labelAt": [
+        391,
+        9290
+      ]
+    },
+    {
+      "from": "t-g",
+      "to": "t-g-fallos",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          9300
+        ],
+        [
+          920,
+          9300
+        ]
+      ]
+    },
+    {
+      "from": "t-g-fallos",
+      "to": "t-recuperar",
+      "label": "obligatorio para cada A–G",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          9340
+        ],
+        [
+          1060,
+          9420
+        ]
+      ],
+      "labelAt": [
+        989,
+        9383
+      ]
+    },
+    {
+      "from": "t-recuperar",
+      "to": "t-lease",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          9460
+        ],
+        [
+          754,
+          9460
+        ]
+      ]
+    },
+    {
+      "from": "t-lease",
+      "to": "t-unknown",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          9460
+        ],
+        [
+          308,
+          9460
+        ]
+      ]
+    },
+    {
+      "from": "t-unknown",
+      "to": "t-evidencia",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          9500
+        ],
+        [
+          168,
+          9580
+        ]
+      ]
+    },
+    {
+      "from": "t-evidencia",
+      "to": "t-historico",
+      "label": "no confundir evidencia",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          308,
+          9620
+        ],
+        [
+          474,
+          9620
+        ]
+      ],
+      "labelAt": [
+        391,
+        9610
+      ]
+    },
+    {
+      "from": "t-historico",
+      "to": "t-abiertas",
+      "label": null,
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          9620
+        ],
+        [
+          920,
+          9620
+        ]
+      ]
+    },
+    {
+      "from": "hoy-limite",
+      "to": "a-inicio",
+      "label": "futuro, NO conector actual",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          168,
+          360
+        ],
+        [
+          168,
+          520
+        ]
+      ],
+      "labelAt": [
+        95,
+        443
+      ]
+    },
+    {
+      "from": "a-presentar",
+      "to": "coord",
+      "label": "candidato autorizado",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          28,
+          1680
+        ],
+        [
+          4,
+          1680
+        ],
+        [
+          4,
+          6210
+        ],
+        [
+          28,
+          6210
+        ]
+      ],
+      "labelAt": [
+        108,
+        1760
+      ]
+    },
+    {
+      "from": "coord",
+      "to": "b-inicio",
+      "label": "despacho B explícito",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          28,
+          6210
+        ],
+        [
+          0,
+          6210
+        ],
+        [
+          0,
+          1960
+        ],
+        [
+          24,
+          1960
+        ]
+      ],
+      "labelAt": [
+        108,
+        3040
+      ]
+    },
+    {
+      "from": "coord",
+      "to": "c-inicio",
+      "label": "despacho C explícito",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          28,
+          6210
+        ],
+        [
+          4,
+          6210
+        ],
+        [
+          4,
+          3200
+        ],
+        [
+          28,
+          3200
+        ]
+      ],
+      "labelAt": [
+        108,
+        3800
+      ]
+    },
+    {
+      "from": "coord",
+      "to": "d-inicio",
+      "label": "despacho D explícito",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          28,
+          6210
+        ],
+        [
+          4,
+          6210
+        ],
+        [
+          4,
+          3960
+        ],
+        [
+          28,
+          3960
+        ]
+      ],
+      "labelAt": [
+        108,
+        4654
+      ]
+    },
+    {
+      "from": "coord",
+      "to": "e-inicio",
+      "label": "despacho E explícito",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          28,
+          6210
+        ],
+        [
+          4,
+          6210
+        ],
+        [
+          4,
+          4720
+        ],
+        [
+          28,
+          4720
+        ]
+      ],
+      "labelAt": [
+        108,
+        5220
+      ]
+    },
+    {
+      "from": "coord",
+      "to": "f-inicio",
+      "label": "despacho F explícito",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          28,
+          6210
+        ],
+        [
+          4,
+          6210
+        ],
+        [
+          4,
+          5320
+        ],
+        [
+          28,
+          5320
+        ]
+      ],
+      "labelAt": [
+        108,
+        5850
+      ]
+    },
+    {
+      "from": "coord",
+      "to": "m-historia",
+      "label": "auditoría compartida autorizada",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          28,
+          6210
+        ],
+        [
+          4,
+          6210
+        ],
+        [
+          4,
+          7460
+        ],
+        [
+          28,
+          7460
+        ]
+      ],
+      "labelAt": [
+        108,
+        7394
+      ]
+    },
+    {
+      "from": "r-mapa",
+      "to": "m-registro",
+      "label": "no activa registro",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          614,
+          8180
+        ],
+        [
+          614,
+          8060
+        ],
+        [
+          168,
+          8060
+        ],
+        [
+          168,
+          7980
+        ]
+      ],
+      "labelAt": [
+        391,
+        8050
+      ]
+    },
+    {
+      "from": "c-readback",
+      "to": "b-identidad",
+      "label": "reusar UUID + KNF reales",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          474,
+          3513
+        ],
+        [
+          450,
+          3513
+        ],
+        [
+          450,
+          1967
+        ],
+        [
+          474,
+          1967
+        ]
+      ],
+      "labelAt": [
+        519,
+        2357
+      ]
+    },
+    {
+      "from": "d-dev",
+      "to": "b-inicio",
+      "label": "enlace, no permiso heredado",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          304,
+          4440
+        ],
+        [
+          328,
+          4440
+        ],
+        [
+          328,
+          1960
+        ],
+        [
+          304,
+          1960
+        ]
+      ],
+      "labelAt": [
+        428,
+        4520
+      ]
+    },
+    {
+      "from": "f-dev",
+      "to": "c-inicio",
+      "label": "nuevo encargo vinculado",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          324,
+          5780
+        ],
+        [
+          348,
+          5780
+        ],
+        [
+          348,
+          3200
+        ],
+        [
+          308,
+          3200
+        ]
+      ],
+      "labelAt": [
+        428,
+        5800
+      ]
+    },
+    {
+      "from": "e-ci",
+      "to": "b-merge",
+      "label": "merge solo con su aprobación",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          754,
+          5173
+        ],
+        [
+          778,
+          5173
+        ],
+        [
+          778,
+          2760
+        ],
+        [
+          754,
+          2760
+        ]
+      ],
+      "labelAt": [
+        700,
+        3914
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "fuera runtime",
+      "x": 355,
+      "y": 140,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        391,
+        150
+      ]
+    },
+    {
+      "text": "excepción acotada",
+      "x": 791,
+      "y": 140,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        837,
+        150
+      ]
+    },
+    {
+      "text": "si Slack elegido",
+      "x": 1080,
+      "y": 633,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        1123,
+        643
+      ]
+    },
+    {
+      "text": "si Notion elegido",
+      "x": 791,
+      "y": 666,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        837,
+        676
+      ]
+    },
+    {
+      "text": "si GitLab elegido",
+      "x": 561,
+      "y": 620,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        607,
+        630
+      ]
+    },
+    {
+      "text": "solo scope concedido",
+      "x": 791,
+      "y": 780,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        844,
+        790
+      ]
+    },
+    {
+      "text": "solo scope concedido",
+      "x": 502,
+      "y": 793,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        555,
+        803
+      ]
+    },
+    {
+      "text": "solo scope concedido",
+      "x": 331,
+      "y": 796,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        384,
+        806
+      ]
+    },
+    {
+      "text": "pull elegido",
+      "x": 354,
+      "y": 940,
+      "width": 68,
+      "height": 14,
+      "labelAt": [
+        388,
+        950
+      ]
+    },
+    {
+      "text": "push solicitado",
+      "x": 800,
+      "y": 940,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        841,
+        950
+      ]
+    },
+    {
+      "text": "intake read-only",
+      "x": 348,
+      "y": 1020,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        391,
+        1030
+      ]
+    },
+    {
+      "text": "solo push aprobado",
+      "x": 789,
+      "y": 1013,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        837,
+        1023
+      ]
+    },
+    {
+      "text": "solo respuesta admitida",
+      "x": 331,
+      "y": 1180,
+      "width": 120,
+      "height": 14,
+      "labelAt": [
+        391,
+        1190
+      ]
+    },
+    {
+      "text": "nuevo permitido",
+      "x": 972,
+      "y": 1433,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        1013,
+        1443
+      ]
+    },
+    {
+      "text": "si cambia fuente",
+      "x": 348,
+      "y": 1660,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        391,
+        1670
+      ]
+    },
+    {
+      "text": "guardas de toda captura",
+      "x": 934,
+      "y": 1753,
+      "width": 120,
+      "height": 14,
+      "labelAt": [
+        994,
+        1763
+      ]
+    },
+    {
+      "text": "opcional; misma frontera",
+      "x": 328,
+      "y": 1820,
+      "width": 125,
+      "height": 14,
+      "labelAt": [
+        391,
+        1830
+      ]
+    },
+    {
+      "text": "solo si resuelto",
+      "x": 348,
+      "y": 2100,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        391,
+        2110
+      ]
+    },
+    {
+      "text": "solo autorizado",
+      "x": 796,
+      "y": 2260,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        837,
+        2270
+      ]
+    },
+    {
+      "text": "si publicar encargado",
+      "x": 335,
+      "y": 2420,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        391,
+        2430
+      ]
+    },
+    {
+      "text": "solo diff solicitado",
+      "x": 784,
+      "y": 2490,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        837,
+        2500
+      ]
+    },
+    {
+      "text": "vigente y exacto",
+      "x": 348,
+      "y": 2580,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        391,
+        2590
+      ]
+    },
+    {
+      "text": "si hay encargo",
+      "x": 957,
+      "y": 2653,
+      "width": 77,
+      "height": 14,
+      "labelAt": [
+        995,
+        2663
+      ]
+    },
+    {
+      "text": "nuevo diff a checks",
+      "x": 1079,
+      "y": 2650,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        1130,
+        2660
+      ]
+    },
+    {
+      "text": "si merge encargado",
+      "x": 566,
+      "y": 2650,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        614,
+        2660
+      ]
+    },
+    {
+      "text": "MR entregado; sin fix",
+      "x": 1005,
+      "y": 3012,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        1060,
+        3022
+      ]
+    },
+    {
+      "text": "si se solicita deploy",
+      "x": 335,
+      "y": 2740,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        390,
+        2750
+      ]
+    },
+    {
+      "text": "solo merge solicitado",
+      "x": 1005,
+      "y": 2990,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        1060,
+        3000
+      ]
+    },
+    {
+      "text": "si se pide status",
+      "x": 1014,
+      "y": 2968,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        1060,
+        2978
+      ]
+    },
+    {
+      "text": "solo escritura aprobada",
+      "x": 488,
+      "y": 2993,
+      "width": 120,
+      "height": 14,
+      "labelAt": [
+        548,
+        3003
+      ]
+    },
+    {
+      "text": "resultado sin status",
+      "x": 784,
+      "y": 3118,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        837,
+        3128
+      ]
+    },
+    {
+      "text": "si humano decide cerrar",
+      "x": 554,
+      "y": 3124,
+      "width": 120,
+      "height": 14,
+      "labelAt": [
+        614,
+        3134
+      ]
+    },
+    {
+      "text": "no hay tarea reutilizable",
+      "x": 924,
+      "y": 3273,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        989,
+        3283
+      ]
+    },
+    {
+      "text": "match exacto: leer IDs",
+      "x": 1002,
+      "y": 3450,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        1060,
+        3460
+      ]
+    },
+    {
+      "text": "ambiguo: preguntar",
+      "x": 1012,
+      "y": 3410,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        1060,
+        3420
+      ]
+    },
+    {
+      "text": "confirmación real",
+      "x": 353,
+      "y": 3507,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        399,
+        3517
+      ]
+    },
+    {
+      "text": "resuelto; permiso propio",
+      "x": 929,
+      "y": 3593,
+      "width": 125,
+      "height": 14,
+      "labelAt": [
+        991,
+        3603
+      ]
+    },
+    {
+      "text": "lectura necesaria",
+      "x": 962,
+      "y": 4033,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        1008,
+        4043
+      ]
+    },
+    {
+      "text": "evidencia suficiente",
+      "x": 784,
+      "y": 4024,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        837,
+        4034
+      ]
+    },
+    {
+      "text": "solo evidencia autorizada",
+      "x": 995,
+      "y": 4170,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        1060,
+        4180
+      ]
+    },
+    {
+      "text": "necesaria no disponible",
+      "x": 843,
+      "y": 4353,
+      "width": 120,
+      "height": 14,
+      "labelAt": [
+        903,
+        4363
+      ]
+    },
+    {
+      "text": "solo borrador solicitado",
+      "x": 361,
+      "y": 4490,
+      "width": 125,
+      "height": 14,
+      "labelAt": [
+        424,
+        4500
+      ]
+    },
+    {
+      "text": "si vigente",
+      "x": 996,
+      "y": 4353,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        1025,
+        4363
+      ]
+    },
+    {
+      "text": "solo si scopes concedidos",
+      "x": 995,
+      "y": 4490,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        1060,
+        4500
+      ]
+    },
+    {
+      "text": "si DEV encargado",
+      "x": 377,
+      "y": 4650,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        420,
+        4660
+      ]
+    },
+    {
+      "text": "registrar seguimiento",
+      "x": 215,
+      "y": 4513,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        271,
+        4523
+      ]
+    },
+    {
+      "text": "diff admitido",
+      "x": 355,
+      "y": 4700,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        391,
+        4710
+      ]
+    },
+    {
+      "text": "requiere CI o logs",
+      "x": 789,
+      "y": 4693,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        837,
+        4703
+      ]
+    },
+    {
+      "text": "diff suficiente",
+      "x": 796,
+      "y": 4784,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        837,
+        4794
+      ]
+    },
+    {
+      "text": "lectura extra aprobada",
+      "x": 938,
+      "y": 4793,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        996,
+        4803
+      ]
+    },
+    {
+      "text": "hallazgos",
+      "x": 1033,
+      "y": 4950,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        1060,
+        4960
+      ]
+    },
+    {
+      "text": "si publicar encargado",
+      "x": 843,
+      "y": 4950,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        898,
+        4960
+      ]
+    },
+    {
+      "text": "solo texto aprobado",
+      "x": 794,
+      "y": 5167,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        845,
+        5177
+      ]
+    },
+    {
+      "text": "solo nuevo encargo",
+      "x": 352,
+      "y": 4860,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        400,
+        4870
+      ]
+    },
+    {
+      "text": "publicación concedida",
+      "x": 497,
+      "y": 5103,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        553,
+        5113
+      ]
+    },
+    {
+      "text": "otro formato necesario",
+      "x": 779,
+      "y": 5384,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        837,
+        5394
+      ]
+    },
+    {
+      "text": "borrador local",
+      "x": 352,
+      "y": 5627,
+      "width": 77,
+      "height": 14,
+      "labelAt": [
+        391,
+        5637
+      ]
+    },
+    {
+      "text": "si publicar solicitado",
+      "x": 392,
+      "y": 5537,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        450,
+        5547
+      ]
+    },
+    {
+      "text": "solo escritura aprobada",
+      "x": 42,
+      "y": 5553,
+      "width": 120,
+      "height": 14,
+      "labelAt": [
+        102,
+        5563
+      ]
+    },
+    {
+      "text": "si hay decisión DEV",
+      "x": 61,
+      "y": 5703,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        111,
+        5713
+      ]
+    },
+    {
+      "text": "job solo por regla/encargo",
+      "x": 829,
+      "y": 6012,
+      "width": 135,
+      "height": 14,
+      "labelAt": [
+        896,
+        6022
+      ]
+    },
+    {
+      "text": "sin efecto requerido",
+      "x": 456,
+      "y": 6940,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        509,
+        6950
+      ]
+    },
+    {
+      "text": "efecto solicitado",
+      "x": 680,
+      "y": 6617,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        726,
+        6627
+      ]
+    },
+    {
+      "text": "si espera",
+      "x": 769,
+      "y": 6513,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        796,
+        6523
+      ]
+    },
+    {
+      "text": "otro job independiente",
+      "x": 938,
+      "y": 6613,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        996,
+        6623
+      ]
+    },
+    {
+      "text": "cuando llega condición",
+      "x": 1002,
+      "y": 6450,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        1060,
+        6460
+      ]
+    },
+    {
+      "text": "si cae o vence lease",
+      "x": 56,
+      "y": 6613,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        109,
+        6623
+      ]
+    },
+    {
+      "text": "recuperar tras fencing",
+      "x": 556,
+      "y": 6750,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        614,
+        6760
+      ]
+    },
+    {
+      "text": "vigente: nuevo claim",
+      "x": 1007,
+      "y": 6470,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        1060,
+        6480
+      ]
+    },
+    {
+      "text": "cambió: esperar revisión",
+      "x": 551,
+      "y": 6610,
+      "width": 125,
+      "height": 14,
+      "labelAt": [
+        614,
+        6620
+      ]
+    },
+    {
+      "text": "si cancelar",
+      "x": 360,
+      "y": 6650,
+      "width": 63,
+      "height": 14,
+      "labelAt": [
+        391,
+        6660
+      ]
+    },
+    {
+      "text": "respuesta confirmada",
+      "x": 784,
+      "y": 7000,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        837,
+        7010
+      ]
+    },
+    {
+      "text": "sin respuesta: UNKNOWN",
+      "x": 779,
+      "y": 7064,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        837,
+        7074
+      ]
+    },
+    {
+      "text": "leer antes de retry",
+      "x": 109,
+      "y": 7250,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        160,
+        7260
+      ]
+    },
+    {
+      "text": "efecto confirmado",
+      "x": 764,
+      "y": 7090,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        810,
+        7100
+      ]
+    },
+    {
+      "text": "ausente y job activo",
+      "x": 337,
+      "y": 6935,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        390,
+        6945
+      ]
+    },
+    {
+      "text": "aún incierto: no retry",
+      "x": 102,
+      "y": 7230,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        160,
+        7240
+      ]
+    },
+    {
+      "text": "registrar resultado",
+      "x": 507,
+      "y": 7093,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        557,
+        7103
+      ]
+    },
+    {
+      "text": "solo si hace falta",
+      "x": 958,
+      "y": 7533,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        1006,
+        7543
+      ]
+    },
+    {
+      "text": "coincidencia exacta",
+      "x": 786,
+      "y": 7520,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        837,
+        7530
+      ]
+    },
+    {
+      "text": "opcional futuro",
+      "x": 80,
+      "y": 7693,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        121,
+        7703
+      ]
+    },
+    {
+      "text": "si hay lección confirmada",
+      "x": 924,
+      "y": 7853,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        989,
+        7863
+      ]
+    },
+    {
+      "text": "activar requiere decisión",
+      "x": 326,
+      "y": 7920,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        391,
+        7930
+      ]
+    },
+    {
+      "text": "solo tras comentarios",
+      "x": 943,
+      "y": 8293,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        999,
+        8303
+      ]
+    },
+    {
+      "text": "cuando se autorice",
+      "x": 66,
+      "y": 8513,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        114,
+        8523
+      ]
+    },
+    {
+      "text": "matriz, no dependencia",
+      "x": 938,
+      "y": 8733,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        996,
+        8743
+      ]
+    },
+    {
+      "text": "matriz, no dependencia",
+      "x": 333,
+      "y": 8800,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        391,
+        8810
+      ]
+    },
+    {
+      "text": "matriz, no dependencia",
+      "x": 333,
+      "y": 8960,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        391,
+        8970
+      ]
+    },
+    {
+      "text": "matriz, no dependencia",
+      "x": 938,
+      "y": 9053,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        996,
+        9063
+      ]
+    },
+    {
+      "text": "matriz, no dependencia",
+      "x": 333,
+      "y": 9120,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        391,
+        9130
+      ]
+    },
+    {
+      "text": "matriz, no dependencia",
+      "x": 333,
+      "y": 9280,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        391,
+        9290
+      ]
+    },
+    {
+      "text": "obligatorio para cada A–G",
+      "x": 924,
+      "y": 9373,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        989,
+        9383
+      ]
+    },
+    {
+      "text": "no confundir evidencia",
+      "x": 333,
+      "y": 9600,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        391,
+        9610
+      ]
+    },
+    {
+      "text": "futuro, NO conector actual",
+      "x": 27,
+      "y": 433,
+      "width": 135,
+      "height": 14,
+      "labelAt": [
+        95,
+        443
+      ]
+    },
+    {
+      "text": "candidato autorizado",
+      "x": 55,
+      "y": 1750,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        108,
+        1760
+      ]
+    },
+    {
+      "text": "despacho B explícito",
+      "x": 55,
+      "y": 3030,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        108,
+        3040
+      ]
+    },
+    {
+      "text": "despacho C explícito",
+      "x": 55,
+      "y": 3790,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        108,
+        3800
+      ]
+    },
+    {
+      "text": "despacho D explícito",
+      "x": 55,
+      "y": 4644,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        108,
+        4654
+      ]
+    },
+    {
+      "text": "despacho E explícito",
+      "x": 55,
+      "y": 5210,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        108,
+        5220
+      ]
+    },
+    {
+      "text": "despacho F explícito",
+      "x": 55,
+      "y": 5840,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        108,
+        5850
+      ]
+    },
+    {
+      "text": "auditoría compartida autorizada",
+      "x": 29,
+      "y": 7384,
+      "width": 159,
+      "height": 14,
+      "labelAt": [
+        108,
+        7394
+      ]
+    },
+    {
+      "text": "no activa registro",
+      "x": 343,
+      "y": 8040,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        391,
+        8050
+      ]
+    },
+    {
+      "text": "reusar UUID + KNF reales",
+      "x": 456,
+      "y": 2347,
+      "width": 125,
+      "height": 14,
+      "labelAt": [
+        519,
+        2357
+      ]
+    },
+    {
+      "text": "enlace, no permiso heredado",
+      "x": 358,
+      "y": 4510,
+      "width": 140,
+      "height": 14,
+      "labelAt": [
+        428,
+        4520
+      ]
+    },
+    {
+      "text": "nuevo encargo vinculado",
+      "x": 368,
+      "y": 5790,
+      "width": 120,
+      "height": 14,
+      "labelAt": [
+        428,
+        5800
+      ]
+    },
+    {
+      "text": "merge solo con su aprobación",
+      "x": 628,
+      "y": 3904,
+      "width": 144,
+      "height": 14,
+      "labelAt": [
+        700,
+        3914
+      ]
+    }
+  ],
+  "schemaVersion": 1,
+  "source": "renderer",
+  "error": "Architecture layout validation failed:\n- [composition/ambiguous-corridor] showcase architecture connections[41] id \"b-local\" \"b-preview\" -> \"b-verificar\" shares a 10px corridor with connections[55] id \"b-human-close\" \"b-result\" -> \"b-cierre\" at [837, 3080] -> [847, 3080] (segments 2 and 0; minimum 8px) — if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[51] id \"b-merge-result\" \"b-merge\" -> \"b-verificar\" shares a 10px corridor with connections[55] id \"b-human-close\" \"b-result\" -> \"b-cierre\" at [837, 3080] -> [847, 3080] (segments 2 and 0; minimum 8px) — if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[52] id \"b-19\" \"b-verificar\" -> \"b-status\" shares a 10px corridor with connections[55] id \"b-human-close\" \"b-result\" -> \"b-cierre\" at [837, 3080] -> [847, 3080] (segments 0 and 0; minimum 8px) — if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/label-route-clearance] showcase architecture label \"solo diff solicitado\" on connections[41] id \"b-local\" \"b-preview\" -> \"b-verificar\" label \"solo diff solicitado\" is 0px from connections[46] id \"b-16\" \"b-fix\" -> \"b-checks\" label \"nuevo diff a checks\" segment 1 [876, 2760] -> [876, 2440] (label rect [784, 2490, 106, 14]; minimum 4px) — if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+  "diagnostics": [
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[41] id \"b-local\" \"b-preview\" -> \"b-verificar\" shares a 10px corridor with connections[55] id \"b-human-close\" \"b-result\" -> \"b-cierre\" at [837, 3080] -> [847, 3080] (segments 2 and 0; minimum 8px) — if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 41,
+        "id": "b-local",
+        "from": "b-preview",
+        "to": "b-verificar"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 55,
+          "id": "b-human-close",
+          "from": "b-result",
+          "to": "b-cierre"
+        },
+        "overlapLengthPx": 10,
+        "minimumPx": 8,
+        "from": [
+          837,
+          3080
+        ],
+        "to": [
+          847,
+          3080
+        ],
+        "segmentIndex": 2,
+        "otherSegmentIndex": 0
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[51] id \"b-merge-result\" \"b-merge\" -> \"b-verificar\" shares a 10px corridor with connections[55] id \"b-human-close\" \"b-result\" -> \"b-cierre\" at [837, 3080] -> [847, 3080] (segments 2 and 0; minimum 8px) — if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 51,
+        "id": "b-merge-result",
+        "from": "b-merge",
+        "to": "b-verificar"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 55,
+          "id": "b-human-close",
+          "from": "b-result",
+          "to": "b-cierre"
+        },
+        "overlapLengthPx": 10,
+        "minimumPx": 8,
+        "from": [
+          837,
+          3080
+        ],
+        "to": [
+          847,
+          3080
+        ],
+        "segmentIndex": 2,
+        "otherSegmentIndex": 0
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[52] id \"b-19\" \"b-verificar\" -> \"b-status\" shares a 10px corridor with connections[55] id \"b-human-close\" \"b-result\" -> \"b-cierre\" at [837, 3080] -> [847, 3080] (segments 0 and 0; minimum 8px) — if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 52,
+        "id": "b-19",
+        "from": "b-verificar",
+        "to": "b-status"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 55,
+          "id": "b-human-close",
+          "from": "b-result",
+          "to": "b-cierre"
+        },
+        "overlapLengthPx": 10,
+        "minimumPx": 8,
+        "from": [
+          837,
+          3080
+        ],
+        "to": [
+          847,
+          3080
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 0
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"solo diff solicitado\" on connections[41] id \"b-local\" \"b-preview\" -> \"b-verificar\" label \"solo diff solicitado\" is 0px from connections[46] id \"b-16\" \"b-fix\" -> \"b-checks\" label \"nuevo diff a checks\" segment 1 [876, 2760] -> [876, 2440] (label rect [784, 2490, 106, 14]; minimum 4px) — if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 41,
+        "id": "b-local",
+        "from": "b-preview",
+        "to": "b-verificar"
+      },
+      "evidence": {
+        "label": "solo diff solicitado",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 46,
+          "id": "b-16",
+          "from": "b-fix",
+          "to": "b-checks"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "b-local",
+            "from": "b-preview",
+            "to": "b-verificar",
+            "label": "solo diff solicitado",
+            "fromSide": "right",
+            "toSide": "left",
+            "labelAt": [
+              837,
+              2500
+            ]
+          },
+          "relationIndex": 41,
+          "label": "solo diff solicitado",
+          "x": 784,
+          "y": 2490,
+          "width": 106,
+          "height": 14,
+          "lx": 837,
+          "ly": 2500
+        },
+        "from": [
+          876,
+          2760
+        ],
+        "to": [
+          876,
+          2440
+        ]
+      },
+      "supportedFixes": [
+        "if the authored fromSide/toSide/labelAt are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    }
+  ],
+  "contract": "archify-architecture-layout-v1"
+}

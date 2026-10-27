@@ -1,0 +1,463 @@
+{
+  "scope": "structural assertions on authored graph, not product runtime or independent coverage",
+  "candidateSha256": "53c56b6a007e028b4f1c856fe3f6233d781e289b5668abca8146c01a28195993",
+  "artifactSha256": "c7ea06b900e255d2c6e4133fc14ca20d8572d1765314e0c83acdccfb12c243eb",
+  "candidateBytes": 60890,
+  "artifactBytes": 1216918,
+  "counts": {
+    "views": 5,
+    "nodes": 162,
+    "relationships": 188,
+    "cards": 9
+  },
+  "allOriginal153NodesPreserved": true,
+  "assertions": [
+    {
+      "name": "A Slack-only pull",
+      "passed": true,
+      "path": [
+        "a-inicio",
+        "a-policy",
+        "a-adapter",
+        "a-slack",
+        "a-admit",
+        "a-pull",
+        "a-auth",
+        "a-paginas",
+        "a-retry",
+        "a-raw"
+      ],
+      "blocked": [
+        "a-notion",
+        "a-gitlab",
+        "a-push"
+      ]
+    },
+    {
+      "name": "A no Slack-to-Notion dependency",
+      "passed": true,
+      "path": null,
+      "blocked": []
+    },
+    {
+      "name": "A pull not followed by push",
+      "passed": true,
+      "path": null,
+      "blocked": []
+    },
+    {
+      "name": "B diff-only local result",
+      "passed": true,
+      "path": [
+        "b-preview",
+        "b-verificar",
+        "b-result"
+      ],
+      "blocked": [
+        "b-aprobar",
+        "b-publicar",
+        "b-ci",
+        "b-fix",
+        "b-merge",
+        "b-deploy",
+        "b-status",
+        "b-cierre"
+      ]
+    },
+    {
+      "name": "B MR-only local result",
+      "passed": true,
+      "path": [
+        "b-ci",
+        "b-verificar",
+        "b-result"
+      ],
+      "blocked": [
+        "b-fix",
+        "b-merge",
+        "b-deploy",
+        "b-status",
+        "b-cierre"
+      ]
+    },
+    {
+      "name": "B fix requires b-checks",
+      "passed": true,
+      "path": null,
+      "blocked": [
+        "b-checks"
+      ]
+    },
+    {
+      "name": "B fix requires b-preview",
+      "passed": true,
+      "path": null,
+      "blocked": [
+        "b-preview"
+      ]
+    },
+    {
+      "name": "B fix requires b-aprobar",
+      "passed": true,
+      "path": null,
+      "blocked": [
+        "b-aprobar"
+      ]
+    },
+    {
+      "name": "B fix requires b-live",
+      "passed": true,
+      "path": null,
+      "blocked": [
+        "b-live"
+      ]
+    },
+    {
+      "name": "C exact task reused without create",
+      "passed": true,
+      "path": [
+        "c-buscar",
+        "c-readback",
+        "b-identidad"
+      ],
+      "blocked": [
+        "c-aceptar",
+        "c-aprobar",
+        "c-intent",
+        "c-crear",
+        "c-stop"
+      ]
+    },
+    {
+      "name": "D sufficient evidence draft no tools/write",
+      "passed": true,
+      "path": [
+        "d-inicio",
+        "d-contexto",
+        "d-skill",
+        "d-hechos",
+        "d-diagnostico",
+        "d-feedback",
+        "d-result"
+      ],
+      "blocked": [
+        "d-herramientas",
+        "d-stop",
+        "d-aprobar",
+        "d-live",
+        "d-publicar"
+      ]
+    },
+    {
+      "name": "D draft to DEV without Slack write",
+      "passed": true,
+      "path": [
+        "d-result",
+        "d-dev"
+      ],
+      "blocked": [
+        "d-aprobar",
+        "d-live",
+        "d-publicar"
+      ]
+    },
+    {
+      "name": "E read-only diff review",
+      "passed": true,
+      "path": [
+        "e-inicio",
+        "e-base",
+        "e-worker",
+        "e-result"
+      ],
+      "blocked": [
+        "e-permiso",
+        "e-comentar",
+        "e-fix",
+        "e-update"
+      ]
+    },
+    {
+      "name": "E fix independent of comments",
+      "passed": true,
+      "path": [
+        "e-result",
+        "e-fix",
+        "e-checks"
+      ],
+      "blocked": [
+        "e-comentar"
+      ]
+    },
+    {
+      "name": "F local report decision",
+      "passed": true,
+      "path": [
+        "f-inicio",
+        "f-fuentes",
+        "f-frescura",
+        "f-informe",
+        "f-result",
+        "f-decidir"
+      ],
+      "blocked": [
+        "f-runbook",
+        "f-publicar"
+      ]
+    },
+    {
+      "name": "F alternate Runbook decision",
+      "passed": true,
+      "path": [
+        "f-inicio",
+        "f-fuentes",
+        "f-frescura",
+        "f-runbook",
+        "f-result",
+        "f-decidir"
+      ],
+      "blocked": [
+        "f-informe",
+        "f-publicar"
+      ]
+    },
+    {
+      "name": "Q normal no-effect result",
+      "passed": true,
+      "path": [
+        "q-ejecutar",
+        "q-checkpoint",
+        "q-result"
+      ],
+      "blocked": [
+        "q-wait",
+        "q-otros",
+        "q-resume",
+        "q-crash",
+        "q-cancel",
+        "q-live",
+        "q-effect"
+      ]
+    },
+    {
+      "name": "Q normal controlled effect",
+      "passed": true,
+      "path": [
+        "q-ejecutar",
+        "q-checkpoint",
+        "q-live",
+        "q-intent",
+        "q-effect"
+      ],
+      "blocked": [
+        "q-wait",
+        "q-otros",
+        "q-resume",
+        "q-crash",
+        "q-cancel"
+      ]
+    },
+    {
+      "name": "Q wait resumes independently",
+      "passed": true,
+      "path": [
+        "q-wait",
+        "q-resume",
+        "q-claim",
+        "q-workers",
+        "q-aislar",
+        "q-ejecutar"
+      ],
+      "blocked": [
+        "q-otros",
+        "q-crash",
+        "q-cancel"
+      ]
+    },
+    {
+      "name": "Q cancelled cannot cause effect",
+      "passed": true,
+      "path": null,
+      "blocked": []
+    },
+    {
+      "name": "Q confirmed never becomes UNKNOWN",
+      "passed": true,
+      "path": null,
+      "blocked": []
+    },
+    {
+      "name": "Q UNKNOWN requires q-reconcile",
+      "passed": true,
+      "path": null,
+      "blocked": [
+        "q-reconcile"
+      ]
+    },
+    {
+      "name": "Q UNKNOWN requires q-live",
+      "passed": true,
+      "path": null,
+      "blocked": [
+        "q-live"
+      ]
+    },
+    {
+      "name": "Q UNKNOWN requires q-intent",
+      "passed": true,
+      "path": null,
+      "blocked": [
+        "q-intent"
+      ]
+    },
+    {
+      "name": "Memory exact bypasses candidate search",
+      "passed": true,
+      "path": [
+        "m-exacto",
+        "m-rehidratar"
+      ],
+      "blocked": [
+        "m-candidatos"
+      ]
+    },
+    {
+      "name": "Q uncertain human wait has no automatic replay",
+      "passed": true
+    }
+  ],
+  "assertionCount": 26,
+  "changedSemanticEdgeIds": [
+    "a-03",
+    "a-04",
+    "a-05",
+    "a-06",
+    "a-07",
+    "a-08",
+    "b-11",
+    "b-16",
+    "b-19",
+    "b-20",
+    "c-03",
+    "d-03",
+    "d-11",
+    "e-01",
+    "e-02",
+    "e-03",
+    "e-04",
+    "e-05",
+    "f-04",
+    "f-05",
+    "f-06",
+    "q-09",
+    "q-10",
+    "q-11",
+    "q-12",
+    "q-13",
+    "q-17",
+    "q-18",
+    "q-19"
+  ],
+  "addedEdgeIds": [
+    "a-gitlab-admit",
+    "a-mode-pull",
+    "a-mode-push",
+    "a-push-auth",
+    "b-ci-merge",
+    "b-human-close",
+    "b-local",
+    "b-merge-result",
+    "b-mr-result",
+    "b-result-local",
+    "c-ambiguous",
+    "c-reuse",
+    "d-draft-only",
+    "d-follow-result",
+    "d-needed-unavailable",
+    "d-sufficient",
+    "e-comment-approved",
+    "e-extra-authorized",
+    "e-publish-choice",
+    "f-local-decision",
+    "f-publish-choice",
+    "f-report-result",
+    "m-exact-hit",
+    "q-cancel-choice",
+    "q-effect-choice",
+    "q-noeffect",
+    "q-reclaim",
+    "q-reconciled",
+    "q-record-result",
+    "q-resume-blocked",
+    "q-safe-retry",
+    "q-unknown-read"
+  ],
+  "removedEdgeIds": [],
+  "newNodeIds": [
+    "a-admit",
+    "b-result",
+    "d-result",
+    "d-stop",
+    "e-result",
+    "f-result",
+    "q-cancel-record",
+    "q-reconcile",
+    "q-result"
+  ],
+  "strictChecks": 9,
+  "composition": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "signals": {
+    "resolvedCrossovers": 77,
+    "routesOverSuggestedBends": 1
+  },
+  "browserStatus": "pass",
+  "browserState": {
+    "detail": "read",
+    "motion": "still"
+  },
+  "browserViewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "overflowX": false,
+      "verticalScrollAccepted": true,
+      "minimumProjectedEdgeTextPx": 6.670967741935484
+    },
+    {
+      "width": 1600,
+      "height": 1000,
+      "overflowX": false,
+      "verticalScrollAccepted": true,
+      "minimumProjectedEdgeTextPx": 6.670967741935484
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "overflowX": false,
+      "verticalScrollAccepted": true,
+      "minimumProjectedEdgeTextPx": 6.670967741935484
+    },
+    {
+      "width": 2048,
+      "height": 1320,
+      "overflowX": false,
+      "verticalScrollAccepted": true,
+      "minimumProjectedEdgeTextPx": 6.670967741935484
+    }
+  ],
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-24T22:44:47.674Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "independentCoveragePerformed": false,
+  "imagesInspectedByAuthor": false
+}

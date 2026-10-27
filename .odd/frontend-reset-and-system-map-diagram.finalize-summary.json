@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+    "sha256": "1a4b9904e279cc4fee8b9b26597d51649f6ab611ecb792582c232694bccded90",
+    "bytes": 50325
+  },
+  "artifact": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+    "sha256": "9bb4127c50e71bcfa8e740a9ca87989b0137e83cfc791183d87c3e0bb80ca0fa",
+    "bytes": 1156919
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.finalize.json",
+    "summaryReceipt": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.finalize-summary.json",
+    "browserCheckReceipt": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-24T22:44:47.674Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 4313,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 45,
+      "routesOverSuggestedBends": 1
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "b-05",
+            "from": "b-stop",
+            "to": "b-checkout",
+            "label": "solo si resuelto",
+            "collectionIndex": 30,
+            "artifactIndex": 31
+          },
+          "right": {
+            "id": "shared-c-b",
+            "from": "c-readback",
+            "to": "b-identidad",
+            "label": "reusar UUID + KNF reales",
+            "collectionIndex": 152,
+            "artifactIndex": 153
+          },
+          "point": [
+            450,
+            2120
+          ]
+        },
+        {
+          "left": {
+            "id": "b-05",
+            "from": "b-stop",
+            "to": "b-checkout",
+            "label": "solo si resuelto",
+            "collectionIndex": 30,
+            "artifactIndex": 31
+          },
+          "right": {
+            "id": "shared-d-b",
+            "from": "d-dev",
+            "to": "b-inicio",
+            "label": "enlace, no permiso heredado",
+            "collectionIndex": 153,
+            "artifactIndex": 154
+          },
+          "point": [
+            328,
+            2120
+          ]
+        },
+        {
+          "left": {
+            "id": "b-07",
+            "from": "b-base",
+            "to": "b-topologia",
+            "label": "",
+            "collectionIndex": 32,
+            "artifactIndex": 33
+          },
+          "right": {
+            "id": "shared-c-b",
+            "from": "c-readback",
+            "to": "b-identidad",
+            "label": "reusar UUID + KNF reales",
+            "collectionIndex": 152,
+            "artifactIndex": 153
+          },
+          "point": [
+            450,
+            2280
+          ]
+        },
+        {
+          "left": {
+            "id": "b-07",
+            "from": "b-base",
+            "to": "b-topologia",
+            "label": "",
+            "collectionIndex": 32,
+            "artifactIndex": 33
+          },
+          "right": {
+            "id": "shared-d-b",
+            "from": "d-dev",
+            "to": "b-inicio",
+            "label": "enlace, no permiso heredado",
+            "collectionIndex": 153,
+            "artifactIndex": 154
+          },
+          "point": [
+            328,
+            2280
+          ]
+        },
+        {
+          "left": {
+            "id": "b-11",
+            "from": "b-preview",
+            "to": "b-aprobar",
+            "label": "",
+            "collectionIndex": 36,
+            "artifactIndex": 37
+          },
+          "right": {
+            "id": "shared-c-b",
+            "from": "c-readback",
+            "to": "b-identidad",
+            "label": "reusar UUID + KNF reales",
+            "collectionIndex": 152,
+            "artifactIndex": 153
+          },
+          "point": [
+            450,
+            2440
+          ]
+        },
+        {
+          "left": {
+            "id": "b-11",
+            "from": "b-preview",
+            "to": "b-aprobar",
+            "label": "",
+            "collectionIndex": 36,
+            "artifactIndex": 37
+          },
+          "right": {
+            "id": "shared-d-b",
+            "from": "d-dev",
+            "to": "b-inicio",
+            "label": "enlace, no permiso heredado",
+            "collectionIndex": 153,
+            "artifactIndex": 154
+          },
+          "point": [
+            328,
+            2440
+          ]
+        },
+        {
+          "left": {
+            "id": "b-13",
+            "from": "b-live",
+            "to": "b-publicar",
+            "label": "vigente y exacto",
+            "collectionIndex": 38,
+            "artifactIndex": 39
+          },
+          "right": {
+            "id": "shared-c-b",
+            "from": "c-readback",
+            "to": "b-identidad",
+            "label": "reusar UUID + KNF reales",
+            "collectionIndex": 152,
+            "artifactIndex": 153
+          },
+          "point": [
+            450,
+            2600
+          ]
+        },
+        {
+          "left": {
+            "id": "b-13",
+            "from": "b-live",
+            "to": "b-publicar",
+            "label": "vigente y exacto",
+            "collectionIndex": 38,
+            "artifactIndex": 39
+          },
+          "right": {
+            "id": "shared-d-b",
+            "from": "d-dev",
+            "to": "b-inicio",
+            "label": "enlace, no permiso heredado",
+            "collectionIndex": 153,
+            "artifactIndex": 154
+          },
+          "point": [
+            328,
+            2600
+          ]
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "g-03",
+            "from": "g-atencion",
+            "to": "coord",
+            "label": "job solo por regla/encargo",
+            "collectionIndex": 85,
+            "artifactIndex": 86
+          },
+          "bends": 3,
+          "stretch": 1
+        }
+      ],
+      "truncated": true
+    },
+    "hints": [
+      "b-stop → b-checkout crosses c-readback → b-identidad: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "b-stop → b-checkout crosses d-dev → b-inicio: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "b-base → b-topologia crosses c-readback → b-identidad: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "b-base → b-topologia crosses d-dev → b-inicio: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "b-preview → b-aprobar crosses c-readback → b-identidad: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "b-preview → b-aprobar crosses d-dev → b-inicio: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "b-live → b-publicar crosses c-readback → b-identidad: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "b-live → b-publicar crosses d-dev → b-inicio: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

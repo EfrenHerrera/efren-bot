@@ -1,0 +1,180 @@
+{
+  "schema": "0010_human_control",
+  "existing_tables_preserved": 30,
+  "changed_existing_tables": [],
+  "health": 200,
+  "items": [
+    {
+      "id": "f4bc4708-b946-4ccb-96bb-1e2f627d2c54",
+      "domain": "review",
+      "status": "partial",
+      "revision": 1,
+      "control_revision": 0,
+      "disposition": "active",
+      "report_revision": 1
+    },
+    {
+      "id": "e6196a67-fb31-43f1-8842-e8b07e77d2de",
+      "domain": "review",
+      "status": "partial",
+      "revision": 2,
+      "control_revision": 0,
+      "disposition": "active",
+      "report_revision": 2
+    },
+    {
+      "id": "8fc81b79-f098-4ddb-886f-69a0656e6004",
+      "domain": "review",
+      "status": "partial",
+      "revision": 2,
+      "control_revision": 0,
+      "disposition": "active",
+      "report_revision": 2
+    }
+  ],
+  "controls": {
+    "review": {
+      "activated_at": "2026-10-26T05:03:36.891641+00:00",
+      "paused": false,
+      "available": false,
+      "queued": 0
+    },
+    "support": {
+      "activated_at": "2026-10-26T03:06:24.830229+00:00",
+      "paused": false,
+      "available": false,
+      "queued": 0
+    }
+  },
+  "human_decisions": 0,
+  "runners_started": false,
+  "remote_effects": 0,
+  "source_inputs_unchanged": true,
+  "risk_gate": "pending-untracked-base",
+  "baseline_tables_after": {
+    "activities": {
+      "count": 3,
+      "digest": "1d501868ac4cbf1811accafc90445590"
+    },
+    "alembic_version": {
+      "count": 1,
+      "digest": "573ca846c22ec5949db50b72e13dedf5"
+    },
+    "bridge_presence": {
+      "count": 0,
+      "digest": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "bridge_runs": {
+      "count": 0,
+      "digest": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "events": {
+      "count": 3,
+      "digest": "048b92b0fa56454b25031b61e2c2d0d0"
+    },
+    "messages": {
+      "count": 3,
+      "digest": "abfbfa80c6f18ac6777ab8978b32c764"
+    },
+    "mr_review_control": {
+      "count": 1,
+      "digest": "ad51625d79cbafbfb3e316f2ed02d115"
+    },
+    "mr_review_entries": {
+      "count": 9,
+      "digest": "8dd0fb6212b62948cf95255c7ea31bb3"
+    },
+    "mr_review_items": {
+      "count": 3,
+      "digest": "24d9f4d2c7cdc4865ea7dd1430843ed6"
+    },
+    "mr_review_proposals": {
+      "count": 0,
+      "digest": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "mr_review_requests": {
+      "count": 1,
+      "digest": "4e15152d82b64b97e753ce8341b8469f"
+    },
+    "outbox": {
+      "count": 3,
+      "digest": "f34511c2940066df5a4089e7a77da8d8"
+    },
+    "slack_collection_annotations": {
+      "count": 1,
+      "digest": "e835dc0cd24b33c4be138bb161e5a2c2"
+    },
+    "slack_collection_captures": {
+      "count": 2670,
+      "digest": "5190db7f2c636e88ef4cebd7abf59c31"
+    },
+    "slack_collection_control": {
+      "count": 1,
+      "digest": "72374d74854ef50ac6595931da322452"
+    },
+    "slack_collection_conversation_seen": {
+      "count": 0,
+      "digest": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "slack_collection_followup_messages": {
+      "count": 0,
+      "digest": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "slack_collection_followups": {
+      "count": 0,
+      "digest": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "slack_collection_messages": {
+      "count": 3424,
+      "digest": "9170714f8efbe043b15dd3bef68f03f5"
+    },
+    "slack_collection_runs": {
+      "count": 23,
+      "digest": "8fc9bbb0f9374b38c0c16e47d13605af"
+    },
+    "support_cases": {
+      "count": 0,
+      "digest": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "support_control": {
+      "count": 1,
+      "digest": "6528d1ccb9fcc4ee3344d9f5728df576"
+    },
+    "support_entries": {
+      "count": 0,
+      "digest": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "support_intakes": {
+      "count": 0,
+      "digest": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "tasks": {
+      "count": 1,
+      "digest": "d44322264b19ae85f9976e7c99cd484c"
+    },
+    "threads": {
+      "count": 2,
+      "digest": "4187f1cd41939a12d88f71f72a84b88a"
+    },
+    "work_approvals": {
+      "count": 2,
+      "digest": "76b3ef21960b0c85fe3263cde3ab8a79"
+    },
+    "work_artifacts": {
+      "count": 3,
+      "digest": "80c0918eb94928d9e183cb10941c6b03"
+    },
+    "work_history": {
+      "count": 7,
+      "digest": "f8eddfdf6edfb7d8f41255986ae16ca6"
+    },
+    "work_items": {
+      "count": 2,
+      "digest": "a24ea9529469f325bafcea590cf9b409"
+    },
+    "work_jobs": {
+      "count": 2,
+      "digest": "f433cd7d44c85ce4021eeefacbcf11f6"
+    }
+  }
+}

@@ -1,0 +1,2617 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "startedAt": "2026-10-24T22:23:14.167Z",
+  "specification": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+    "sha256": "d99fa414afa12468ed361b8c4550437662532cbf58a87c47ada30601c0ce2948",
+    "bytes": 50400
+  },
+  "artifact": {
+    "path": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html"
+  },
+  "stages": {
+    "validate": {
+      "status": "fail",
+      "exitCode": 1,
+      "durationMs": null,
+      "command": [
+        "/opt/homebrew/Cellar/node/26.0.0/bin/node",
+        "/Users/efren.herrera/.agents/skills/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+        "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": false,
+        "command": "deliver",
+        "receiptId": "e60bd367-d1ec-4622-9985-c434c129cd5b",
+        "stage": "render",
+        "type": "architecture",
+        "input": "/Users/efren.herrera/workspace/efren-bot/.archify/architecture-assistant-system-20261024-151003/candidate.json",
+        "output": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.html",
+        "error": "Architecture layout validation failed:\n- [composition/proper-crossing] showcase architecture connections[30] id \"b-05\" \"b-stop\" -> \"b-checkout\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2120] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[32] id \"b-07\" \"b-base\" -> \"b-topologia\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2280] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[36] id \"b-11\" \"b-preview\" -> \"b-aprobar\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2440] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[38] id \"b-13\" \"b-live\" -> \"b-publicar\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2600] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[42] id \"b-17\" \"b-merge\" -> \"b-deploy\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2760] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[44] id \"b-19\" \"b-verificar\" -> \"b-status\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2920] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[45] id \"b-20\" \"b-status\" -> \"b-cierre\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 2920] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[46] id \"c-01\" \"c-inicio\" -> \"c-owner\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 3200] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[47] id \"c-02\" \"c-owner\" -> \"c-buscar\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 3200] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[49] id \"c-04\" \"c-aceptar\" -> \"c-aprobar\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 3360] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[50] id \"c-05\" \"c-aprobar\" -> \"c-intent\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 3360] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[50] id \"c-05\" \"c-aprobar\" -> \"c-intent\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 3360] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[52] id \"c-07\" \"c-crear\" -> \"c-readback\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 3520] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[53] id \"c-08\" \"c-readback\" -> \"c-stop\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 3520] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[55] id \"c-10\" \"c-bundle\" -> \"c-campos\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 3680] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[56] id \"c-11\" \"c-campos\" -> \"c-ids\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 3680] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[57] id \"d-01\" \"d-inicio\" -> \"d-contexto\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 3960] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[58] id \"d-02\" \"d-contexto\" -> \"d-skill\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 3960] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[60] id \"d-04\" \"d-herramientas\" -> \"d-hechos\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 4120] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[61] id \"d-05\" \"d-hechos\" -> \"d-diagnostico\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 4120] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[63] id \"d-07\" \"d-feedback\" -> \"d-aprobar\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 4280] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[64] id \"d-08\" \"d-aprobar\" -> \"d-live\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 4280] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[66] id \"d-10\" \"d-publicar\" -> \"d-seguir\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 4440] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[67] id \"d-11\" \"d-seguir\" -> \"d-dev\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 4440] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[68] id \"e-01\" \"e-inicio\" -> \"e-permiso\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 4720] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[69] id \"e-02\" \"e-permiso\" -> \"e-base\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 4720] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[71] id \"e-04\" \"e-worker\" -> \"e-comentar\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 4880] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[72] id \"e-05\" \"e-comentar\" -> \"e-fix\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 4880] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[74] id \"e-07\" \"e-checks\" -> \"e-update\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 5040] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[76] id \"f-01\" \"f-inicio\" -> \"f-fuentes\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 5320] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[80] id \"f-05\" \"f-runbook\" -> \"f-publicar\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 5480] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" crosses connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [40, 4440] (segments 1 and 0) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" crosses connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [40, 4440] (segments 1 and 0) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- [composition/proper-crossing] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" crosses connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [40, 4440] (segments 1 and 0) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.\n- Label \"enlace, no permiso heredado\" overlaps component \"c-inicio\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [-54, 3180, 140, 14]\n  component \"c-inicio\" rect: [80, 3160, 280, 80]\n  Suggested fix: set labelAt [70, 3254] or set labelDx 54 with labelDy 64 (below); or set labelAt [70, 3152] or set labelDx 54 with labelDy -38 (above)\n- [composition/label-route-clearance] showcase architecture label \"enlace, no permiso heredado\" on connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" label \"enlace, no permiso heredado\" is 0px from connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" label \"candidato autorizado\" segment 1 [40, 1520] -> [40, 6210] (label rect [-54, 3180, 140, 14]; minimum 4px) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"enlace, no permiso heredado\" on connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" label \"enlace, no permiso heredado\" is 0px from connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" label \"despacho B explícito\" segment 1 [40, 6210] -> [40, 1960] (label rect [-54, 3180, 140, 14]; minimum 4px) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-canvas-containment] showcase architecture label \"enlace, no permiso heredado\" on connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" extends past the left edge by 53.8px (label rect [-54, 3180, 140, 14]; viewBox 1292x9750) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise enlarge meta.viewBox.",
+        "diagnostics": [
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[30] id \"b-05\" \"b-stop\" -> \"b-checkout\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2120] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 30,
+              "id": "b-05",
+              "from": "b-stop",
+              "to": "b-checkout"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 152,
+                "id": "shared-c-b",
+                "from": "c-readback",
+                "to": "b-identidad"
+              },
+              "point": [
+                380,
+                2120
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[32] id \"b-07\" \"b-base\" -> \"b-topologia\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2280] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 32,
+              "id": "b-07",
+              "from": "b-base",
+              "to": "b-topologia"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 152,
+                "id": "shared-c-b",
+                "from": "c-readback",
+                "to": "b-identidad"
+              },
+              "point": [
+                380,
+                2280
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[36] id \"b-11\" \"b-preview\" -> \"b-aprobar\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2440] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 36,
+              "id": "b-11",
+              "from": "b-preview",
+              "to": "b-aprobar"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 152,
+                "id": "shared-c-b",
+                "from": "c-readback",
+                "to": "b-identidad"
+              },
+              "point": [
+                380,
+                2440
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[38] id \"b-13\" \"b-live\" -> \"b-publicar\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2600] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 38,
+              "id": "b-13",
+              "from": "b-live",
+              "to": "b-publicar"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 152,
+                "id": "shared-c-b",
+                "from": "c-readback",
+                "to": "b-identidad"
+              },
+              "point": [
+                380,
+                2600
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[42] id \"b-17\" \"b-merge\" -> \"b-deploy\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2760] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 42,
+              "id": "b-17",
+              "from": "b-merge",
+              "to": "b-deploy"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 152,
+                "id": "shared-c-b",
+                "from": "c-readback",
+                "to": "b-identidad"
+              },
+              "point": [
+                380,
+                2760
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[44] id \"b-19\" \"b-verificar\" -> \"b-status\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2920] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 44,
+              "id": "b-19",
+              "from": "b-verificar",
+              "to": "b-status"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 152,
+                "id": "shared-c-b",
+                "from": "c-readback",
+                "to": "b-identidad"
+              },
+              "point": [
+                380,
+                2920
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[45] id \"b-20\" \"b-status\" -> \"b-cierre\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 2920] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 45,
+              "id": "b-20",
+              "from": "b-status",
+              "to": "b-cierre"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 155,
+                "id": "shared-e-merge",
+                "from": "e-ci",
+                "to": "b-merge"
+              },
+              "point": [
+                820,
+                2920
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[46] id \"c-01\" \"c-inicio\" -> \"c-owner\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 3200] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 46,
+              "id": "c-01",
+              "from": "c-inicio",
+              "to": "c-owner"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 152,
+                "id": "shared-c-b",
+                "from": "c-readback",
+                "to": "b-identidad"
+              },
+              "point": [
+                380,
+                3200
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[47] id \"c-02\" \"c-owner\" -> \"c-buscar\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 3200] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 47,
+              "id": "c-02",
+              "from": "c-owner",
+              "to": "c-buscar"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 155,
+                "id": "shared-e-merge",
+                "from": "e-ci",
+                "to": "b-merge"
+              },
+              "point": [
+                820,
+                3200
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[49] id \"c-04\" \"c-aceptar\" -> \"c-aprobar\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 3360] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 49,
+              "id": "c-04",
+              "from": "c-aceptar",
+              "to": "c-aprobar"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 155,
+                "id": "shared-e-merge",
+                "from": "e-ci",
+                "to": "b-merge"
+              },
+              "point": [
+                820,
+                3360
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[50] id \"c-05\" \"c-aprobar\" -> \"c-intent\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 3360] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 50,
+              "id": "c-05",
+              "from": "c-aprobar",
+              "to": "c-intent"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 152,
+                "id": "shared-c-b",
+                "from": "c-readback",
+                "to": "b-identidad"
+              },
+              "point": [
+                380,
+                3360
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[50] id \"c-05\" \"c-aprobar\" -> \"c-intent\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 3360] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 50,
+              "id": "c-05",
+              "from": "c-aprobar",
+              "to": "c-intent"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "point": [
+                370,
+                3360
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[52] id \"c-07\" \"c-crear\" -> \"c-readback\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 3520] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 52,
+              "id": "c-07",
+              "from": "c-crear",
+              "to": "c-readback"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "point": [
+                370,
+                3520
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[53] id \"c-08\" \"c-readback\" -> \"c-stop\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 3520] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 53,
+              "id": "c-08",
+              "from": "c-readback",
+              "to": "c-stop"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 155,
+                "id": "shared-e-merge",
+                "from": "e-ci",
+                "to": "b-merge"
+              },
+              "point": [
+                820,
+                3520
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[55] id \"c-10\" \"c-bundle\" -> \"c-campos\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 3680] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 55,
+              "id": "c-10",
+              "from": "c-bundle",
+              "to": "c-campos"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 155,
+                "id": "shared-e-merge",
+                "from": "e-ci",
+                "to": "b-merge"
+              },
+              "point": [
+                820,
+                3680
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[56] id \"c-11\" \"c-campos\" -> \"c-ids\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 3680] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 56,
+              "id": "c-11",
+              "from": "c-campos",
+              "to": "c-ids"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "point": [
+                370,
+                3680
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[57] id \"d-01\" \"d-inicio\" -> \"d-contexto\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 3960] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 57,
+              "id": "d-01",
+              "from": "d-inicio",
+              "to": "d-contexto"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "point": [
+                370,
+                3960
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[58] id \"d-02\" \"d-contexto\" -> \"d-skill\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 3960] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 58,
+              "id": "d-02",
+              "from": "d-contexto",
+              "to": "d-skill"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 155,
+                "id": "shared-e-merge",
+                "from": "e-ci",
+                "to": "b-merge"
+              },
+              "point": [
+                820,
+                3960
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[60] id \"d-04\" \"d-herramientas\" -> \"d-hechos\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 4120] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 60,
+              "id": "d-04",
+              "from": "d-herramientas",
+              "to": "d-hechos"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 155,
+                "id": "shared-e-merge",
+                "from": "e-ci",
+                "to": "b-merge"
+              },
+              "point": [
+                820,
+                4120
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[61] id \"d-05\" \"d-hechos\" -> \"d-diagnostico\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 4120] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 61,
+              "id": "d-05",
+              "from": "d-hechos",
+              "to": "d-diagnostico"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "point": [
+                370,
+                4120
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[63] id \"d-07\" \"d-feedback\" -> \"d-aprobar\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 4280] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 63,
+              "id": "d-07",
+              "from": "d-feedback",
+              "to": "d-aprobar"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "point": [
+                370,
+                4280
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[64] id \"d-08\" \"d-aprobar\" -> \"d-live\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 4280] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 64,
+              "id": "d-08",
+              "from": "d-aprobar",
+              "to": "d-live"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 155,
+                "id": "shared-e-merge",
+                "from": "e-ci",
+                "to": "b-merge"
+              },
+              "point": [
+                820,
+                4280
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[66] id \"d-10\" \"d-publicar\" -> \"d-seguir\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 4440] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 66,
+              "id": "d-10",
+              "from": "d-publicar",
+              "to": "d-seguir"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 155,
+                "id": "shared-e-merge",
+                "from": "e-ci",
+                "to": "b-merge"
+              },
+              "point": [
+                820,
+                4440
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[67] id \"d-11\" \"d-seguir\" -> \"d-dev\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 4440] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 67,
+              "id": "d-11",
+              "from": "d-seguir",
+              "to": "d-dev"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "point": [
+                370,
+                4440
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[68] id \"e-01\" \"e-inicio\" -> \"e-permiso\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 4720] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 68,
+              "id": "e-01",
+              "from": "e-inicio",
+              "to": "e-permiso"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "point": [
+                370,
+                4720
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[69] id \"e-02\" \"e-permiso\" -> \"e-base\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 4720] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 69,
+              "id": "e-02",
+              "from": "e-permiso",
+              "to": "e-base"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 155,
+                "id": "shared-e-merge",
+                "from": "e-ci",
+                "to": "b-merge"
+              },
+              "point": [
+                820,
+                4720
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[71] id \"e-04\" \"e-worker\" -> \"e-comentar\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 4880] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 71,
+              "id": "e-04",
+              "from": "e-worker",
+              "to": "e-comentar"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 155,
+                "id": "shared-e-merge",
+                "from": "e-ci",
+                "to": "b-merge"
+              },
+              "point": [
+                820,
+                4880
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 1
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[72] id \"e-05\" \"e-comentar\" -> \"e-fix\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 4880] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 72,
+              "id": "e-05",
+              "from": "e-comentar",
+              "to": "e-fix"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "point": [
+                370,
+                4880
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[74] id \"e-07\" \"e-checks\" -> \"e-update\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 5040] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 74,
+              "id": "e-07",
+              "from": "e-checks",
+              "to": "e-update"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "point": [
+                370,
+                5040
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[76] id \"f-01\" \"f-inicio\" -> \"f-fuentes\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 5320] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 76,
+              "id": "f-01",
+              "from": "f-inicio",
+              "to": "f-fuentes"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "point": [
+                370,
+                5320
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[80] id \"f-05\" \"f-runbook\" -> \"f-publicar\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 5480] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 80,
+              "id": "f-05",
+              "from": "f-runbook",
+              "to": "f-publicar"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 154,
+                "id": "shared-f-b",
+                "from": "f-dev",
+                "to": "c-inicio"
+              },
+              "point": [
+                370,
+                5480
+              ],
+              "segmentIndex": 0,
+              "otherSegmentIndex": 2
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" crosses connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [40, 4440] (segments 1 and 0) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 144,
+              "id": "shared-a",
+              "from": "a-presentar",
+              "to": "coord"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 153,
+                "id": "shared-d-b",
+                "from": "d-dev",
+                "to": "b-inicio"
+              },
+              "point": [
+                40,
+                4440
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 0
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" crosses connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [40, 4440] (segments 1 and 0) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 146,
+              "id": "shared-c",
+              "from": "coord",
+              "to": "c-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 153,
+                "id": "shared-d-b",
+                "from": "d-dev",
+                "to": "b-inicio"
+              },
+              "point": [
+                40,
+                4440
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 0
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/proper-crossing",
+            "severity": "error",
+            "message": "[composition/proper-crossing] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" crosses connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [40, 4440] (segments 1 and 0) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 147,
+              "id": "shared-d",
+              "from": "coord",
+              "to": "d-inicio"
+            },
+            "evidence": {
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 153,
+                "id": "shared-d-b",
+                "from": "d-dev",
+                "to": "b-inicio"
+              },
+              "point": [
+                40,
+                4440
+              ],
+              "segmentIndex": 1,
+              "otherSegmentIndex": 0
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+            ]
+          },
+          {
+            "code": "composition/label-route-clearance",
+            "severity": "error",
+            "message": "[composition/label-route-clearance] showcase architecture label \"enlace, no permiso heredado\" on connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" label \"enlace, no permiso heredado\" is 0px from connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" label \"candidato autorizado\" segment 1 [40, 1520] -> [40, 6210] (label rect [-54, 3180, 140, 14]; minimum 4px) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 153,
+              "id": "shared-d-b",
+              "from": "d-dev",
+              "to": "b-inicio"
+            },
+            "evidence": {
+              "label": "enlace, no permiso heredado",
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 144,
+                "id": "shared-a",
+                "from": "a-presentar",
+                "to": "coord"
+              },
+              "segmentIndex": 1,
+              "clearancePx": 0,
+              "minimumPx": 4,
+              "labelRect": {
+                "relation": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "variant": "dashed",
+                  "fromSide": "left",
+                  "toSide": "left",
+                  "via": [
+                    [
+                      16,
+                      4440
+                    ],
+                    [
+                      16,
+                      1960
+                    ]
+                  ]
+                },
+                "relationIndex": 153,
+                "label": "enlace, no permiso heredado",
+                "x": -53.8,
+                "y": 3180,
+                "width": 139.6,
+                "height": 14,
+                "lx": 16,
+                "ly": 3190
+              },
+              "from": [
+                40,
+                1520
+              ],
+              "to": [
+                40,
+                6210
+              ]
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+            ]
+          },
+          {
+            "code": "composition/label-route-clearance",
+            "severity": "error",
+            "message": "[composition/label-route-clearance] showcase architecture label \"enlace, no permiso heredado\" on connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" label \"enlace, no permiso heredado\" is 0px from connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" label \"despacho B explícito\" segment 1 [40, 6210] -> [40, 1960] (label rect [-54, 3180, 140, 14]; minimum 4px) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 153,
+              "id": "shared-d-b",
+              "from": "d-dev",
+              "to": "b-inicio"
+            },
+            "evidence": {
+              "label": "enlace, no permiso heredado",
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 145,
+                "id": "shared-b",
+                "from": "coord",
+                "to": "b-inicio"
+              },
+              "segmentIndex": 1,
+              "clearancePx": 0,
+              "minimumPx": 4,
+              "labelRect": {
+                "relation": {
+                  "id": "shared-d-b",
+                  "from": "d-dev",
+                  "to": "b-inicio",
+                  "label": "enlace, no permiso heredado",
+                  "variant": "dashed",
+                  "fromSide": "left",
+                  "toSide": "left",
+                  "via": [
+                    [
+                      16,
+                      4440
+                    ],
+                    [
+                      16,
+                      1960
+                    ]
+                  ]
+                },
+                "relationIndex": 153,
+                "label": "enlace, no permiso heredado",
+                "x": -53.8,
+                "y": 3180,
+                "width": 139.6,
+                "height": 14,
+                "lx": 16,
+                "ly": 3190
+              },
+              "from": [
+                40,
+                6210
+              ],
+              "to": [
+                40,
+                1960
+              ]
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+            ]
+          },
+          {
+            "code": "composition/label-canvas-containment",
+            "severity": "error",
+            "message": "[composition/label-canvas-containment] showcase architecture label \"enlace, no permiso heredado\" on connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" extends past the left edge by 53.8px (label rect [-54, 3180, 140, 14]; viewBox 1292x9750) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise enlarge meta.viewBox.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 153,
+              "id": "shared-d-b",
+              "from": "d-dev",
+              "to": "b-inicio"
+            },
+            "evidence": {
+              "label": "enlace, no permiso heredado",
+              "labelRect": {
+                "x": -53.8,
+                "y": 3180,
+                "width": 139.6,
+                "height": 14
+              },
+              "viewBox": [
+                1292,
+                9750
+              ],
+              "overflowPx": {
+                "left": 53.8
+              },
+              "tolerancePx": 0.5
+            },
+            "supportedFixes": [
+              "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise enlarge meta.viewBox"
+            ]
+          },
+          {
+            "code": "layout/constraint",
+            "severity": "error",
+            "message": "Label \"enlace, no permiso heredado\" overlaps component \"c-inicio\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [-54, 3180, 140, 14]\n  component \"c-inicio\" rect: [80, 3160, 280, 80]\n  Suggested fix: set labelAt [70, 3254] or set labelDx 54 with labelDy 64 (below); or set labelAt [70, 3152] or set labelDx 54 with labelDy -38 (above)",
+            "subject": {
+              "diagramType": "architecture"
+            },
+            "evidence": {},
+            "supportedFixes": []
+          }
+        ],
+        "provenance": "absent",
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      },
+      "execution": "embedded-in-deliver"
+    },
+    "deliver": {
+      "status": "not-run",
+      "execution": "blocked-by-validate"
+    }
+  },
+  "diagnostics": [
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[30] id \"b-05\" \"b-stop\" -> \"b-checkout\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2120] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 30,
+        "id": "b-05",
+        "from": "b-stop",
+        "to": "b-checkout"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 152,
+          "id": "shared-c-b",
+          "from": "c-readback",
+          "to": "b-identidad"
+        },
+        "point": [
+          380,
+          2120
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[32] id \"b-07\" \"b-base\" -> \"b-topologia\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2280] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 32,
+        "id": "b-07",
+        "from": "b-base",
+        "to": "b-topologia"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 152,
+          "id": "shared-c-b",
+          "from": "c-readback",
+          "to": "b-identidad"
+        },
+        "point": [
+          380,
+          2280
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[36] id \"b-11\" \"b-preview\" -> \"b-aprobar\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2440] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 36,
+        "id": "b-11",
+        "from": "b-preview",
+        "to": "b-aprobar"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 152,
+          "id": "shared-c-b",
+          "from": "c-readback",
+          "to": "b-identidad"
+        },
+        "point": [
+          380,
+          2440
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[38] id \"b-13\" \"b-live\" -> \"b-publicar\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2600] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 38,
+        "id": "b-13",
+        "from": "b-live",
+        "to": "b-publicar"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 152,
+          "id": "shared-c-b",
+          "from": "c-readback",
+          "to": "b-identidad"
+        },
+        "point": [
+          380,
+          2600
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[42] id \"b-17\" \"b-merge\" -> \"b-deploy\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2760] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 42,
+        "id": "b-17",
+        "from": "b-merge",
+        "to": "b-deploy"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 152,
+          "id": "shared-c-b",
+          "from": "c-readback",
+          "to": "b-identidad"
+        },
+        "point": [
+          380,
+          2760
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[44] id \"b-19\" \"b-verificar\" -> \"b-status\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 2920] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 44,
+        "id": "b-19",
+        "from": "b-verificar",
+        "to": "b-status"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 152,
+          "id": "shared-c-b",
+          "from": "c-readback",
+          "to": "b-identidad"
+        },
+        "point": [
+          380,
+          2920
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[45] id \"b-20\" \"b-status\" -> \"b-cierre\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 2920] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 45,
+        "id": "b-20",
+        "from": "b-status",
+        "to": "b-cierre"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "point": [
+          820,
+          2920
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[46] id \"c-01\" \"c-inicio\" -> \"c-owner\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 3200] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 46,
+        "id": "c-01",
+        "from": "c-inicio",
+        "to": "c-owner"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 152,
+          "id": "shared-c-b",
+          "from": "c-readback",
+          "to": "b-identidad"
+        },
+        "point": [
+          380,
+          3200
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[47] id \"c-02\" \"c-owner\" -> \"c-buscar\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 3200] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 47,
+        "id": "c-02",
+        "from": "c-owner",
+        "to": "c-buscar"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "point": [
+          820,
+          3200
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[49] id \"c-04\" \"c-aceptar\" -> \"c-aprobar\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 3360] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 49,
+        "id": "c-04",
+        "from": "c-aceptar",
+        "to": "c-aprobar"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "point": [
+          820,
+          3360
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[50] id \"c-05\" \"c-aprobar\" -> \"c-intent\" crosses connections[152] id \"shared-c-b\" \"c-readback\" -> \"b-identidad\" at [380, 3360] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 50,
+        "id": "c-05",
+        "from": "c-aprobar",
+        "to": "c-intent"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 152,
+          "id": "shared-c-b",
+          "from": "c-readback",
+          "to": "b-identidad"
+        },
+        "point": [
+          380,
+          3360
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[50] id \"c-05\" \"c-aprobar\" -> \"c-intent\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 3360] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 50,
+        "id": "c-05",
+        "from": "c-aprobar",
+        "to": "c-intent"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "point": [
+          370,
+          3360
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[52] id \"c-07\" \"c-crear\" -> \"c-readback\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 3520] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 52,
+        "id": "c-07",
+        "from": "c-crear",
+        "to": "c-readback"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "point": [
+          370,
+          3520
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[53] id \"c-08\" \"c-readback\" -> \"c-stop\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 3520] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 53,
+        "id": "c-08",
+        "from": "c-readback",
+        "to": "c-stop"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "point": [
+          820,
+          3520
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[55] id \"c-10\" \"c-bundle\" -> \"c-campos\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 3680] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 55,
+        "id": "c-10",
+        "from": "c-bundle",
+        "to": "c-campos"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "point": [
+          820,
+          3680
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[56] id \"c-11\" \"c-campos\" -> \"c-ids\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 3680] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 56,
+        "id": "c-11",
+        "from": "c-campos",
+        "to": "c-ids"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "point": [
+          370,
+          3680
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[57] id \"d-01\" \"d-inicio\" -> \"d-contexto\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 3960] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 57,
+        "id": "d-01",
+        "from": "d-inicio",
+        "to": "d-contexto"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "point": [
+          370,
+          3960
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[58] id \"d-02\" \"d-contexto\" -> \"d-skill\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 3960] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 58,
+        "id": "d-02",
+        "from": "d-contexto",
+        "to": "d-skill"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "point": [
+          820,
+          3960
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[60] id \"d-04\" \"d-herramientas\" -> \"d-hechos\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 4120] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 60,
+        "id": "d-04",
+        "from": "d-herramientas",
+        "to": "d-hechos"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "point": [
+          820,
+          4120
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[61] id \"d-05\" \"d-hechos\" -> \"d-diagnostico\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 4120] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 61,
+        "id": "d-05",
+        "from": "d-hechos",
+        "to": "d-diagnostico"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "point": [
+          370,
+          4120
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[63] id \"d-07\" \"d-feedback\" -> \"d-aprobar\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 4280] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 63,
+        "id": "d-07",
+        "from": "d-feedback",
+        "to": "d-aprobar"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "point": [
+          370,
+          4280
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[64] id \"d-08\" \"d-aprobar\" -> \"d-live\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 4280] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 64,
+        "id": "d-08",
+        "from": "d-aprobar",
+        "to": "d-live"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "point": [
+          820,
+          4280
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[66] id \"d-10\" \"d-publicar\" -> \"d-seguir\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 4440] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 66,
+        "id": "d-10",
+        "from": "d-publicar",
+        "to": "d-seguir"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "point": [
+          820,
+          4440
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[67] id \"d-11\" \"d-seguir\" -> \"d-dev\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 4440] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 67,
+        "id": "d-11",
+        "from": "d-seguir",
+        "to": "d-dev"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "point": [
+          370,
+          4440
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[68] id \"e-01\" \"e-inicio\" -> \"e-permiso\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 4720] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 68,
+        "id": "e-01",
+        "from": "e-inicio",
+        "to": "e-permiso"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "point": [
+          370,
+          4720
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[69] id \"e-02\" \"e-permiso\" -> \"e-base\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 4720] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 69,
+        "id": "e-02",
+        "from": "e-permiso",
+        "to": "e-base"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "point": [
+          820,
+          4720
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[71] id \"e-04\" \"e-worker\" -> \"e-comentar\" crosses connections[155] id \"shared-e-merge\" \"e-ci\" -> \"b-merge\" at [820, 4880] (segments 0 and 1) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 71,
+        "id": "e-04",
+        "from": "e-worker",
+        "to": "e-comentar"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 155,
+          "id": "shared-e-merge",
+          "from": "e-ci",
+          "to": "b-merge"
+        },
+        "point": [
+          820,
+          4880
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[72] id \"e-05\" \"e-comentar\" -> \"e-fix\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 4880] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 72,
+        "id": "e-05",
+        "from": "e-comentar",
+        "to": "e-fix"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "point": [
+          370,
+          4880
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[74] id \"e-07\" \"e-checks\" -> \"e-update\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 5040] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 74,
+        "id": "e-07",
+        "from": "e-checks",
+        "to": "e-update"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "point": [
+          370,
+          5040
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[76] id \"f-01\" \"f-inicio\" -> \"f-fuentes\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 5320] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 76,
+        "id": "f-01",
+        "from": "f-inicio",
+        "to": "f-fuentes"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "point": [
+          370,
+          5320
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[80] id \"f-05\" \"f-runbook\" -> \"f-publicar\" crosses connections[154] id \"shared-f-b\" \"f-dev\" -> \"c-inicio\" at [370, 5480] (segments 0 and 2) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 80,
+        "id": "f-05",
+        "from": "f-runbook",
+        "to": "f-publicar"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 154,
+          "id": "shared-f-b",
+          "from": "f-dev",
+          "to": "c-inicio"
+        },
+        "point": [
+          370,
+          5480
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" crosses connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [40, 4440] (segments 1 and 0) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 144,
+        "id": "shared-a",
+        "from": "a-presentar",
+        "to": "coord"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 153,
+          "id": "shared-d-b",
+          "from": "d-dev",
+          "to": "b-inicio"
+        },
+        "point": [
+          40,
+          4440
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 0
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[146] id \"shared-c\" \"coord\" -> \"c-inicio\" crosses connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [40, 4440] (segments 1 and 0) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 146,
+        "id": "shared-c",
+        "from": "coord",
+        "to": "c-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 153,
+          "id": "shared-d-b",
+          "from": "d-dev",
+          "to": "b-inicio"
+        },
+        "point": [
+          40,
+          4440
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 0
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/proper-crossing",
+      "severity": "error",
+      "message": "[composition/proper-crossing] showcase architecture connections[147] id \"shared-d\" \"coord\" -> \"d-inicio\" crosses connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" at [40, 4440] (segments 1 and 0) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 147,
+        "id": "shared-d",
+        "from": "coord",
+        "to": "d-inicio"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 153,
+          "id": "shared-d-b",
+          "from": "d-dev",
+          "to": "b-inicio"
+        },
+        "point": [
+          40,
+          4440
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 0
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust route/via or fromSide/toSide so the connections use separate corridors"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"enlace, no permiso heredado\" on connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" label \"enlace, no permiso heredado\" is 0px from connections[144] id \"shared-a\" \"a-presentar\" -> \"coord\" label \"candidato autorizado\" segment 1 [40, 1520] -> [40, 6210] (label rect [-54, 3180, 140, 14]; minimum 4px) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 153,
+        "id": "shared-d-b",
+        "from": "d-dev",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "label": "enlace, no permiso heredado",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 144,
+          "id": "shared-a",
+          "from": "a-presentar",
+          "to": "coord"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "shared-d-b",
+            "from": "d-dev",
+            "to": "b-inicio",
+            "label": "enlace, no permiso heredado",
+            "variant": "dashed",
+            "fromSide": "left",
+            "toSide": "left",
+            "via": [
+              [
+                16,
+                4440
+              ],
+              [
+                16,
+                1960
+              ]
+            ]
+          },
+          "relationIndex": 153,
+          "label": "enlace, no permiso heredado",
+          "x": -53.8,
+          "y": 3180,
+          "width": 139.6,
+          "height": 14,
+          "lx": 16,
+          "ly": 3190
+        },
+        "from": [
+          40,
+          1520
+        ],
+        "to": [
+          40,
+          6210
+        ]
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"enlace, no permiso heredado\" on connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" label \"enlace, no permiso heredado\" is 0px from connections[145] id \"shared-b\" \"coord\" -> \"b-inicio\" label \"despacho B explícito\" segment 1 [40, 6210] -> [40, 1960] (label rect [-54, 3180, 140, 14]; minimum 4px) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 153,
+        "id": "shared-d-b",
+        "from": "d-dev",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "label": "enlace, no permiso heredado",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 145,
+          "id": "shared-b",
+          "from": "coord",
+          "to": "b-inicio"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "shared-d-b",
+            "from": "d-dev",
+            "to": "b-inicio",
+            "label": "enlace, no permiso heredado",
+            "variant": "dashed",
+            "fromSide": "left",
+            "toSide": "left",
+            "via": [
+              [
+                16,
+                4440
+              ],
+              [
+                16,
+                1960
+              ]
+            ]
+          },
+          "relationIndex": 153,
+          "label": "enlace, no permiso heredado",
+          "x": -53.8,
+          "y": 3180,
+          "width": 139.6,
+          "height": 14,
+          "lx": 16,
+          "ly": 3190
+        },
+        "from": [
+          40,
+          6210
+        ],
+        "to": [
+          40,
+          1960
+        ]
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-canvas-containment",
+      "severity": "error",
+      "message": "[composition/label-canvas-containment] showcase architecture label \"enlace, no permiso heredado\" on connections[153] id \"shared-d-b\" \"d-dev\" -> \"b-inicio\" extends past the left edge by 53.8px (label rect [-54, 3180, 140, 14]; viewBox 1292x9750) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise enlarge meta.viewBox.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 153,
+        "id": "shared-d-b",
+        "from": "d-dev",
+        "to": "b-inicio"
+      },
+      "evidence": {
+        "label": "enlace, no permiso heredado",
+        "labelRect": {
+          "x": -53.8,
+          "y": 3180,
+          "width": 139.6,
+          "height": 14
+        },
+        "viewBox": [
+          1292,
+          9750
+        ],
+        "overflowPx": {
+          "left": 53.8
+        },
+        "tolerancePx": 0.5
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise enlarge meta.viewBox"
+      ]
+    },
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "Label \"enlace, no permiso heredado\" overlaps component \"c-inicio\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [-54, 3180, 140, 14]\n  component \"c-inicio\" rect: [80, 3160, 280, 80]\n  Suggested fix: set labelAt [70, 3254] or set labelDx 54 with labelDy 64 (below); or set labelAt [70, 3152] or set labelDx 54 with labelDy -38 (above)",
+      "subject": {
+        "diagramType": "architecture"
+      },
+      "evidence": {},
+      "supportedFixes": []
+    }
+  ],
+  "evidence": {
+    "receipt": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.finalize.json",
+    "summaryReceipt": "/Users/efren.herrera/workspace/efren-bot/.odd/frontend-reset-and-system-map-diagram.finalize-summary.json"
+  },
+  "visualReview": "not-requested",
+  "failedStage": "validate",
+  "finishedAt": "2026-10-24T22:23:14.635Z",
+  "durationMs": 468,
+  "update": {
+    "status": "update_available",
+    "installedVersion": "3.0.1",
+    "availableVersion": "3.2.0",
+    "releaseNotes": "https://github.com/tt-a1i/archify/releases/tag/v3.2.0",
+    "severity": "normal",
+    "checkedAt": "2026-10-24T22:19:37.577Z",
+    "source": "cache",
+    "noticeRequired": true,
+    "noticeText": "Archify update: 3.0.1 → 3.2.0. A previous check at 2026-10-24T22:19:37.577Z found a newer release. Release notes: https://github.com/tt-a1i/archify/releases/tag/v3.2.0. The installed Skill has not changed; ask to snooze or ignore this reminder.",
+    "eventKey": "archify@sha256:70e210265c59f24dcbdf2a502ff671104b5454e7ee7d3554aecd86bad32384f5"
+  }
+}

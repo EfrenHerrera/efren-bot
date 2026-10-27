@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "profile_id": "slack-thread-read",
+  "profile_version": 1,
+  "approved": false,
+  "cli": {
+    "path": "/absolute/path/to/claude",
+    "minimum_version": "2.1.295",
+    "verified_version": null,
+    "verified_sha256": null
+  },
+  "model": null,
+  "allowed_slack_hosts": [],
+  "connector": {
+    "kind": "claude_ai",
+    "selector": "slack_thread_v1",
+    "server_url": "https://mcp.slack.com/mcp",
+    "tool_name": "mcp__claude_ai_Slack__slack_read_thread",
+    "fixed_arguments": {
+      "limit": 100,
+      "response_format": "concise"
+    },
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["channel_id", "message_ts", "limit", "response_format"],
+      "properties": {
+        "channel_id": {"type": "string"},
+        "message_ts": {"type": "string"},
+        "limit": {"type": "integer", "const": 100},
+        "response_format": {"type": "string", "const": "concise"}
+      }
+    }
+  },
+  "limits": {
+    "run_timeout_seconds": 120,
+    "max_turns": 4,
+    "max_tool_calls": 1,
+    "max_stdout_bytes": 1048576,
+    "max_stderr_bytes": 65536,
+    "max_result_bytes": 32768
+  }
+}

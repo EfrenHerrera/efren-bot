@@ -1,0 +1,709 @@
+{
+  "scope": "structural assertions on authored graph, not product runtime or independent coverage",
+  "candidateSha256": "8b164c86e229f0951049595d25c6ef791cbf5077401c6c7904fc847259869c05",
+  "artifactSha256": "7a68f198d28b565c3f0a372a96678d9c873a7f86c07f06b75c9646cf8a719e48",
+  "candidateBytes": 62438,
+  "artifactBytes": 1220824,
+  "counts": {
+    "views": 5,
+    "nodes": 162,
+    "relationships": 190,
+    "cards": 9
+  },
+  "allOriginal153NodesPreserved": true,
+  "assertions": [
+    {
+      "name": "A Slack-only pull",
+      "passed": true,
+      "rerun": true,
+      "start": "a-inicio",
+      "end": "a-raw",
+      "path": [
+        "a-inicio",
+        "a-policy",
+        "a-adapter",
+        "a-slack",
+        "a-admit",
+        "a-pull",
+        "a-auth",
+        "a-paginas",
+        "a-retry",
+        "a-raw"
+      ],
+      "blocked": [
+        "a-notion",
+        "a-gitlab",
+        "a-push"
+      ]
+    },
+    {
+      "name": "A no Slack-to-Notion dependency",
+      "passed": true,
+      "rerun": true,
+      "start": "a-slack",
+      "end": "a-notion",
+      "path": null,
+      "blocked": []
+    },
+    {
+      "name": "A pull not followed by push",
+      "passed": true,
+      "rerun": true,
+      "start": "a-pull",
+      "end": "a-push",
+      "path": null,
+      "blocked": []
+    },
+    {
+      "name": "B diff-only local result",
+      "passed": true,
+      "rerun": true,
+      "start": "b-preview",
+      "end": "b-result",
+      "path": [
+        "b-preview",
+        "b-verificar",
+        "b-result"
+      ],
+      "blocked": [
+        "b-aprobar",
+        "b-publicar",
+        "b-ci",
+        "b-fix",
+        "b-merge",
+        "b-deploy",
+        "b-status",
+        "b-cierre"
+      ]
+    },
+    {
+      "name": "B MR-only local result",
+      "passed": true,
+      "rerun": true,
+      "start": "b-ci",
+      "end": "b-result",
+      "path": [
+        "b-ci",
+        "b-verificar",
+        "b-result"
+      ],
+      "blocked": [
+        "b-fix",
+        "b-merge",
+        "b-deploy",
+        "b-status",
+        "b-cierre"
+      ]
+    },
+    {
+      "name": "B fix requires b-checks",
+      "passed": true,
+      "rerun": true,
+      "start": "b-fix",
+      "end": "b-publicar",
+      "path": null,
+      "blocked": [
+        "b-checks"
+      ]
+    },
+    {
+      "name": "B fix requires b-preview",
+      "passed": true,
+      "rerun": true,
+      "start": "b-fix",
+      "end": "b-publicar",
+      "path": null,
+      "blocked": [
+        "b-preview"
+      ]
+    },
+    {
+      "name": "B fix requires b-aprobar",
+      "passed": true,
+      "rerun": true,
+      "start": "b-fix",
+      "end": "b-publicar",
+      "path": null,
+      "blocked": [
+        "b-aprobar"
+      ]
+    },
+    {
+      "name": "B fix requires b-live",
+      "passed": true,
+      "rerun": true,
+      "start": "b-fix",
+      "end": "b-publicar",
+      "path": null,
+      "blocked": [
+        "b-live"
+      ]
+    },
+    {
+      "name": "C exact task reused without create",
+      "passed": true,
+      "rerun": true,
+      "start": "c-buscar",
+      "end": "b-identidad",
+      "path": [
+        "c-buscar",
+        "c-readback",
+        "b-identidad"
+      ],
+      "blocked": [
+        "c-aceptar",
+        "c-aprobar",
+        "c-intent",
+        "c-crear",
+        "c-stop"
+      ]
+    },
+    {
+      "name": "D sufficient evidence draft no tools/write",
+      "passed": true,
+      "rerun": true,
+      "start": "d-inicio",
+      "end": "d-result",
+      "path": [
+        "d-inicio",
+        "d-contexto",
+        "d-skill",
+        "d-hechos",
+        "d-diagnostico",
+        "d-feedback",
+        "d-result"
+      ],
+      "blocked": [
+        "d-herramientas",
+        "d-stop",
+        "d-aprobar",
+        "d-live",
+        "d-publicar"
+      ]
+    },
+    {
+      "name": "D draft to DEV without Slack write",
+      "passed": true,
+      "rerun": true,
+      "start": "d-result",
+      "end": "d-dev",
+      "path": [
+        "d-result",
+        "d-dev"
+      ],
+      "blocked": [
+        "d-aprobar",
+        "d-live",
+        "d-publicar"
+      ]
+    },
+    {
+      "name": "E read-only diff review",
+      "passed": true,
+      "rerun": true,
+      "start": "e-inicio",
+      "end": "e-result",
+      "path": [
+        "e-inicio",
+        "e-base",
+        "e-worker",
+        "e-result"
+      ],
+      "blocked": [
+        "e-permiso",
+        "e-comentar",
+        "e-fix",
+        "e-update"
+      ]
+    },
+    {
+      "name": "E fix independent of comments",
+      "passed": true,
+      "rerun": true,
+      "start": "e-result",
+      "end": "e-checks",
+      "path": [
+        "e-result",
+        "e-fix",
+        "e-checks"
+      ],
+      "blocked": [
+        "e-comentar"
+      ]
+    },
+    {
+      "name": "F local report decision",
+      "passed": true,
+      "rerun": true,
+      "start": "f-inicio",
+      "end": "f-decidir",
+      "path": [
+        "f-inicio",
+        "f-fuentes",
+        "f-frescura",
+        "f-informe",
+        "f-result",
+        "f-decidir"
+      ],
+      "blocked": [
+        "f-runbook",
+        "f-publicar"
+      ]
+    },
+    {
+      "name": "F alternate Runbook decision",
+      "passed": true,
+      "rerun": true,
+      "start": "f-inicio",
+      "end": "f-decidir",
+      "path": [
+        "f-inicio",
+        "f-fuentes",
+        "f-frescura",
+        "f-runbook",
+        "f-result",
+        "f-decidir"
+      ],
+      "blocked": [
+        "f-informe",
+        "f-publicar"
+      ]
+    },
+    {
+      "name": "Q normal no-effect result",
+      "passed": true,
+      "rerun": true,
+      "start": "q-ejecutar",
+      "end": "q-result",
+      "path": [
+        "q-ejecutar",
+        "q-checkpoint",
+        "q-result"
+      ],
+      "blocked": [
+        "q-wait",
+        "q-otros",
+        "q-resume",
+        "q-crash",
+        "q-cancel",
+        "q-live",
+        "q-effect"
+      ]
+    },
+    {
+      "name": "Q normal controlled effect",
+      "passed": true,
+      "rerun": true,
+      "start": "q-ejecutar",
+      "end": "q-effect",
+      "path": [
+        "q-ejecutar",
+        "q-checkpoint",
+        "q-live",
+        "q-intent",
+        "q-effect"
+      ],
+      "blocked": [
+        "q-wait",
+        "q-otros",
+        "q-resume",
+        "q-crash",
+        "q-cancel"
+      ]
+    },
+    {
+      "name": "Q wait resumes independently",
+      "passed": true,
+      "rerun": true,
+      "start": "q-wait",
+      "end": "q-ejecutar",
+      "path": [
+        "q-wait",
+        "q-resume",
+        "q-claim",
+        "q-workers",
+        "q-aislar",
+        "q-ejecutar"
+      ],
+      "blocked": [
+        "q-otros",
+        "q-crash",
+        "q-cancel"
+      ]
+    },
+    {
+      "name": "Q cancelled cannot cause effect",
+      "passed": true,
+      "rerun": true,
+      "start": "q-cancel",
+      "end": "q-effect",
+      "path": null,
+      "blocked": []
+    },
+    {
+      "name": "Q confirmed never becomes UNKNOWN",
+      "passed": true,
+      "rerun": true,
+      "start": "q-confirm",
+      "end": "q-unknown",
+      "path": null,
+      "blocked": []
+    },
+    {
+      "name": "Q UNKNOWN requires q-reconcile",
+      "passed": true,
+      "rerun": true,
+      "start": "q-unknown",
+      "end": "q-effect",
+      "path": null,
+      "blocked": [
+        "q-reconcile"
+      ]
+    },
+    {
+      "name": "Q UNKNOWN requires q-live",
+      "passed": true,
+      "rerun": true,
+      "start": "q-unknown",
+      "end": "q-effect",
+      "path": null,
+      "blocked": [
+        "q-live"
+      ]
+    },
+    {
+      "name": "Q UNKNOWN requires q-intent",
+      "passed": true,
+      "rerun": true,
+      "start": "q-unknown",
+      "end": "q-effect",
+      "path": null,
+      "blocked": [
+        "q-intent"
+      ]
+    },
+    {
+      "name": "Memory exact bypasses candidate search",
+      "passed": true,
+      "rerun": true,
+      "start": "m-exacto",
+      "end": "m-rehidratar",
+      "path": [
+        "m-exacto",
+        "m-rehidratar"
+      ],
+      "blocked": [
+        "m-candidatos"
+      ]
+    },
+    {
+      "name": "Q uncertain human wait has no automatic replay",
+      "passed": true,
+      "rerun": true
+    },
+    {
+      "name": "Canonical history to m-leccion without vectors",
+      "passed": true,
+      "start": "m-historia",
+      "end": "m-leccion",
+      "path": [
+        "m-historia",
+        "m-leccion"
+      ],
+      "blocked": [
+        "m-vector",
+        "m-embedding",
+        "m-candidatos"
+      ]
+    },
+    {
+      "name": "Canonical history to m-registro without vectors",
+      "passed": true,
+      "start": "m-historia",
+      "end": "m-registro",
+      "path": [
+        "m-historia",
+        "m-leccion",
+        "m-revisar",
+        "m-registro"
+      ],
+      "blocked": [
+        "m-vector",
+        "m-embedding",
+        "m-candidatos"
+      ]
+    },
+    {
+      "name": "Canonical history to m-retener without vectors",
+      "passed": true,
+      "start": "m-historia",
+      "end": "m-retener",
+      "path": [
+        "m-historia",
+        "m-retener"
+      ],
+      "blocked": [
+        "m-vector",
+        "m-embedding",
+        "m-candidatos"
+      ]
+    },
+    {
+      "name": "Visible G/P predicate, uncertainty wait, unchanged live/intent/effect gates",
+      "passed": true,
+      "scope": "textual contract in proposed topology; no remote capability verified"
+    }
+  ],
+  "assertionCount": 30,
+  "changedSemanticEdgeIds": [
+    "a-03",
+    "a-04",
+    "a-05",
+    "a-06",
+    "a-07",
+    "a-08",
+    "b-11",
+    "b-16",
+    "b-19",
+    "b-20",
+    "c-03",
+    "d-03",
+    "d-11",
+    "e-01",
+    "e-02",
+    "e-03",
+    "e-04",
+    "e-05",
+    "f-04",
+    "f-05",
+    "f-06",
+    "q-09",
+    "q-10",
+    "q-11",
+    "q-12",
+    "q-13",
+    "q-17",
+    "q-18",
+    "q-19",
+    "q-safe-retry"
+  ],
+  "addedEdgeIds": [
+    "a-gitlab-admit",
+    "a-mode-pull",
+    "a-mode-push",
+    "a-push-auth",
+    "b-ci-merge",
+    "b-human-close",
+    "b-local",
+    "b-merge-result",
+    "b-mr-result",
+    "b-result-local",
+    "c-ambiguous",
+    "c-reuse",
+    "d-draft-only",
+    "d-follow-result",
+    "d-needed-unavailable",
+    "d-sufficient",
+    "e-comment-approved",
+    "e-extra-authorized",
+    "e-publish-choice",
+    "f-local-decision",
+    "f-publish-choice",
+    "f-report-result",
+    "m-exact-hit",
+    "m-history-lesson",
+    "m-history-retention",
+    "q-cancel-choice",
+    "q-effect-choice",
+    "q-noeffect",
+    "q-reclaim",
+    "q-reconciled",
+    "q-record-result",
+    "q-resume-blocked",
+    "q-safe-retry",
+    "q-unknown-read"
+  ],
+  "removedEdgeIds": [],
+  "newNodeIds": [
+    "a-admit",
+    "b-result",
+    "d-result",
+    "d-stop",
+    "e-result",
+    "f-result",
+    "q-cancel-record",
+    "q-reconcile",
+    "q-result"
+  ],
+  "strictChecks": 9,
+  "composition": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "signals": {
+    "resolvedCrossovers": 82,
+    "routesOverSuggestedBends": 3
+  },
+  "browserStatus": "pass",
+  "browserState": {
+    "detail": "read",
+    "motion": "still"
+  },
+  "browserViewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "overflowX": false,
+      "verticalScrollAccepted": true,
+      "minimumProjectedEdgeTextPx": 6.670967741935484
+    },
+    {
+      "width": 1600,
+      "height": 1000,
+      "overflowX": false,
+      "verticalScrollAccepted": true,
+      "minimumProjectedEdgeTextPx": 6.670967741935484
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "overflowX": false,
+      "verticalScrollAccepted": true,
+      "minimumProjectedEdgeTextPx": 6.670967741935484
+    },
+    {
+      "width": 2048,
+      "height": 1320,
+      "overflowX": false,
+      "verticalScrollAccepted": true,
+      "minimumProjectedEdgeTextPx": 6.670967741935484
+    }
+  ],
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-10-24T22:44:47.674Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "independentCoveragePerformed": false,
+  "imagesInspectedByAuthor": false,
+  "previous26AssertionsRerun": true,
+  "hypotheticalRetryPredicateCases": [
+    {
+      "name": "empty query + in-flight",
+      "assumedFutureInputs": {},
+      "expectedRetry": false,
+      "passed": true
+    },
+    {
+      "name": "guaranteed same-key same-payload",
+      "assumedFutureInputs": {
+        "g": true,
+        "key": true,
+        "payload": true
+      },
+      "expectedRetry": true,
+      "passed": true
+    },
+    {
+      "name": "authoritative nonacceptance, cannot complete",
+      "assumedFutureInputs": {
+        "p": true,
+        "not_accepted": true,
+        "no_late": true
+      },
+      "expectedRetry": true,
+      "passed": true
+    },
+    {
+      "name": "absence but may complete later",
+      "assumedFutureInputs": {
+        "p": true,
+        "not_accepted": true,
+        "no_late": false
+      },
+      "expectedRetry": false,
+      "passed": true
+    },
+    {
+      "name": "changed payload",
+      "assumedFutureInputs": {
+        "g": true,
+        "key": true,
+        "payload": false
+      },
+      "expectedRetry": false,
+      "passed": true
+    },
+    {
+      "name": "revoked approval",
+      "assumedFutureInputs": {
+        "g": true,
+        "key": true,
+        "payload": true,
+        "approval": false
+      },
+      "expectedRetry": false,
+      "passed": true
+    },
+    {
+      "name": "cancelled job",
+      "assumedFutureInputs": {
+        "g": true,
+        "key": true,
+        "payload": true,
+        "active": false
+      },
+      "expectedRetry": false,
+      "passed": true
+    },
+    {
+      "name": "stale fencing",
+      "assumedFutureInputs": {
+        "g": true,
+        "key": true,
+        "payload": true,
+        "fencing": false
+      },
+      "expectedRetry": false,
+      "passed": true
+    },
+    {
+      "name": "missing durable intent",
+      "assumedFutureInputs": {
+        "g": true,
+        "key": true,
+        "payload": true,
+        "intent": false
+      },
+      "expectedRetry": false,
+      "passed": true
+    }
+  ],
+  "hypotheticalRetryPredicateCaseCount": 9,
+  "providerGuaranteesVerified": false,
+  "runtimeEnforcementVerified": false,
+  "targetedFinalFixes": {
+    "modifiedNodeIds": [
+      "q-reconcile"
+    ],
+    "modifiedEdgeIds": [
+      "q-safe-retry",
+      "q-18"
+    ],
+    "addedEdgeIds": [
+      "m-history-lesson",
+      "m-history-retention"
+    ],
+    "modifiedCards": [
+      "Enforcement, capacidad y efectos inciertos",
+      "Ejemplos A–G: entrada → acción permitida → evidencia FUTURA"
+    ],
+    "allPrevious188EndpointsUnchanged": true
+  },
+  "latestReceipt": "semantic-final-3/frontend-reset-and-system-map-diagram.finalize.json"
+}

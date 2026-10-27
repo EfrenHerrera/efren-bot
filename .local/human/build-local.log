@@ -1,0 +1,112 @@
+ Image efren-bot-backend:local Building 
+ Image efren-bot-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.43kB done
+#1 DONE 0.0s
+
+#2 [web internal] load build definition from Dockerfile
+#2 transferring dockerfile: 203B done
+#2 DONE 0.0s
+
+#3 [api internal] load build definition from Dockerfile
+#3 transferring dockerfile: 716B done
+#3 DONE 0.0s
+
+#4 [api internal] load metadata for docker.io/library/python:3.14.6-slim-bookworm
+#4 ...
+
+#5 [web internal] load metadata for docker.io/library/node:26-bookworm-slim
+#5 DONE 1.4s
+
+#4 [api internal] load metadata for docker.io/library/python:3.14.6-slim-bookworm
+#4 DONE 1.4s
+
+#6 [web internal] load .dockerignore
+#6 transferring context: 73B done
+#6 DONE 0.0s
+
+#7 [web 1/5] FROM docker.io/library/node:26-bookworm-slim@sha256:28147155d47dc31abe0a46e0d12b59b2fb3d0a2dcc5dc65fce76a074180b16fe
+#7 DONE 0.0s
+
+#8 [web internal] load build context
+#8 transferring context: 39.37kB done
+#8 DONE 0.0s
+
+#9 [web 3/5] COPY package.json package-lock.json ./
+#9 CACHED
+
+#10 [web 2/5] WORKDIR /app
+#10 CACHED
+
+#11 [web 4/5] RUN npm ci
+#11 CACHED
+
+#12 [web 5/5] COPY . .
+#12 DONE 0.0s
+
+#13 [web] exporting to image
+#13 exporting layers 0.0s done
+#13 writing image sha256:fa58d42189466786da9779913d4f3dccd86bc2b318992d0b2039f61258b334a9 done
+#13 naming to docker.io/library/efren-bot-web done
+#13 DONE 0.0s
+
+#14 [web] resolving provenance for metadata file
+#14 DONE 0.0s
+
+#15 [api internal] load metadata for ghcr.io/astral-sh/uv:0.11.28
+#15 DONE 1.6s
+
+#16 [api internal] load .dockerignore
+#16 transferring context: 245B done
+#16 DONE 0.0s
+
+#17 [api] FROM ghcr.io/astral-sh/uv:0.11.28@sha256:0f36cb9361a3346885ca3677e3767016687b5a170c1a6b88465ec14aefec90aa
+#17 DONE 0.0s
+
+#18 [api stage-0 1/9] FROM docker.io/library/python:3.14.6-slim-bookworm@sha256:4c92ffcde4dd6f1ff72a24518f49fd4990b27134987dfa31a733badde66df9f8
+#18 DONE 0.0s
+
+#19 [api internal] load build context
+#19 transferring context: 116.66kB done
+#19 DONE 0.0s
+
+#20 [api stage-0 2/9] COPY --from=ghcr.io/astral-sh/uv:0.11.28 /uv /usr/local/bin/uv
+#20 CACHED
+
+#21 [api stage-0 3/9] WORKDIR /app
+#21 CACHED
+
+#22 [api stage-0 4/9] COPY pyproject.toml uv.lock README.md ./
+#22 CACHED
+
+#23 [api stage-0 5/9] RUN uv sync --frozen --no-dev --no-install-project
+#23 CACHED
+
+#24 [api stage-0 6/9] COPY src/ ./src/
+#24 DONE 0.0s
+
+#25 [api stage-0 7/9] COPY migrations/ ./migrations/
+#25 DONE 0.0s
+
+#26 [api stage-0 8/9] COPY alembic.ini ./
+#26 DONE 0.0s
+
+#27 [api stage-0 9/9] RUN uv sync --frozen --no-dev --no-editable     && useradd --system --uid 10001 --create-home efrenbot
+#27 0.438    Building efren-bot @ file:///app
+#27 0.469       Built efren-bot @ file:///app
+#27 0.508 Prepared 1 package in 76ms
+#27 0.524 Installed 1 package in 16ms
+#27 0.525  + efren-bot==0.1.0 (from file:///app)
+#27 0.543 useradd warning: efrenbot's uid 10001 is greater than SYS_UID_MAX 999
+#27 DONE 0.6s
+
+#28 [api] exporting to image
+#28 exporting layers 0.0s done
+#28 writing image sha256:a1c92dd5ba42c7355a74cc3907f67b683ce0a0eb3f46264e695528f2de7a7eed done
+#28 naming to docker.io/library/efren-bot-backend:local done
+#28 DONE 0.0s
+
+#29 [api] resolving provenance for metadata file
+#29 DONE 0.0s
+ Image efren-bot-backend:local Built 
+ Image efren-bot-web Built 
