@@ -22,6 +22,21 @@ class Settings(BaseSettings):
     claude_bridge_token_file: str = "/run/efren-bot-bridge/token"
     claude_bridge_profile_file: str = "/run/efren-bot-bridge/profile.json"
     claude_bridge_api_url: Literal["http://127.0.0.1:8000"] = "http://127.0.0.1:8000"
+    # Factory control plane. Defaults are fully mocked: no executor binary, no real effects.
+    factory_projects_file: str = ""
+    factory_profiles_dir: str = ""
+    factory_scraft_ops_bin: str = "scraft-ops"
+    factory_state_dir: str = ""
+    factory_agent_executor: Literal["", "fake", "claude", "opencode"] = ""
+    factory_gateway: Literal["recording", "real"] = "recording"
+    factory_effect_ttl_hours: int = Field(default=24, ge=1, le=720)
+    # Notion (official API). Both empty means Notion is not wired: no adapter, no gateway.
+    factory_notion_token: str = ""
+    factory_notion_database_id: str = ""
+    factory_notion_status_property: str = "Status"
+    # WhatsApp Cloud API webhook. Empty means the webhook answers 503 (fail closed).
+    factory_whatsapp_app_secret: str = ""
+    factory_whatsapp_verify_token: str = ""
 
     @field_validator("app_timezone")
     @classmethod

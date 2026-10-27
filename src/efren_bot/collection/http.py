@@ -102,6 +102,11 @@ class CollectionBoundary:
                         "/api/collection/human/list",
                         "/api/collection/human/detail",
                         "/api/collection/human/act",
+                        "/api/collection/factory/list",
+                        "/api/collection/factory/detail",
+                        "/api/collection/factory/admission",
+                        "/api/collection/factory/control",
+                        "/api/collection/factory/effect",
                     }
                     if len(body) > (16384 if structured else 128):
                         raise CollectionError("body_too_large", 413)
@@ -120,7 +125,7 @@ class CollectionBoundary:
             await reply({"error": error.code}, error.status)(scope, receive, send)
 
 
-def install_collection(app, sessions):
+def install_collection(app, sessions, factory=None):
     service = CollectionService(sessions)
     token = secrets.token_urlsafe(32)
     app.add_middleware(CollectionBoundary, token=token)
@@ -260,6 +265,31 @@ def install_collection(app, sessions):
             return reply({"error": error.code}, error.status)
         except SQLAlchemyError:
             return reply({"error": "database_unavailable"}, 503)
+
+    if factory is not None:
+        from efren_bot.factory.service import FactoryError
+
+        @router.post("/factory/{operation}")
+        def factory_route(operation: str, request: Request):
+            try:
+                data = request.scope["collection_input"]
+                if operation == "list":
+                    if data != {}:
+                        raise CollectionError("invalid_request", 422)
+                    return reply(factory.list())
+                route = factory.ROUTES.get(operation)
+                if route is None:
+                    raise CollectionError("invalid_action", 404)
+                method, schema = route
+                return reply(getattr(factory, method)(schema.model_validate(data)))
+            except ValidationError:
+                return reply({"error": "invalid_request"}, 422)
+            except FactoryError as error:
+                return reply({"error": error.code}, error.status)
+            except CollectionError as error:
+                return reply({"error": error.code}, error.status)
+            except SQLAlchemyError:
+                return reply({"error": "database_unavailable"}, 503)
 
     @router.post("/{action}")
     def command(action: str, request: Request):

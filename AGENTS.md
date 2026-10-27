@@ -93,3 +93,28 @@ desplegar solo los servicios locales propios afectados para mostrar la sección.
 - Sin escucha, búsqueda global, publicación, delegados ni efectos automáticos sobre
   tareas. Backend no visita permalinks. Host/Origin/JSON/auth se validan antes de
   admitir datos reales. Todas las demás reglas y la decisión de Git intacto se conservan.
+
+## Incremento autorizado: fábrica
+
+Autorización del usuario: «necesito primero que lo armes todo y lo pruebes con data mock o con
+entornos de testing, para que cuando yo suba los cambios me muevo a otro entorno donde está todo
+linkeado» y «trabaja sobre main y sube ahí los commits, no crees otra rama». Implementa
+`docs/factory.md`: embudo de fuentes, criterios de admisión, perfiles de proyecto, despacho a
+`scraft-ops factory run` y compuerta humana de efectos. Tablas `factory_*` y migración
+`0011_factory` aditivas; no cambia fixture/work/soporte/revisión/recolección.
+
+- Todo conector real (Notion, GitLab, WhatsApp, Slack vivo) está **apagado por defecto** y solo se
+  enciende con entorno explícito en la máquina conectada; el ensayo usa datos simulados, agente
+  falso y pasarela que solo anota (`FACTORY_GATEWAY=recording`).
+- La API/web **solo registra decisiones**. Git, `glab`, CLIs de agente y credenciales viven en el
+  host; nunca en Docker ni en el proceso web. `compose.factory.yaml` solo monta el registro de
+  proyectos no secreto, de solo lectura.
+- Efectos: `open_pr`, `update_notion`, `post_slack`. `merge` y `deploy` no existen. Cada efecto lo
+  aprueba una persona sobre el contenido exacto (huella), con vigencia, salvo que el perfil lo marque
+  `auto` y el run sea de riesgo bajo y sin pendientes. Resultado incierto: nunca se reintenta a ciegas.
+- Un job trabaja en un worktree propio de la unidad de ejecución, jamás en el checkout del usuario.
+  Sin permiso de worktree en el `JobSpec`, la unidad se niega a correr.
+- Admisión determinista y versionada, sin modelo; Slack solo cuenta si una persona marcó
+  «requiere atención». No inferir encargos ni proyectos por adivinanza: la ambigüedad pregunta.
+- Webhooks externos solo con firma y fallando cerrado sin secreto. Ninguna ruta sin autenticar muta
+  la fábrica. Git y despliegues siguen sin autorización salvo lo indicado arriba para este incremento.

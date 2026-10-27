@@ -79,7 +79,7 @@ def decide(sessions, data, value=None):
 def test_schema_and_head(pg_engine):
     with pg_engine.connect() as connection:
         assert connection.scalar(text("SELECT version_num FROM alembic_version")) == (
-            "0010_human_control"
+            "0011_factory"
         )
         assert compare_metadata(MigrationContext.configure(connection), Base.metadata) == []
 

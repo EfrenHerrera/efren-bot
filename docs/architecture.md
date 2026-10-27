@@ -1,5 +1,15 @@
 # Arquitectura y alcance
 
+## Incremento fábrica
+
+Fuentes (adaptadores) → `factory_items` (huella única por versión) → criterios de admisión
+(`factory_admissions`, append-only, decide política o persona) → `factory_jobs` → unidad de ejecución
+`scraft-ops factory run` (JobSpec → RunRecord) → `factory_effects` con huella y vigencia. La API solo
+persiste y registra decisiones por la frontera local endurecida; el worker de host reclama con
+`SKIP LOCKED`, ejecuta fuera de transacción y acepta el resultado solo si el intento sigue vigente
+(fencing). Los efectos aprobados los ejecuta el worker de host con marcador durable `executing`.
+Contrato, límites y evidencia en [factory.md](factory.md).
+
 ## Incremento revisiones de MR
 
 Mensajes nuevos de collection → `mr_review_requests` → N `mr_review_items` independientes

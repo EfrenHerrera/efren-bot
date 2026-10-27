@@ -1,0 +1,35 @@
+{
+  "schema": "scraft.factory.profile/1",
+  "name": "orchestrator-multirepo",
+  "kind": "orchestrator",
+  "topology": "multi-repo",
+  "description": "A folder of related repositories that talk through messaging and workflows. One job works in one repository; the control plane splits an initiative into ordered per-repo jobs. Contract changes always need a human.",
+  "match": {
+    "keywords": ["orquestador", "orchestrator", "temporal", "workflow", "kafka", "topic", "evento", "event", "contrato", "contract", "saga", "microservicio", "microservice"],
+    "repos": []
+  },
+  "checks": [
+    {"name": "go-vet", "command": ["go", "vet", "./..."], "mandatory": true, "timeout_seconds": 300, "requires_files": ["go.mod"]},
+    {"name": "go-test", "command": ["go", "test", "./..."], "mandatory": true, "timeout_seconds": 900, "requires_files": ["go.mod"]},
+    {"name": "lint", "command": ["npm", "run", "lint", "--if-present"], "mandatory": true, "timeout_seconds": 300, "requires_files": ["package.json"]},
+    {"name": "test", "command": ["npm", "run", "test", "--if-present"], "mandatory": true, "timeout_seconds": 900, "requires_files": ["package.json"]}
+  ],
+  "force_human_globs": [
+    "**/*.avsc", "**/*.proto", "**/asyncapi*", "**/schemas/**", "**/contracts/**", "**/topics/**",
+    "**/migrations/**", "**/workflows/**", "**/*.tf", "go.mod", "package.json"
+  ],
+  "effects": {
+    "open_pr": "human",
+    "publish_comment": "human",
+    "update_notion": "human",
+    "post_slack": "human",
+    "merge": "forbidden",
+    "deploy": "forbidden"
+  },
+  "executor": "claude",
+  "concurrency": 2,
+  "rules": [
+    "A change to a message schema or workflow definition is a contract change: producer and consumers are separate jobs, producer first and backward compatible.",
+    "Do not assume another repository's behavior: read its contract or stop and ask."
+  ]
+}

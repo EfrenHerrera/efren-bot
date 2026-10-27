@@ -83,3 +83,15 @@ support-runner:
 .PHONY: review-runner
 review-runner:
 	$(UV) run --frozen python -m efren_bot.review.runner
+
+.PHONY: factory-worker factory-rehearsal
+# Host process: pulls sources, runs queued jobs through scraft-ops, performs approved effects.
+# Mocked unless FACTORY_* is configured (see docs/factory.md). Never run it in Docker.
+FACTORY_PULL ?= slack
+factory-worker:
+	$(UV) run --frozen python -m efren_bot.factory.worker --pull $(FACTORY_PULL)
+
+# Rehearsal with the real scraft-ops binary and a FAKE agent: no model, network or credentials.
+# Usage: make factory-rehearsal SCRAFT_OPS_BIN=/path/to/scraft-ops
+factory-rehearsal:
+	SCRAFT_OPS_BIN="$(SCRAFT_OPS_BIN)" DATABASE_URL="$(TEST_DATABASE_URL)" $(UV) run --frozen pytest tests/test_factory_unit.py tests/test_factory_service.py tests/test_factory_http.py tests/test_factory_cross.py

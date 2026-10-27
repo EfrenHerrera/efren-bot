@@ -62,9 +62,21 @@ def create_app(settings: Settings | None = None, *, engine: Engine | None = None
 
     install_work(app, sessions, reads)
 
+    from efren_bot.factory.http import FactoryOperations, install_factory_webhooks
+    from efren_bot.factory.wiring import build_service
+
+    plant = build_service(settings, sessions)
+    install_factory_webhooks(
+        app,
+        plant,
+        whatsapp_app_secret=settings.factory_whatsapp_app_secret,
+        whatsapp_verify_token=settings.factory_whatsapp_verify_token,
+    )
+    factory_operations = FactoryOperations(plant, reads)
+
     from efren_bot.collection.http import install_collection
 
-    install_collection(app, sessions)
+    install_collection(app, sessions, factory=factory_operations)
 
     @app.exception_handler(SQLAlchemyError)
     async def unavailable(request, exc):

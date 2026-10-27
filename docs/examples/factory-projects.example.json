@@ -1,0 +1,31 @@
+{
+  "projects": [
+    {
+      "name": "landing",
+      "profile": "frontend",
+      "repo_path": "/ABSOLUTE/PATH/TO/landing",
+      "base_ref": "main",
+      "keywords": ["landing", "pricing page", "botón"],
+      "notion_projects": ["Landing Web"],
+      "slack_channels": ["web-team"],
+      "executor": "claude"
+    },
+    {
+      "name": "etl-lambdas",
+      "profile": "lambdas",
+      "repo_path": "/ABSOLUTE/PATH/TO/etl-lambdas",
+      "base_ref": "main",
+      "keywords": ["lambda", "etl"],
+      "notion_projects": ["ETL"],
+      "executor": "opencode"
+    },
+    {
+      "name": "payments-orchestrator",
+      "profile": "orchestrator-multirepo",
+      "repo_path": "/ABSOLUTE/PATH/TO/payments-orchestrator",
+      "base_ref": "main",
+      "keywords": ["orquestador", "temporal", "kafka"],
+      "notion_projects": ["Payments"]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+.factory-workspace h3 { margin:28px 0 12px; }
+.factory-card { background:var(--surface); border:1px solid var(--line); border-radius:7px; padding:16px; margin:12px 0; }
+.factory-card header { display:flex; justify-content:space-between; gap:10px; margin-bottom:8px; }
+.factory-reasons { font-size:.75rem; color:var(--muted); padding-left:18px; }
+.factory-payload { background:var(--accent-soft); padding:12px; border-radius:6px; overflow:auto; font-size:.72rem; max-height:260px; }
+.factory-jobs { list-style:none; padding:0; }
+.factory-job { border-top:1px solid var(--line); padding:14px 0; }
+.factory-job .pill { margin-left:8px; }
+.factory-job input { flex:1 1 220px; min-width:180px; padding:8px 10px; border:1px solid var(--line); border-radius:6px; background:var(--surface); color:var(--ink); }

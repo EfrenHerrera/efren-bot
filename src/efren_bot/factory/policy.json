@@ -1,0 +1,27 @@
+{
+  "version": "admission/1",
+  "min_text_chars": 12,
+  "work_markers": [
+    "haz", "hazme", "implementa", "agrega", "añade", "anade", "cambia", "arregla", "corrige",
+    "crea", "necesito", "puedes", "podrías", "podrias", "por favor", "revisa", "investiga",
+    "fix", "add", "implement", "change", "update", "create", "please", "can you", "need",
+    "review", "investigate"
+  ],
+  "information_markers": ["gracias", "thanks", "ok", "listo", "fyi", "de nada", "perfecto", "👍"],
+  "human_admission_markers": [
+    "producción", "produccion", "production", "prod ", "borrar", "delete", "drop table",
+    "migración", "migracion", "migration", "permiso", "permission", "iam", "credencial",
+    "credential", "secret", "pago", "payment", "cliente", "customer data"
+  ],
+  "role_markers": {
+    "review": ["revisa mr", "review mr", "revisar mr", "code review", "revisa el pr", "review this pr"],
+    "research": ["investiga", "investigar", "investigate", "por qué", "por que", "why does", "explica", "explain"],
+    "support": ["soporte", "support", "error en", "falla", "incidente", "incident", "reporte"]
+  },
+  "source_rules": {
+    "notion": {"always_work": true, "require_ready": true},
+    "slack": {"require_human_flag": true},
+    "whatsapp": {"require_work_marker": true},
+    "fixture": {}
+  }
+}

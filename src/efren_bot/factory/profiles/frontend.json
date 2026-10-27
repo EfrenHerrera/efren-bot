@@ -1,0 +1,33 @@
+{
+  "schema": "scraft.factory.profile/1",
+  "name": "frontend",
+  "kind": "frontend",
+  "topology": "single-repo",
+  "description": "Pure frontend project: no backend, no database. Visual and type checks decide; small copy and style changes may go straight to a pull request.",
+  "match": {
+    "keywords": ["landing", "frontend", "front-end", "ui", "ux", "css", "button", "copy", "texto", "página", "pagina", "react", "next", "vite", "angular", "astro"],
+    "repos": []
+  },
+  "checks": [
+    {"name": "install-check", "command": ["npm", "ls", "--depth=0"], "mandatory": false, "timeout_seconds": 120, "requires_files": ["package.json"]},
+    {"name": "typecheck", "command": ["npm", "run", "typecheck", "--if-present"], "mandatory": true, "timeout_seconds": 300, "requires_files": ["package.json"]},
+    {"name": "lint", "command": ["npm", "run", "lint", "--if-present"], "mandatory": true, "timeout_seconds": 300, "requires_files": ["package.json"]},
+    {"name": "test", "command": ["npm", "run", "test", "--if-present"], "mandatory": true, "timeout_seconds": 600, "requires_files": ["package.json"]},
+    {"name": "build", "command": ["npm", "run", "build", "--if-present"], "mandatory": true, "timeout_seconds": 600, "requires_files": ["package.json"]}
+  ],
+  "force_human_globs": ["package.json", "package-lock.json", "**/auth/**", "**/payment*/**", ".env*"],
+  "effects": {
+    "open_pr": "auto",
+    "publish_comment": "human",
+    "update_notion": "human",
+    "post_slack": "human",
+    "merge": "forbidden",
+    "deploy": "forbidden"
+  },
+  "executor": "claude",
+  "concurrency": 3,
+  "rules": [
+    "Verify visually when the change is visible; a passing build alone does not prove the page looks right.",
+    "Do not touch backend, infrastructure or dependency manifests."
+  ]
+}

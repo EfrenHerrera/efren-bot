@@ -1,0 +1,16 @@
+# Opt-in. The API receives only the non-secret projects registry (read-only) and the webhook's
+# own verification values from the host environment. The worker, git, glab and agent CLIs run on
+# the HOST, never in Docker: no repository access or corporate credentials enter a container.
+services:
+  api:
+    environment:
+      FACTORY_PROJECTS_FILE: /etc/efren-bot/projects.json
+      FACTORY_WHATSAPP_APP_SECRET: ${FACTORY_WHATSAPP_APP_SECRET:-}
+      FACTORY_WHATSAPP_VERIFY_TOKEN: ${FACTORY_WHATSAPP_VERIFY_TOKEN:-}
+    volumes:
+      - type: bind
+        source: ./.local/factory/projects.json
+        target: /etc/efren-bot/projects.json
+        read_only: true
+        bind:
+          create_host_path: false

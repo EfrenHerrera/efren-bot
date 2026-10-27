@@ -1,0 +1,35 @@
+{
+  "schema": "scraft.factory.profile/1",
+  "name": "lambdas",
+  "kind": "serverless",
+  "topology": "single-repo",
+  "description": "AWS Lambda / serverless project. Code changes are prepared locally and tested locally; permissions and infrastructure always need a human and nothing deploys automatically.",
+  "match": {
+    "keywords": ["lambda", "serverless", "sam", "api gateway", "eventbridge", "sqs", "sns", "step function", "cloudformation", "terraform", "handler"],
+    "repos": []
+  },
+  "checks": [
+    {"name": "lint", "command": ["npm", "run", "lint", "--if-present"], "mandatory": true, "timeout_seconds": 300, "requires_files": ["package.json"]},
+    {"name": "test", "command": ["npm", "run", "test", "--if-present"], "mandatory": true, "timeout_seconds": 600, "requires_files": ["package.json"]},
+    {"name": "go-vet", "command": ["go", "vet", "./..."], "mandatory": true, "timeout_seconds": 300, "requires_files": ["go.mod"]},
+    {"name": "go-test", "command": ["go", "test", "./..."], "mandatory": true, "timeout_seconds": 600, "requires_files": ["go.mod"]}
+  ],
+  "force_human_globs": [
+    "**/iam/**", "**/*iam*.yml", "**/*iam*.yaml", "**/*.tf", "**/serverless.yml", "**/template.yaml",
+    "**/template.yml", "**/samconfig.toml", "**/policies/**", "package.json", "go.mod"
+  ],
+  "effects": {
+    "open_pr": "human",
+    "publish_comment": "human",
+    "update_notion": "human",
+    "post_slack": "human",
+    "merge": "forbidden",
+    "deploy": "forbidden"
+  },
+  "executor": "claude",
+  "concurrency": 2,
+  "rules": [
+    "Never run a deploy, invoke a remote function or call cloud APIs; local tests and mocks only.",
+    "Any change to permissions, roles, queues or infrastructure definitions needs a human."
+  ]
+}

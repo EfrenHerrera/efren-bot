@@ -7,6 +7,13 @@ Los fixtures, tareas y trabajo sintético se mantienen separados.
 
 ## Estado
 
+Nuevo incremento local: **Fábrica**. Embudo de fuentes (Slack almacenado, Notion, WhatsApp, las que
+se agreguen) con criterios de admisión deterministas, perfiles de proyecto (frontend, lambdas,
+orquestador multi-repo), ejecución en la unidad `scraft-ops factory run` y compuerta humana por
+efecto con huella y vigencia. Esquema `0011_factory`; pestaña **Fábrica** en la web; host
+`make factory-worker`. Ensayado con datos simulados y agente falso; los conectores reales están
+apagados por defecto y lo verificado y lo pendiente están en [docs/factory.md](docs/factory.md).
+
 Actualización local: **Solicitudes y decisiones**, bandeja común para soporte/MR con
 continuar/reorientar/pausar/ignorar/delegar/detener y autorización de acciones concretas.
 Esquema actual `0010_human_control`; [contrato](docs/human-control.md).
