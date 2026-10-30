@@ -5,10 +5,11 @@ import type { Proposal, ReviewAction, ReviewDetail, ReviewList } from '@/review-
 
 const POLL_MS = 4000;
 
-export function useReviews() {
+export function useReviews(targetId?: string) {
   const [data, setData] = useState<ReviewList | null>(null);
   const [detail, setDetail] = useState<ReviewDetail | null>(null);
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selection, setSelected] = useState<string | null>(null);
+  const selected = targetId || selection;
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [version, setVersion] = useState(0);
@@ -22,7 +23,7 @@ export function useReviews() {
       try {
         const next = reviewList.parse(await collectionRequest('reviews/list', 'POST', controller.signal, {}));
         if (controller.signal.aborted) return;
-        setData(next); setSelected(previous => previous && next.items.some(item => item.id === previous) ? previous : next.items[0]?.id || null);
+        setData(next); if (!targetId) setSelected(previous => previous && next.items.some(item => item.id === previous) ? previous : next.items[0]?.id || null);
         if (selected) {
           const detail = reviewDetail.parse(await collectionRequest('reviews/detail', 'POST', controller.signal, { id: selected }));
           if (!controller.signal.aborted) setDetail(detail);
@@ -34,7 +35,7 @@ export function useReviews() {
     setDetail(previous => previous?.item.id === selected ? previous : null);
     void load();
     return () => { controller.abort(); clearTimeout(timer); };
-  }, [selected, version]);
+  }, [selected, targetId, version]);
   async function command(path: string, body: unknown) {
     if (mutation.current) return false;
     const controller = new AbortController(); mutation.current = controller; setBusy(true);

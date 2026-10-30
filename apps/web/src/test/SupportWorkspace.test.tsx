@@ -33,6 +33,17 @@ beforeEach(() => {
 afterEach(() => vi.unstubAllGlobals());
 
 describe('Soporte supervisado sin falsas fuentes', () => {
+  it('abre un caso exacto fuera de la lista reciente y conserva su borrador al volver', async () => {
+    empty = true;
+    const drafts = new Map();
+    const view = render(<SupportWorkspace targetId={id} drafts={drafts} openConversation={() => {}} />);
+    const field = await screen.findByRole('textbox', { name: 'Mensaje para esta investigación' });
+    expect(screen.queryByRole('complementary', { name: 'Casos de soporte' })).not.toBeInTheDocument();
+    fireEvent.change(field, { target: { value: 'Contexto no enviado' } });
+    view.unmount();
+    render(<SupportWorkspace targetId={id} drafts={drafts} openConversation={() => {}} />);
+    expect(await screen.findByRole('textbox', { name: 'Mensaje para esta investigación' })).toHaveValue('Contexto no enviado');
+  });
   it('muestra bloqueo real, hipótesis y alcance; no inventa consultas completadas', async () => {
     render(<SupportWorkspace openConversation={() => {}} />);
     expect(await screen.findByText('Preliminar · solo lo reportado en Slack')).toBeInTheDocument();

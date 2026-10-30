@@ -3,6 +3,10 @@ import { choiceLabels, dispositionLabels, filterLabels, matches, requestKey } fr
 import type { HumanAction, HumanChoice, HumanDetail, HumanDraft, HumanFilter, HumanRequest } from '@/human-client';
 import { CodeBlock, ReviewText } from '@/ReviewText';
 import { useHuman } from '@/use-human';
+import { ReviewWorkspace } from '@/ReviewWorkspace';
+import { SupportWorkspace } from '@/SupportWorkspace';
+import type { ReviewDraft } from '@/use-review-draft';
+import type { SupportDraft } from '@/use-support';
 import '@/review.css';
 import '@/human.css';
 
@@ -11,7 +15,7 @@ const filters: HumanFilter[] = ['decision', 'working', 'conclusion', 'inactive',
 const domains: HumanRequest['domain'][] = ['support', 'review'];
 const dates = new Intl.DateTimeFormat('es-MX', { dateStyle: 'short', timeStyle: 'short' });
 
-function DecisionPanel({ detail, inbox, drafts }: { detail: HumanDetail; inbox: Inbox; drafts: Map<string, HumanDraft> }) {
+function DecisionPanel({ detail, inbox, drafts, openDetail }: { detail: HumanDetail; inbox: Inbox; drafts: Map<string, HumanDraft>; openDetail: () => void }) {
   const item = detail.request;
   const key = requestKey(item);
   const [draft, setDraft] = useState<HumanDraft>(() => drafts.get(key) || { text: '', revision: item.revision, control_revision: item.control_revision, request_id: crypto.randomUUID() });
@@ -30,6 +34,7 @@ function DecisionPanel({ detail, inbox, drafts }: { detail: HumanDetail; inbox: 
   }
   return <section className="review-detail human-detail" aria-label="Solicitud seleccionada">
     <p className="eyebrow">{item.domain === 'support' ? 'Soporte' : 'Revisión de MR'} · Revisión {item.revision}</p><h3>{item.title}</h3>
+    <button className="secondary-button" onClick={openDetail}>{item.domain === 'review' ? 'Abrir análisis y conversación de la MR' : 'Abrir investigación y conversación'}</button>
     <div className="human-state" data-state={item.disposition}><strong>{dispositionLabels[item.disposition]}</strong><span>{item.disposition === 'delegated' ? 'La atiende otra persona; Efren Bot no continúa.' : item.disposition !== 'active' ? 'Sin nuevas operaciones hasta tu intervención.' : 'Solo dentro del alcance autorizado.'}</span></div>
     <section className="human-controls" aria-label="Control del seguimiento">
       <button className="primary-button" disabled={disabled || stale} onClick={() => { void control(item.disposition === 'active' ? 'continue' : 'attend'); }}>{item.disposition === 'active' ? 'Continuar / revalidar' : 'Atender de nuevo'}</button>
@@ -67,17 +72,24 @@ function DecisionPanel({ detail, inbox, drafts }: { detail: HumanDetail; inbox: 
   </section>;
 }
 
-export function HumanWorkspace({ drafts: retained }: { drafts?: Map<string, HumanDraft> }) {
+export function HumanWorkspace({ drafts: retained, reviewDrafts, supportDrafts, openConversation }: { drafts?: Map<string, HumanDraft>; reviewDrafts?: Map<string, ReviewDraft>; supportDrafts?: Map<string, SupportDraft>; openConversation?: () => void }) {
   const own = useRef(new Map<string, HumanDraft>());
+  const ownReviews = useRef(new Map<string, ReviewDraft>());
+  const ownSupport = useRef(new Map<string, SupportDraft>());
+  const [opened, setOpened] = useState<HumanRequest | null>(null);
   const [filter, setFilter] = useState<HumanFilter>('decision');
   const inbox = useHuman(filter);
   const data = inbox.data;
   const items = data?.items.filter(item => matches(item, filter)) || [];
+  if (opened) return <section className="request-workspace" aria-label="Detalle de solicitud">
+    <header className="request-heading"><button className="secondary-button" onClick={() => setOpened(null)}>← Volver a solicitudes</button><p>{opened.domain === 'review' ? 'Solicitud / Revisión de MR' : 'Solicitud / Investigación de soporte'}</p></header>
+    {opened.domain === 'review' ? <ReviewWorkspace key={opened.id} targetId={opened.id} drafts={reviewDrafts || ownReviews.current} /> : <SupportWorkspace key={opened.id} targetId={opened.id} drafts={supportDrafts || ownSupport.current} openConversation={openConversation || (() => setOpened(null))} />}
+  </section>;
   return <section className="review-workspace human-workspace" aria-label="Solicitudes y decisiones">
-    <header className="review-heading"><div><h2>Solicitudes y decisiones</h2><p>Decide qué seguir, qué dejar y qué acciones autorizar.</p></div><button className="secondary-button" onClick={inbox.refresh}>Actualizar solicitudes</button></header>
+    <header className="review-heading"><div><h2>Solicitudes</h2><p>Soporte y MRs en una sola bandeja. Abre cada solicitud para consultar su análisis y conversar.</p></div><button className="secondary-button" onClick={inbox.refresh}>Actualizar solicitudes</button></header>
     <p className="review-help">Lecturas autorizadas y propuestas privadas pueden avanzar sin permiso por cada paso. Delegar no significa resolver.</p>
     <details className="human-runtime"><summary>Ejecutores y capacidades</summary>
-      {data && <><div className="human-presence">{domains.map(domain => <article key={domain}><strong>{domain === 'support' ? 'Soporte' : 'MRs'}</strong><span>{data.controls[domain].available ? 'Ejecutor disponible' : 'Sin ejecutor confirmado'}</span><span>{data.controls[domain].paused ? 'Control pausado' : 'Control habilitado'} · {data.controls[domain].queued} en cola</span><p>No se arranca desde esta sección.</p></article>)}</div>
+      {data && <><div className="human-presence">{domains.map(domain => <article key={domain}><strong>{domain === 'support' ? 'Soporte' : 'MRs'}</strong><span>{data.controls[domain].available ? 'Ejecutor disponible' : 'Sin ejecutor confirmado'}</span><span>{data.controls[domain].paused ? 'Control pausado' : 'Control habilitado'} · {data.controls[domain].queued} en cola</span><p>Control global de novedades; no arranca el proceso host.</p><button className="secondary-button" disabled={inbox.busy || Boolean(inbox.error)} onClick={() => { void inbox.command(domain, !data.controls[domain].activated_at ? 'activate' : data.controls[domain].paused ? 'resume' : 'pause'); }}>{!data.controls[domain].activated_at ? `Activar ${domain === 'support' ? 'soporte' : 'revisiones'} desde ahora` : `${data.controls[domain].paused ? 'Reanudar' : 'Pausar'} ${domain === 'support' ? 'soporte' : 'revisiones'}`}</button></article>)}</div>
         <ul>{data.capabilities.map(capability => <li key={capability.kind}><strong>{capability.label}</strong><p>{capability.reason}</p></li>)}</ul></>}
     </details>
     {inbox.error && <p className="error-banner" role="alert">{inbox.error}<button className="text-button" onClick={inbox.refresh}>Actualizar estado</button></p>}
@@ -85,6 +97,6 @@ export function HumanWorkspace({ drafts: retained }: { drafts?: Map<string, Huma
     <div className="review-layout"><aside aria-label="Solicitudes recientes"><h3>{items.length} solicitudes · hasta {data?.limit_per_domain || 100} por tipo</h3>
       {items.map(item => <button className="review-choice" key={requestKey(item)} aria-pressed={inbox.selected === requestKey(item)} disabled={inbox.busy} onClick={() => inbox.setSelected(requestKey(item))}><span className="eyebrow">{item.domain === 'support' ? 'Soporte' : 'MR'}</span><strong>{item.title}</strong><span>{dispositionLabels[item.disposition]}</span><small>{item.conclusion ? 'Tiene conclusión guardada' : 'Sin conclusión'} · {item.actions.filter(action => !action.denied).length} acciones</small></button>)}
       {!items.length && <p className="review-help">No hay solicitudes en este filtro. Puedes revisar Todas, sin activar procesos.</p>}
-    </aside>{inbox.detail && requestKey(inbox.detail.request) === inbox.selected ? <DecisionPanel key={inbox.selected} detail={inbox.detail} inbox={inbox} drafts={retained || own.current} /> : <section className="review-detail"><p className="review-help">Selecciona una solicitud para ver evidencia y decidir.</p></section>}</div>
+    </aside>{inbox.detail && requestKey(inbox.detail.request) === inbox.selected ? <DecisionPanel key={inbox.selected} detail={inbox.detail} inbox={inbox} drafts={retained || own.current} openDetail={() => { if (inbox.detail) setOpened(inbox.detail.request); }} /> : <section className="review-detail"><p className="review-help">Selecciona una solicitud para ver evidencia y decidir.</p></section>}</div>
   </section>;
 }

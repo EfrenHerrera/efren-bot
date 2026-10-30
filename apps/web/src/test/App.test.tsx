@@ -35,6 +35,11 @@ beforeEach(() => {
 afterEach(() => vi.unstubAllGlobals());
 
 describe('Conversaciones con contexto y seguimiento opcional', () => {
+  it('ofrece solo fuentes, solicitudes y ejecución como navegación principal', () => {
+    render(<App />);
+    const nav = screen.getByRole('navigation', { name: 'Área de trabajo' });
+    expect(within(nav).getAllByRole('button').map(button => button.textContent)).toEqual(['Conversaciones', 'Solicitudes', 'Fábrica']);
+  });
   it('agrupa respuestas y muestra contexto por defecto sin clasificación por comentario', async () => {
     const view = render(<App />);
     const context = screen.getByRole('region', { name: 'Contexto de la conversación' });

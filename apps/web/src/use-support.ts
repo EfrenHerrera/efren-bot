@@ -5,10 +5,19 @@ import type { SupportAction, SupportDetail, SupportList } from '@/support-client
 
 const POLL_MS = 4000;
 
-export function useSupport() {
+export type SupportDraft = { text: string; redirect: boolean; requestId: string };
+
+export function useSupportDraft(id: string, drafts: Map<string, SupportDraft>) {
+  const [draft, setDraft] = useState<SupportDraft>(() => drafts.get(id) || { text: '', redirect: false, requestId: crypto.randomUUID() });
+  useEffect(() => { drafts.set(id, draft); }, [id, drafts, draft]);
+  return { draft, setDraft };
+}
+
+export function useSupport(targetId?: string) {
   const [data, setData] = useState<SupportList | null>(null);
   const [detail, setDetail] = useState<SupportDetail | null>(null);
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selection, setSelected] = useState<string | null>(null);
+  const selected = targetId || selection;
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [version, setVersion] = useState(0);
@@ -23,7 +32,7 @@ export function useSupport() {
         const next = supportList.parse(await collectionRequest('support/list', 'POST', controller.signal, {}));
         if (controller.signal.aborted) return;
         setData(next);
-        setSelected(previous => previous && next.cases.some(item => item.id === previous) ? previous : next.cases[0]?.id || null);
+        if (!targetId) setSelected(previous => previous && next.cases.some(item => item.id === previous) ? previous : next.cases[0]?.id || null);
         if (selected) {
           const context = supportDetail.parse(await collectionRequest('support/detail', 'POST', controller.signal, { id: selected }));
           if (!controller.signal.aborted) setDetail(context);
@@ -35,7 +44,7 @@ export function useSupport() {
     setDetail(previous => previous?.case.id === selected ? previous : null);
     void load();
     return () => { controller.abort(); clearTimeout(timer); };
-  }, [selected, version]);
+  }, [selected, targetId, version]);
   async function command(path: string, body: unknown) {
     if (mutation.current) return false;
     const controller = new AbortController(); mutation.current = controller; setBusy(true);

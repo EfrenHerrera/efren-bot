@@ -1,4 +1,9 @@
 .human-workspace .review-heading { margin-bottom:12px; }
+.request-heading { display:flex; flex-wrap:wrap; gap:16px; align-items:center; margin:24px 0; }
+.request-heading p { color:var(--muted); font-size:.8rem; }
+.request-settings { margin:24px 0; font-size:.8rem; }
+.request-settings>summary { cursor:pointer; color:var(--muted); margin-bottom:12px; }
+.request-detail-layout { display:block; }
 .human-runtime { margin:16px 0; font-size:.75rem; color:var(--muted); }
 .human-runtime summary { cursor:pointer; }
 .human-presence { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:15px 0; }

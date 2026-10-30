@@ -3,6 +3,9 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { HumanWorkspace } from '@/HumanWorkspace';
 import type { HumanDraft } from '@/human-client';
 
+vi.mock('@/ReviewWorkspace', () => ({ ReviewWorkspace: ({ targetId }: { targetId: string }) => <p>Detalle MR {targetId}</p> }));
+vi.mock('@/SupportWorkspace', () => ({ SupportWorkspace: ({ targetId }: { targetId: string }) => <p>Detalle soporte {targetId}</p> }));
+
 const id = '123e4567-e89b-42d3-a456-426614174000';
 const second = '123e4567-e89b-42d3-a456-426614174001';
 const at = '2026-10-26T06:00:00Z';
@@ -11,15 +14,16 @@ let revision = 1;
 let blocked = false;
 let fail = false;
 let decisions: unknown[] = [];
+let support = false;
 
 function item() {
-  return { domain: 'review', id, title: 'Synthetic MR', status: 'ready', revision, control_revision: 0,
+  return { domain: support ? 'support' : 'review', id, title: 'Synthetic MR', status: 'ready', revision, control_revision: 0,
     disposition: 'active', category: 'decision', conclusion: 'Saved **conclusion**', report_revision: 1,
     pending: ['Runtime not executed'], actions: [{ ...proposal, enabled: !blocked }], updated_at: at, error_code: null };
 }
 
 beforeEach(() => {
-  revision = 1; blocked = false; fail = false; decisions = [];
+  revision = 1; blocked = false; fail = false; decisions = []; support = false;
   vi.stubGlobal('confirm', vi.fn(() => false));
   vi.stubGlobal('fetch', vi.fn<typeof fetch>(async (input, init) => {
     const path = String(input);
@@ -40,6 +44,22 @@ beforeEach(() => {
 afterEach(() => vi.unstubAllGlobals());
 
 describe('Control humano común sin arrancar procesos', () => {
+  it.each([false, true])('abre el detalle exacto y vuelve sin perder filtro ni indicación (soporte=%s)', async (isSupport) => {
+    support = isSupport;
+    render(<HumanWorkspace />);
+    await screen.findByRole('heading', { name: 'Synthetic MR' });
+    fireEvent.click(screen.getByRole('button', { name: 'Todas' }));
+    fireEvent.click(screen.getByText('Dar contexto o cambiar el enfoque'));
+    fireEvent.change(screen.getByRole('textbox', { name: 'Tu indicación' }), { target: { value: 'Conservar contexto' } });
+    fireEvent.click(screen.getByRole('button', { name: isSupport ? 'Abrir investigación y conversación' : 'Abrir análisis y conversación de la MR' }));
+    expect(await screen.findByText(`Detalle ${isSupport ? 'soporte' : 'MR'} ${id}`)).toBeInTheDocument();
+    expect(screen.queryByRole('complementary', { name: 'Solicitudes recientes' })).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: /Volver a solicitudes/ }));
+    expect(screen.getByRole('button', { name: 'Todas' })).toHaveAttribute('aria-pressed', 'true');
+    fireEvent.click(screen.getByText('Dar contexto o cambiar el enfoque'));
+    expect(screen.getByRole('textbox', { name: 'Tu indicación' })).toHaveValue('Conservar contexto');
+    expect(decisions).toEqual([]);
+  });
   it('separa disponibilidad y pausa y deja las capacidades inexistentes bloqueadas', async () => {
     render(<HumanWorkspace />);
     expect(await screen.findByRole('heading', { name: 'Synthetic MR' })).toBeInTheDocument();

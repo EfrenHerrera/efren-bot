@@ -7,6 +7,10 @@ Los fixtures, tareas y trabajo sintético se mantienen separados.
 
 ## Estado
 
+Navegación web: **Conversaciones → fuentes**, **Solicitudes → seguimiento y decisiones**,
+**Fábrica → ejecución avanzada separada**. Soporte y revisiones se abren como detalles
+desde Solicitudes, no como listas principales repetidas. [Motivo y alcance](docs/navigation.md).
+
 Nuevo incremento local: **Fábrica**. Embudo de fuentes (Slack almacenado, Notion, WhatsApp, las que
 se agreguen) con criterios de admisión deterministas, perfiles de proyecto (frontend, lambdas,
 orquestador multi-repo), ejecución en la unidad `scraft-ops factory run` y compuerta humana por

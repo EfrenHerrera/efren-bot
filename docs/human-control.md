@@ -1,5 +1,8 @@
 # Solicitudes y decisiones
 
+En la navegación se llama **Solicitudes**. Es la entrada única de soporte/MR; los análisis
+y conversaciones especializados se abren desde cada ficha. Ver [motivo del cambio](navigation.md).
+
 Una disposición humana no es una conclusión ni la resolución del problema original.
 La capa común referencia casos de soporte y MRs; conserva sus colas, evidencia y reportes.
 Fixture/work no participa. La política se aplica también desde rutas antiguas y el host.

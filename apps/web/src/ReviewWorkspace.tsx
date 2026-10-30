@@ -142,12 +142,17 @@ function ReviewPanel({ reviews, detail, drafts }: { reviews: Reviews; detail: Re
   </section>;
 }
 
-export function ReviewWorkspace({ drafts: retainedDrafts }: { drafts?: Map<string, ReviewDraft> }) {
+export function ReviewWorkspace({ drafts: retainedDrafts, targetId }: { drafts?: Map<string, ReviewDraft>; targetId?: string }) {
   const ownDrafts = useRef(new Map<string, ReviewDraft>());
   const drafts = retainedDrafts || ownDrafts.current;
-  const reviews = useReviews();
+  const reviews = useReviews(targetId);
   const control = reviews.data?.control;
   const [demoKey] = useState(() => crypto.randomUUID());
+  if (targetId) return <section className="review-workspace" aria-label="Revisión de la solicitud">
+    {reviews.error && <p className="error-banner" role="alert">{reviews.error}<button className="text-button" onClick={reviews.refresh}>Actualizar estado</button></p>}
+    {reviews.detail?.item.id === targetId ? <ReviewPanel key={targetId} detail={reviews.detail} reviews={reviews} drafts={drafts} /> : <p role="status">Cargando la revisión seleccionada…</p>}
+    <details className="request-settings"><summary>Configuración avanzada de revisiones</summary><p className="review-help">Control global, independiente de esta solicitud. No arranca el proceso host.</p><button className="secondary-button" disabled={!control || reviews.busy} onClick={() => { void reviews.command(!control?.activated_at ? 'activate' : control.paused ? 'resume' : 'pause', {}); }}>{!control?.activated_at ? 'Activar solo lo nuevo' : control.paused ? 'Reanudar revisiones' : 'Pausar revisiones'}</button><p className="review-help">{control?.runner_available ? 'Ejecutor disponible' : 'Ejecutor no confirmado'} · Solo Core y konfio-app-web. Sin ejecución de código, aprobación ni merge.</p></details>
+  </section>;
   return <section className="review-workspace" aria-label="Revisiones por decidir">
     <header className="review-heading"><div><h2>Revisiones por decidir</h2><p>Una conclusión clara. La evidencia, cuando la necesites.</p></div>
       <button className="secondary-button" disabled={!control || reviews.busy} onClick={() => { void reviews.command(!control?.activated_at ? 'activate' : control.paused ? 'resume' : 'pause', {}); }}>{!control?.activated_at ? 'Activar solo lo nuevo' : control.paused ? 'Reanudar revisiones' : 'Pausar revisiones'}</button>

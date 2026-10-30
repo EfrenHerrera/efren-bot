@@ -1,30 +1,40 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { supportLabels } from '@/support-client';
-import { useSupport } from '@/use-support';
+import { useSupport, useSupportDraft } from '@/use-support';
+import type { SupportDraft } from '@/use-support';
 import '@/support.css';
 
 const dates = new Intl.DateTimeFormat('es-MX', { dateStyle: 'short', timeStyle: 'short' });
 
-export function SupportWorkspace({ openConversation }: { openConversation: () => void }) {
-  const support = useSupport();
-  const [text, setText] = useState('');
-  const [redirect, setRedirect] = useState(false);
-  const [requestId, setRequestId] = useState(() => crypto.randomUUID());
+export function SupportWorkspace({ openConversation, targetId, drafts }: { openConversation: () => void; targetId?: string; drafts?: Map<string, SupportDraft> }) {
+  const support = useSupport(targetId);
+  const own = useRef(new Map<string, SupportDraft>());
+  return <SupportContent key={support.selected || 'empty'} support={support} openConversation={openConversation} targetId={targetId} drafts={drafts || own.current} />;
+}
+
+function SupportContent({ support, openConversation, targetId, drafts }: { support: ReturnType<typeof useSupport>; openConversation: () => void; targetId?: string; drafts: Map<string, SupportDraft> }) {
+  const { draft, setDraft } = useSupportDraft(support.selected || 'empty', drafts);
+  const { text, redirect, requestId } = draft;
+  function setText(text: string) { setDraft(previous => ({ ...previous, text })); }
+  function setRedirect(redirect: boolean) { setDraft(previous => ({ ...previous, redirect })); }
+  function setRequestId(requestId: string) { setDraft(previous => ({ ...previous, requestId })); }
   const [copied, setCopied] = useState(false);
   const current = support.detail?.case;
   const control = support.data?.control;
   async function send() {
     if (await support.act(redirect ? 'redirect' : 'ask', text, requestId)) {
-      setText(''); setRequestId(crypto.randomUUID());
+      setDraft(previous => ({ ...previous, text: '', requestId: crypto.randomUUID() }));
     }
   }
   return <section className="support-workspace" aria-label="Investigaciones de soporte">
-    <header className="support-heading"><div><h2>Soporte nuevo</h2><p>Los mensajes nuevos se evalúan en contexto. El histórico no es una cola de trabajo.</p></div><button className="secondary-button" onClick={openConversation}>Volver a conversaciones</button></header>
     {support.error && <p role="alert" className="error-banner">{support.error}</p>}
+    <details className="request-settings" open={targetId ? undefined : true}><summary>Configuración avanzada de soporte</summary>
+    <header className="support-heading"><div><h2>Soporte nuevo</h2><p>Los mensajes nuevos se evalúan en contexto. El histórico no es una cola de trabajo.</p></div><button className="secondary-button" onClick={openConversation}>Volver a conversaciones</button></header>
     <section className="support-control"><div><strong>{!control ? 'Conectando soporte…' : !control.activated_at ? 'Soporte sin activar' : control.paused ? 'Soporte automático pausado' : 'Detección automática activa'}</strong><p>{control?.runner_available ? 'Ejecutor host disponible' : 'Ejecutor host no confirmado'}{control?.activated_at ? ` · Corte: ${dates.format(new Date(control.activated_at))}` : ''}</p></div><button className="primary-button" disabled={!control || support.busy} onClick={() => { void support.command(!control?.activated_at ? 'activate' : control.paused ? 'resume' : 'pause', {}); }}>{!control?.activated_at ? 'Activar solo desde ahora' : control.paused ? 'Reanudar soporte' : 'Pausar soporte'}</button></section>
     <p className="support-scope" role="note"><strong>Fuentes pendientes de autorización.</strong> Por ahora solo se analiza el reporte Slack guardado. No se han leído CloudWatch, GitLab ni repositorios locales. Un preliminar no confirma la causa.</p>
     <details className="support-limits"><summary>Alcance y mensajes evaluados</summary>{Object.values(support.data?.source_limits || {}).map(value => <p key={value}>{value}</p>)}<p>Hasta 100 casos recientes; hasta 30 decisiones recientes. Pausar soporte no pausa la recolección. Las preguntas se responden entre pasos; una operación ya iniciada puede terminar, pero un análisis invalidado no se aplica.</p><ul>{support.data?.intakes.map(item => <li key={item.id}>{item.status === 'failed' ? 'Evaluación no completada' : item.decision.action === 'uncertain' ? 'Clasificación incierta; no se inició investigación' : item.status === 'ignored' ? 'Sin soporte nuevo' : item.status === 'support' ? 'Soporte detectado' : 'Pendiente de evaluación'}{item.decision.reason ? ` · ${item.decision.reason}` : ''}{item.error_code ? ` · ${item.error_code}` : ''}</li>)}</ul></details>
-    <div className="support-layout"><aside aria-label="Casos de soporte"><h3>{support.data?.cases.length || 0} casos</h3>{support.data?.cases.map(item => <button className="support-case" key={item.id} aria-pressed={support.selected === item.id} disabled={support.busy || Boolean(text)} onClick={() => { support.setSelected(item.id); setCopied(false); }}><strong>{item.title}</strong><span>{supportLabels[item.status]}</span><small>#{item.context.channel_name} · {dates.format(new Date(item.updated_at))}</small></button>)}{support.data?.cases.length === 0 && <p>No hay casos nuevos. No se investigó el histórico. Los próximos reportes se evaluarán automáticamente cuando el ejecutor esté disponible.</p>}</aside>
+    </details>
+    <div className={targetId ? 'request-detail-layout' : 'support-layout'}>{!targetId && <aside aria-label="Casos de soporte"><h3>{support.data?.cases.length || 0} casos</h3>{support.data?.cases.map(item => <button className="support-case" key={item.id} aria-pressed={support.selected === item.id} disabled={support.busy || Boolean(text)} onClick={() => { support.setSelected(item.id); setCopied(false); }}><strong>{item.title}</strong><span>{supportLabels[item.status]}</span><small>#{item.context.channel_name} · {dates.format(new Date(item.updated_at))}</small></button>)}{support.data?.cases.length === 0 && <p>No hay casos nuevos. No se investigó el histórico. Los próximos reportes se evaluarán automáticamente cuando el ejecutor esté disponible.</p>}</aside>}
       <section className="support-detail" aria-label="Detalle de investigación">{!current ? <p>Selecciona un caso para ver su evidencia, avance y conversación.</p> : <>
         <header><div><h3>{current.title}</h3><p>{supportLabels[current.status]} · Revisión {current.revision}</p></div><div className="support-actions"><button className="secondary-button" disabled={support.busy} onClick={() => { void support.act(current.status === 'paused' || current.status === 'dismissed' || current.status === 'failed' ? 'resume' : 'pause', '', crypto.randomUUID()); }}>{current.status === 'paused' || current.status === 'dismissed' || current.status === 'failed' ? 'Reanudar caso' : 'Pausar caso'}</button>{current.status !== 'dismissed' && <button className="text-button" disabled={support.busy} onClick={() => { void support.act('dismiss', '', crypto.randomUUID()); }}>No es soporte / descartar</button>}</div></header>
         {current.error_code && <p className="support-scope">{current.error_code === 'source_scope_pending' ? 'Investigación bloqueada: falta aprobar fuentes. No hay evidencia de logs ni código.' : `No se completó: ${current.error_code}`}</p>}

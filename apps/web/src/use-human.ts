@@ -52,5 +52,15 @@ export function useHuman(filter: HumanFilter) {
       return false;
     } finally { mutation.current = null; if (alive.current) setBusy(false); }
   }
-  return { data, detail, selected, setSelected, error, busy, act, refresh: () => setVersion(value => value + 1) };
+  async function command(domain: 'support' | 'review', operation: 'activate' | 'pause' | 'resume') {
+    if (mutation.current || error) return;
+    const controller = new AbortController(); mutation.current = controller; setBusy(true);
+    try {
+      await collectionRequest(`${domain === 'review' ? 'reviews' : 'support'}/${operation}`, 'POST', controller.signal, {});
+      if (alive.current && !controller.signal.aborted) setVersion(value => value + 1);
+    } catch {
+      if (alive.current && !controller.signal.aborted) setError('No se confirmó el cambio del control global. Actualiza antes de reintentar.');
+    } finally { mutation.current = null; if (alive.current) setBusy(false); }
+  }
+  return { data, detail, selected, setSelected, error, busy, act, command, refresh: () => setVersion(value => value + 1) };
 }

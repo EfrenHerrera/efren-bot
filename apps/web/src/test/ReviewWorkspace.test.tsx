@@ -35,6 +35,11 @@ beforeEach(() => {
 afterEach(() => vi.unstubAllGlobals());
 
 describe('Revisiones profundas con decisiones humanas', () => {
+  it('abre la MR exacta como detalle sin otra lista ni fallback', async () => {
+    render(<ReviewWorkspace targetId={second} />);
+    await waitFor(() => expect(fetch).toHaveBeenCalledWith('/api/collection/reviews/detail', expect.objectContaining({ body: JSON.stringify({ id: second }) })));
+    expect(screen.queryByRole('complementary', { name: 'Todas las MRs solicitadas' })).not.toBeInTheDocument();
+  });
   it('muestra todas las MRs y cobertura por dimensión, no una selección inicial', async () => {
     render(<ReviewWorkspace />);
     expect(await screen.findByRole('heading', { name: '3 MRs recientes' })).toBeInTheDocument();
