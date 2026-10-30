@@ -8,7 +8,9 @@ through an explicit hint or through the project's own declared keywords.
 import json
 from pathlib import Path
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
+
+from efren_bot.factory.contracts import FallbackExecutor, JobPolicy
 
 
 class Project(BaseModel):
@@ -21,8 +23,19 @@ class Project(BaseModel):
     notion_projects: list[str] = Field(default_factory=list)
     slack_channels: list[str] = Field(default_factory=list)
     executor: str = ""
+    fallback_executors: list[FallbackExecutor] = Field(default_factory=list, max_length=1)
     model: str = ""
     effort: str = ""
+
+    @model_validator(mode="after")
+    def valid_execution_policy(self):
+        JobPolicy(
+            executor=self.executor,
+            fallback_executors=self.fallback_executors,
+            model=self.model,
+            effort=self.effort,
+        )
+        return self
 
 
 class ProjectRegistry:

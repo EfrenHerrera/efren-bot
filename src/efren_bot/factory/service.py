@@ -16,7 +16,14 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session, sessionmaker
 
 from efren_bot.factory import effects as fx
-from efren_bot.factory.contracts import JobPolicy, JobRepo, JobSource, JobSpec, RunRecord
+from efren_bot.factory.contracts import (
+    FallbackExecutor,
+    JobPolicy,
+    JobRepo,
+    JobSource,
+    JobSpec,
+    RunRecord,
+)
 from efren_bot.factory.executor import Executor, ExecutorError
 from efren_bot.factory.intake import IntakeItem
 from efren_bot.factory.models import (
@@ -65,6 +72,7 @@ class FactoryService:
         executor: Executor,
         gateway: fx.EffectGateway,
         agent_executor: str = "",
+        agent_fallbacks: list[FallbackExecutor] | None = None,
         effect_ttl: timedelta = timedelta(hours=24),
     ):
         self.sessions = sessions
@@ -74,6 +82,7 @@ class FactoryService:
         self.executor = executor
         self.gateway = gateway
         self.agent_executor = agent_executor
+        self.agent_fallbacks = agent_fallbacks
         self.effect_ttl = effect_ttl
 
     # ------------------------------------------------------------ intake
@@ -178,6 +187,7 @@ class FactoryService:
         self, session: Session, row: FactoryItem, project: Project, role: str
     ) -> FactoryJob:
         key = f"fj-{uuid.uuid4().hex[:12]}"
+        profile = self.profiles.get(project.profile)
         spec = JobSpec(
             job_id=key,
             source=JobSource(kind=row.source_kind, ref=row.external_id, url=row.url or ""),
@@ -190,7 +200,15 @@ class FactoryService:
                 allow_worktree=True,
                 allow_commit=True,
                 run_review=True,
-                executor=self.agent_executor or project.executor,
+                executor=self.agent_executor
+                or project.executor
+                or (profile.executor if profile else "")
+                or "opencode",
+                fallback_executors=(
+                    self.agent_fallbacks
+                    if self.agent_fallbacks is not None
+                    else project.fallback_executors
+                ),
                 model=project.model,
                 effort=project.effort,
             ),

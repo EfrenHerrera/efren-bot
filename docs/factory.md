@@ -76,6 +76,41 @@ Cada intento usa su propio id (`fj-xxxx-a1`, `-a2`…) porque los worktrees son 
 La unidad de ejecución nunca toca tu checkout: trabaja en un worktree propio, corre los checks del
 perfil, calcula el riesgo del diff real y, si el riesgo es medio o alto, pide una revisión independiente.
 
+#### Ejecutor principal y respaldo autorizado
+
+Frontend prefiere **OpenCode**. Se puede autorizar **Claude como respaldo** en el
+registro del proyecto (esto sí permite consumir esa cuenta):
+
+```json
+{"name":"landing","profile":"frontend","repo_path":"/ruta/sandbox","executor":"opencode","fallback_executors":["claude"]}
+```
+
+Sin `fallback_executors` no hay cambio de cuenta implícito. La selección de principal
+sigue override del proceso → proyecto → perfil;los otros perfiles conservan su
+configuración explícita. Cada JobSpec guarda la selección al admitirlo:los cambios
+de configuración no reescriben jobs en cola ni reanudan los fallidos del piloto.
+
+La unidad prueba cada ejecutor autorizado una sola vez durante el trabajo inicial,
+con el mismo presupuesto de tiempo total. Releva solo ante CLI ausente o mensajes
+de disponibilidad reconocidos (cuota/autenticación/429/503),sin progreso en el log y
+con HEAD/worktree intactos,incluidos archivos ignorados. Errores desconocidos,pruebas
+fallidas,timeout,cancelación,log truncado o cambios parciales detienen:sin fallback.
+La revisión independiente no se releva automáticamente después del trabajo.
+
+`RunRecord.executor` es el último ejecutor invocado;`execution_attempts` conserva
+todos los intentos con motivo,log y timestamps,incluso si el respaldo recupera el
+fallo. Se almacena íntegro en el detalle del job. Checks,riesgo,revisión y aprobación
+de efectos no se debilitan. Nunca fake→real. Un modelo/effort fijado y fallback
+juntos se rechazan hasta poder configurar ambos proveedores sin ambigüedad.
+
+OpenCode V2 se invoca con servidor privado (`run --standalone`),cwd del worktree y
+`--format json` para el trabajo inicial;la revisión conserva texto para no buscar
+veredictos dentro de eventos JSON de herramientas. No se cambia la configuración
+global ni el servidor de tu sesión.
+Requiere un binario scraft-ops actualizado compatible con el campo aditivo
+`policy.fallback_executors`. El campo vacío se omite para unidades antiguas estrictas.
+Compilar un binario de pruebas no sustituye ni instala el binario global.
+
 ### 5. Efectos y compuerta humana (`effects.py`)
 
 Efectos que existen: `open_pr`, `update_notion`, `post_slack`. **`merge` y `deploy` no existen.**
@@ -109,7 +144,8 @@ No existe ninguna ruta sin autenticar que mute la fábrica.
 | `FACTORY_PROFILES_DIR` | Perfiles que sobrescriben los incluidos | vacío |
 | `FACTORY_SCRAFT_OPS_BIN` | Binario `scraft-ops` | `scraft-ops` |
 | `FACTORY_STATE_DIR` | Worktrees, logs y registros de corrida | `~/.scraft-ops/factory` |
-| `FACTORY_AGENT_EXECUTOR` | `fake` (ensayo), `claude` u `opencode` | vacío: lo decide el proyecto/perfil |
+| `FACTORY_AGENT_EXECUTOR` | `fake` (ensayo), `claude` u `opencode` | vacío: lo decide el proyecto/perfil;frontend prefiere OpenCode |
+| `FACTORY_AGENT_FALLBACKS` | JSON allowlist de hasta un respaldo real,por ejemplo `["claude"]`;`[]` desactiva respaldo en los jobs que admita ese proceso | sin definir:hereda `fallback_executors` del proyecto,que por defecto es vacío |
 | `FACTORY_GATEWAY` | `recording` (no hace nada, anota) o `real` | `recording` |
 | `FACTORY_EFFECT_TTL_HOURS` | Vigencia de una aprobación | `24` |
 | `FACTORY_NOTION_TOKEN` / `FACTORY_NOTION_DATABASE_ID` | Notion real (lectura de tareas y escritura de estado, esta última solo con aprobación y `FACTORY_GATEWAY=real`) | vacío (sin Notion) |
@@ -154,14 +190,14 @@ Comprobaciones, clasificadas antes de ejecutarlas: **obligatorias** por criterio
 | Admisión, adaptadores, efectos, ejecutor | `test_factory_unit.py` | verificado |
 | Embudo → cola → fencing → efectos, en PostgreSQL separado | `test_factory_service.py` | verificado |
 | Frontera HTTP y webhook firmado | `test_factory_http.py` | verificado |
-| Bandeja web "Fábrica" | `FactoryWorkspace.test.tsx`, typecheck, build | verificado con mocks; **no visto en navegador real** |
+| Bandeja web "Fábrica" | `FactoryWorkspace.test.tsx`, typecheck, build; navegador local | mocks PASS; vista vacía observada escritorio/móvil, acciones reales aún sin verificar; ver factory-test-report.md |
 | `NotionHttpClient` contra Notion real | solo con transporte simulado | **sin verificar** |
 | `GlabGateway` (git push + `glab mr create`) | solo con procesos simulados | **sin verificar** contra GitLab real |
 | `SlackCollectionAdapter` sobre el recolector vivo | consulta SQL simulada en la unidad | **sin verificar** con datos reales |
 | Webhook de WhatsApp con Meta | firma y payload documentados | **sin verificar** con Meta real |
 | `claude -p` / `opencode run` headless | construcción de argumentos | **sin verificar**: los flags se leyeron del `--help` local, no se ejecutó un agente real |
 | Efectos `post_slack` | no hay pasarela | **no implementado** (se propone, no se ejecuta) |
-| Despliegue en Docker de la API con el registro de proyectos | `compose.factory.yaml` | **sin verificar** |
+| Despliegue en Docker de la API con el registro de proyectos | `compose.factory.yaml` | verificado localmente con registro vacío readonly, esquema0011, health200 y datos previos intactos; evidencia `.local/factory/validation/deployed-acceptance.json` |
 
 Límites conocidos: el perfil no tiene paso de preparación (un worktree nuevo no trae `node_modules`; ver el plan de pruebas); un job es de un solo repositorio (la iniciativa multi-repo, con orden entre repos,
 es trabajo de la capa siguiente); no hay topes de costo/tiempo por corrida más allá del timeout de la

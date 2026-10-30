@@ -3,7 +3,7 @@
 from datetime import datetime
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 JOB_SCHEMA = "scraft.factory.job/1"
 RUN_SCHEMA = "scraft.factory.run/1"
@@ -11,6 +11,7 @@ RUN_SCHEMA = "scraft.factory.run/1"
 ROLES = ("development", "review", "support", "research")
 EFFECT_KINDS = ("open_pr", "publish_comment", "update_notion", "post_slack", "merge", "deploy")
 Policy = Literal["auto", "human", "forbidden"]
+FallbackExecutor = Literal["opencode", "claude"]
 
 
 class JobSource(BaseModel):
@@ -32,9 +33,23 @@ class JobPolicy(BaseModel):
     allow_commit: bool = False
     timeout_seconds: int = Field(default=0, ge=0)
     executor: str = ""
+    fallback_executors: list[FallbackExecutor] = Field(default_factory=list, max_length=1)
     model: str = ""
     effort: str = ""
     run_review: bool = False
+
+    @model_validator(mode="after")
+    def authorized_fallback(self):
+        if self.fallback_executors and (
+            self.executor not in {"", "opencode", "claude"}
+            or self.executor in self.fallback_executors
+            or self.model
+            or self.effort
+        ):
+            raise ValueError(
+                "fallback requires a different real executor without pinned model/effort"
+            )
+        return self
 
 
 class JobMock(BaseModel):
@@ -62,6 +77,8 @@ class JobSpec(BaseModel):
     def wire(self) -> dict:
         data = self.model_dump(by_alias=True, exclude_none=True)
         data["schema"] = JOB_SCHEMA
+        if not data["policy"]["fallback_executors"]:
+            data["policy"].pop("fallback_executors")
         return data
 
 
@@ -111,6 +128,17 @@ class RunEffect(BaseModel):
     reason: str = ""
 
 
+class ExecutionAttempt(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    executor: str
+    phase: str
+    status: str
+    reason: str = ""
+    log_ref: str = ""
+    started_at: datetime | None = None
+    completed_at: datetime | None = None
+
+
 class RunRecord(BaseModel):
     """Tolerant on purpose: new fields from a newer scraft-ops must not break the plant."""
 
@@ -123,6 +151,7 @@ class RunRecord(BaseModel):
     started_at: datetime | None = None
     completed_at: datetime | None = None
     executor: str = ""
+    execution_attempts: list[ExecutionAttempt] = Field(default_factory=list)
     branch: str = ""
     worktree: str = ""
     base_ref: str = ""

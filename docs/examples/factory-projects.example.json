@@ -8,7 +8,8 @@
       "keywords": ["landing", "pricing page", "botón"],
       "notion_projects": ["Landing Web"],
       "slack_channels": ["web-team"],
-      "executor": "claude"
+      "executor": "opencode",
+      "fallback_executors": []
     },
     {
       "name": "etl-lambdas",

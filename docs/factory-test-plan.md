@@ -75,7 +75,7 @@ make factory-rehearsal SCRAFT_OPS_BIN=$SO
 make test
 ```
 
-**Esperado:** el ensayo corre 4 archivos (85 pruebas al escribir esto) **sin ninguna omitida**:
+**Esperado:** el ensayo corre todos los archivos `test_factory_*.py`, incluidos fallback y sus guardias, **sin ninguna omitida**:
 `test_factory_cross.py` se omite si falta `SCRAFT_OPS_BIN`, y eso cuenta como fallo de esta etapa.
 `make test` pasa completo (646 pruebas de Python y 33 de la web al escribir esto; lo que importa es
 **cero fallos, cero omitidas en los archivos `test_factory_*`**).

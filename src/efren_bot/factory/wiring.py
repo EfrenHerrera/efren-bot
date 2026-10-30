@@ -91,7 +91,6 @@ def build_executor(settings: Settings) -> Executor:
         settings.factory_scraft_ops_bin,
         state_dir=settings.factory_state_dir or None,
         profile_dir=settings.factory_profiles_dir or None,
-        executor=settings.factory_agent_executor or None,
     )
 
 
@@ -118,6 +117,7 @@ def build_service(
         executor=executor or build_executor(settings),
         gateway=gateway or build_gateway(settings, notion_client),
         agent_executor=settings.factory_agent_executor,
+        agent_fallbacks=settings.factory_agent_fallbacks,
         effect_ttl=timedelta(hours=settings.factory_effect_ttl_hours),
     )
 

@@ -185,3 +185,97 @@ def test_full_stack_notion_task_to_a_gated_pull_request(pg_engine, tmp_path, rep
     )
     assert done.state == "approved" and len(gateway.executed) == 1
     assert service.run_approved_effects() == 1 and len(gateway.executed) == 2
+
+
+@pytest.mark.integration
+@needs_binary
+@pytest.mark.parametrize(
+    "case, expected_status, expected_executors",
+    [
+        ("quota", "succeeded", ["opencode", "claude"]),
+        ("primary-success", "succeeded", ["opencode"]),
+        ("partial", "failed", ["opencode"]),
+        ("unknown", "failed", ["opencode"]),
+        ("both", "failed", ["opencode", "claude"]),
+        ("not-authorized", "failed", ["opencode"]),
+    ],
+)
+def test_real_unit_fallback_roundtrips_through_plant_without_accounts(
+    pg_engine, tmp_path, repo, profile_dir, case, expected_status, expected_executors
+):
+    from efren_bot.db import session_factory
+
+    with pg_engine.begin() as connection:
+        assert connection.scalar(text("SELECT current_database()")) == "efren_bot_test"
+        connection.execute(
+            text("TRUNCATE factory_effects, factory_jobs, factory_admissions, factory_items")
+        )
+    stubs = tmp_path / "cli-doubles"
+    stubs.mkdir()
+    primary = "printf 'quota exceeded'; exit 1"
+    if case == "primary-success":
+        primary = "printf 'done' > result.txt; printf 'completed'"
+    elif case == "partial":
+        primary = "printf 'partial' > partial.txt; printf 'quota exceeded'; exit 1"
+    elif case == "unknown":
+        primary = "printf 'invalid code'; exit 1"
+    secondary = (
+        "printf 'quota exceeded'; exit 1"
+        if case == "both"
+        else "printf 'done' > result.txt; printf 'completed'"
+    )
+    for name, body in [("opencode", primary), ("claude", secondary)]:
+        path = stubs / name
+        path.write_text("#!/bin/sh\nset -eu\n" + body + "\n")
+        path.chmod(0o755)
+    profile_path = profile_dir / "frontend.json"
+    profile = json.loads(profile_path.read_text())
+    profile["checks"] = [
+        {"name": "artifact", "command": ["sh", "-c", "test -s result.txt"], "mandatory": True}
+    ]
+    profile["effects"] = {"open_pr": "forbidden", "merge": "forbidden", "deploy": "forbidden"}
+    profile_path.write_text(json.dumps(profile))
+
+    def isolated_process(command, **kwargs):
+        return subprocess.run(
+            command, env={**os.environ, "PATH": f"{stubs}:/usr/bin:/bin"}, **kwargs
+        )
+
+    sessions = session_factory(pg_engine)
+    gateway = fx.RecordingGateway()
+    service = FactoryService(
+        sessions,
+        projects=ProjectRegistry(
+            [
+                Project(
+                    name="landing",
+                    profile="frontend",
+                    repo_path=str(repo),
+                    executor="opencode",
+                    fallback_executors=[] if case == "not-authorized" else ["claude"],
+                )
+            ]
+        ),
+        profiles=PROFILES,
+        policy=POLICY,
+        executor=ScraftOpsExecutor(
+            BIN,
+            state_dir=str(tmp_path / "state"),
+            profile_dir=str(profile_dir),
+            runner=isolated_process,
+        ),
+        gateway=gateway,
+    )
+    admitted = service.ingest([item("manual", project_hint="landing")])[0]
+    assert admitted.decision == "admit"
+    assert service.process_one() == admitted.job_id
+    with sessions() as session:
+        row = session.get(FactoryJob, admitted.job_id)
+        assert row.status == expected_status and row.attempt_count == 1
+        assert [
+            attempt["executor"] for attempt in row.run_record["execution_attempts"]
+        ] == expected_executors
+        assert row.run_record["job_id"].endswith("-a1")
+        assert list(session.scalars(select(FactoryEffect))) == []
+    assert gateway.executed == []
+    assert git(repo, "status", "--porcelain") == ""

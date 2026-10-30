@@ -28,6 +28,9 @@ class Settings(BaseSettings):
     factory_scraft_ops_bin: str = "scraft-ops"
     factory_state_dir: str = ""
     factory_agent_executor: Literal["", "fake", "claude", "opencode"] = ""
+    factory_agent_fallbacks: list[Literal["opencode", "claude"]] | None = Field(
+        default=None, max_length=1
+    )
     factory_gateway: Literal["recording", "real"] = "recording"
     factory_effect_ttl_hours: int = Field(default=24, ge=1, le=720)
     # Notion (official API). Both empty means Notion is not wired: no adapter, no gateway.

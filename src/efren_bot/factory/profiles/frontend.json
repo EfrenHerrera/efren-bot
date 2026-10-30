@@ -24,7 +24,7 @@
     "merge": "forbidden",
     "deploy": "forbidden"
   },
-  "executor": "claude",
+  "executor": "opencode",
   "concurrency": 3,
   "rules": [
     "Verify visually when the change is visible; a passing build alone does not prove the page looks right.",
